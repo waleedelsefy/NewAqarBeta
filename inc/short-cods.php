@@ -96,7 +96,7 @@ function newaqarr_cta_shortcode()
             }
 
             .main-cta a.cta-phone {
-                background: <?php echo $primary_color; ?> !important;
+                background: var(--primary-color-collapse) !important;
                 border: 0;
                 color: #fff !important;
             }

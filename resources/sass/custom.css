@@ -11970,13 +11970,13 @@ textarea.form-control-lg {
   --call-to-action-font-color: black;
   --call-to-action-font-weight:600;
   --primary-color-disabled: #fff;
-  --primary-color-collapse: #ef5e4e;
+  --primary-color-collapse: #00a77f;
   --primary-link-color: #0277bd;
   --primary-link-color-hover: #23527c;
   --primary-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --primary-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
-  --bs-accordion-btn-focus-border-color: #ef5e4e ;
+  --bs-accordion-btn-focus-border-color: #00a77f ;
   --bs-accordion-btn-focus-box-shadow: unset !important;
   --bs-accordion-btn-focus-border-color: unset !important;
   --bs-accordion-btn-focus-border-color: unset !important;

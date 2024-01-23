@@ -5,7 +5,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Bootscore
+ * @package Didos
  * @version 5.3.3
  */
 defined( 'ABSPATH' ) || exit;

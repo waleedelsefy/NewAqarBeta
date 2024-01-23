@@ -7,9 +7,9 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Bootscore
+ * @package Didos
  *
- * @version 5.3.0
+ * @version 1.0.1
  */
 
 $theme_settings = get_option('newaqarr_theme_settings');

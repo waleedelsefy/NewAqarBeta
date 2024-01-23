@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  *
- * @package Bootscore 
+ * @package Didos 
  * @version 5.3.3
  */
 // Exit if accessed directly

@@ -3909,7 +3909,7 @@ body address, body big, body blockquote, body button, body caption, body cite, b
     border: none;
     font-size: var(--p-content-font-size);
     line-height: 1.8em;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     text-align: inherit
 }
@@ -5002,7 +5002,7 @@ body .menu-item-has-children:hover .sub-menu, html .menu-item-has-children:hover
 
 
 body .slider-area, html .slider-area {
-    background: url(https://www.newaqarr.com/wp-content/uploads/2022/05/background.jpg);
+    background: var(--ar_front_page_hero_background);
     background-size: cover;
     min-height: 204px;
     padding-bottom: 100px;
@@ -5019,7 +5019,7 @@ body .slider-area h1, html .slider-area h1 {
 
 @media screen and (max-width: 650px) {
     body .slider-area, html .slider-area {
-        background: url(https://www.newaqarr.com/wp-content/uploads/2022/05/background.jpg)
+        background: var(--ar_front_page_hero_background);
     }
 }
 

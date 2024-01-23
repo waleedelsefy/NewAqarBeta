@@ -19,7 +19,7 @@ if (is_array($theme_settings)) {
     get_template_part("assets/style");
 } else {
     $phone_number = '';
-    $primary_color = '#ef5e4e';
+    $primary_color = '#00a77f';
     error_log("newaqarr_theme_settings is not an array");
 }
 ?>

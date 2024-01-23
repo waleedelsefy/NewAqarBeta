@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Bootscore
+ * @package Didos
  * @version 5.3.3
  */
 

@@ -5,7 +5,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Bootscore
+ * @package Didos
  */
 
 /**

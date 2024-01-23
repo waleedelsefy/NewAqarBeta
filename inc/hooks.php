@@ -2,7 +2,7 @@
 /**
  * Hooks
  *
- * @package Bootscore 
+ * @package Didos 
  * @version 5.3.3
  */
 defined( 'ABSPATH' ) || exit;

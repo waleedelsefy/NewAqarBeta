@@ -1742,7 +1742,7 @@ body .my-8, html .my-8 {
 }
 
 body .slider-area, html .slider-area {
-    background: var(--ar_front_page_hero_background)
+    background: var(--ar_front_page_hero_background);
 }
 
 body .wa__popup_content_list .wa__popup_content_item .wa__member_duty, html .wa__popup_content_list .wa__popup_content_item .wa__member_duty {
@@ -2577,7 +2577,8 @@ body .col-xs-4, html .col-xs-4 {
     }
 
     body .col-md-6, html .col-md-6 {
-        width: 50%
+        width: 50%;
+
     }
 
     body .col-md-4, html .col-md-4 {
@@ -3909,7 +3910,7 @@ body address, body big, body blockquote, body button, body caption, body cite, b
     border: none;
     font-size: var(--p-content-font-size);
     line-height: 1.8em;
-    margin: 0;
+    margin: 10px;
     padding: 0;
     text-align: inherit
 }
@@ -5001,13 +5002,6 @@ body .menu-item-has-children:hover .sub-menu, html .menu-item-has-children:hover
 }
 
 
-body .slider-area, html .slider-area {
-    background: url(https://www.newaqarr.com/wp-content/uploads/2022/05/background.jpg);
-    background-size: cover;
-    min-height: 204px;
-    padding-bottom: 100px;
-    padding-top: 100px
-}
 
 body .slider-area h1, body .slider-area p, html .slider-area h1, html .slider-area p {
     color: #fff
@@ -5017,11 +5011,6 @@ body .slider-area h1, html .slider-area h1 {
     text-shadow: 2px 2px rgba(0, 0, 0, .769)
 }
 
-@media screen and (max-width: 650px) {
-    body .slider-area, html .slider-area {
-        background: url(https://www.newaqarr.com/wp-content/uploads/2022/05/background.jpg)
-    }
-}
 
 body input[type=color], body input[type=date], body input[type=datetime], body input[type=email], body input[type=month], body input[type=number], body input[type=password], body input[type=search], body input[type=tel], body input[type=text], body input[type=time], body input[type=url], body input[type=week], body select, body textarea, html input[type=color], html input[type=date], html input[type=datetime], html input[type=email], html input[type=month], html input[type=number], html input[type=password], html input[type=search], html input[type=tel], html input[type=text], html input[type=time], html input[type=url], html input[type=week], html select, html textarea {
     background: #fff;

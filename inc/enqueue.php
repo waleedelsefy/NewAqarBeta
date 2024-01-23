@@ -2,7 +2,7 @@
 /**
  * Enqueue styles & scripts
  *
- * @package Bootscore 
+ * @package Didos 
  * @version 5.3.4
  */
 // Exit if accessed directly

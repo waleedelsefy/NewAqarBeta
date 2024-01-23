@@ -3,7 +3,7 @@
 /**
  * Columns
  *
- * @package Bootscore 
+ * @package Didos 
  * @version 5.3.3
  */
 // Exit if accessed directly
