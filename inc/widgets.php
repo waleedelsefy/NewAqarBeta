@@ -22,7 +22,7 @@ add_filter( 'use_widgets_block_editor', '__return_false' );
  */
 if (!function_exists('bootscore_widgets_init')) :
 
-    function twentytwenty_sidebar_registration() {
+    function newaqar_sidebar_registration() {
 
         // Arguments used in all register_sidebar() calls.
         $shared_args = array(
@@ -37,9 +37,9 @@ if (!function_exists('bootscore_widgets_init')) :
             array_merge(
                 $shared_args,
                 array(
-                    'name'        => __( 'Footer #1', 'twentytwenty' ),
+                    'name'        => __( 'Footer #1', 'newaqar' ),
                     'id'          => 'sidebar-1',
-                    'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'twentytwenty' ),
+                    'description' => __( 'Widgets in this area will be displayed in the first column in the footer.', 'newaqar' ),
                 )
             )
         );
@@ -49,9 +49,9 @@ if (!function_exists('bootscore_widgets_init')) :
             array_merge(
                 $shared_args,
                 array(
-                    'name'        => __( 'Footer #2', 'twentytwenty' ),
+                    'name'        => __( 'Footer #2', 'newaqar' ),
                     'id'          => 'sidebar-2',
-                    'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'twentytwenty' ),
+                    'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'newaqar' ),
                 )
             )
         );
@@ -61,9 +61,9 @@ if (!function_exists('bootscore_widgets_init')) :
             array_merge(
                 $shared_args,
                 array(
-                    'name'        => __( 'Footer #3', 'twentytwenty' ),
+                    'name'        => __( 'Footer #3', 'newaqar' ),
                     'id'          => 'sidebar-3',
-                    'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'twentytwenty' ),
+                    'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'newaqar' ),
                 )
             )
         );
@@ -73,9 +73,9 @@ if (!function_exists('bootscore_widgets_init')) :
             array_merge(
                 $shared_args,
                 array(
-                    'name'        => __( 'Footer #4', 'twentytwenty' ),
+                    'name'        => __( 'Footer #4', 'newaqar' ),
                     'id'          => 'sidebar-4',
-                    'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'twentytwenty' ),
+                    'description' => __( 'Widgets in this area will be displayed in the second column in the footer.', 'newaqar' ),
                 )
             )
         );
@@ -84,7 +84,7 @@ if (!function_exists('bootscore_widgets_init')) :
             array_merge(
                 $shared_args,
                 array(
-                    'name'        => __( 'سايدبار الصفحات', 'twentytwenty' ),
+                    'name'        => __( 'سايدبار الصفحات', 'newaqar' ),
                     'id'          => 'page-sidebar',
                 )
             )
@@ -92,7 +92,7 @@ if (!function_exists('bootscore_widgets_init')) :
 
     }
 
-    add_action( 'widgets_init', 'twentytwenty_sidebar_registration' );
+    add_action( 'widgets_init', 'newaqar_sidebar_registration' );
 
 
 
