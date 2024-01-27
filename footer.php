@@ -150,7 +150,7 @@ if (is_array($theme_settings)) {
 </footer><!-- #site-footer -->
 <div class="copyrights">
     <p class="copywrite-txt">
-        كافة الحقوق محفوظة لـ نيو ستارت  © 2021 رقم السجل الضريبي 223-743-723
+        كافة الحقوق محفوظة لـ نيو ستارت  © 2024 رقم السجل الضريبي 223-743-723
     </p>
 </div>
 
