@@ -4,18 +4,18 @@
 function register_project_post_type()
 {
     $labels = array(
-        'name'               => __('Projects', 'newaqarr'),
-        'singular_name'      => __('Project', 'newaqarr'),
-        'add_new'            => __('Add New Project', 'newaqarr'),
-        'add_new_item'       => __('Add New Project', 'newaqarr'),
-        'edit_item'          => __('Edit Project', 'newaqarr'),
-        'new_item'           => __('New Project', 'newaqarr'),
-        'all_items'          => __('All Projects', 'newaqarr'),
-        'view_item'          => __('View Project', 'newaqarr'),
-        'search_items'       => __('Search for Project', 'newaqarr'),
-        'not_found'          => __('No project found', 'newaqarr'),
-        'not_found_in_trash' => __('No project found in trash', 'newaqarr'),
-        'menu_name'          => __('Projects', 'newaqarr'),
+        'name'               => __('Projects', 'newaqar'),
+        'singular_name'      => __('Project', 'newaqar'),
+        'add_new'            => __('Add New Project', 'newaqar'),
+        'add_new_item'       => __('Add New Project', 'newaqar'),
+        'edit_item'          => __('Edit Project', 'newaqar'),
+        'new_item'           => __('New Project', 'newaqar'),
+        'all_items'          => __('All Projects', 'newaqar'),
+        'view_item'          => __('View Project', 'newaqar'),
+        'search_items'       => __('Search for Project', 'newaqar'),
+        'not_found'          => __('No project found', 'newaqar'),
+        'not_found_in_trash' => __('No project found in trash', 'newaqar'),
+        'menu_name'          => __('Projects', 'newaqar'),
     );
 
     $args = array(
@@ -43,15 +43,15 @@ function custom_project_permalink($permalink, $post_id) {
 add_filter('post_type_link', 'custom_project_permalink', 10, 2);
 function register_types_taxonomy() {
     $labels = array(
-        'name'              => _x('Types', 'taxonomy general name', 'newaqarr'),
-        'singular_name'     => _x('Type', 'taxonomy singular name', 'newaqarr'),
-        'search_items'      => __('Search Types', 'newaqarr'),
-        'all_items'         => __('All Types', 'newaqarr'),
-        'edit_item'         => __('Edit Type', 'newaqarr'),
-        'update_item'       => __('Update Type', 'newaqarr'),
-        'add_new_item'      => __('Add New Type', 'newaqarr'),
-        'new_item_name'     => __('New Type Name', 'newaqarr'),
-        'menu_name'         => __('Types', 'newaqarr'),
+        'name'              => _x('Types', 'taxonomy general name', 'newaqar'),
+        'singular_name'     => _x('Type', 'taxonomy singular name', 'newaqar'),
+        'search_items'      => __('Search Types', 'newaqar'),
+        'all_items'         => __('All Types', 'newaqar'),
+        'edit_item'         => __('Edit Type', 'newaqar'),
+        'update_item'       => __('Update Type', 'newaqar'),
+        'add_new_item'      => __('Add New Type', 'newaqar'),
+        'new_item_name'     => __('New Type Name', 'newaqar'),
+        'menu_name'         => __('Types', 'newaqar'),
     );
 
     $args = array(
@@ -101,41 +101,41 @@ function render_project_details_metabox($post) {
     <table class="form-table">
         <tr>
             <th scope="row">
-                <label for="project_details[project_space]"><?php _e('Project Space:', 'newaqarr'); ?></label>
+                <label for="project_details[project_space]"><?php _e('Project Space:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="text" name="project_details[project_space]" value="<?php echo esc_attr($project_space); ?>" placeholder="<?php esc_attr_e('Enter Project Space', 'newaqarr'); ?>">
+                <input type="text" name="project_details[project_space]" value="<?php echo esc_attr($project_space); ?>" placeholder="<?php esc_attr_e('Enter Project Space', 'newaqar'); ?>">
             </td>
         </tr>
 
         <tr>
             <th scope="row">
-                <label for="project_details[project_price]"><?php _e('Project Price:', 'newaqarr'); ?></label>
+                <label for="project_details[project_price]"><?php _e('Project Price:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="text" name="project_details[project_price]" value="<?php echo esc_attr($project_price); ?>" placeholder="<?php esc_attr_e('Enter Project Price', 'newaqarr'); ?>">
+                <input type="text" name="project_details[project_price]" value="<?php echo esc_attr($project_price); ?>" placeholder="<?php esc_attr_e('Enter Project Price', 'newaqar'); ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <label for="project_details[payment_systems]"><?php _e('Payment Systems:', 'newaqarr'); ?></label>
+                <label for="project_details[payment_systems]"><?php _e('Payment Systems:', 'newaqar'); ?></label>
             </th>
             <td>
                 <select name="project_details[payment_systems]">
-                    <option value="cash" <?php selected($payment_systems, 'cash'); ?>><?php esc_html_e('Cash', 'newaqarr'); ?></option>
-                    <option value="installment" <?php selected($payment_systems, 'installment'); ?>><?php esc_html_e('Installment', 'newaqarr'); ?></option>
-                    <option value="both" <?php selected($payment_systems, 'both'); ?>><?php esc_html_e('Both Cash and Installment', 'newaqarr'); ?></option>
+                    <option value="cash" <?php selected($payment_systems, 'cash'); ?>><?php esc_html_e('Cash', 'newaqar'); ?></option>
+                    <option value="installment" <?php selected($payment_systems, 'installment'); ?>><?php esc_html_e('Installment', 'newaqar'); ?></option>
+                    <option value="both" <?php selected($payment_systems, 'both'); ?>><?php esc_html_e('Both Cash and Installment', 'newaqar'); ?></option>
                 </select>
-                <input type="number" min="0" max="99" name="project_details[down_payment]" value="<?php echo esc_attr($down_payment); ?>" placeholder="<?php esc_attr_e('Enter down payment', 'newaqarr'); ?>"> %
-                <input type="number" min="0" max="30" name="project_details[installment]" value="<?php echo esc_attr($installment); ?>" placeholder="<?php esc_attr_e('Enter installment payment', 'newaqarr'); ?>">
+                <input type="number" min="0" max="99" name="project_details[down_payment]" value="<?php echo esc_attr($down_payment); ?>" placeholder="<?php esc_attr_e('Enter down payment', 'newaqar'); ?>"> %
+                <input type="number" min="0" max="30" name="project_details[installment]" value="<?php echo esc_attr($installment); ?>" placeholder="<?php esc_attr_e('Enter installment payment', 'newaqar'); ?>">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <label for="project_details[delivery]"><?php _e('Delivery Time:', 'newaqarr'); ?></label>
+                <label for="project_details[delivery]"><?php _e('Delivery Time:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="number" name="project_details[delivery]" value="<?php echo esc_attr($delivery); ?>" placeholder="<?php esc_attr_e('Enter delivery year', 'newaqarr'); ?>">
+                <input type="number" name="project_details[delivery]" value="<?php echo esc_attr($delivery); ?>" placeholder="<?php esc_attr_e('Enter delivery year', 'newaqar'); ?>">
 
             </td>
         </tr>
@@ -172,7 +172,7 @@ add_action('save_post', 'save_project_meta');
 function add_faq_meta_box() {
     add_meta_box(
         'faq_meta_box',                 // $id (string) (required) - Meta box ID
-        __('FAQs', 'newaqarr'),        // $title (string) (required) - Meta box title
+        __('FAQs', 'newaqar'),        // $title (string) (required) - Meta box title
         'faq_meta_box_callback',        // $callback (callable) (required) - Callback function to display the contents of the meta box
         'projects',                     // $screen (string|array|WP_Screen) (required) - The screen or screens on which to show the box
         'normal',                       // $context (string) (optional) - The context within the screen where the boxes should display ('normal', 'advanced', or 'side')
@@ -188,8 +188,8 @@ function faq_meta_box_callback($post) {
     <table class="form-table">
         <thead>
         <tr>
-            <th><?php _e('Question', 'newaqarr');?></th>
-            <th><?php _e('Answer', 'newaqarr');?></th>
+            <th><?php _e('Question', 'newaqar');?></th>
+            <th><?php _e('Answer', 'newaqar');?></th>
         </tr>
         </thead>
         <tbody>
@@ -199,7 +199,7 @@ function faq_meta_box_callback($post) {
                     <td><input type="text" name="faqs[<?php echo $index; ?>][question]" value="<?php echo esc_attr($faq['question']); ?>" /></td>
                     <td><input type="text" name="faqs[<?php echo $index; ?>][answer]" value="<?php echo esc_attr($faq['answer']); ?>" /></td>
                     <td>
-                        <button class="button faq-delete-button"><?php _e('Delete', 'newaqarr');?></button>
+                        <button class="button faq-delete-button"><?php _e('Delete', 'newaqar');?></button>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -207,12 +207,12 @@ function faq_meta_box_callback($post) {
             <tr>
                 <td><input type="text" name="faqs[0][question]" value="" /></td>
                 <td><input type="text" name="faqs[0][answer]" value="" /></td>
-                <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr');?></button></td>
+                <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar');?></button></td>
             </tr>
         <?php endif; ?>
         </tbody>
     </table>
-    <button class="button" id="add-faq-row"><?php _e('Add New Question ', 'newaqarr');?></button>
+    <button class="button" id="add-faq-row"><?php _e('Add New Question ', 'newaqar');?></button>
 
     <script>
         jQuery(document).ready(function ($) {
@@ -221,7 +221,7 @@ function faq_meta_box_callback($post) {
                 var newRow = '<tr>' +
                     '<td><input type="text" name="faqs[' + index + '][question]" value="" /></td>' +
                     '<td><input type="text" name="faqs[' + index + '][answer]" value="" /></td>' +
-                    '<td><button class="button faq-delete-button"> <?php _e('Delete', 'newaqarr');?> </button></td>' +
+                    '<td><button class="button faq-delete-button"> <?php _e('Delete', 'newaqar');?> </button></td>' +
                     '</tr>';
                 $('.form-table tbody').append(newRow);
                 return false;
@@ -255,7 +255,7 @@ add_action('save_post_projects', 'save_faq_meta_data');
 function project_gallery_meta_box() {
     add_meta_box(
         'project_gallery_meta_box',
-        __('Project Gallery', 'newaqarr'),
+        __('Project Gallery', 'newaqar'),
         'project_gallery_meta_box_callback',
         'projects',
         'normal',
@@ -268,9 +268,9 @@ function project_gallery_meta_box_callback($post) {
     $gallery_images = get_post_meta($post->ID, 'project_gallery', true);
     ?>
     <p>
-        <label for="project_gallery"><?php _e('Project Gallery:', 'newaqarr'); ?></label>
+        <label for="project_gallery"><?php _e('Project Gallery:', 'newaqar'); ?></label>
         <input type="text" id="project_gallery" name="project_gallery" value="<?php echo esc_attr($gallery_images); ?>" size="50">
-        <input type="button" id="upload_project_gallery_button" class="button" value="<?php _e('Upload Gallery', 'newaqarr'); ?>">
+        <input type="button" id="upload_project_gallery_button" class="button" value="<?php _e('Upload Gallery', 'newaqar'); ?>">
     </p>
     <div id="project_gallery_preview"></div>
 
@@ -327,33 +327,33 @@ add_action('save_post', 'save_project_gallery');
 
 
 
-function newaqarr_manage_projects_columns($columns) {
+function newaqar_manage_projects_columns($columns) {
     $columns['project_price'] = 'سعر المتر فى المشروع';
     return $columns;
 }
-function newaqarr_manage_projects_column_content($column_name, $post_ID) {
+function newaqar_manage_projects_column_content($column_name, $post_ID) {
     if ($column_name == 'project_price') {
         $project_details = get_post_meta($post_ID, 'project_details', true);
         $project_price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
 
-        echo '<input type="number" name="project_details[project_price]" value="' . esc_attr($project_price) . '" placeholder="' . esc_attr__('Enter project Meter price', 'newaqarr') . '" step="1">';
+        echo '<input type="number" name="project_details[project_price]" value="' . esc_attr($project_price) . '" placeholder="' . esc_attr__('Enter project Meter price', 'newaqar') . '" step="1">';
 
-        echo ' <button type="submit" class="button button-primary" name="save_project_button">' . esc_html__('Save', 'newaqarr') . '</button>';
+        echo ' <button type="submit" class="button button-primary" name="save_project_button">' . esc_html__('Save', 'newaqar') . '</button>';
     }
 }
 
-function newaqarr_manage_projects_columns_sortable($columns) {
+function newaqar_manage_projects_columns_sortable($columns) {
     $columns['project_price'] = 'project_price';
     return $columns;
 }
 
-add_filter('manage_projects_posts_columns', 'newaqarr_manage_projects_columns');
-add_action('manage_projects_posts_custom_column', 'newaqarr_manage_projects_column_content', 10, 2);
-add_filter('manage_edit-projects_sortable_columns', 'newaqarr_manage_projects_columns_sortable');
+add_filter('manage_projects_posts_columns', 'newaqar_manage_projects_columns');
+add_action('manage_projects_posts_custom_column', 'newaqar_manage_projects_column_content', 10, 2);
+add_filter('manage_edit-projects_sortable_columns', 'newaqar_manage_projects_columns_sortable');
 
-add_action('wp_ajax_save_project_price', 'newaqarr_save_project_price');
+add_action('wp_ajax_save_project_price', 'newaqar_save_project_price');
 
-function newaqarr_save_project_price() {
+function newaqar_save_project_price() {
     $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
     $project_price = isset($_POST['project_price']) ? sanitize_text_field($_POST['project_price']) : '';
 

@@ -36,12 +36,12 @@ function save_project_meta_data($post_id) {
 add_action('save_post', 'save_project_meta_data');
 /* for fast theme
 function custom_units_columns($columns) {
-    $columns['project_association'] = esc_html__('Project Association', 'newaqarr');
+    $columns['project_association'] = esc_html__('Project Association', 'newaqar');
     return $columns;
 }
 add_filter('manage_units_posts_columns', 'custom_units_columns');
 function units_custom_columns($columns) {
-    $columns['project_association'] = __('Project Association', 'newaqarr');
+    $columns['project_association'] = __('Project Association', 'newaqar');
     return $columns;
 }
 add_filter('manage_units_posts_columns', 'units_custom_columns');
@@ -52,7 +52,7 @@ function custom_units_column_data($column, $post_id) {
         $selected_project = ($project_id) ? $project_id : '';
 
         echo '<select data-post-id="' . esc_attr($post_id) . '" class="project-association-select">';
-        echo '<option value="">' . esc_html__('Select Project', 'newaqarr') . '</option>';
+        echo '<option value="">' . esc_html__('Select Project', 'newaqar') . '</option>';
         foreach ($projects as $project) {
             echo '<option value="' . esc_attr($project->ID) . '" ' . selected($selected_project, $project->ID, false) . '>' . esc_html($project->post_title) . '</option>';
         }
@@ -61,7 +61,7 @@ function custom_units_column_data($column, $post_id) {
         if ($project_id) {
             $edit_link = get_edit_post_link($project_id);
             if ($edit_link) {
-                echo '<br/><a href="' . esc_url($edit_link) . '">' . __('Edit Project', 'newaqarr') . '</a>';
+                echo '<br/><a href="' . esc_url($edit_link) . '">' . __('Edit Project', 'newaqar') . '</a>';
             }
         }
     }
@@ -71,7 +71,7 @@ add_action('manage_units_posts_custom_column', 'custom_units_column_data', 10, 2
 function add_project_meta_box() {
     add_meta_box(
         'project_meta_box',
-        __('Project Information', 'newaqarr'),
+        __('Project Information', 'newaqar'),
         'project_meta_box_callback',
         'units',
         'normal',
@@ -85,9 +85,9 @@ function project_meta_box_callback($post) {
 
     $project_options = get_project_options();
 
-    echo '<label for="unit_project_id">' . __('Select Project:', 'newaqarr') . '</label>';
+    echo '<label for="unit_project_id">' . __('Select Project:', 'newaqar') . '</label>';
     echo '<select name="unit_project_id" id="unit_project_id" class="project-association-select">';
-    echo '<option value="">' . esc_html__('Select Project', 'newaqarr') . '</option>';
+    echo '<option value="">' . esc_html__('Select Project', 'newaqar') . '</option>';
 
     foreach ($project_options as $option) {
         echo '<option value="' . esc_attr($option['id']) . '" ' . selected($option['id'], $project_id, false) . '>' . esc_html($option['text']) . '</option>';
@@ -188,18 +188,18 @@ add_action('save_post', 'update_unit_type_from_project');
 
 function register_units_post_type() {
     $labels = array(
-        'name'               => __('Units', 'newaqarr'),
-        'singular_name'      => __('Unit', 'newaqarr'),
-        'add_new'            => __('Add New Unit', 'newaqarr'),
-        'add_new_item'       => __('Add New Unit', 'newaqarr'),
-        'edit_item'          => __('Edit Unit', 'newaqarr'),
-        'new_item'           => __('New Unit', 'newaqarr'),
-        'all_items'          => __('All Units', 'newaqarr'),
-        'view_item'          => __('View Unit', 'newaqarr'),
-        'search_items'       => __('Search for Unit', 'newaqarr'),
-        'not_found'          => __('No unit found', 'newaqarr'),
-        'not_found_in_trash' => __('No unit found in trash', 'newaqarr'),
-        'menu_name'          => __('Units', 'newaqarr'),
+        'name'               => __('Units', 'newaqar'),
+        'singular_name'      => __('Unit', 'newaqar'),
+        'add_new'            => __('Add New Unit', 'newaqar'),
+        'add_new_item'       => __('Add New Unit', 'newaqar'),
+        'edit_item'          => __('Edit Unit', 'newaqar'),
+        'new_item'           => __('New Unit', 'newaqar'),
+        'all_items'          => __('All Units', 'newaqar'),
+        'view_item'          => __('View Unit', 'newaqar'),
+        'search_items'       => __('Search for Unit', 'newaqar'),
+        'not_found'          => __('No unit found', 'newaqar'),
+        'not_found_in_trash' => __('No unit found in trash', 'newaqar'),
+        'menu_name'          => __('Units', 'newaqar'),
     );
 
     $args = array(
@@ -216,7 +216,7 @@ function register_units_post_type() {
     register_post_type('units', $args);
 }
 add_action('init', 'register_units_post_type');
-function newaqarr_unit_permalink($permalink, $post_id) {
+function newaqar_unit_permalink($permalink, $post_id) {
     if (get_post_type($post_id) === 'units') {
         $project_id = get_post_meta($post_id, 'project_association', true);
         $project_slug = get_post_field('post_name', $project_id);
@@ -224,35 +224,35 @@ function newaqarr_unit_permalink($permalink, $post_id) {
     }
     return $permalink;
 }
-add_filter('post_type_link', 'newaqarr_unit_permalink', 10, 2);
+add_filter('post_type_link', 'newaqar_unit_permalink', 10, 2);
 
-function newaqarr_manage_units_columns($columns) {
+function newaqar_manage_units_columns($columns) {
     $columns['unit_space'] = 'مساحة الوحدة';
     return $columns;
 }
-function newaqarr_manage_units_column_content($column_name, $post_ID) {
+function newaqar_manage_units_column_content($column_name, $post_ID) {
     if ($column_name == 'unit_space') {
         $unit_details = get_post_meta($post_ID, 'unit_details', true);
         $unit_space = isset($unit_details['unit_space']) ? esc_attr($unit_details['unit_space']) : '';
 
-        echo '<input type="number" name="unit_details[unit_space]" value="' . esc_attr($unit_space) . '" placeholder="' . esc_attr__('Enter unit Space', 'newaqarr') . '" step="1">';
+        echo '<input type="number" name="unit_details[unit_space]" value="' . esc_attr($unit_space) . '" placeholder="' . esc_attr__('Enter unit Space', 'newaqar') . '" step="1">';
 
-        echo ' <button type="submit" class="button button-primary" name="save_unit_button">' . esc_html__('Save', 'newaqarr') . '</button>';
+        echo ' <button type="submit" class="button button-primary" name="save_unit_button">' . esc_html__('Save', 'newaqar') . '</button>';
     }
 }
 
-function newaqarr_manage_units_columns_sortable($columns) {
+function newaqar_manage_units_columns_sortable($columns) {
     $columns['unit_space'] = 'unit_space';
     return $columns;
 }
 
-add_filter('manage_units_posts_columns', 'newaqarr_manage_units_columns');
-add_action('manage_units_posts_custom_column', 'newaqarr_manage_units_column_content', 10, 2);
-add_filter('manage_edit-units_sortable_columns', 'newaqarr_manage_units_columns_sortable');
+add_filter('manage_units_posts_columns', 'newaqar_manage_units_columns');
+add_action('manage_units_posts_custom_column', 'newaqar_manage_units_column_content', 10, 2);
+add_filter('manage_edit-units_sortable_columns', 'newaqar_manage_units_columns_sortable');
 
-add_action('wp_ajax_save_unit_space', 'newaqarr_save_unit_space');
+add_action('wp_ajax_save_unit_space', 'newaqar_save_unit_space');
 
-function newaqarr_save_unit_space() {
+function newaqar_save_unit_space() {
     $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;
     $unit_space = isset($_POST['unit_space']) ? sanitize_text_field($_POST['unit_space']) : '';
 
@@ -264,13 +264,13 @@ function newaqarr_save_unit_space() {
     }
 }
 
-function newaqarr_add_unit_details_meta_boxes() {
-    add_meta_box('unit_details_metabox', 'Unit Details', 'newaqarr_render_unit_details_metabox', 'units', 'normal', 'high');
+function newaqar_add_unit_details_meta_boxes() {
+    add_meta_box('unit_details_metabox', 'Unit Details', 'newaqar_render_unit_details_metabox', 'units', 'normal', 'high');
 }
 
-add_action('add_meta_boxes', 'newaqarr_add_unit_details_meta_boxes');
+add_action('add_meta_boxes', 'newaqar_add_unit_details_meta_boxes');
 
-function newaqarr_render_unit_details_metabox($post) {
+function newaqar_render_unit_details_metabox($post) {
     wp_nonce_field('save_unit_meta_data', 'unit_meta_box_nonce');
     $unit_details = get_post_meta($post->ID, 'unit_details', true);
     $unit_project = get_post_meta($post->ID, '_unit_project_id', true);
@@ -298,37 +298,37 @@ function newaqarr_render_unit_details_metabox($post) {
     <table class="form-table">
         <tr>
             <th scope="row">
-                <label for="unit_details[unit_space]"><?php _e('Unit Space:', 'newaqarr'); ?></label>
+                <label for="unit_details[unit_space]"><?php _e('Unit Space:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="number" name="unit_details[unit_space]" value="<?php echo esc_attr($unit_space); ?>" placeholder="<?php esc_attr_e('Enter the unit space', 'newaqarr'); ?>" step="any">
+                <input type="number" name="unit_details[unit_space]" value="<?php echo esc_attr($unit_space); ?>" placeholder="<?php esc_attr_e('Enter the unit space', 'newaqar'); ?>" step="any">
             </td>
         </tr>
         <tr>
             <th scope="row">
-                <label for="unit_details[unit_price]"><?php _e('Unit Price:', 'newaqarr'); ?></label>
+                <label for="unit_details[unit_price]"><?php _e('Unit Price:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="number" name="unit_details[unit_price]" value="<?php echo esc_attr($unit_price); ?>" placeholder="<?php esc_attr_e('Enter the unit price', 'newaqarr'); ?>" step="any">
+                <input type="number" name="unit_details[unit_price]" value="<?php echo esc_attr($unit_price); ?>" placeholder="<?php esc_attr_e('Enter the unit price', 'newaqar'); ?>" step="any">
             </td>
         </tr>
 
         <tr>
             <th scope="row">
-                <label for="unit_details[payment_systems]"><?php _e('Payment Systems:', 'newaqarr'); ?></label>
+                <label for="unit_details[payment_systems]"><?php _e('Payment Systems:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="text" name="unit_details[payment_systems]" value="<?php echo esc_attr($payment_systems); ?>" placeholder="<?php esc_attr_e('Enter payment systems', 'newaqarr'); ?>">
-                <input type="number" name="unit_details[down_payment]" value="<?php echo esc_attr($down_payment); ?>" placeholder="<?php esc_attr_e('Enter down payment', 'newaqarr'); ?>" step="any">
-                <input type="number" name="unit_details[installment]" value="<?php echo esc_attr($installment); ?>" placeholder="<?php esc_attr_e('Enter unit installment', 'newaqarr'); ?>" step="any">
-                <input type="number" name="unit_details[delivery]" value="<?php echo esc_attr($delivery); ?>" placeholder="<?php esc_attr_e('Enter unit delivery', 'newaqarr'); ?>" step="any">
+                <input type="text" name="unit_details[payment_systems]" value="<?php echo esc_attr($payment_systems); ?>" placeholder="<?php esc_attr_e('Enter payment systems', 'newaqar'); ?>">
+                <input type="number" name="unit_details[down_payment]" value="<?php echo esc_attr($down_payment); ?>" placeholder="<?php esc_attr_e('Enter down payment', 'newaqar'); ?>" step="any">
+                <input type="number" name="unit_details[installment]" value="<?php echo esc_attr($installment); ?>" placeholder="<?php esc_attr_e('Enter unit installment', 'newaqar'); ?>" step="any">
+                <input type="number" name="unit_details[delivery]" value="<?php echo esc_attr($delivery); ?>" placeholder="<?php esc_attr_e('Enter unit delivery', 'newaqar'); ?>" step="any">
             </td>
         </tr>
     </table>
     <?php
 }
 
-function newaqarr_save_unit_meta($post_id) {
+function newaqar_save_unit_meta($post_id) {
     if (!isset($_POST['unit_meta_box_nonce']) || !wp_verify_nonce($_POST['unit_meta_box_nonce'], 'save_unit_meta_data')) {
         error_log('Nonce verification failed.');
         return;
@@ -363,5 +363,5 @@ function newaqarr_save_unit_meta($post_id) {
     }
 }
 
-add_action('save_post', 'newaqarr_save_unit_meta');
+add_action('save_post', 'newaqar_save_unit_meta');
 

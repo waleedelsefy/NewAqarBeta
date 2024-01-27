@@ -106,11 +106,11 @@ function disable_block_editor() {
     if ('post.php' != $GLOBALS['pagenow'] || !current_user_can('edit_posts')) {
         return;
     }
-    $theme_settings = get_option('newaqarr_theme_settings');
+    $theme_settings = get_option('newaqar_theme_settings');
     if (false === $theme_settings) {
         $default_settings = array();
-        update_option('newaqarr_theme_settings', $default_settings);
-        $theme_settings = get_option('newaqarr_theme_settings');
+        update_option('newaqar_theme_settings', $default_settings);
+        $theme_settings = get_option('newaqar_theme_settings');
     }
     $allowed_domains = array('example.com', 'anotheralloweddomain.com');
     remove_action('admin_init', 'wp_enqueue_editor');

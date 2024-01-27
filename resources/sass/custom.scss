@@ -6,10 +6,10 @@
   --call-to-action-font-color: black;
   --call-to-action-font-weight:600;
   --primary-color-disabled: #fff;
-  --primary-background-color: #f1f1f1;
-  --primary-color-collapse: #00a77f;
+  --primary-background-color: rgba(252, 252, 253, 0.75);
+  --primary-color-collapse:#000080;
   --primary-have-color-collapse: #37424FFF;
-  --primary-link-color: #8cc2c8;
+  --primary-link-color: #000080;
   --primary-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --primary-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
@@ -862,7 +862,6 @@ body , html {
 
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
-
     .content-col {
       display: flex;
       flex-direction: column;
@@ -963,7 +962,7 @@ body , html {
       .cil {
         color: #000;
         display: flex;
-        background: #00a77f00;
+        background:#00008000;
         text-decoration: none;
         position: relative;
         height: 40px;
@@ -990,6 +989,9 @@ body , html {
       .dd-input-text {
         width: 100% !important;
         min-width: 300px !important;
+      }
+      .sf-field-search {
+        width: 460px;
       }
     }
 

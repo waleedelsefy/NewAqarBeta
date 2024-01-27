@@ -4,8 +4,8 @@
             <div class="col-lg-12 col-md-12">
                 <div class="sec-heading center">
                     <?php
-                    echo '<h2>' . esc_html__('Top cities', 'newaqarr') . '</h2>';
-                    echo  '<p>' . esc_html__('All projects in the most famous cities inside Egypt', 'newaqarr') . '</p>';
+                    echo '<h2>' . esc_html__('Top cities', 'newaqar') . '</h2>';
+                    echo  '<p>' . esc_html__('All projects in the most famous cities inside Egypt', 'newaqar') . '</p>';
                     ?>
 
                 </div>

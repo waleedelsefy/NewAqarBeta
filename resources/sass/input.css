@@ -15434,7 +15434,7 @@ a.to-the-top > * {
 
 .header-container .site-logo {
   display: block;
-  background: url(https://newaqarr.com/wp-content/uploads/2021/01/Logo.png);
+  background: url(https://newaqar.com/wp-content/uploads/2021/01/Logo.png);
   background-repeat: no-repeat;
   transition: all ease 0.3s;
   height: 40px;
@@ -15556,7 +15556,7 @@ header nav {
 
 @media screen and (max-width: 650px) {
   .slider-area {
-    background: url(https://www.newaqarr.com/wp-content/uploads/2022/05/background.jpg);
+    background: url(https://www.newaqar.com/wp-content/uploads/2022/05/background.jpg);
   }
 }
 .searchandfilter li {
@@ -16500,14 +16500,7 @@ nav.rank-math-breadcrumb {
   font-weight: 600;
 }
 
-.sf-input-select .sf-field-search, .sf-field-taxonomy-city, .sf-field-taxonomy-type {
-  display: inline-flex;
-  justify-content: space-around;
-  margin: auto auto;
-  width: 32%;
-  font-size: 13px;
-  padding: 3px;
-}
+
 
 .latest-properties .col-lg-12 p {
   text-align: center;

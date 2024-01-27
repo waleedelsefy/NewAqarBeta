@@ -12,23 +12,23 @@ $settings_array = array(
     'secondary_color_2' => '#e74c3c',
 );
 
-if (false === get_option('newaqarr_theme_settings')) {
+if (false === get_option('newaqar_theme_settings')) {
     $serialized_settings = serialize($settings_array);
-    update_option('newaqarr_theme_settings', $serialized_settings);
+    update_option('newaqar_theme_settings', $serialized_settings);
 }
 function theme_options_section_callback() {
-    echo '<p>' . __('Theme options description goes here.', 'newaqarr') . '</p>';
+    echo '<p>' . __('Theme options description goes here.', 'newaqar') . '</p>';
 }
 function theme_options_page() {
     ?>
     <div class="wrap">
-        <h1><?php _e('Theme Options', 'newaqarr'); ?></h1>
+        <h1><?php _e('Theme Options', 'newaqar'); ?></h1>
         <form method="post" action="options.php">
             <?php
             settings_fields('theme_options_group');
             do_settings_sections('theme-options');
             ?>
-            <?php submit_button(__('Save Changes', 'newaqarr')); ?>
+            <?php submit_button(__('Save Changes', 'newaqar')); ?>
         </form>
     </div>
     <?php

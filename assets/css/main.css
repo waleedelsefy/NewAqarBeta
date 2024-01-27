@@ -2010,14 +2010,7 @@ body .searchandfilter li, html .searchandfilter li {
     display: block
 }
 
-body .sf-input-select .sf-field-search, html .sf-input-select .sf-field-search {
-    display: inline-flex;
-    font-size: 13px;
-    justify-content: space-around;
-    margin: auto;
-    padding: 3px;
-    width: 32%
-}
+
 
 body .w-100, html .w-100 {
     width: 100%
@@ -5394,10 +5387,6 @@ body .sec-heading, body .sec-heading h2, html .sec-heading, html .sec-heading h2
 
 body .summary th, body td, html .summary th, html td {
     padding: 13px 10px
-}
-
-body .search-filters .sf-field-search, html .search-filters .sf-field-search {
-    width: 100% !important
 }
 
 

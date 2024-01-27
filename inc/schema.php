@@ -1,5 +1,5 @@
 <?php
-function newaqarr_product_schema() {
+function newaqar_product_schema() {
     global $post;
     $unit_project = get_post_meta($post->ID, '_unit_project_id', true);
     $post_id = get_the_ID();
@@ -88,9 +88,9 @@ function newaqarr_product_schema() {
     }
 }
 
-add_action('wp_head', 'newaqarr_product_schema');
+add_action('wp_head', 'newaqar_product_schema');
 
-function newaqarr_faq_schema() {
+function newaqar_faq_schema() {
     $post_id = get_the_ID();
     $faqs = get_post_meta($post_id, '_faqs', true);
     $author_id = get_the_author_meta('ID');
@@ -143,9 +143,9 @@ function get_upvote_count($answer) {
 
     return $random_upvotes;
 }
-add_action('wp_head', 'newaqarr_faq_schema');
+add_action('wp_head', 'newaqar_faq_schema');
 
-function newaqarr_breadcrumb_schema() {
+function newaqar_breadcrumb_schema() {
     // Check if it is a category or single post
     if (is_category() || is_single()) {
         $breadcrumb_items = [];
@@ -191,4 +191,4 @@ function newaqarr_breadcrumb_schema() {
 }
 
 // Hook the function to be executed in the header
-add_action('wp_head', 'newaqarr_breadcrumb_schema');
+add_action('wp_head', 'newaqar_breadcrumb_schema');

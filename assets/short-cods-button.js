@@ -38,7 +38,7 @@
                     });
 
                     // Insert the shortcode with the entered IDs
-                    editor.insertContent('[newaqarr_post ids="' + result + '"]');
+                    editor.insertContent('[newaqar_post ids="' + result + '"]');
                 }
             }
         });

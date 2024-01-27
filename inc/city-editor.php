@@ -4,19 +4,19 @@
 function register_city_taxonomy()
 {
     $labels = array(
-        'name'                       => __('Cities', 'newaqarr'),
-        'singular_name'              => __('City', 'newaqarr'),
-        'search_items'               => __('Search for Cities', 'newaqarr'),
-        'popular_items'              => __('Popular Cities', 'newaqarr'),
-        'all_items'                  => __('All Cities', 'newaqarr'),
-        'edit_item'                  => __('Edit City', 'newaqarr'),
-        'update_item'                => __('Update City', 'newaqarr'),
-        'add_new_item'               => __('Add New City', 'newaqarr'),
-        'new_item_name'              => __('New City Name', 'newaqarr'),
-        'separate_items_with_commas' => __('Separate cities with commas', 'newaqarr'),
-        'add_or_remove_items'        => __('Add or remove cities', 'newaqarr'),
-        'choose_from_most_used'      => __('Choose from the most used cities', 'newaqarr'),
-        'menu_name'                  => __('Cities', 'newaqarr'),
+        'name'                       => __('Cities', 'newaqar'),
+        'singular_name'              => __('City', 'newaqar'),
+        'search_items'               => __('Search for Cities', 'newaqar'),
+        'popular_items'              => __('Popular Cities', 'newaqar'),
+        'all_items'                  => __('All Cities', 'newaqar'),
+        'edit_item'                  => __('Edit City', 'newaqar'),
+        'update_item'                => __('Update City', 'newaqar'),
+        'add_new_item'               => __('Add New City', 'newaqar'),
+        'new_item_name'              => __('New City Name', 'newaqar'),
+        'separate_items_with_commas' => __('Separate cities with commas', 'newaqar'),
+        'add_or_remove_items'        => __('Add or remove cities', 'newaqar'),
+        'choose_from_most_used'      => __('Choose from the most used cities', 'newaqar'),
+        'menu_name'                  => __('Cities', 'newaqar'),
         'show_in_nav_menus'          => true,
     );
 
@@ -42,11 +42,11 @@ function add_city_image_field() {
 
     ?>
     <div class="form-field">
-        <label for="city-image"><?php _e('City Image', 'newaqarr'); ?></label>
+        <label for="city-image"><?php _e('City Image', 'newaqar'); ?></label>
         <img src="<?php echo esc_url($city_image); ?>" height="150px" id="selected-city-image">
         <input type="text" name="city_image" id="city-image" class="regular-text hidden" value="">
-        <button class="button" id="upload-city-image"><?php _e('Upload Image', 'newaqarr'); ?></button>
-        <p class="description"><?php _e('Enter the URL of the city image or use the "Upload Image" button.', 'newaqarr'); ?></p>
+        <button class="button" id="upload-city-image"><?php _e('Upload Image', 'newaqar'); ?></button>
+        <p class="description"><?php _e('Enter the URL of the city image or use the "Upload Image" button.', 'newaqar'); ?></p>
     </div>
 
     <script>
@@ -65,9 +65,9 @@ function add_city_image_field() {
 
                 // Create the media frame.
                 file_frame = wp.media({
-                    title: '<?php _e('Select or Upload Image', 'newaqarr'); ?>',
+                    title: '<?php _e('Select or Upload Image', 'newaqar'); ?>',
                     button: {
-                        text: '<?php _e('Use this image', 'newaqarr'); ?>',
+                        text: '<?php _e('Use this image', 'newaqar'); ?>',
                     },
                     multiple: false,
                 });
@@ -104,16 +104,16 @@ function edit_city_image_field($term) {
     $city_image = get_term_meta($term->term_id, 'city_image', true);
     ?>
     <tr class="form-field">
-        <th scope="row" valign="top"><label for="city-image"><?php _e('City Image', 'newaqarr'); ?></label></th>
+        <th scope="row" valign="top"><label for="city-image"><?php _e('City Image', 'newaqar'); ?></label></th>
         <td>
             <div>
                 <img src="<?php echo esc_url($city_image); ?>" height="150px" style="margin-bottom: 10px; max-width: 100%;" id="preview-city-image">
             </div>
             <div>
                 <input type="text" name="city_image" id="city-image" class="regular-text hidden" value="<?php echo esc_url($city_image); ?>">
-                <button class="button" id="update-city-image"><?php _e('Upload Image', 'newaqarr'); ?></button>
+                <button class="button" id="update-city-image"><?php _e('Upload Image', 'newaqar'); ?></button>
             </div>
-            <p class="description"><?php _e('Enter the URL of the city image or use the "Upload Image" button.', 'newaqarr'); ?></p>
+            <p class="description"><?php _e('Enter the URL of the city image or use the "Upload Image" button.', 'newaqar'); ?></p>
         </td>
     </tr>
     <script>
@@ -126,9 +126,9 @@ function edit_city_image_field($term) {
                 // Create the media frame if it doesn't exist
                 if (typeof file_frame === 'undefined') {
                     file_frame = wp.media({
-                        title: '<?php _e('Select or Upload Image', 'newaqarr'); ?>',
+                        title: '<?php _e('Select or Upload Image', 'newaqar'); ?>',
                         button: {
-                            text: '<?php _e('Use this image', 'newaqarr'); ?>'
+                            text: '<?php _e('Use this image', 'newaqar'); ?>'
                         },
                         multiple: false
                     });
@@ -153,7 +153,7 @@ add_action('city_edit_form_fields', 'edit_city_image_field');
 
 // Add custom column to taxonomy term list table
 function add_city_image_column($columns) {
-    $columns['city_image'] = __('Image', 'newaqarr');
+    $columns['city_image'] = __('Image', 'newaqar');
     return $columns;
 }
 add_filter('manage_edit-city_columns', 'add_city_image_column');
@@ -175,9 +175,9 @@ add_action('init', 'register_city_taxonomy');
 
 function register_city_page_sidebar() {
     register_sidebar(array(
-        'name'          => __('City Page Sidebar', 'newaqarr'),
+        'name'          => __('City Page Sidebar', 'newaqar'),
         'id'            => 'city_page_sidebar',
-        'description'   => __('Sidebar for city pages', 'newaqarr'),
+        'description'   => __('Sidebar for city pages', 'newaqar'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widget-title">',
@@ -199,9 +199,9 @@ function add_city_qa_fields($term) {
             <table class="form-faq-city">
                 <thead>
                 <tr>
-                    <th><?php _e('ID', 'newaqarr'); ?></th>
-                    <th><?php _e('Question', 'newaqarr'); ?></th>
-                    <th><?php _e('Answer', 'newaqarr'); ?></th>
+                    <th><?php _e('ID', 'newaqar'); ?></th>
+                    <th><?php _e('Question', 'newaqar'); ?></th>
+                    <th><?php _e('Answer', 'newaqar'); ?></th>
                     <th></th>
                 </tr>
                 </thead>
@@ -212,7 +212,7 @@ function add_city_qa_fields($term) {
                             <td><input type="hidden" name="faqs[<?php echo $index; ?>][id]" value="<?php echo esc_attr($faq['id']); ?>" /><?php echo esc_html($faq['id']); ?></td>
                             <td><input type="text" name="faqs[<?php echo $index; ?>][question]" value="<?php echo esc_attr($faq['question']); ?>" /></td>
                             <td><input type="text" name="faqs[<?php echo $index; ?>][answer]" value="<?php echo esc_attr($faq['answer']); ?>" /></td>
-                            <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr'); ?></button></td>
+                            <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else : ?>
@@ -220,12 +220,12 @@ function add_city_qa_fields($term) {
                         <td><input type="hidden" name="faqs[0][id]" value="1" />1</td>
                         <td><input type="text" name="faqs[0][question]" value="" /></td>
                         <td><input type="text" name="faqs[0][answer]" value="" /></td>
-                        <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr'); ?></button></td>
+                        <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>
                     </tr>
                 <?php endif; ?>
                 </tbody>
             </table>
-            <button class="button" id="add-faq-row"><?php _e('Add New Question', 'newaqarr'); ?></button>
+            <button class="button" id="add-faq-row"><?php _e('Add New Question', 'newaqar'); ?></button>
         </div>
 
         <script>
@@ -242,7 +242,7 @@ function add_city_qa_fields($term) {
                         '<td><input type="hidden" name="faqs[' + index + '][id]" value="' + index + '" />' + index + '</td>' +
                         '<td><input type="text" name="faqs[' + index + '][question]" value="" /></td>' +
                         '<td><input type="text" name="faqs[' + index + '][answer]" value="" /></td>' +
-                        '<td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr'); ?></button></td>' +
+                        '<td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>' +
                         '</tr>';
 
                     $('.form-faq-city tbody').append(newRow);

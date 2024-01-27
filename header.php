@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <?php
 wp_head();
-$theme_settings = get_option('newaqarr_theme_settings');
+$theme_settings = get_option('newaqar_theme_settings');
 
 if (is_array($theme_settings)) {
     $logo_url = esc_attr($theme_settings['site_logo']);
@@ -16,7 +16,7 @@ if (is_array($theme_settings)) {
     $logo_url = '';
     $phone_number = '';
     $primary_color = '';
-    error_log("newaqarr_theme_settings is not an array");
+    error_log("newaqar_theme_settings is not an array");
 }
 ?>
 <body <?php body_class(); ?>>

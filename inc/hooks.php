@@ -32,15 +32,15 @@ add_filter('the_content', 'center_image_in_content');
 
 function register_payment_systems_taxonomy() {
     $labels_installment = array(
-        'name'              => __('Payment Systems', 'newaqarr'),
-        'singular_name'     => __('payment system', 'newaqarr'),
-        'search_items'      => __('Search Payment Systems', 'newaqarr'),
-        'all_items'         => __('All Payment Systems', 'newaqarr'),
-        'edit_item'         => __('Edit Payment System', 'newaqarr'),
-        'update_item'       => __('Update Payment System', 'newaqarr'),
-        'add_new_item'      => __('Add New Payment System', 'newaqarr'),
-        'new_item_name'     => __('New Payment System Name', 'newaqarr'),
-        'menu_name'         => __('Payment Systems', 'newaqarr'),
+        'name'              => __('Payment Systems', 'newaqar'),
+        'singular_name'     => __('payment system', 'newaqar'),
+        'search_items'      => __('Search Payment Systems', 'newaqar'),
+        'all_items'         => __('All Payment Systems', 'newaqar'),
+        'edit_item'         => __('Edit Payment System', 'newaqar'),
+        'update_item'       => __('Update Payment System', 'newaqar'),
+        'add_new_item'      => __('Add New Payment System', 'newaqar'),
+        'new_item_name'     => __('New Payment System Name', 'newaqar'),
+        'menu_name'         => __('Payment Systems', 'newaqar'),
     );
 
     $args_installment = array(

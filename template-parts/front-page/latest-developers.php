@@ -7,8 +7,8 @@
             <div class="col-md-12">
                 <div class="sec-heading center">
                     <?php
-                    echo '<h2>' . esc_html__('Developers', 'newaqarr') . '</h2>';
-                    echo '<p>' . esc_html__('All trusted real estate developers', 'newaqarr') . '</p>';
+                    echo '<h2>' . esc_html__('Developers', 'newaqar') . '</h2>';
+                    echo '<p>' . esc_html__('All trusted real estate developers', 'newaqar') . '</p>';
                     ?>
                 </div>
             </div>

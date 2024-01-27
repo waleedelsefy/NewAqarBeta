@@ -20,7 +20,7 @@ get_header();
 
                                 $archive_title = sprintf(
                                     '%1$s %2$s',
-                                    '<span class="color-accent">' . __( 'Search:', 'newaqarr' ) . '</span>',
+                                    '<span class="color-accent">' . __( 'Search:', 'newaqar' ) . '</span>',
                                     get_search_query()
                                 );
 
@@ -31,12 +31,12 @@ get_header();
                                             'We found %s result for your search.',
                                             'We found %s results for your search.',
                                             $wp_query->found_posts,
-                                            'newaqarr'
+                                            'newaqar'
                                         ),
                                         number_format_i18n( $wp_query->found_posts )
                                     );
                                 } else {
-                                    $archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'newaqarr' );
+                                    $archive_subtitle = __( 'We could not find any results for your search. You can give it another try through the search form below.', 'newaqar' );
                                 }
                             } elseif ( ! is_home() ) {
                                 $archive_title    = get_the_archive_title();
@@ -84,7 +84,7 @@ get_header();
                                     <?php
                                     get_search_form(
                                         array(
-                                            'label' => __( 'search again', 'newaqarr' ),
+                                            'label' => __( 'search again', 'newaqar' ),
                                         )
                                     );
                                     ?>
@@ -104,7 +104,7 @@ get_header();
 								text-align: center;
 								color: #fff;
 							"><p style="margin: 1rem;font-size: 25px;">
-                            <?php echo __('Call Us', 'newaqarr'); ?></p></div>
+                            <?php echo __('Call Us', 'newaqar'); ?></p></div>
                     <?php echo do_shortcode('[fluentform id="3"]'); ?>
                 </div>
 

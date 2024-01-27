@@ -7,7 +7,7 @@ require_once get_template_directory() . '/admin/int/theme_contacts_section.php';
 require_once get_template_directory() . '/admin/int/theme_footer_section.php';
 
 function add_theme_options_page() {
-    add_menu_page(__('Theme Options', 'newaqarr'), __('Theme Options', 'newaqarr'), 'manage_options', 'theme_options', 'theme_options_page');
+    add_menu_page(__('Theme Options', 'newaqar'), __('Theme Options', 'newaqar'), 'manage_options', 'theme_options', 'theme_options_page');
 }
 
 add_action('admin_menu', 'add_theme_options_page');

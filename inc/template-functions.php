@@ -16,7 +16,7 @@ defined('ABSPATH') || exit;
  *
  * @return array
  */
-function newaqarr_single_template($single_template) {
+function newaqar_single_template($single_template) {
     global $post;
 
     $custom_post_types = array('projects', 'units');
@@ -27,4 +27,4 @@ function newaqarr_single_template($single_template) {
 
     return $single_template;
 }
-add_filter('single_template', 'newaqarr_single_template');
+add_filter('single_template', 'newaqar_single_template');

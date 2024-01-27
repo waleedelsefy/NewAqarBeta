@@ -2,19 +2,19 @@
 // Register Developer Taxonomy
 function register_developer_taxonomy() {
     $labels = array(
-        'name'                       => __('Developers', 'newaqarr'),
-        'singular_name'              => __('Developer', 'newaqarr'),
-        'search_items'               => __('Search for Developer', 'newaqarr'),
-        'popular_items'              => __('Popular Developers', 'newaqarr'),
-        'all_items'                  => __('All Developers', 'newaqarr'),
-        'edit_item'                  => __('Edit Developer', 'newaqarr'),
-        'update_item'                => __('Update Developer', 'newaqarr'),
-        'add_new_item'               => __('Add New Developer', 'newaqarr'),
-        'new_item_name'              => __('New Developer Name', 'newaqarr'),
-        'separate_items_with_commas' => __('Separate developers with commas', 'newaqarr'),
-        'add_or_remove_items'        => __('Add or remove developers', 'newaqarr'),
-        'choose_from_most_used'      => __('Choose from the most used developers', 'newaqarr'),
-        'menu_name'                  => __('Developers', 'newaqarr'),
+        'name'                       => __('Developers', 'newaqar'),
+        'singular_name'              => __('Developer', 'newaqar'),
+        'search_items'               => __('Search for Developer', 'newaqar'),
+        'popular_items'              => __('Popular Developers', 'newaqar'),
+        'all_items'                  => __('All Developers', 'newaqar'),
+        'edit_item'                  => __('Edit Developer', 'newaqar'),
+        'update_item'                => __('Update Developer', 'newaqar'),
+        'add_new_item'               => __('Add New Developer', 'newaqar'),
+        'new_item_name'              => __('New Developer Name', 'newaqar'),
+        'separate_items_with_commas' => __('Separate developers with commas', 'newaqar'),
+        'add_or_remove_items'        => __('Add or remove developers', 'newaqar'),
+        'choose_from_most_used'      => __('Choose from the most used developers', 'newaqar'),
+        'menu_name'                  => __('Developers', 'newaqar'),
     );
 
     $args = array(
@@ -37,11 +37,11 @@ add_action('init', 'register_developer_taxonomy');
 function add_developer_image_field() {
     $developer_image = '';     ?>
     <div class="form-field">
-        <label for="developer-image"><?php _e('Developer Image', 'newaqarr'); ?></label>
+        <label for="developer-image"><?php _e('Developer Image', 'newaqar'); ?></label>
         <img src="<?php echo esc_url($developer_image); ?>" height="150px" id="selected-developer-image">
         <input type="text" name="developer_image" id="developer-image" class="regular-text hidden" value="">
-        <button class="button" id="upload-developer-image"><?php _e('Upload Image', 'newaqarr'); ?></button>
-        <p class="description"><?php _e('Enter the URL of the developer image or use the "Upload Image" button.', 'newaqarr'); ?></p>
+        <button class="button" id="upload-developer-image"><?php _e('Upload Image', 'newaqar'); ?></button>
+        <p class="description"><?php _e('Enter the URL of the developer image or use the "Upload Image" button.', 'newaqar'); ?></p>
     </div>
 
     <script>
@@ -60,9 +60,9 @@ function add_developer_image_field() {
 
                 // Create the media frame.
                 file_frame = wp.media({
-                    title: '<?php _e('Select or Upload Image', 'newaqarr'); ?>',
+                    title: '<?php _e('Select or Upload Image', 'newaqar'); ?>',
                     button: {
-                        text: '<?php _e('Use this image', 'newaqarr'); ?>',
+                        text: '<?php _e('Use this image', 'newaqar'); ?>',
                     },
                     multiple: false,
                 });
@@ -98,16 +98,16 @@ add_action('edited_developer', 'save_developer_image_field');
 function edit_developer_image_field($term) {
     $developer_image = get_term_meta($term->term_id, 'developer_image', true);    ?>
     <tr class="form-field">
-        <th scope="row" valign="top"><label for="developer-image"><?php _e('developer Image', 'newaqarr'); ?></label></th>
+        <th scope="row" valign="top"><label for="developer-image"><?php _e('developer Image', 'newaqar'); ?></label></th>
         <td>
             <div>
                 <img src="<?php echo esc_url($developer_image); ?>" height="150px" style="margin-bottom: 10px; max-width: 100%;" id="preview-developer-image">
             </div>
             <div>
                 <input type="text" name="developer_image" id="developer-image" class="regular-text hidden" value="<?php echo esc_url($developer_image); ?>">
-                <button class="button" id="update-developer-image"><?php _e('Upload Image', 'newaqarr'); ?></button>
+                <button class="button" id="update-developer-image"><?php _e('Upload Image', 'newaqar'); ?></button>
             </div>
-            <p class="description"><?php _e('Enter the URL of the developer image or use the "Upload Image" button.', 'newaqarr'); ?></p>
+            <p class="description"><?php _e('Enter the URL of the developer image or use the "Upload Image" button.', 'newaqar'); ?></p>
         </td>
     </tr>
     <script>
@@ -120,9 +120,9 @@ function edit_developer_image_field($term) {
                 // Create the media frame if it doesn't exist
                 if (typeof file_frame === 'undefined') {
                     file_frame = wp.media({
-                        title: '<?php _e('Select or Upload Image', 'newaqarr'); ?>',
+                        title: '<?php _e('Select or Upload Image', 'newaqar'); ?>',
                         button: {
-                            text: '<?php _e('Use this image', 'newaqarr'); ?>'
+                            text: '<?php _e('Use this image', 'newaqar'); ?>'
                         },
                         multiple: false
                     });
@@ -146,7 +146,7 @@ function edit_developer_image_field($term) {
 add_action('developer_edit_form_fields', 'edit_developer_image_field');
 
 function add_developer_image_column($columns) {
-    $columns['developer_image'] = __('Image', 'newaqarr');
+    $columns['developer_image'] = __('Image', 'newaqar');
     return $columns;
 }
 add_filter('manage_edit-developer_columns', 'add_developer_image_column');
@@ -176,9 +176,9 @@ function add_developer_qa_fields($term) {
             <table class="form-faq-developer">
                 <thead>
                 <tr>
-                    <th><?php _e('ID', 'newaqarr'); ?></th>
-                    <th><?php _e('Question', 'newaqarr'); ?></th>
-                    <th><?php _e('Answer', 'newaqarr'); ?></th>
+                    <th><?php _e('ID', 'newaqar'); ?></th>
+                    <th><?php _e('Question', 'newaqar'); ?></th>
+                    <th><?php _e('Answer', 'newaqar'); ?></th>
                     <th></th>
                 </tr>
                 </thead>
@@ -189,7 +189,7 @@ function add_developer_qa_fields($term) {
                             <td><input type="hidden" name="faqs[<?php echo $index; ?>][id]" value="<?php echo esc_attr($faq['id']); ?>" /><?php echo esc_html($faq['id']); ?></td>
                             <td><input type="text" name="faqs[<?php echo $index; ?>][question]" value="<?php echo esc_attr($faq['question']); ?>" /></td>
                             <td><input type="text" name="faqs[<?php echo $index; ?>][answer]" value="<?php echo esc_attr($faq['answer']); ?>" /></td>
-                            <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr'); ?></button></td>
+                            <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else : ?>
@@ -197,12 +197,12 @@ function add_developer_qa_fields($term) {
                         <td><input type="hidden" name="faqs[0][id]" value="1" />1</td>
                         <td><input type="text" name="faqs[0][question]" value="" /></td>
                         <td><input type="text" name="faqs[0][answer]" value="" /></td>
-                        <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr'); ?></button></td>
+                        <td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>
                     </tr>
                 <?php endif; ?>
                 </tbody>
             </table>
-            <button class="button" id="add-faq-row"><?php _e('Add New Question', 'newaqarr'); ?></button>
+            <button class="button" id="add-faq-row"><?php _e('Add New Question', 'newaqar'); ?></button>
         </div>
 
         <script>
@@ -219,7 +219,7 @@ function add_developer_qa_fields($term) {
                         '<td><input type="hidden" name="faqs[' + index + '][id]" value="' + index + '" />' + index + '</td>' +
                         '<td><input type="text" name="faqs[' + index + '][question]" value="" /></td>' +
                         '<td><input type="text" name="faqs[' + index + '][answer]" value="" /></td>' +
-                        '<td><button class="button faq-delete-button"><?php _e('Delete', 'newaqarr'); ?></button></td>' +
+                        '<td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>' +
                         '</tr>';
 
                     $('.form-faq-developer tbody').append(newRow);
