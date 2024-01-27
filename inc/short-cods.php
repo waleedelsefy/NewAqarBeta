@@ -66,7 +66,7 @@ function newaqar_cta_shortcode()
         }
 
         .main-cta a {
-            color: #25D366 !important;
+            color: #00a77f !important;
             transition: .3s all ease;
         }
             .main-cta a,
@@ -102,7 +102,7 @@ function newaqar_cta_shortcode()
             }
 
             .main-cta a.cta-wts {
-                background: #25D366 !important;
+                background: #00a77f !important;
                 border: 0;
                 color: #FFF !important;
             }
@@ -121,7 +121,7 @@ function newaqar_cta_shortcode()
         <a href="https://wa.me/2<?php echo $whatsapp_number;?>?text=اريد برشور <?php the_title(); ?> قادم من <?php the_permalink(); ?> aria-label="zoom-meeting" class="cta-mail meeting-cta">
 
             <span class="d-flex gap-2">
-               <span class="call-to-action-page"><?php echo esc_html(__('البرشور', 'newaqar')); ?></span>
+               <span class="call-to-action-page"><?php echo esc_html(__('Brochure', 'newaqar')); ?></span>
   <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="#ffffff" width="20" viewBox="0 0 576 512"><path d="M542.2 32.1c-54.8 3.1-163.7 14.4-231 55.6-4.6 2.8-7.3 7.9-7.3 13.2v363.9c0 11.6 12.6 18.9 23.3 13.5 69.2-34.8 169.2-44.3 218.7-46.9 16.9-.9 30-14.4 30-30.7V62.8c0-17.7-15.4-31.7-33.8-30.7zM264.7 87.6C197.5 46.5 88.6 35.2 33.8 32.1 15.4 31 0 45 0 62.8V400.6c0 16.2 13.1 29.8 30 30.7 49.5 2.6 149.6 12.1 218.8 47 10.6 5.4 23.2-1.9 23.2-13.5V100.6c0-5.3-2.6-10.1-7.3-13z"/></svg>            </span>
         </a>
         <a href="tel:+2<?php echo $phone_number; ?>" aria-label="call" class="cta-phone">

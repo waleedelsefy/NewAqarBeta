@@ -57,21 +57,7 @@ html body {
   text-align: end
 }
 body , html {
-  .slider-area {
-    background: var(--ar_front_page_hero_background);
-    background-position: -246px 0 !important;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    background-size: contain !important;
-    min-height: 204px;
-    padding-top: 100px;
-  }
-    .hero-title {
-      font-size: 3.4rem !important;
-    }
+
 
   .post-thumbnail {
     display: flex;
@@ -697,6 +683,22 @@ body , html {
   /***** Only Mobile ****/
   @media screen and (min-width: 100px) and (max-width: 769px) {
 
+    .slider-area {
+      background: var(--ar_front_page_hero_background);
+      background-position: -246px 0 !important;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background-size: cover !important;
+      min-height: 204px;
+      padding-top: 100px;
+    }
+    .hero-title {
+      font-size: 3.4rem !important;
+    }
+
     /*start header*/
     .header {
       display: flex;
@@ -735,8 +737,8 @@ body , html {
     }
 
     #site-link {
-      height: 46px;
-      right: 19px;
+      height: 70px;
+      margin-inline-start: 19px;
       transition: all .3s ease;
       width: 155px;
       z-index: 10;
@@ -850,9 +852,7 @@ body , html {
       margin: 0;
     }
     .hero {
-      margin-bottom:30px;
-      margin-top:20px;
-      .hero-title {
+           .hero-title {
         margin-bottom: 50px;
         font-size: var(--h1-hero-font-size);
       }
@@ -862,6 +862,21 @@ body , html {
 
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
+    .slider-area {
+      background: var(--ar_front_page_hero_background);
+      background-position: -246px 0 !important;
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      background-size: contain !important;
+      min-height: 204px;
+      padding-top: 100px;
+    }
+    .hero-title {
+      font-size: 3.4rem !important;
+    }
     .content-col {
       display: flex;
       flex-direction: column;

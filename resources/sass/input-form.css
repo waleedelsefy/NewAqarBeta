@@ -703,7 +703,7 @@ select[multiple].input-lg, textarea.input-lg {
   right: 8px;
   height: var(--s);
   min-width: var(--s);
-  background: #25d366;
+  background: #00a77f;
   color: inherit;
   border-radius: calc(var(--s) / 2);
   box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, 0.24);
@@ -925,7 +925,7 @@ select[multiple].input-lg, textarea.input-lg {
   height: var(--s);
   max-width: 100%;
   padding: 0 calc(var(--s) / 2) 0 var(--s);
-  background: #25d366 var(--aqarchat-ico) calc(var(--s) * 0.2) 50% no-repeat;
+  background: #00a77f var(--aqarchat-ico) calc(var(--s) * 0.2) 50% no-repeat;
   background-size: calc(var(--s) * 0.6);
   color: #fff;
   border-radius: calc(var(--s) / 2);
