@@ -80,12 +80,12 @@
     border-top: .3em solid;
     content: "";
     display: inline-block;
-    margin-left: .255em;
+    margin-inline-end: .255em;
     vertical-align: .255em
 }
 
 .dropdown-toggle:empty:after {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 
@@ -148,12 +148,12 @@
     border-top: 0;
     content: "";
     display: inline-block;
-    margin-left: .255em;
+    margin-inline-end: .255em;
     vertical-align: .255em
 }
 
 .dropup .dropdown-toggle:empty:after {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 .dropend .dropdown-toggle:after {
@@ -163,12 +163,12 @@
     border-top: .3em solid transparent;
     content: "";
     display: inline-block;
-    margin-left: .255em;
+    margin-inline-end: .255em;
     vertical-align: .255em
 }
 
 .dropend .dropdown-toggle:empty:after {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 .dropend .dropdown-toggle:after {
@@ -179,7 +179,7 @@
     content: "";
     display: inline-block;
     display: none;
-    margin-left: .255em;
+    margin-inline-end: .255em;
     vertical-align: .255em
 }
 
@@ -189,12 +189,12 @@
     border-top: .3em solid transparent;
     content: "";
     display: inline-block;
-    margin-right: .255em;
+    margin-inline-start: .255em;
     vertical-align: .255em
 }
 
 .dropstart .dropdown-toggle:empty:after {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 .dropstart .dropdown-toggle:before {
@@ -376,8 +376,8 @@
 }
 
 .card > hr {
-    margin-left: 0;
-    margin-right: 0
+    margin-inline-end: 0;
+    margin-inline-start: 0
 }
 
 .card > .list-group {
@@ -530,7 +530,7 @@
 }
 
 .page-item:not(:first-child) .page-link {
-    margin-left: calc(var(--bs-border-width) * -1)
+    margin-inline-end: calc(var(--bs-border-width) * -1)
 }
 
 .page-item:first-child .page-link {
@@ -823,8 +823,8 @@
     }
 
     .modal-dialog {
-        margin-left: auto;
-        margin-right: auto;
+        margin-inline-end: auto;
+        margin-inline-start: auto;
         max-width: var(--bs-modal-width)
     }
 }
@@ -853,7 +853,7 @@
     line-height: 1.5;
     margin: var(--bs-tooltip-margin);
     opacity: 0;
-    text-align: left;
+    text-align: end;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -925,7 +925,7 @@
     line-break: auto;
     line-height: 1.5;
     max-width: var(--bs-popover-max-width);
-    text-align: left;
+    text-align: end;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -981,7 +981,7 @@
     backface-visibility: hidden;
     display: none;
     float: left;
-    margin-right: -100%;
+    margin-inline-start: -100%;
     position: relative;
     transition: transform .6s ease-in-out;
     width: 100%
@@ -1011,8 +1011,8 @@
     justify-content: center;
     left: 0;
     margin-bottom: 1rem;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-inline-end: 15%;
+    margin-inline-start: 15%;
     padding: 0;
     position: absolute;
     right: 0;
@@ -1029,8 +1029,8 @@
     cursor: pointer;
     flex: 0 1 auto;
     height: 3px;
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-inline-end: 3px;
+    margin-inline-start: 3px;
     opacity: .5;
     padding: 0;
     text-indent: -999px;
@@ -1204,7 +1204,7 @@
 
 .offcanvas-header .btn-close {
     margin-bottom: calc(var(--bs-offcanvas-padding-y) * -.5);
-    margin-right: calc(var(--bs-offcanvas-padding-x) * -.5);
+    margin-inline-start: calc(var(--bs-offcanvas-padding-x) * -.5);
     margin-top: calc(var(--bs-offcanvas-padding-y) * -.5);
     padding: calc(var(--bs-offcanvas-padding-y) * .5) calc(var(--bs-offcanvas-padding-x) * .5)
 }
@@ -1430,11 +1430,11 @@
 }
 
 .me-1 {
-    margin-right: .25rem !important
+    margin-inline-start: .25rem !important
 }
 
 .me-3 {
-    margin-right: 1rem !important
+    margin-inline-start: 1rem !important
 }
 
 .mb-0 {
@@ -1458,7 +1458,7 @@
 }
 
 .ms-1 {
-    margin-left: .25rem !important
+    margin-inline-end: .25rem !important
 }
 
 .p-0 {
@@ -1509,7 +1509,7 @@
 }
 
 .text-end {
-    text-align: right !important
+    text-align: start !important
 }
 
 .text-center {
@@ -1608,7 +1608,7 @@
     }
 
     .ms-md-2 {
-        margin-left: .5rem !important
+        margin-inline-end: .5rem !important
     }
 
     .py-md-5 {
@@ -1631,7 +1631,7 @@
     }
 
     .ms-lg-2 {
-        margin-left: .5rem !important
+        margin-inline-end: .5rem !important
     }
 }
 .badge:empty {
@@ -1732,7 +1732,7 @@ body .dropdown-toggle:after, html .dropdown-toggle:after {
     border-top: 0 !important;
     content: "";
     display: inline-block;
-    margin-left: .255em;
+    margin-inline-end: .255em;
     vertical-align: .255em
 }
 
@@ -1884,7 +1884,7 @@ body .checkbox label, body .radio label, html .checkbox label, html .radio label
 }
 
 body .checkbox input[type=checkbox], body .radio input[type=radio], html .checkbox input[type=checkbox], html .radio input[type=radio] {
-    margin-left: -20px;
+    margin-inline-end: -20px;
     margin-top: 4px \9;
     position: absolute
 }
@@ -1907,7 +1907,7 @@ body label, html label {
 body input[type=checkbox] + label, body label.inline, html input[type=checkbox] + label, html label.inline {
     display: inline;
     font-weight: 400;
-    margin-left: .5rem
+    margin-inline-end: .5rem
 }
 
 body input[type=checkbox], html input[type=checkbox] {
@@ -2434,7 +2434,7 @@ body dd, body dt, html dd, html dt {
 }
 
 body dd, html dd {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 body abbr[title], html abbr[title] {
@@ -2522,8 +2522,8 @@ body pre code, html pre code {
 
 
 body .row, html .row {
-    margin-left: -15px;
-    margin-right: -15px
+    margin-inline-end: -15px;
+    margin-inline-start: -15px
 }
 
 body .col-lg-12, body .col-lg-3, body .col-lg-4, body .col-lg-6, body .col-lg-8, body .col-lg-9, body .col-md-12, body .col-md-2, body .col-md-3, body .col-md-4, body .col-md-6, body .col-md-8, body .col-md-9, body .col-sm-4, body .col-xs-12, body .col-xs-4, html .col-lg-12, html .col-lg-3, html .col-lg-4, html .col-lg-6, html .col-lg-8, html .col-lg-9, html .col-md-12, html .col-md-2, html .col-md-3, html .col-md-4, html .col-md-6, html .col-md-8, html .col-md-9, html .col-sm-4, html .col-xs-12, html .col-xs-4 {
@@ -2625,11 +2625,11 @@ body caption, html caption {
     color: #777;
     padding-bottom: 8px;
     padding-top: 8px;
-    text-align: left
+    text-align: end
 }
 
 body th, html th {
-    text-align: left
+    text-align: end
 }
 
 body .table, html .table {
@@ -2820,7 +2820,7 @@ body .caret, html .caret {
     border-top: 4px solid \9;
     display: inline-block;
     height: 0;
-    margin-left: 2px;
+    margin-inline-end: 2px;
     vertical-align: middle;
     width: 0
 }
@@ -2850,7 +2850,7 @@ body .dropdown-menu, html .dropdown-menu {
     min-width: 160px;
     padding: 5px 0;
     position: absolute;
-    text-align: left;
+    text-align: end;
     top: 100%;
     z-index: 1000
 }
@@ -2919,7 +2919,7 @@ body .dropup .dropdown-menu, html .dropup .dropdown-menu {
 }
 
 body .btn .caret, html .btn .caret {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 body [data-toggle=buttons] > .btn input[type=checkbox], body [data-toggle=buttons] > .btn input[type=radio], html [data-toggle=buttons] > .btn input[type=checkbox], html [data-toggle=buttons] > .btn input[type=radio] {
@@ -3115,7 +3115,7 @@ body .pagination > li > a, body .pagination > li > span, html .pagination > li >
     color: #337ab7;
     float: left;
     line-height: 1.42857143;
-    margin-left: -1px;
+    margin-inline-end: -1px;
     padding: 6px 12px;
     position: relative;
     text-decoration: none
@@ -3124,7 +3124,7 @@ body .pagination > li > a, body .pagination > li > span, html .pagination > li >
 body .pagination > li:first-child > a, body .pagination > li:first-child > span, html .pagination > li:first-child > a, html .pagination > li:first-child > span {
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 body .pagination > li:last-child > a, body .pagination > li:last-child > span, html .pagination > li:last-child > a, html .pagination > li:last-child > span {
@@ -3222,7 +3222,7 @@ body .list-group-item > .badge, html .list-group-item > .badge {
 }
 
 body .list-group-item > .badge + .badge, html .list-group-item > .badge + .badge {
-    margin-right: 5px
+    margin-inline-start: 5px
 }
 
 body .thumbnail, html .thumbnail {
@@ -3237,8 +3237,8 @@ body .thumbnail, html .thumbnail {
 }
 
 body .thumbnail a > img, body .thumbnail > img, html .thumbnail a > img, html .thumbnail > img {
-    margin-left: auto;
-    margin-right: auto
+    margin-inline-end: auto;
+    margin-inline-start: auto
 }
 
 body a.thumbnail.active, body a.thumbnail:focus, body a.thumbnail:hover, html a.thumbnail.active, html a.thumbnail:focus, html a.thumbnail:hover {
@@ -3364,7 +3364,7 @@ body a.list-group-item:focus, body a.list-group-item:hover, body button.list-gro
 }
 
 body button.list-group-item, html button.list-group-item {
-    text-align: left;
+    text-align: end;
     width: 100%
 }
 
@@ -3573,7 +3573,7 @@ body .tooltip, html .tooltip {
     line-height: 1.42857143;
     opacity: 0;
     position: absolute;
-    text-align: left;
+    text-align: end;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -3595,7 +3595,7 @@ body .tooltip.top, html .tooltip.top {
 }
 
 body .tooltip.right, html .tooltip.right {
-    margin-left: 3px;
+    margin-inline-end: 3px;
     padding: 0 5px
 }
 
@@ -3605,7 +3605,7 @@ body .tooltip.bottom, html .tooltip.bottom {
 }
 
 body .tooltip.left, html .tooltip.left {
-    margin-left: -3px;
+    margin-inline-end: -3px;
     padding: 0 5px
 }
 
@@ -3631,7 +3631,7 @@ body .tooltip.top .tooltip-arrow, html .tooltip.top .tooltip-arrow {
     border-width: 5px 5px 0;
     bottom: 0;
     left: 50%;
-    margin-left: -5px
+    margin-inline-end: -5px
 }
 
 body .tooltip.top-left .tooltip-arrow, html .tooltip.top-left .tooltip-arrow {
@@ -3670,7 +3670,7 @@ body .tooltip.bottom .tooltip-arrow, html .tooltip.bottom .tooltip-arrow {
     border-bottom-color: #000;
     border-width: 0 5px 5px;
     left: 50%;
-    margin-left: -5px;
+    margin-inline-end: -5px;
     top: 0
 }
 
@@ -3711,7 +3711,7 @@ body .popover, html .popover {
     max-width: 276px;
     padding: 1px;
     position: absolute;
-    text-align: left;
+    text-align: end;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -3728,7 +3728,7 @@ body .popover.top, html .popover.top {
 }
 
 body .popover.right, html .popover.right {
-    margin-left: 10px
+    margin-inline-end: 10px
 }
 
 body .popover.bottom, html .popover.bottom {
@@ -3736,7 +3736,7 @@ body .popover.bottom, html .popover.bottom {
 }
 
 body .popover.left, html .popover.left {
-    margin-left: -10px
+    margin-inline-end: -10px
 }
 
 body .popover > .arrow, body .popover > .arrow:after, html .popover > .arrow, html .popover > .arrow:after {
@@ -3763,7 +3763,7 @@ body .popover.top > .arrow, html .popover.top > .arrow {
     border-top-color: rgba(0, 0, 0, .25);
     bottom: -11px;
     left: 50%;
-    margin-left: -11px
+    margin-inline-end: -11px
 }
 
 body .popover.top > .arrow:after, html .popover.top > .arrow:after {
@@ -3771,7 +3771,7 @@ body .popover.top > .arrow:after, html .popover.top > .arrow:after {
     border-top-color: #fff;
     bottom: 1px;
     content: " ";
-    margin-left: -10px
+    margin-inline-end: -10px
 }
 
 body .popover.right > .arrow, html .popover.right > .arrow {
@@ -3796,7 +3796,7 @@ body .popover.bottom > .arrow, html .popover.bottom > .arrow {
     border-bottom-color: rgba(0, 0, 0, .25);
     border-top-width: 0;
     left: 50%;
-    margin-left: -11px;
+    margin-inline-end: -11px;
     top: -11px
 }
 
@@ -3804,7 +3804,7 @@ body .popover.bottom > .arrow:after, html .popover.bottom > .arrow:after {
     border-bottom-color: #fff;
     border-top-width: 0;
     content: " ";
-    margin-left: -10px;
+    margin-inline-end: -10px;
     top: 1px
 }
 
@@ -3833,7 +3833,7 @@ body .carousel-indicators, html .carousel-indicators {
     bottom: 10px;
     left: 50%;
     list-style: none;
-    margin-left: -30%;
+    margin-inline-end: -30%;
     padding-left: 0;
     position: absolute;
     text-align: center;
@@ -3934,7 +3934,7 @@ body body, html body {
     font-size: 16px;
     font-weight: 400;
     letter-spacing: -.015em;
-    text-align: left
+    text-align: end
 }
 
 body *, body :after, body :before, html *, html :after, html :before {
@@ -4218,7 +4218,7 @@ body pre, html pre {
     margin: 4rem 0;
     overflow: auto;
     padding: 3rem 2rem;
-    text-align: left
+    text-align: end
 }
 
 body pre code, html pre code {
@@ -4313,7 +4313,7 @@ body th, html th {
     background-color: var(--primary-background-color);
     color: #000;
     font-weight: 700;
-    text-align: right
+    text-align: start
 }
 
 body section, html section {
@@ -4322,8 +4322,8 @@ body section, html section {
 }
 
 body .section-inner, html .section-inner {
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline-end: auto;
+    margin-inline-start: auto;
     max-width: 120rem;
     width: calc(100% - 4rem)
 }
@@ -4491,8 +4491,8 @@ body .entry-content, html .entry-content {
 
 body .entry-content > *, html .entry-content > * {
     margin-bottom: 1.25em;
-    margin-left: auto;
-    margin-right: auto
+    margin-inline-end: auto;
+    margin-inline-start: auto
 }
 
 body .entry-content > :first-child, html .entry-content > :first-child {
@@ -4660,7 +4660,7 @@ body .widget_nav_menu li, html .widget_nav_menu li {
 }
 
 body .widget_nav_menu li li, html .widget_nav_menu li li {
-    margin-left: 2rem
+    margin-inline-end: 2rem
 }
 
 body .widget_nav_menu a, html .widget_nav_menu a {
@@ -4673,7 +4673,7 @@ body .widget_nav_menu a:focus, body .widget_nav_menu a:hover, html .widget_nav_m
 }
 
 body .widget_nav_menu .widget-content > div > ul, html .widget_nav_menu .widget-content > div > ul {
-    margin-left: 0
+    margin-inline-end: 0
 }
 
 body #site-footer, html #site-footer {
@@ -4911,7 +4911,7 @@ body #site-footer a:focus, body #site-footer a:hover, html #site-footer a:focus,
 
     body .pagination .next, html .pagination .next {
         margin: 0 0 0 auto;
-        text-align: right
+        text-align: start
     }
 
     body .footer-menu, html .footer-menu {
@@ -4982,7 +4982,7 @@ body .sub-menu li, html .sub-menu li {
     border-bottom: 1px solid var(--primary-background-color);
     float: none !important;
     margin: 0;
-    text-align: right
+    text-align: start
 }
 
 body .sub-menu a:after, html .sub-menu a:after {
@@ -5151,8 +5151,8 @@ body .copywrite-txt a, html .copywrite-txt a {
 }
 
 body form.searchandfilter ul, html form.searchandfilter ul {
-    margin-left: 0;
-    margin-right: 40px
+    margin-inline-end: 0;
+    margin-inline-start: 40px
 }
 
 body .page_title, html .page_title {
@@ -5165,7 +5165,7 @@ body .page_title h1, html .page_title h1 {
     font-size: 15pt;
     margin: 20px 0;
     padding: 10px 0 0;
-    text-align: right;
+    text-align: start;
     text-transform: uppercase
 }
 
@@ -5189,11 +5189,11 @@ body .content-wrapper, html .content-wrapper {
 body .content, html .content {
     color: #666669;
     padding: 25px;
-    text-align: right
+    text-align: start
 }
 
 body .tabs, html .tabs {
-    margin-right: 15px
+    margin-inline-start: 15px
 }
 
 body .tab, html .tab {
@@ -5280,7 +5280,7 @@ body .search-filters span, html .search-filters span {
 
 body .search-filters .searchandfilter, html .search-filters .searchandfilter {
     margin-top: 0;
-    text-align: left
+    text-align: end
 }
 
 body .searchandfilter input[type=submit], html .searchandfilter input[type=submit] {
@@ -5296,8 +5296,8 @@ body .searchandfilter input[type=submit], html .searchandfilter input[type=submi
     }
 
     body .search-filters .searchandfilter ul, html .search-filters .searchandfilter ul {
-        margin-left: 0;
-        margin-right: 0
+        margin-inline-end: 0;
+        margin-inline-start: 0
     }
 
     body .col-sm-4, html .col-sm-4 {
@@ -5309,7 +5309,7 @@ body .searchandfilter input[type=submit], html .searchandfilter input[type=submi
 
 
     body form.searchandfilter ul, html form.searchandfilter ul {
-        margin-right: 0
+        margin-inline-start: 0
     }
 
     body #site-footer .widget, body .widget-about, html #site-footer .widget, html .widget-about {
@@ -5321,8 +5321,8 @@ body .searchandfilter input[type=submit], html .searchandfilter input[type=submi
     }
 
     body .row, html .row {
-        margin-left: 0;
-        margin-right: 0
+        margin-inline-end: 0;
+        margin-inline-start: 0
     }
 
     body .page_title h1, html .page_title h1 {
@@ -5332,12 +5332,12 @@ body .searchandfilter input[type=submit], html .searchandfilter input[type=submi
     body .mobile-panel .menu-item-has-children a:after, html .mobile-panel .menu-item-has-children a:after {
         font-size: 10px;
         left: 0;
-        margin-right: 0;
+        margin-inline-start: 0;
         top: 10px
     }
 
     body .sub-menu, html .sub-menu {
-        margin-right: 15px !important;
+        margin-inline-start: 15px !important;
         margin-top: 10px !important;
         position: relative;
         top: unset !important;
@@ -5526,7 +5526,7 @@ body :root, html :root {
 
 body body, html body {
     font-family: var(--primary-font-family);
-    text-align: right
+    text-align: start
 }
 
 @media (min-width: 992px) {

@@ -54,7 +54,7 @@ html body {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -.015em;
-  text-align: left
+  text-align: end
 }
 body , html {
   .slider-area {
@@ -170,8 +170,8 @@ body , html {
   html h1, html .heading-size-1, body h1, body .heading-size-1 {
   }
   .mx-5 {
-    margin-right: ($spacer * .25) !important;
-    margin-left: ($spacer * .25) !important;
+    margin-inline-start: ($spacer * .25) !important;
+    margin-inline-end: ($spacer * .25) !important;
     color:var(--all-h-content-color);
 
   }
@@ -457,8 +457,8 @@ body , html {
     }
 
     .row-tax {
-      margin-left:  -50px !important;
-      margin-right: -50px !important;
+      margin-inline-end:  -50px !important;
+      margin-inline-start: -50px !important;
     }
   }
 
@@ -970,7 +970,7 @@ body , html {
         box-shadow: 0px 0px 4px -1.9px #0000004f;
         padding: 0 10px 0 5px;
         text-align: center;
-        margin-right: 23px;
+        margin-inline-start: 23px;
       }
     }
 
@@ -1035,7 +1035,7 @@ body , html {
   }
 
   .fluentform .ff-text-left {
-    text-align: left;
+    text-align: end;
   }
   /**** end of fluent form ****/
 

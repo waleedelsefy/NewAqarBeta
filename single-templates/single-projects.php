@@ -64,19 +64,19 @@ if ($city_terms && !is_wp_error($city_terms)) {
         .project-main-title h1{font-size: 1.6rem;line-height: 2.4rem; }
     }
     .main-price-box .p-price{display: flex; align-items: center;justify-content: center}
-    .main-price-box .main-price-range{font-size: 1.8rem; line-height: 2.6rem;font-weight: bold; color: #9BB73D;margin-left: 7px}
+    .main-price-box .main-price-range{font-size: 1.8rem; line-height: 2.6rem;font-weight: bold; color: #9BB73D;margin-inline-end: 7px}
     .main-price-box .small-txt{font-size: 0.9rem;color: #8F959B}
     @media only screen and (min-width:992px){
         .main-price-box .main-price-box{margin-top:20px;}
     }
     .main-cta a{border-radius: 5px;display: flex;align-items: center;justify-content: center;width:100%;height:30px;line-height: 28px;text-align: center;color:var(--primary-color-collapse);margin:5px;font-size: 0.8rem;transition: 0.3s;background-color: #FFFFFF;border:1px solid #9A9A9A;white-space: nowrap; overflow: hidden;font-weight: 600;z-index: 1;position:relative}
     .main-cta a:hover{background-color: var(--primary-color-collapse);color: #FFFFFF;border-color:var(--primary-color-collapse)}
-    .main-cta i{font-size: 0.9rem;margin-left: 2px;margin-right: -5px; color: #8CC2C8}
+    .main-cta i{font-size: 0.9rem;margin-inline-end: 2px;margin-inline-start: -5px; color: #8CC2C8}
     .main-cta .cta-wts i{color: #9BB73D}
     .main-cta .cta-phone i{color: var(--primary-color-collapse)}
     @media only screen and (min-width:992px){
         .main-cta a{height:36px;line-height: 34px;font-size: 0.9rem;}
-        .main-cta i{font-size: 1.1rem;margin-left: 5px}
+        .main-cta i{font-size: 1.1rem;margin-inline-end: 5px}
     }
     .project-gallery *{transition: 0.5}
     .project-gallery-img-big img, .project-gallery-img img{width:100%;height:300px; object-fit: cover;display: block}
@@ -93,7 +93,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .content-box li{padding:5px}
     .content-box h3{color:var(--primary-link-color)}
     .content-box img{max-width: 100%;height:auto}
-    .content-box .headline-p {line-height: 30px;transition: 0.5s;text-align: right;font-size: 1.2rem;position: relative;font-weight: bold;margin: 15px 0;color: var(--primary-have-color-collapse);padding-right:10px;border-right: 4px solid var(--primary-have-color-collapse)}
+    .content-box .headline-p {line-height: 30px;transition: 0.5s;text-align: start;font-size: 1.2rem;position: relative;font-weight: bold;margin: 15px 0;color: var(--primary-have-color-collapse);padding-right:10px;border-right: 4px solid var(--primary-have-color-collapse)}
     .project-sub-title{font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
     .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: 10px;height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
     .project-sub-title::after{right:10px; width:80px;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
@@ -101,13 +101,13 @@ if ($city_terms && !is_wp_error($city_terms)) {
     table.infotable tr:nth-child(even){background-color: #F9F9F9}
     table.infotable th.ttitle {width: 35%;font-size: 0.8rem;padding-left:0;border-left:1px solid #e0dcd6;background-color: var(--primary-color-collapse); color:  #FFFFFF}
     table.infotable tr:nth-child(even) th.ttitle{background-color:#212529}
-    table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: right;font-size: 0.9rem}
+    table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}
     @media only screen and (min-width:992px){
         table.infotable th.ttitle {font-size: 0.9rem; width: 15%}
         table.infotable td, table.infotable th {font-size: 1rem; padding: 7px 25px 7px 15px}
     }
-    .facility-img img{height:25px;width:auto;display: block; margin-left: 5px}
+    .facility-img img{height:25px;width:auto;display: block; margin-inline-end: 5px}
     @media only screen and (min-width:992px){
         .facility-img img{height:30px;}
     }
@@ -137,11 +137,11 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .lwptoc_items a:hover{color: var(--primary-link-color)}
     .faq .acc {margin: 0 auto;}
     .faq .acc__card {margin: 10px 0; position: relative;}
-    .faq .acc__title {background: #FFF; color: var(--primary-color-collapse); cursor: pointer; display: block; padding: 10px 15px; position: relative; text-align: right;border-radius: 5px;box-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
+    .faq .acc__title {background: #FFF; color: var(--primary-color-collapse); cursor: pointer; display: block; padding: 10px 15px; position: relative; text-align: start;border-radius: 5px;box-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
     .faq .acc__title::after  { width: 8px; height: 8px; border-left: 3px solid var(--primary-color-collapse); border-top: 3px solid var(--primary-color-collapse);  position: absolute; left: 20px; content: " "; top: 50%; transform: rotate(-45deg) translateY(-50%); transition: all 0.2s ease-in-out;}
     .faq .acc__title.active{background-color: var(--primary-have-color-collapse);color:#FFFFFF}
     .faq .acc__title.active::after { transform: rotate(-135deg) translateY(50%); transition: all 0.2s ease-in-out;border-color:#FFFFFF}
-    .faq .acc__panel {background-color: #FFFFFF;border:2px solid var(--primary-have-color-collapse); color: #575E65;  display: none; margin: 0; padding: 20px; text-align: right;border-radius: 0 0 5px 5px;margin-top:-5px}
+    .faq .acc__panel {background-color: #FFFFFF;border:2px solid var(--primary-have-color-collapse); color: #575E65;  display: none; margin: 0; padding: 20px; text-align: start;border-radius: 0 0 5px 5px;margin-top:-5px}
     /*author-box*/
     .author-box{width:100%;padding: 15px; display: flex; flex-wrap: wrap; justify-content: center;text-align: center}
     .author-img{ border-radius: 100px; overflow: hidden;flex-shrink: 0}
@@ -155,7 +155,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .author-txt{font-size: 0.9rem; color: #8F959B}
     @media only screen and (min-width:992px){
         .author-box{flex-wrap: nowrap; align-items: center; text-align: inherit;}
-        .author-img{ margin-left: 25px;}
+        .author-img{ margin-inline-end: 25px;}
         .author-name{font-size:1.1rem; margin: 0}
         ul.author-contacts{justify-content: flex-start}
     }
@@ -194,7 +194,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .side-bar .main-cta{}
     .side-bar .main-cta a{background-color: #8CC2C8;color:#FFF;border:none;}
     .side-bar .main-cta a:hover{transform: translateY(3px)}
-    .side-bar .main-cta i{font-size: 0.9rem;margin-left: 2px;margin-right: -5px}
+    .side-bar .main-cta i{font-size: 0.9rem;margin-inline-end: 2px;margin-inline-start: -5px}
     .side-bar .main-cta .cta-wts {background-color: var(--primary-have-color-collapse)}
     .side-bar .main-cta .cta-phone {background-color: var(--primary-color-collapse)}
     .side-bar .main-cta .cta-wts i, .side-bar .main-cta .cta-phone i{color:#FFFFFF }
