@@ -5,7 +5,7 @@
                 <div class="sec-heading center">
                     <?php
                     echo '<h2>' . esc_html__('Latest projects', 'newaqar') . '</h2>';
-                    echo  '<p>' . esc_html__('Aqar Rawand website publishes the latest real estate projects', 'newaqar') . '</p>';
+                    echo  '<p>' . esc_html__('New Aqar website publishes the latest real estate projects', 'newaqar') . '</p>';
                     ?>
 
                 </div>

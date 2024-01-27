@@ -850,7 +850,7 @@ msgid "View the latest real estate and project news"
 msgstr "عرض أحدث أخبار العقارات والمشاريع"
 
 #: template-parts/front-page/latest-properties.php:9
-msgid "Aqar Rawand website publishes the latest real estate projects"
+msgid "New Aqar website publishes the latest real estate projects"
 msgstr "موقع عقار رواند ينشر أحدث مشاريع العقارات"
 
 #: template-parts/front-page/search-form.php:5
@@ -885,7 +885,7 @@ msgstr "اتصل الآن"
 
 #. Theme Name of the plugin/theme
 msgid "NewAqar"
-msgstr "عقار راوند"
+msgstr "نيو عقار"
 
 #. Theme URI of the plugin/theme
 msgid "https://www.newaqar.com/"

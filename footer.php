@@ -78,6 +78,87 @@ if (is_array($theme_settings)) {
 
     }
 </style>
+<footer id="site-footer" role="contentinfo" class="header-footer-group">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="footer-widget widget-about">
+                    <?php dynamic_sidebar( 'sidebar-1' ); ?>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="https://www.facebook.com/NewStartrealestatemarketing" target="_blank" rel="noopener">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/StartEstate" target="_blank" rel="noopener">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCC-nNZHb4fs2agyz581xjEw" target="_blank" rel="noopener">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/newstarteg/" target="_blank" rel="noopener">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/newstart-eg" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.snapchat.com/add/newaqar?share_id=yTmLad20vqc&locale=ar-EG" target="_blank" rel="noopener">
+                                <i class="fab fa-snapchat"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tiktok.com/@Newstart_eg" target="_blank" rel="noopener">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copywrite-txt">
+                        جميع الحقوق محفوظة
+                        &copy;
+                        <?php
+                        echo date_i18n(
+                            _x( 'Y', 'copyright date format', 'twentytwenty' )
+                        );
+                        ?>
+                        <?php bloginfo( 'name' ); ?>.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <?php dynamic_sidebar( 'sidebar-2' ); ?>
+            </div>
+
+            <div class="col-lg-4">
+                <?php dynamic_sidebar( 'sidebar-3' ); ?>
+            </div>
+
+        </div>
+
+    </div><!-- .section-inner -->
+
+</footer><!-- #site-footer -->
+<div class="copyrights">
+    <p class="copywrite-txt">
+        كافة الحقوق محفوظة لـ نيو ستارت  © 2021 رقم السجل الضريبي 223-743-723
+    </p>
+</div>
+
+<?php wp_footer(); ?>
+<style>.skip-link {display: none !important;}</style>
+
+</body>
+</html>
 
 <div id="floating-icons">
 <?php if (is_front_page()) {
