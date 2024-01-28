@@ -239,4 +239,45 @@ add_action('developer_edit_form_fields', 'add_developer_qa_fields');
 add_action('edited_developer', 'save_developer_qa_fields');
 add_action('developer_add_form_fields', 'add_developer_qa_fields');
 add_action('created_developer', 'save_developer_qa_fields');
-?>
+
+// في ملف functions.php في قالبك
+function add_developer_desc_field() {
+    add_action('developer_edit_form_fields', 'display_developer_desc_field');
+    add_action('edited_developer', 'save_developer_desc_field');
+    add_action('admin_enqueue_scripts', 'enqueue_custom_styles');
+}
+
+function display_developer_desc_field($term) {
+    $developer_desc = get_term_meta($term->term_id, 'developer_desc', true);
+    ?>
+    <tr class="form-field">
+        <th scope="row"><label for="developer_desc"><?php _e('وصف المطور', 'newaqar'); ?></label></th>
+        <td>
+            <?php
+            $settings = array(
+                'textarea_name' => 'developer_desc',
+                'editor_class'  => 'wp-editor-area',
+            );
+            wp_editor($developer_desc, 'developer_desc', $settings);
+            ?>
+            <p class="description"><?php _e('إضافة وصف للمطور هنا.', 'newaqar'); ?></p>
+        </td>
+    </tr>
+    <?php
+}
+
+function save_developer_desc_field($term_id) {
+    if (isset($_POST['developer_desc'])) {
+        update_term_meta($term_id, 'developer_desc', sanitize_text_field($_POST['developer_desc']));
+    }
+}
+
+function enqueue_custom_styles() {
+    echo '<style>
+        div#wp-developer_desc-wrap {
+    width: 61%;
+}
+    </style>';
+}
+
+add_developer_desc_field();
