@@ -25,7 +25,6 @@ function newaqar_product_schema() {
         } elseif (is_singular('projects')) {
             $developer_terms = get_the_terms(get_the_ID(), 'developer');
             $project_details = get_post_meta($post->ID, 'project_details', true);
-
             if (is_array($project_details) && !empty($project_details)) {
                 $space = isset($project_details['project_space']) ? esc_attr($project_details['project_space']) : '';
                 $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
@@ -36,12 +35,10 @@ function newaqar_product_schema() {
                 $payment_systems = ''; // Corrected variable name
             }
         }
-
         if ($developer_terms && !is_wp_error($developer_terms)) {
             $first_term = reset($developer_terms);
             $developer_name = esc_html($first_term->name);
             $developer_link = get_term_link($first_term);
-
             // Replace this section with your logic to generate the schema
             $ld_json = array(
                 "@context" => "https://schema.org/",
@@ -76,7 +73,6 @@ function newaqar_product_schema() {
                     "acceptedPaymentMethod" => $payment_systems, // Added this line for payment systems
                 ),
             );
-
             echo '<script type="application/ld+json">';
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             echo '</script>';
@@ -87,14 +83,11 @@ function newaqar_product_schema() {
         }
     }
 }
-
 add_action('wp_head', 'newaqar_product_schema');
-
 function newaqar_faq_schema() {
     $post_id = get_the_ID();
     $faqs = get_post_meta($post_id, '_faqs', true);
     $author_id = get_the_author_meta('ID');
-
     if (!empty($faqs) && count($faqs) > 1) {
         foreach ($faqs as $index => $faq) {
             $ld_json = array(
@@ -127,7 +120,6 @@ function newaqar_faq_schema() {
                     'suggestedAnswer' => array(),
                 ),
             );
-
             echo '<script type="application/ld+json">';
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             echo '</script>';
@@ -140,21 +132,17 @@ function get_best_answer($faqs) {
 function get_upvote_count($answer) {
     // Generate a random number (you can adjust the range as needed)
     $random_upvotes = rand(199, 10000); // Adjust the range (e.g., from 1 to 100)
-
     return $random_upvotes;
 }
 add_action('wp_head', 'newaqar_faq_schema');
-
 function newaqar_breadcrumb_schema() {
     // Check if it is a category or single post
     if (is_category() || is_single()) {
         $breadcrumb_items = [];
         $counter = 2;
-
         // Get the terms for developers and cities
         $developer_terms = get_the_terms(get_the_ID(), 'developer');
         $city_terms = get_the_terms(get_the_ID(), 'city');
-
         if ($developer_terms && !is_wp_error($developer_terms)) {
             foreach ($developer_terms as $developer_term) {
                 $breadcrumb_items[] = [
@@ -166,7 +154,6 @@ function newaqar_breadcrumb_schema() {
                 $counter++;
             }
         }
-
         if ($city_terms && !is_wp_error($city_terms)) {
             foreach ($city_terms as $city_term) {
                 $breadcrumb_items[] = [
@@ -178,7 +165,6 @@ function newaqar_breadcrumb_schema() {
                 $counter++;
             }
         }
-
         // Output the JSON-LD script
         echo '<script type="application/ld+json">';
         echo json_encode([
@@ -189,6 +175,5 @@ function newaqar_breadcrumb_schema() {
         echo '</script>';
     }
 }
-
 // Hook the function to be executed in the header
 add_action('wp_head', 'newaqar_breadcrumb_schema');

@@ -1,5 +1,4 @@
 import * as Popper from "@popperjs/core"
-
 !function(f, m, v, b) {
         b.chatbox_show = function() {
             this.chatbox || (this.chatbox = !0,
@@ -30,4 +29,3 @@ import * as Popper from "@popperjs/core"
         f(m).on("load", e),
         v.addEventListener("DOMContentLoaded", e)
 }(jQuery, window, document, window.aqarchat_obj || {});
-

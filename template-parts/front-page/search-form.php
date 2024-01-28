@@ -5,7 +5,6 @@
                 <input placeholder="<?php echo esc_attr_x('Search for property...', 'placeholder', 'newaqar'); ?>" name="s" class="sf-input-text dd-input-text  " type="text" value="<?php echo get_search_query(); ?>" title="">
             </label>
         </div>
-
         <?php
         function render_taxonomy_filter($taxonomy, $label, $placeholder)
         {
@@ -13,7 +12,6 @@
                 'taxonomy'   => $taxonomy,
                 'hide_empty' => false,
             ));
-
             if (!is_wp_error($terms) && !empty($terms)) :
                 ?>
                 <div class="sf-field-search <?php echo esc_attr($taxonomy); ?>" data-sf-field-name="_sft_<?php echo esc_attr($taxonomy); ?>" data-sf-field-type="taxonomy" data-sf-field-input-type="select">
@@ -29,7 +27,6 @@
             <?php
             endif;
         }
-
         render_taxonomy_filter('city', __('All Cities', 'newaqar'), __('All Cities', 'newaqar'));
         render_taxonomy_filter('type', __('All Unit Types', 'newaqar'), __('All Unit Types', 'newaqar'));
         ?>

@@ -1,7 +1,6 @@
 <div class="latest-developers">
     <!-- Include Swiper.js library -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -13,7 +12,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="container">
                 <div class="swiper-container">
@@ -21,15 +19,12 @@
                         <?php
                         $taxonomy = 'developer';
                         $terms = get_terms($taxonomy);
-
                         foreach ($terms as $term) {
                             $term_details = get_term_by('id', $term->term_id, $taxonomy);
-
                             if ($term_details) {
                                 $term_name = esc_html($term_details->name);
                                 $term_image = get_term_meta($term_details->term_id, 'developer_image', true);
                                 $term_link = get_term_link($term_details);
-
                                 if ($term_image) {
                                     ?>
                                     <div class="swiper-slide col-md-2 col-sm-4">
@@ -49,7 +44,6 @@
         </div>
     </div>
 </div>
-
 <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 'auto',

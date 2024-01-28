@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Custom template tags for this theme
  *
@@ -57,7 +56,6 @@ if (!function_exists('bootscore_date')) :
     if (get_the_time('U') !== get_the_modified_time('U')) {
       $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <span class="time-updated-separator">/</span> <time class="updated" datetime="%3$s">%4$s</time>';
     }
-
     $time_string = sprintf(
       $time_string,
       esc_attr(get_the_date(DATE_W3C)),
@@ -65,30 +63,24 @@ if (!function_exists('bootscore_date')) :
       esc_attr(get_the_modified_date(DATE_W3C)),
       esc_html(get_the_modified_date())
     );
-
     $posted_on = sprintf(
     /* translators: %s: post date. */
       '%s',
       '<span rel="bookmark">' . $time_string . '</span>'
     );
-
     echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-
   }
 endif;
 /**
  * Author
  */
 if (!function_exists('bootscore_author')) :
-
   function bootscore_author() {
     $byline = sprintf(
       esc_html_x('by %s', 'post author', 'bootscore'),
       '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>'
     );
-
     echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
-
   }
 endif;
 /**
@@ -99,7 +91,6 @@ if (!function_exists('bootscore_comments')) :
    * Prints HTML with meta information for the categories, tags and comments.
    */
   function bootscore_comments() {
-
     if (!is_single() && !post_password_required() && (comments_open() || get_comments_number())) {
       echo ' <span class="comment-divider">|</span> <i class="fa-regular fa-comments"></i> <span class="comments-link">';
       comments_popup_link(
@@ -128,7 +119,6 @@ if (!function_exists('bootscore_edit')) :
    * Prints HTML with the edit link for the current post.
    */
   function bootscore_edit() {
-
     edit_post_link(
       sprintf(
         wp_kses(
@@ -157,7 +147,6 @@ if (!function_exists('bootscore_comment_count')) :
   function bootscore_comment_count() {
     if (!post_password_required() && (comments_open() || get_comments_number())) {
       echo ' <span class="comment-divider">|</span> <i class="fa-regular fa-comments"></i> <span class="comments-link">';
-
       /* translators: %s: Name of current post. Only visible to screen readers. */
       // comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'bootscore' ), get_the_title() ) );
       comments_popup_link(sprintf(__('Leave a comment', 'bootscore'), get_the_title()));
@@ -185,9 +174,7 @@ if (!function_exists('bootscore_tags')) :
       }
     }
   }
-
   add_filter("term_links-post_tag", 'add_tag_class');
-
   function add_tag_class($links) {
     return str_replace('<a href="', '<a class="badge bg-primary-subtle text-primary-emphasis text-decoration-none me-1" href="', $links);
   }
@@ -206,16 +193,12 @@ if (!function_exists('bootscore_post_thumbnail')) :
     if (post_password_required() || is_attachment() || !has_post_thumbnail()) {
       return;
     }
-
     if (is_singular()) :
       ?>
-
       <div class="post-thumbnail">
         <?php the_post_thumbnail('full', array('class' => 'rounded mb-3')); ?>
       </div><!-- .post-thumbnail -->
-
     <?php else : ?>
-
       <a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
         <?php
         the_post_thumbnail('post-thumbnail', array(
@@ -225,7 +208,6 @@ if (!function_exists('bootscore_post_thumbnail')) :
         ));
         ?>
       </a>
-
     <?php
     endif; // End is_singular().
   }

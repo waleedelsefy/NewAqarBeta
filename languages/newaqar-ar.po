@@ -21,99 +21,76 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
 #: 404.php:23
 msgid "Page not found."
 msgstr "الصفحة غير موجودة."
-
 #: 404.php:28
 msgid "Back Home &raquo;"
 msgstr "العودة إلى الصفحة الرئيسية  &raquo;"
-
 #: admin/int.php:10 admin/theme-options.php:31
 msgid "Theme Options"
 msgstr "إعدادات القالب"
-
 #: admin/int/theme_colors_section.php:8
 msgid "Colors Options"
 msgstr "اختيارات الالوان"
-
 #: admin/int/theme_colors_section.php:10
 msgid "Primary Color"
 msgstr "اللون الرئيسي"
-
 #: admin/int/theme_colors_section.php:11
 msgid "Secondary Color"
 msgstr "اللون الثانوي"
-
 #: admin/int/theme_colors_section.php:12
 msgid "Secondary Color 2"
 msgstr "اللون الثالث"
-
 #: admin/int/theme_contacts_section.php:6
 msgid "Contacts Options"
 msgstr "إعدادات الاتصال"
-
 #: admin/int/theme_contacts_section.php:7
 msgid "Phone Number"
 msgstr "رقم  الموبيل"
-
 #: admin/int/theme_contacts_section.php:8
 msgid "WhatsApp Number"
 msgstr "رقم الوتساب"
-
 #: admin/int/theme_contacts_section.php:9
 msgid "WhatsApp Message"
 msgstr "رسالة الوتساب"
-
 #: admin/int/theme_footer_section.php:7
 msgid "Footer Options"
 msgstr "اعدادات الفوتر"
-
 #: admin/int/theme_footer_section.php:9
 msgid "Footer Logo"
 msgstr "اللوجو في الفوتر"
-
 #: admin/int/theme_footer_section.php:11
 msgid "Copywrite Text"
 msgstr "نص حقوق الموقع"
-
 #: admin/int/theme_footer_section.php:37 admin/int/theme_options_section.php:27
 #: admin/int/theme_options_section.php:42 admin/int/theme_options_section.php:59
 msgid "Choose Image"
 msgstr "اختار صورة"
-
 #: admin/int/theme_options_section.php:6
 msgid "General Options"
 msgstr "الاعدادت الاساسية"
-
 #: admin/int/theme_options_section.php:8
 msgid "Logo"
 msgstr "اللوجو"
-
 #: admin/int/theme_options_section.php:9
 msgid "Slider Background URL"
 msgstr "صورة السلايدر"
-
 #: admin/int/theme_options_section.php:10
 msgid "Default Image card"
 msgstr "الصورة الافتراضية للكارت"
-
 #: admin/theme-options.php:23
 msgid "Theme options description goes here."
 msgstr "وصف خيارات القالب يأتي هنا."
-
 #: admin/theme-options.php:37
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
-
 #. translators: %s: post title
 #: comments.php:35
 #, php-format
 msgctxt "comments title"
 msgid "One Comment &ldquo;%s&rdquo;"
 msgstr "تعليق واحد: &ldquo;%s&rdquo;"
-
 #: comments.php:40
 #, php-format
 msgctxt "comments title"
@@ -125,578 +102,441 @@ msgstr[2] "%1$s تعليق علي &ldquo;%2$s&rdquo;"
 msgstr[3] "%1$s تعليقات علي &ldquo;%2$s&rdquo;"
 msgstr[4] "%1$s تعليق علي &ldquo;%2$s&rdquo;"
 msgstr[5] "%1$s تعليق علي &ldquo;%2$s&rdquo;"
-
 #: comments.php:57 comments.php:77
 msgid "Comment navigation"
 msgstr "تصفح التعليقات"
-
 #: comments.php:60 comments.php:80
 msgid "Older Comments"
 msgstr "تعليقات أقدم"
-
 #: comments.php:61 comments.php:81
 msgid "Newer Comments"
 msgstr "تعليقات أحدث"
-
 #: comments.php:94
 msgid "Comments are closed."
 msgstr "تم إغلاق التعليقات."
-
 #. translators: %s: post title
 #: comments.php:101 inc/template-tags.php:122
 msgid "Leave a Comment"
 msgstr "اترك تعليقًا"
-
 #: comments.php:102
 #, php-format
 msgid "Leave a Comment to %s"
 msgstr "اترك تعليقًا لـ %s"
-
 #: comments.php:103
 msgid "Cancel"
 msgstr "الغاء"
-
 #: comments.php:104
 msgid "Post Comment"
 msgstr "أترك تعليق"
-
 #: comments.php:106
 msgid "Start typing..."
 msgstr "ابدأ الكتابة..."
-
 #: comments.php:123
 msgid "Name*"
 msgstr "الاسم*"
-
 #: comments.php:126
 msgid "Email* (will not be published)"
 msgstr "البريد الإلكتروني* (لن يتم نشره)"
-
 #: comments.php:131
 msgid "Website"
 msgstr "الموقع الإلكتروني"
-
 #: footer.php:179 footer.php:187 footer.php:216 footer.php:219
 msgid "Get the brochure now"
 msgstr "احصل على البرشور الآن"
-
 #: footer.php:190
 msgid "What project are you looking for?"
 msgstr "أي مشروع تبحث عنه؟"
-
 #: footer.php:196
 msgid "Welcome to the Aqar Rwand website"
 msgstr "مرحبًا بك في موقع عقار رواند"
-
 #: footer.php:240
 msgid "Do you need assistance?"
 msgstr "هل تحتاج إلى مساعدة؟"
-
 #: inc/city-editor.php:7 inc/city-editor.php:19
 msgid "Cities"
 msgstr "المدن"
-
 #: inc/city-editor.php:8
 msgid "City"
 msgstr "مدينة"
-
 #: inc/city-editor.php:9
 msgid "Search for Cities"
 msgstr "البحث عن المدن"
-
 #: inc/city-editor.php:10
 msgid "Popular Cities"
 msgstr "اشهر المدن"
-
 #: inc/city-editor.php:11 template-parts/front-page/search-form.php:33
 msgid "All Cities"
 msgstr "كل المدن"
-
 #: inc/city-editor.php:12
 msgid "Edit City"
 msgstr "تحرير المدينة"
-
 #: inc/city-editor.php:13
 msgid "Update City"
 msgstr "تحديث المدينة"
-
 #: inc/city-editor.php:14
 msgid "Add New City"
 msgstr "اصافة مدينة جديدة"
-
 #: inc/city-editor.php:15
 msgid "New City Name"
 msgstr "اسم المدينة الجديد"
-
 #: inc/city-editor.php:16
 msgid "Separate cities with commas"
 msgstr "افصل بين المدن بفواصل"
-
 #: inc/city-editor.php:17
 msgid "Add or remove cities"
 msgstr "إضافة أو إزالة المدن"
-
 #: inc/city-editor.php:18
 msgid "Choose from the most used cities"
 msgstr "اختر من بين أكثر المدن استخدامًا"
-
 #: inc/city-editor.php:45 inc/city-editor.php:107
 msgid "City Image"
 msgstr "صورة المدينة"
-
 #: inc/city-editor.php:48 inc/city-editor.php:114 inc/developer-editor.php:43
 #: inc/developer-editor.php:108
 msgid "Upload Image"
 msgstr "تحميل صورة"
-
 #: inc/city-editor.php:49 inc/city-editor.php:116
 msgid "Enter the URL of the city image or use the \"Upload Image\" button."
 msgstr "أدخل عنوان URL لصورة المدينة أو استخدم زر \"تحميل الصورة\"."
-
 #: inc/city-editor.php:68 inc/city-editor.php:129 inc/developer-editor.php:63
 #: inc/developer-editor.php:123
 msgid "Select or Upload Image"
 msgstr "حدد أو قم بتحميل الصورة"
-
 #: inc/city-editor.php:70 inc/city-editor.php:131 inc/developer-editor.php:65
 #: inc/developer-editor.php:125
 msgid "Use this image"
 msgstr "استخدم هذه الصورة"
-
 #: inc/city-editor.php:156 inc/developer-editor.php:149
 msgid "Image"
 msgstr "صورة"
-
 #: inc/city-editor.php:178
 msgid "City Page Sidebar"
 msgstr "الشريط الجانبي لصفحة المدينة"
-
 #: inc/city-editor.php:180
 msgid "Sidebar for city pages"
 msgstr "شريط جانبي لصفحات المدينة"
-
 #: inc/city-editor.php:205 inc/developer-editor.php:179
 msgid "ID"
 msgstr "ID"
-
 #: inc/city-editor.php:206 inc/developer-editor.php:180
 #: inc/project-editor.php:165
 msgid "Question"
 msgstr "سؤال"
-
 #: inc/city-editor.php:207 inc/developer-editor.php:181
 #: inc/project-editor.php:166
 msgid "Answer"
 msgstr "إجابة"
-
 #: inc/city-editor.php:218 inc/city-editor.php:226 inc/city-editor.php:248
 #: inc/developer-editor.php:192 inc/developer-editor.php:200
 #: inc/developer-editor.php:222 inc/project-editor.php:176
 #: inc/project-editor.php:184 inc/project-editor.php:198
 msgid "Delete"
 msgstr "حذف"
-
 #: inc/city-editor.php:231 inc/developer-editor.php:205
 msgid "Add New Question"
 msgstr "سؤال جديد"
-
 #: inc/comments.php:44
 msgid "Pingback:"
 msgstr "تنبيه:"
-
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/comments.php:44 inc/comments.php:68 inc/template-tags.php:151
 msgid "Edit"
 msgstr "تحرير"
-
 #: inc/comments.php:61
 #, php-format
 msgid "%s <span class=\"says d-none\">says:</span>"
 msgstr "%s <span class=\"says d-none\">يقول:</span>"
-
 #: inc/comments.php:66
 #, php-format
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr "%1$s في %2$s"
-
 #: inc/comments.php:73
 msgid "Your comment is awaiting moderation."
 msgstr "تعليقك ينتظر الموافقة عليه."
-
 #: inc/comments.php:122
 msgid ""
 "Save my name, email, and website in this browser for the next time I comment."
 msgstr ""
 "احفظ اسمي، بريدي الإلكتروني، والموقع الإلكتروني في هذا المتصفح لاستخدامها في "
 "المرة القادمة التي أقوم فيها بالتعليق."
-
 #: inc/developer-editor.php:5 inc/developer-editor.php:17
 #: template-parts/front-page/latest-developers.php:10
 msgid "Developers"
 msgstr "المطورين"
-
 #: inc/developer-editor.php:6
 msgid "Developer"
 msgstr "مطور"
-
 #: inc/developer-editor.php:7
 msgid "Search for Developer"
 msgstr "البحث عن المطور"
-
 #: inc/developer-editor.php:8
 msgid "Popular Developers"
 msgstr "اشهر المطورين"
-
 #: inc/developer-editor.php:9
 msgid "All Developers"
 msgstr "كل المطورين"
-
 #: inc/developer-editor.php:10
 msgid "Edit Developer"
 msgstr "تحرير المطور"
-
 #: inc/developer-editor.php:11
 msgid "Update Developer"
 msgstr "تحديث المطور"
-
 #: inc/developer-editor.php:12
 msgid "Add New Developer"
 msgstr "إضافة مطور جديد"
-
 #: inc/developer-editor.php:13
 msgid "New Developer Name"
 msgstr "اسم المطور الجديد"
-
 #: inc/developer-editor.php:14
 msgid "Separate developers with commas"
 msgstr "افصل بين المطورين بفواصل"
-
 #: inc/developer-editor.php:15
 msgid "Add or remove developers"
 msgstr "إضافة أو إزالة المطورين"
-
 #: inc/developer-editor.php:16
 msgid "Choose from the most used developers"
 msgstr "اختر من بين المطورين الأكثر استخدامًا"
-
 #: inc/developer-editor.php:40
 msgid "Developer Image"
 msgstr "شعار المطور"
-
 #: inc/developer-editor.php:44 inc/developer-editor.php:110
 msgid "Enter the URL of the developer image or use the \"Upload Image\" button."
 msgstr "أدخل عنوان URL لصورة المطور أو استخدم زر \"تحميل الصورة\"."
-
 #: inc/developer-editor.php:101
 msgid "developer Image"
 msgstr "شعار المطور"
-
 #: inc/pagination.php:36
 msgid "Page navigation"
 msgstr "التنقل في الصفحة"
-
 #: inc/pagination.php:40
 msgid "First Page"
 msgstr "الصفحة الأولى"
-
 #: inc/pagination.php:44
 msgid "Previous Page"
 msgstr "الصفحة السابقة"
-
 #: inc/pagination.php:49
 msgid "Current Page"
 msgstr "الصفحه الحاليه"
-
 #: inc/pagination.php:49
 msgid "Page"
 msgstr "صفحة"
-
 #: inc/pagination.php:54
 msgid "Next Page"
 msgstr "الصفحة التالية"
-
 #: inc/pagination.php:58
 msgid "Last Page"
 msgstr "آخر صفحة"
-
 #: inc/password-protected-form.php:22
 msgid "Password"
 msgstr "كلمة السر"
-
 #: inc/password-protected-form.php:23
 msgid "Submit"
 msgstr "ارسال"
-
 #: inc/project-editor.php:7 inc/project-editor.php:18
 msgid "Projects"
 msgstr "المشاريع"
-
 #: inc/project-editor.php:8
 msgid "Project"
 msgstr "مشروع"
-
 #: inc/project-editor.php:9 inc/project-editor.php:10
 msgid "Add New Project"
 msgstr "إضافة مشروع جديد"
-
 #: inc/project-editor.php:11 inc/unit-editor.php:68
 msgid "Edit Project"
 msgstr "تحرير المشروع"
-
 #: inc/project-editor.php:12
 msgid "New Project"
 msgstr "مشروع جديد"
-
 #: inc/project-editor.php:13
 msgid "All Projects"
 msgstr "كل المشاريع"
-
 #: inc/project-editor.php:14
 msgid "View Project"
 msgstr "عرض مشروع"
-
 #: inc/project-editor.php:15
 msgid "Search for Project"
 msgstr "البحث عن المشروع"
-
 #: inc/project-editor.php:16
 msgid "No project found"
 msgstr "لم يتم العثور على مشروع"
-
 #: inc/project-editor.php:17
 msgid "No project found in trash"
 msgstr "لم يتم العثور على أي مشروع في سلة المهملات"
-
 #: inc/project-editor.php:38
 msgctxt "taxonomy general name"
 msgid "Types"
 msgstr "الانواع"
-
 #: inc/project-editor.php:39
 msgctxt "taxonomy singular name"
 msgid "Type"
 msgstr "النوع"
-
 #: inc/project-editor.php:40
 msgid "Search Types"
 msgstr "البحث في الانواع"
-
 #: inc/project-editor.php:41
 msgid "All Types"
 msgstr "كل الانواع"
-
 #: inc/project-editor.php:42
 msgid "Edit Type"
 msgstr "تحرير النوع"
-
 #: inc/project-editor.php:43
 msgid "Update Type"
 msgstr "تحديث النوع"
-
 #: inc/project-editor.php:44
 msgid "Add New Type"
 msgstr "إضافة نوع جديد"
-
 #: inc/project-editor.php:45
 msgid "New Type Name"
 msgstr "اسم النوع الجديد"
-
 #: inc/project-editor.php:46
 msgid "Types"
 msgstr "الانواع"
-
 #: inc/project-editor.php:89
 msgid "Project Space:"
 msgstr "مساحة المشروع:"
-
 #: inc/project-editor.php:92
 msgid "Enter Project Space"
 msgstr "أدخل مساحة المشروع"
-
 #: inc/project-editor.php:98
 msgid "Project Price:"
 msgstr "سعر المشروع:"
-
 #: inc/project-editor.php:101
 msgid "Enter Project Price"
 msgstr "أدخل سعر المشروع"
-
 #: inc/project-editor.php:106
 msgid "Payment Systems:"
 msgstr "أنظمة الدفع:"
-
 #: inc/project-editor.php:109
 msgid "Enter Payment Systems"
 msgstr "أدخل أنظمة الدفع"
-
 #: inc/project-editor.php:149
 msgid "FAQs"
 msgstr "الأسئلة الشائعة"
-
 #: inc/project-editor.php:189
 msgid "Add New Question "
 msgstr "إضافة سؤال جديد "
-
 #: inc/project-editor.php:233
 msgid "Project Gallery"
 msgstr "معرض صور المشروع"
-
 #: inc/project-editor.php:246
 msgid "Project Gallery:"
 msgstr "معرض صور المشروع :"
-
 #: inc/project-editor.php:248
 msgid "Upload Gallery"
 msgstr "تحميل معرض الصور"
-
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:47
 msgid ", "
 msgstr ", "
-
 #: inc/template-tags.php:97
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr "بواسطة  %s"
-
 #. translators: %s: Name of current post. Only visible to screen readers.
 #. comments_popup_link( sprintf( __( 'Leave a comment<span class="screen-reader-text"> on %s</span>', 'bootscore' ), get_the_title() ) );
 #: inc/template-tags.php:180
 msgid "Leave a comment"
 msgstr "اترك تعليقًا"
-
 #: inc/template-tags.php:206
 msgid "Tagged"
 msgstr "تم الوسم"
-
 #: inc/theme-setup.php:138
 msgid "Logo Settings"
 msgstr "إعدادات الشعار"
-
 #: inc/theme-setup.php:148
 msgid "Upload Logo"
 msgstr "تحميل الشعار"
-
 #: inc/unit-editor.php:43 inc/unit-editor.php:48
 msgid "Project Association"
 msgstr "ربط المشروع"
-
 #: inc/unit-editor.php:59 inc/unit-editor.php:98
 msgid "Select Project"
 msgstr "اختر المشروع"
-
 #: inc/unit-editor.php:79
 msgid "Project Information"
 msgstr "معلومات المشروع"
-
 #: inc/unit-editor.php:96
 msgid "Select Project:"
 msgstr "اختر المشروع:"
-
 #: inc/unit-editor.php:201 inc/unit-editor.php:212
 msgid "Units"
 msgstr "الوحدات"
-
 #: inc/unit-editor.php:202
 msgid "Unit"
 msgstr "وحدة"
-
 #: inc/unit-editor.php:203 inc/unit-editor.php:204
 msgid "Add New Unit"
 msgstr "إضافة وحدة جديدة"
-
 #: inc/unit-editor.php:205
 msgid "Edit Unit"
 msgstr "تحرير الوحدة"
-
 #: inc/unit-editor.php:206
 msgid "New Unit"
 msgstr "وحدة جديدة"
-
 #: inc/unit-editor.php:207
 msgid "All Units"
 msgstr "جميع الوحدات"
-
 #: inc/unit-editor.php:208
 msgid "View Unit"
 msgstr "شاهد الوحدة"
-
 #: inc/unit-editor.php:209
 msgid "Search for Unit"
 msgstr "البحث عن وحدة"
-
 #: inc/unit-editor.php:210
 msgid "No unit found"
 msgstr "لم يتم العثور على وحدة"
-
 #: inc/unit-editor.php:211
 msgid "No unit found in trash"
 msgstr "لم يتم العثور على وحدة في سلة المهملات"
-
 #: inc/widgets.php:35
 msgid "Top Nav"
 msgstr "القائمة العلوية"
-
 #: inc/widgets.php:37 inc/widgets.php:49 inc/widgets.php:60 inc/widgets.php:71
 #: inc/widgets.php:82 inc/widgets.php:93 inc/widgets.php:104 inc/widgets.php:115
 #: inc/widgets.php:126 inc/widgets.php:137 inc/widgets.php:148
 msgid "Add widgets here."
 msgstr "إضافة ودجت هنا."
-
 #: inc/widgets.php:47
 msgid "Top Nav 2"
 msgstr "الشريط العلوي 2"
-
 #: inc/widgets.php:58
 msgid "Top Nav Search"
 msgstr "بحث الشريط العلوي"
-
 #: inc/widgets.php:69 sidebar.php:30
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
-
 #: inc/widgets.php:80
 msgid "Top Footer"
 msgstr "اعلى الفوتر"
-
 #: inc/widgets.php:91
 msgid "Footer 1"
 msgstr "تذييل 1"
-
 #: inc/widgets.php:102
 msgid "Footer 2"
 msgstr "تذييل 2"
-
 #: inc/widgets.php:113
 msgid "Footer 3"
 msgstr "تذييل 3"
-
 #: inc/widgets.php:124
 msgid "Footer 4"
 msgstr "تذييل 4"
-
 #: inc/widgets.php:135
 msgid "Footer Info"
 msgstr "معلومات التذييل"
-
 #: inc/widgets.php:146
 msgid "404 Page"
 msgstr "صفحة 404"
-
 #: index.php:93 index.php:164 template-parts/content-search.php:60
 msgid "Read more »"
 msgstr "المزيد »"
-
 #: page-templates/page-blank-without-container.php:25
 msgid "Pages:"
 msgstr "الصفحات:"
-
 #: search.php:32
 msgid "Search:"
 msgstr "بحث :"
-
 #: search.php:40
 #, php-format
 msgid "We found %s result for your search."
@@ -707,7 +547,6 @@ msgstr[2] "تم العثور على %s نتيجتان لبحثك."
 msgstr[3] "تم العثور على %s نتيجة لبحثك."
 msgstr[4] "تم العثور على %s نتيجة لبحثك."
 msgstr[5] "تم العثور على %s نتيجة لبحثك."
-
 #: search.php:48
 msgid ""
 "We could not find any results for your search. You can give it another try "
@@ -715,114 +554,88 @@ msgid ""
 msgstr ""
 "لم نتمكن من العثور على أي نتائج لبحثك. يمكنك تجربتها مرة أخرى من خلال نموذج "
 "البحث أدناه."
-
 #: search.php:103
 msgid "search again"
 msgstr "ابحث مرة اخرى"
-
 #: searchform.php:3
 msgid "Search"
 msgstr "بحث"
-
 #: sidebar.php:25
 msgid "Open side menu"
 msgstr "فتح القائمة الجانبية"
-
 #: single-templates/single-projects.php:56
 msgid "Units Of Projects"
 msgstr "وحدات المشروع"
-
 #: single-templates/single-projects.php:80
 msgid "Project Details"
 msgstr "تفاصيل المشروع"
-
 #: single-templates/single-projects.php:85 single-templates/single-units.php:63
 msgid "Project Name"
 msgstr "اسم المشروع"
-
 #: single-templates/single-projects.php:92 single-templates/single-units.php:71
 msgid "Developing Company"
 msgstr "الشركة المطورة"
-
 #: single-templates/single-projects.php:102 single-templates/single-units.php:80
 msgid "Unit Types"
 msgstr "نوع الوحدة"
-
 #: single-templates/single-projects.php:110
 msgid "Project Location"
 msgstr "لوكيشن المشروع"
-
 #: single-templates/single-projects.php:119 single-templates/single-units.php:97
 msgid "Sales Number"
 msgstr "رقم المبيعات"
-
 #: single-templates/single-projects.php:134
 #: single-templates/single-units.php:112 template-parts/single-card.php:88
 msgid "Whatsapp"
 msgstr "واتساب"
-
 #: single-templates/single-projects.php:145
 #: single-templates/single-projects.php:267
 #: single-templates/single-units.php:123
 msgid "Call Us"
 msgstr "اتصل بنا"
-
 #: single-templates/single-projects.php:185
 msgid "Similar Projects"
 msgstr "مشاريع مماثلة"
-
 #: single-templates/single-projects.php:215
 msgid "No similar projects"
 msgstr "لا توجد مشاريع مماثلة"
-
 #: single-templates/single-projects.php:224
 #: template-parts/front-page/latest-properties.php:8
 msgid "Latest projects"
 msgstr "اخر المشروعات"
-
 #: single-templates/single-projects.php:249
 msgid "No Latest projects"
 msgstr "لا يوجد مشروعات جديدة"
-
 #: single-templates/single-projects.php:315
 #: single-templates/single-units.php:258
 msgid "Townhouse - Twin House - Standalone"
 msgstr "تاون هاوس - توين هاوس - منفصل (Standalone)"
-
 #: single-templates/single-units.php:51
 msgid "Unit Details"
 msgstr "تفاصيل الوحدة"
-
 #: single-templates/single-units.php:56
 msgid "Unit Name"
 msgstr "اسم الوحدة"
-
 #: single-templates/single-units.php:88
 msgid "Unit Location"
 msgstr "لوكيشن الوحدة"
-
 #: single-templates/single-units.php:163
 msgid "Similar units"
 msgstr "وحدات مماثلة"
-
 #: single-templates/single-units.php:188
 msgid "No similar units"
 msgstr "لا توجد وحدات متشابهة"
-
 #: single-templates/single-units.php:193
 msgid "Unit project is not set"
 msgstr "الوحدة في المشروع غير محددة"
-
 #: template-parts/content-none.php:22
 msgid "Nothing Found for"
 msgstr "لم يتم العثور على أي شيء لـ"
-
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:33
 #, php-format
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "جاهز لنشر أول مقالة لك؟ <a href=\"%1$s\">ابدأ هنا</a>."
-
 #: template-parts/content-none.php:45
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
@@ -830,67 +643,52 @@ msgid ""
 msgstr ""
 "عذرًا، ولكن لا يوجد شيء يتناسب مع مصطلحات البحث الخاصة بك. يرجى المحاولة مرة "
 "أخرى باستخدام كلمات مفتاحية مختلفة."
-
 #: template-parts/content-none.php:51
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
 "can help."
 msgstr "يبدو أننا لا نستطيع العثور على ما تبحث عنه. ربما يمكن أن يساعد البحث."
-
 #: template-parts/front-page/latest-developers.php:11
 msgid "All trusted real estate developers"
 msgstr "جميع مطوري العقارات الموثوق بهم"
-
 #: template-parts/front-page/latest-news.php:7
 msgid "Articles & News"
 msgstr "أحدث الأخبار"
-
 #: template-parts/front-page/latest-news.php:8
 msgid "View the latest real estate and project news"
 msgstr "عرض أحدث أخبار العقارات والمشاريع"
-
 #: template-parts/front-page/latest-properties.php:9
 msgid "New Aqar website publishes the latest real estate projects"
 msgstr "موقع عقار رواند ينشر أحدث مشاريع العقارات"
-
 #: template-parts/front-page/search-form.php:5
 msgctxt "placeholder"
 msgid "Search for property..."
 msgstr "البحث عن العقار..."
-
 #: template-parts/front-page/search-form.php:34
 msgid "All Unit Types"
 msgstr "كل أنواع الوحدات"
-
 #: template-parts/front-page/search-form.php:40
 msgctxt "submit button"
 msgid "Show Available Properties"
 msgstr "عرض العقارات المتاحة"
-
 #: template-parts/front-page/top-cities.php:7
 msgid "Top cities"
 msgstr "أفضل المدن"
-
 #: template-parts/front-page/top-cities.php:8
 msgid "All projects in the most famous cities inside Egypt"
 msgstr "جميع المشاريع في أشهر المدن داخل مصر"
-
 #: template-parts/single-card.php:79
 msgid "Contact us"
 msgstr "أتصل بنا"
-
 #: template-parts/single-card.php:94
 msgid "Call Now"
 msgstr "اتصل الآن"
-
 #. Theme Name of the plugin/theme
 msgid "NewAqar"
 msgstr "نيو عقار"
-
 #. Theme URI of the plugin/theme
 msgid "https://www.newaqar.com/"
 msgstr "https://www.newaqar.com/"
-
 #. Description of the plugin/theme
 msgid ""
 "NewAqar is a sleek and modern WordPress theme tailored for real estate "
@@ -909,20 +707,15 @@ msgstr ""
 "يسمح لوحة التحكم الإدارية البسيطة بسهولة التخصيص ، مما يجعله خيارًا مثاليًا "
 "لوكالات العقارات والمطورين والوكلاء العقاريين الأفراد الذين يسعون إلى وجود "
 "قوي وجاذب بصريًا عبر الإنترنت."
-
 #. Author of the plugin/theme
 msgid "Waleed Elsefy"
 msgstr "وليد الصيفي"
-
 #. Author URI of the plugin/theme
 msgid "https://dido.pro"
 msgstr "https://dido.pro"
-
 #~ msgid "All"
 #~ msgstr "كل"
-
 #~ msgid "Type"
 #~ msgstr "الانواع"
-
 #~ msgid "Project Area"
 #~ msgstr "منطقة نموذج الاتصال في التذييلLocation"

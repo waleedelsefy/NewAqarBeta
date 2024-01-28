@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template part for displaying a message that posts cannot be found
  *
@@ -10,7 +9,6 @@
  */
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
-
 ?>
 <section class="no-results not-found">
   <header class="page-header mb-4">
@@ -30,13 +28,11 @@ defined( 'ABSPATH' ) || exit;
         ) . '</p>',
         esc_url(admin_url('post-new.php'))
       );
-
     elseif (is_search()) :
       ?>
       <p class="alert alert-info mb-4"><?php esc_html_e('Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'bootscore'); ?></p>
       <?php
       get_search_form();
-
     else :
       ?>
       <p><?php esc_html_e('It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'bootscore'); ?></p>

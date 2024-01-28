@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Theme setup
  *
@@ -27,10 +26,8 @@ if (!function_exists('bootscore_setup')) :
      * to change 'bootscore' to the name of your theme in all the template files.
     */
     load_theme_textdomain('bootscore', get_template_directory() . '/languages');
-
     // Add default posts and comments RSS feed links to head.
     add_theme_support('automatic-feed-links');
-
     /*
      * Let WordPress manage the document title.
      * By adding theme support, we declare that this theme does not use a
@@ -38,14 +35,12 @@ if (!function_exists('bootscore_setup')) :
      * provide it for us.
     */
     add_theme_support('title-tag');
-
     /*
      * Enable support for Post Thumbnails on posts and pages.
      *
      * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
     */
     add_theme_support('post-thumbnails');
-
     /*
      * Switch default core markup for search form, comment form, and comments
      * to output valid HTML5.
@@ -60,7 +55,6 @@ if (!function_exists('bootscore_setup')) :
       'style',
     ));
       add_theme_support( 'custom-logo' );
-
     // Add theme support for selective refresh for widgets.
     add_theme_support('customize-selective-refresh-widgets');
   }
@@ -73,12 +67,10 @@ function add_duplicate_post_button($actions, $post) {
     return $actions;
 }
 add_filter('post_row_actions', 'add_duplicate_post_button', 10, 2);
-
 function duplicate_post_action() {
     if (isset($_GET['duplicate_id']) && current_user_can('edit_posts')) {
         $post_id = $_GET['duplicate_id'];
         $post = get_post($post_id);
-
         if (!empty($post)) {
             $new_post = array(
                 'post_title' => $post->post_title . ' (Copy)',
@@ -89,9 +81,7 @@ function duplicate_post_action() {
                 'post_date' => current_time('mysql'),
                 'post_date_gmt' => current_time('mysql', 1),
             );
-
             $new_post_id = wp_insert_post($new_post);
-
             if ($new_post_id) {
                 // Duplicate post meta data
                 $post_meta = get_post_custom($post_id);
@@ -100,7 +90,6 @@ function duplicate_post_action() {
                         add_post_meta($new_post_id, $key, $value);
                     }
                 }
-
                 // Redirect to the new duplicate post
                 wp_redirect(admin_url('post.php?action=edit&post=' . $new_post_id));
                 exit;
@@ -122,27 +111,21 @@ function bootscore_content_width() {
   // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
   $GLOBALS['content_width'] = apply_filters('bootscore_content_width', 640);
 }
-
 add_action('after_setup_theme', 'bootscore_content_width', 0);
-
 // في functions.php
-
 function custom_theme_logo_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'theme_logo_section', array(
         'title'    => __( 'Logo Settings', 'your_theme_text_domain' ),
         'priority' => 30,
     ) );
-
     $wp_customize->add_setting( 'custom_logo_upload', array(
         'default'           => '',
         'sanitize_callback' => 'esc_url_raw',
     ) );
-
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'custom_logo_upload', array(
         'label'    => __( 'Upload Logo', 'your_theme_text_domain' ),
         'section'  => 'theme_logo_section',
         'settings' => 'custom_logo_upload',
     ) ) );
 }
-
 add_action( 'customize_register', 'custom_theme_logo_customize_register' );

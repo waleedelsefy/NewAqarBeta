@@ -7,7 +7,6 @@
                     echo '<h2>' . esc_html__('Latest projects', 'newaqar') . '</h2>';
                     echo  '<p>' . esc_html__('New Aqar website publishes the latest real estate projects', 'newaqar') . '</p>';
                     ?>
-
                 </div>
             </div>
         </div>

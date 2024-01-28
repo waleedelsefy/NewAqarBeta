@@ -2,28 +2,22 @@
 /**
  * Search Results
  */
-
 get_header();
 ?>
 <div class="container">
-
     <div class="row">
         <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
             <div class="main-content">
                             <?php
-
                             $archive_title    = '';
                             $archive_subtitle = '';
-
                             if ( is_search() ) {
                                 global $wp_query;
-
                                 $archive_title = sprintf(
                                     '%1$s %2$s',
                                     '<span class="color-accent">' . __( 'Search:', 'newaqar' ) . '</span>',
                                     get_search_query()
                                 );
-
                                 if ( $wp_query->found_posts ) {
                                     $archive_subtitle = sprintf(
                                     /* translators: %s: Number of search results. */
@@ -42,33 +36,22 @@ get_header();
                                 $archive_title    = get_the_archive_title();
                                 $archive_subtitle = get_the_archive_description();
                             }
-
                             if ( $archive_title || $archive_subtitle ) {
                                 ?>
-
                                 <header class="archive-header has-text-align-center header-footer-group">
-
                                     <div class="archive-header-inner section-inner medium">
-
                                         <?php if ( $archive_title ) { ?>
                                             <h1 class="archive-title"><?php echo wp_kses_post( $archive_title ); ?></h1>
                                         <?php } ?>
-
                                         <?php if ( $archive_subtitle ) { ?>
                                             <div class="archive-subtitle section-inner thin max-percentage intro-text"><?php echo wp_kses_post( wpautop( $archive_subtitle ) ); ?></div>
                                         <?php } ?>
-
                                     </div><!-- .archive-header-inner -->
-
                                 </header><!-- .archive-header -->
-
                                 <?php
                             }
-
                             if ( have_posts() ) {
-
                                 $i = 0;
-
                                 while ( have_posts() ) {
                                     the_post(); ?>
                                     <div class="col-lg-6 col-md-6 col-12 mt-4 p-5">
@@ -107,11 +90,8 @@ get_header();
                             <?php echo __('Call Us', 'newaqar'); ?></p></div>
                     <?php echo do_shortcode('[fluentform id="3"]'); ?>
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>
-
 <?php echo get_footer(); ?>

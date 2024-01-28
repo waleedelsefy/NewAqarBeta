@@ -1,5 +1,4 @@
 @import '../../node_modules/bootstrap/scss/bootstrap';
-
 :root {
   --menu-li-font-size: 11pt;
   --call-to-action-font-size: 14px;
@@ -43,8 +42,6 @@
     --h1-hero-font-size:36px;
     --content-line-heigh:2rem;
     --p-margin-heigh:0.5rem;
-
-
   }
 }
 html body {
@@ -57,8 +54,6 @@ html body {
   text-align: end
 }
 body , html {
-
-
   .post-thumbnail {
     display: flex;
     justify-content: center;
@@ -72,7 +67,6 @@ body , html {
     font-size: var( --h2-content-font-size) !important;
     font-weight: 600;
     line-height: var(--content-line-heigh)!important;
-
   }
   h3 span {
     font-size: var( --h3-content-font-size) !important;
@@ -94,7 +88,6 @@ body , html {
     font-weight: 600;
     line-height: var(--content-line-heigh)!important;
   }
-
   body td, body th, html td, html th {
     background-color: #fff;
     border: .1rem solid #dcd7ca;
@@ -104,7 +97,6 @@ body , html {
     overflow: visible;
     padding: .5em
   }
-
   body .button, body button, body input[type=button], body input[type=reset], body input[type=submit], html .button, html button, html input[type=button], html input[type=reset], html input[type=submit] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -126,7 +118,6 @@ body , html {
     text-transform: uppercase;
     transition: opacity .15s linear
   }
-
   h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
     color: var(--all-h-content-color) !important;
   }
@@ -136,7 +127,6 @@ body , html {
   .slider-area p, .slider-area h1 {
     color: #fff;
   }
-
   article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
   }
@@ -151,15 +141,12 @@ body , html {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-
   html h1, html .heading-size-1, body h1, body .heading-size-1 {
   }
   .mx-5 {
     margin-inline-start: ($spacer * .25) !important;
     margin-inline-end: ($spacer * .25) !important;
     color:var(--all-h-content-color);
-
   }
   .col-2-4{
     width: 20%;
@@ -168,12 +155,8 @@ body , html {
     font-size: 1rem !important;
     background: var(--primary-color-collapse);
   }
-
   @media screen and (min-width: 220px) and (max-width: 769px) {
-
     /* Add any additional styles for .recent-property within this media query */
-
-
     html .recent-property .title, body .recent-property .title {
       font-size: var(--p-content-font-size);
       line-height: 27px;
@@ -183,17 +166,13 @@ body , html {
       color: #000;
       background: #fff;
     }
-
     .project-space, .project-location {
-
       padding-inline-start: 18px !important;
       border-top: 1px solid var(--primary-background-color);
       padding-top: 4px;
       display: inline-flex;
       gap: 10px;
     }
-
-
     .call-now {
       padding: 8px 11px;
       background: var(--primary-color);
@@ -202,7 +181,6 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
     .call-whatsapp {
       padding: 8px 0px;
       width: 100%;
@@ -211,7 +189,6 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
     .col-xs-12.project-space {
       height: 28px;
     }
@@ -222,19 +199,15 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
   }
   .latest-section-link {
     font-size: var(--p-content-font-size) ;
   }
   @media screen and (min-width: 770px) and (max-width: 1024px) {
-
-
     .col-md-4 {
       width: 33.33%;
       padding: 15px;
     }
-
     html .recent-property .title, body .recent-property .title {
       font-size: var(--p-content-font-size);
       line-height: 27px;
@@ -243,17 +216,13 @@ body , html {
       color: #000;
       background: #fff;
     }
-
     .project-space, .project-location {
-
       padding-inline-start: 18px !important;
       border-top: 1px solid var(--primary-background-color);
       padding-top: 4px;
       display: inline-flex;
       gap: 10px;
     }
-
-
     .call-now {
       padding: 8px 11px;
       background: var(--primary-color);
@@ -262,7 +231,6 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
     .call-whatsapp {
       padding: 8px 25px;
       width: 100%;
@@ -271,7 +239,6 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
     .col-xs-12.project-space {
       height: 28px;
     }
@@ -285,15 +252,12 @@ body , html {
   }
   @media screen and (min-width: 1440px) and (max-width: 2560px) {
     .project-space, .project-location {
-
       padding-inline-start: 18px !important;
       border-top: 1px solid var(--primary-background-color);
       padding-top: 4px;
       display: inline-flex;
       gap: 10px;
     }
-
-
     .call-now {
       padding: 8px 11px;
       background: var(--primary-color);
@@ -302,7 +266,6 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
     .call-whatsapp {
       padding: 8px 25px;
       width: 100%;
@@ -311,7 +274,6 @@ body , html {
       display: inline-flex;
       gap: 8px;
     }
-
     .col-xs-12.project-space {
       height: 28px;
     }
@@ -329,20 +291,17 @@ body , html {
     top: 0;
     left: -295px;
   }
-
   .recent-property {
     height: 100%;
     width: 100%;
     padding: 0px;
     border-radius: var(--recent-property-border-radius)
   }
-
   .img-recent-property {
     width: 100%;
     min-width: 100%;
     height: 285px;
   }
-
   .swiper-button-prev svg {
     fill: #3e4146;
     height: auto;
@@ -354,13 +313,11 @@ body , html {
     border-radius: 20px;
     background: #a99c9c6b;
   }
-
   .swiper-button-next svg {
     fill: #3e4146;
     height: auto;
     width: 8px;
   }
-
   .swiper-slide.col-md-2.col-sm-4 {
     display: flex;
     justify-content: center;
@@ -369,10 +326,8 @@ body , html {
     align-content: center;
     flex-wrap: nowrap;
   }
-
   .accordion-header {
     margin: 0;
-
   }
   button.accordion-button.collapsed {
     background-color: var(--primary-color);
@@ -386,29 +341,23 @@ body , html {
   }
   button.accordion-button::after {
     display: none;
-
   }
-
   .accordion-button:focus {
     z-index: 3;
     border-color: var(--bs-accordion-btn-focus-border-color);
     outline: 0;
     box-shadow: var(--bs-accordion-btn-focus-box-shadow);
   }
-
   body .content_area, html .content_area {
     margin: 0 auto;
     max-width: 90% !important;
     position: relative;
   }
-
   .height-420px {
     height: 420px;
   }
-
   #content-to-toggle {
   }
-
   .toggle-container.d-flex.border-primary {
     background: #eeeeee;
     padding-inline-end: 22px;
@@ -427,32 +376,26 @@ body , html {
     font-weight: 700;
     margin-inline-start: 23px;
     font-size: 18px;
-
   }
   .table-of-contents {
     margin-bottom: 1rem;
     margin-top: 1rem;
   }
-
   @media only screen and (min-width: 769px) {
-
     .sidebar {
       position: sticky;
       margin-inline-start: 15px;
       top: 0px;
     }
-
     .row-tax {
       margin-inline-end:  -50px !important;
       margin-inline-start: -50px !important;
     }
   }
-
   form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
     background-color: var(--primary-color) !important;
     color: #ffffff !important;
   }
-
   ul#iti-0__country-listbox {
     z-index: 99999 !important;
     width: 283px !important;
@@ -466,9 +409,7 @@ body , html {
     line-height: 31px;
     background: transparent;
     padding-top: 8px;
-
   }
-
   .accordion-button:focus {
     z-index: 3;
     border-color: unset !important;
@@ -481,19 +422,16 @@ body , html {
     outline: 0 !important;
     box-shadow: unset !important;
   }
-
   .accordion-button:hover {
     z-index: 3;
     border-color: unset !important;
     outline: 0 !important;
     box-shadow: unset !important;
   }
-
   .searchandfilter .sf-input-select {
     min-width: unset!important;
     width: 100%;
   }
-
   img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     width: 94%;
     border-radius: 5px;
@@ -503,30 +441,23 @@ body , html {
     color: transparent;
   }
   /* free size card buttons */
-
   #phone-num {
     background-color: var(--primary-color);
     font-weight:var(--call-to-action-font-weight) ;
     padding: 0;
     border-end-end-radius: var(--recent-property-border-radius);
-
   }
-
-
   a#whatsapp-liko ,#contact-us, #phone-num {
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
-
   a.title {
     color: #000000e0;
     font-size: 18px;
     font-weight: 400;
   }
-
   /*start footer*/
   .wa__btn_popup {
     left: 20px;
@@ -535,18 +466,12 @@ body , html {
   }
   /*end footer*/
   @media screen and (min-width: 320px) and (max-width: 769px) {
-
-
     .col-xs-12.text-center {
       font-size: 11px
     }
-
     .col-md-4 {
       width: 50%
     }
-
-
-
     .project-location, .project-space {
       border-top: 1px solid var(--primary-background-color);
       display: inline-flex;
@@ -554,20 +479,14 @@ body , html {
       padding-inline-start: 18px !important;
       padding-top: 3px;
       height: 30px;
-
     }
-
-
     .call-now {
       background: var(--primary-color);
       color: #fff
     }
-
-
     .col-xs-12.project-space {
       height: 28px
     }
-
     .call-contact {
       color: var(--secondary-color-2);
       display: inline-flex;
@@ -575,23 +494,15 @@ body , html {
       column-gap: 16px;
       padding: 8px 11px
     }
-
   }
   @media screen and (min-width: 770px) and (max-width: 1024px) {
-
-
     .col-md-4 {
       padding: 15px;
       width: 33.33%
     }
-
-
-
-
     .col-xs-12.project-space {
       height: 28px
     }
-
     .call-contact {
       color: var(--secondary-color-2);
       display: inline-flex;
@@ -599,12 +510,8 @@ body , html {
       gap: 8px;
       padding: 8px 11px
     }
-
   }
   @media screen and (min-width: 1440px) and (max-width: 2560px) {
-
-
-
     .project-location, .project-space {
       border-top: 1px solid var(--primary-background-color);
       display: inline-flex;
@@ -612,7 +519,6 @@ body , html {
       padding-inline-start: 18px !important;
       padding-top: 3px;
       height: 30px;
-
     }
     nav.rank-math-breadcrumb {
       margin-bottom: 3rem;
@@ -622,13 +528,9 @@ body , html {
       background: var(--primary-color);
       color: #fff
     }
-
-
-
     .col-xs-12.project-space {
       height: 28px
     }
-
     .call-contact {
       color: var(--secondary-color-2);
       display: inline-flex;
@@ -636,10 +538,7 @@ body , html {
       gap: 8px;
       padding: 8px 11px
     }
-
   }
-
-
   .whatsapp-ico {
     width: 33%;
     margin: 0;
@@ -649,7 +548,6 @@ body , html {
     justify-content: center;
   }
   /*card style*/
-
   .recent-property {
     padding: 0;
     width: 100%;
@@ -665,24 +563,18 @@ body , html {
     width: -webkit-fill-available;
     background:var(--recent-property-background-color);
     border-radius:var(--recent-property-border-radius);
-
   }
   .img-recent-property{
     border-start-start-radius: var(--recent-property-border-radius);
     border-start-end-radius: var(--recent-property-border-radius);
   }
   /*** Unit Card**/
-
-
   .unit-card {
     border-radius: var(--recent-property-border-radius);
     box-shadow: var(--primary-box-shadow);
-
   }
-
   /***** Only Mobile ****/
   @media screen and (min-width: 100px) and (max-width: 769px) {
-
     .slider-area {
       background: var(--ar_front_page_hero_background);
       background-position: -246px 0 !important;
@@ -698,7 +590,6 @@ body , html {
     .hero-title {
       font-size: 3.4rem !important;
     }
-
     /*start header*/
     .header {
       display: flex;
@@ -713,7 +604,6 @@ body , html {
       align-items: center;
       align-content: center;
       box-shadow: var(--primary-box-shadow);
-
     }
     #contact-us {
       display: none;
@@ -735,7 +625,6 @@ body , html {
       color:var(--call-to-action-font-color);
       width: -webkit-fill-available;
     }
-
     #site-link {
       height: 70px;
       margin-inline-start: 19px;
@@ -744,7 +633,6 @@ body , html {
       z-index: 10;
     }
     /*End header*/
-
     .call-now, .call-whatsapp {
       display: inline-flex;
       font-size: var(--call-to-action-font-size);
@@ -753,13 +641,11 @@ body , html {
       align-items: center;
       justify-content: center;
     }
-
     .col-xs-12.text-center {
       font-size: 11px;
     }
     .col-md-4 {
       width: 50%;
-
     }
     ul#menu-footer-navigation-1 {
       background: white;
@@ -771,9 +657,7 @@ body , html {
       z-index: 88;
       box-shadow: 0px 11px 20px 1px black;
     }
-
     /**start of post card**/
-
     .img-recent-property {
       height: 200px;
       min-width: 100%;
@@ -795,18 +679,15 @@ body , html {
       border-radius: var(--recent-property-border-radius);
       display: block;
     }
-
     /**End of post card**/
     .row-body {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
-
     .breadcrumbs-wrapper {
       display: none;
     }
-
     .left-side-bar {
       padding-left: 0 !important;
       padding-right: 0 !important;
@@ -836,11 +717,9 @@ body , html {
     .side-bar-mob {
       display: block;
     }
-
     main#content {
       margin-top: 24px;
     }
-
     body .sec-heading h2, html .sec-heading h2 {
       font-size: var(--h2-content-font-size);
       font-weight: 600;
@@ -857,9 +736,7 @@ body , html {
         font-size: var(--h1-hero-font-size);
       }
     }
-
   }
-
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
     .slider-area {
@@ -882,18 +759,15 @@ body , html {
       flex-direction: column;
       align-content: center;
       align-items: center;
-
     }
     .row-body {
       display: flex;
       flex-direction: row;
     }
-
     /*start header*/
     nav#block-dar-main-menu {
       width: 70%;
     }
-
     .logo {
       width: 70%;
     }
@@ -918,7 +792,6 @@ body , html {
       align-items: center;
     }
     .hero {
-
       .hero-title {
         margin-bottom: 50px;
         font-size: var(--h1-hero-font-size);
@@ -947,14 +820,12 @@ body , html {
       font-size: var(--h2-content-font-size);
       font-weight: 600;
     }
-
     html .menu-item-has-children a:after {
       color: #000;
       content: "▼";
       font-size: 6pt;
       position: absolute;
     }
-
     .breadcrumb-scroller {
       .ul{
         display: flex;
@@ -965,7 +836,6 @@ body , html {
         align-items: center;
         justify-content: flex-start;
       }
-
       .li {
         display: flex;
         flex-direction: row;
@@ -973,7 +843,6 @@ body , html {
         align-items: center;
         flex-wrap: nowrap;
       }
-
       .cil {
         color: #000;
         display: flex;
@@ -988,7 +857,6 @@ body , html {
         margin-inline-start: 23px;
       }
     }
-
     project-details {
       th.project-title {
         font-size: var(--h2-content-font-size);
@@ -1009,7 +877,6 @@ body , html {
         width: 460px;
       }
     }
-
     /*side bar*/
     .message-section {
       background: #fff;
@@ -1020,7 +887,6 @@ body , html {
       display: block;
       margin-top: 20px;
     }
-
     .right-side-bar {
       display: block;
     }
@@ -1028,33 +894,26 @@ body , html {
       display: none;
     }
   }
-
   .price-last-update p {
     background-color: var(--primary-have-color-collapse);
     color: #FFF !important;
     border-radius: 0 0 9px 9px;
     text-align: center;
-
   }
   /**** Start of fluent form ****/
-
   .fluentform {
     padding: 11px;
     background:var(--recent-property-background-color) ;
     border: 2px solid #0000000a;
     border-radius: 8px;
   }
-
   button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style {
     background: var(--primary-color);
   }
-
   .fluentform .ff-text-left {
     text-align: end;
   }
   /**** end of fluent form ****/
-
-
   /**** content ****/
   main#content-project, .taxonomy-description {
     p , li  {
@@ -1075,7 +934,6 @@ body , html {
   .table-content {
     border: 0.1rem solid #dcd7ca;
     background: white;
-
     p {
       border: none;
       font-size:var(--p-content-font-size);
@@ -1084,12 +942,9 @@ body , html {
       margin-top: 10px;
       padding: 0;
       text-align: inherit;
-
     }
-
   }
   .d-flex .gap-2 {
     align-items: center;
   }
 }
-

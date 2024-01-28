@@ -16,7 +16,6 @@ function register_developer_taxonomy() {
         'choose_from_most_used'      => __('Choose from the most used developers', 'newaqar'),
         'menu_name'                  => __('Developers', 'newaqar'),
     );
-
     $args = array(
         'labels'            => $labels,
         'hierarchical'      => true,
@@ -26,13 +25,10 @@ function register_developer_taxonomy() {
         'query_var'         => true,
         'rewrite'           => array('slug' => 'developer'),
     );
-
     register_taxonomy('developer', 'projects', $args);
 }
-
 // Initialize Developer Taxonomy
 add_action('init', 'register_developer_taxonomy');
-
 // Add custom field to developer taxonomy term
 function add_developer_image_field() {
     $developer_image = '';     ?>
@@ -43,21 +39,17 @@ function add_developer_image_field() {
         <button class="button" id="upload-developer-image"><?php _e('Upload Image', 'newaqar'); ?></button>
         <p class="description"><?php _e('Enter the URL of the developer image or use the "Upload Image" button.', 'newaqar'); ?></p>
     </div>
-
     <script>
         jQuery(document).ready(function ($) {
             var file_frame;
-
             // Media uploader
             $('#upload-developer-image').click(function (e) {
                 e.preventDefault();
-
                 // If the media frame already exists, reopen it.
                 if (file_frame) {
                     file_frame.open();
                     return;
                 }
-
                 // Create the media frame.
                 file_frame = wp.media({
                     title: '<?php _e('Select or Upload Image', 'newaqar'); ?>',
@@ -66,14 +58,12 @@ function add_developer_image_field() {
                     },
                     multiple: false,
                 });
-
                 // When an image is selected, run a callback.
                 file_frame.on('select', function () {
                     var attachment = file_frame.state().get('selection').first().toJSON();
                     $('#developer-image').val(attachment.url);
                     $('#selected-developer-image').attr('src', attachment.url); // Set the image source
                 });
-
                 // Finally, open the modal.
                 file_frame.open();
             });
@@ -83,18 +73,14 @@ function add_developer_image_field() {
 }
 // Add custom field to the developer taxonomy term add screen
 add_action('developer_add_form_fields', 'add_developer_image_field');
-
 // Save custom field value when creating or editing developer taxonomy term
 function save_developer_image_field($term_id) {
     if (isset($_POST['developer_image'])) {
         update_term_meta($term_id, 'developer_image', esc_url($_POST['developer_image']));
     }
 }
-
 add_action('created_developer', 'save_developer_image_field');
-
 add_action('edited_developer', 'save_developer_image_field');
-
 function edit_developer_image_field($term) {
     $developer_image = get_term_meta($term->term_id, 'developer_image', true);    ?>
     <tr class="form-field">
@@ -113,10 +99,8 @@ function edit_developer_image_field($term) {
     <script>
         jQuery(document).ready(function ($) {
             $('#preview-developer-image').attr('src', $('#developer-image').val());
-
             $('#update-developer-image').click(function (e) {
                 e.preventDefault();
-
                 // Create the media frame if it doesn't exist
                 if (typeof file_frame === 'undefined') {
                     file_frame = wp.media({
@@ -126,7 +110,6 @@ function edit_developer_image_field($term) {
                         },
                         multiple: false
                     });
-
                     // When an image is selected, run a callback.
                     file_frame.on('select', function () {
                         var attachment = file_frame.state().get('selection').first().toJSON();
@@ -134,7 +117,6 @@ function edit_developer_image_field($term) {
                         $('#preview-developer-image').attr('src', attachment.url).show(); // Set the image source and display it
                     });
                 }
-
                 // Finally, open the modal.
                 file_frame.open();
             });
@@ -142,15 +124,12 @@ function edit_developer_image_field($term) {
     </script>
     <?php
 }
-
 add_action('developer_edit_form_fields', 'edit_developer_image_field');
-
 function add_developer_image_column($columns) {
     $columns['developer_image'] = __('Image', 'newaqar');
     return $columns;
 }
 add_filter('manage_edit-developer_columns', 'add_developer_image_column');
-
 function display_developer_image_column($content, $column_name, $term_id) {
     if ($column_name === 'developer_image') {
         $developer_image = get_term_meta($term_id, 'developer_image', true);
@@ -160,10 +139,8 @@ function display_developer_image_column($content, $column_name, $term_id) {
     }
     return $content;
 }
-
 function add_developer_qa_fields($term) {
     $term_id = isset($term->term_id) ? $term->term_id : 0;
-
     $faqs = $term_id ? get_term_meta($term_id, '_faqs', true) : array();
     ?>
     <style>
@@ -204,7 +181,6 @@ function add_developer_qa_fields($term) {
             </table>
             <button class="button" id="add-faq-row"><?php _e('Add New Question', 'newaqar'); ?></button>
         </div>
-
         <script>
             jQuery(document).ready(function ($) {
                 // Add a class to the delete button to simplify event delegation
@@ -212,7 +188,6 @@ function add_developer_qa_fields($term) {
                     $(this).closest('tr').remove();
                     return false;
                 });
-
                 $('#add-faq-row').on('click', function () {
                     var index = $('.form-faq-developer tbody tr').length;
                     var newRow = '<tr>' +
@@ -221,7 +196,6 @@ function add_developer_qa_fields($term) {
                         '<td><input type="text" name="faqs[' + index + '][answer]" value="" /></td>' +
                         '<td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>' +
                         '</tr>';
-
                     $('.form-faq-developer tbody').append(newRow);
                     return false;
                 });
@@ -230,17 +204,14 @@ function add_developer_qa_fields($term) {
     </div>
     <?php
 }
-
 function save_developer_qa_fields($term_id) {
     if (isset($_POST['faqs'])) {
         $existing_faqs = get_term_meta($term_id, '_faqs', true);
         $faqs = array();
-
         foreach ($_POST['faqs'] as $faq) {
             $question = sanitize_text_field($faq['question']);
             $answer = sanitize_text_field($faq['answer']);
             $id = !empty($faq['id']) ? sanitize_text_field($faq['id']) : uniqid();
-
             // Check uniqueness
             $is_id_used = false;
             if ($existing_faqs) {
@@ -251,23 +222,19 @@ function save_developer_qa_fields($term_id) {
                     }
                 }
             }
-
             // Generate a new ID if the current one is used
             if ($is_id_used) {
                 $id = uniqid();
             }
-
             if (!empty($question) || !empty($answer)) {
                 $faqs[] = array('id' => $id, 'question' => $question, 'answer' => $answer);
             }
         }
-
         update_term_meta($term_id, '_faqs', $faqs);
     } else {
         delete_term_meta($term_id, '_faqs');
     }
 }
-
 add_action('developer_edit_form_fields', 'add_developer_qa_fields');
 add_action('edited_developer', 'save_developer_qa_fields');
 add_action('developer_add_form_fields', 'add_developer_qa_fields');

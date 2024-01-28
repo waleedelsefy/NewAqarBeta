@@ -12,9 +12,7 @@
                     </div>
                 </div>
             </div>
-
             <div class="row mb-5">
-
                 <?php
                 if (have_posts()) {
                     while (have_posts()) {
@@ -25,7 +23,6 @@
                     <?php }
                 }
                 ?>
-
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -50,20 +47,15 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 <?php
-
                                 endforeach;
                             }
                             ?>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
 <?php get_footer(); ?>

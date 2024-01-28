@@ -7,7 +7,6 @@
                     echo '<h2>' . esc_html__('Top cities', 'newaqar') . '</h2>';
                     echo  '<p>' . esc_html__('All projects in the most famous cities inside Egypt', 'newaqar') . '</p>';
                     ?>
-
                 </div>
             </div>
         </div>
@@ -22,7 +21,6 @@
     }
 </style>
         <div class="row">
-
             <?php
             $top_cities = get_terms(array(
                 'taxonomy'   => 'city',
@@ -43,11 +41,9 @@
                         ),
                     ),
                 ));
-
                 if ($projects_query->have_posts()) {
                     $project_count = $projects_query->found_posts;
                 }
-
                 // Store city data in the array
                 $cities_data[] = array(
                     'term_id'       => $city->term_id,
@@ -76,6 +72,5 @@
                 </div>
             <?php endfor; ?>
         </div>
-
     </div>
 </div>

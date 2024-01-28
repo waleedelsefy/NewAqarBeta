@@ -17,7 +17,6 @@ if (!empty($payment_systems)) {
         }
     }
 }
-
 if (is_array($project_details) && !empty($project_details)) {
     $project_space = isset($project_details['project_space']) ? esc_attr($project_details['project_space']) : '';
     $project_price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
@@ -33,14 +32,11 @@ if (is_array($project_details) && !empty($project_details)) {
     $installment = '';
 }
 $types_terms = get_the_terms(get_the_ID(), 'type');
-
 if ($types_terms && !is_wp_error($types_terms)) {
     $first_term = reset($types_terms);
     $types_name = esc_html($first_term->name);
     $types_link = get_term_link($first_term);
 }
-
-
 if ($developer_terms && !is_wp_error($developer_terms)) {
     $first_term = reset($developer_terms);
     $developer_name = esc_html($first_term->name);
@@ -275,7 +271,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 endif;
                 wp_reset_postdata();
                 ?>
-
                 <main id="content-project" class="column main-content m-0 py-0">
                     <div class="project-sub-title"><?php echo __('تفاصيل المشروع', 'newaqar'); ?></div>
                     <div class="content-box">
@@ -291,21 +286,18 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     <td class="tvalue"><a href="<?php echo $city_link; ?>"><?php echo $city_name; ?></a></td>
                                 </tr>
                             <?php endif; ?>
-
                             <?php if (isset($project_space) && !empty($project_space)) : ?>
                                 <tr>
                                     <th class="ttitle"><?php echo __('مساحة المشروع', 'newaqar'); ?></th>
                                     <td class="tvalue"> <?php echo $project_space; ?></td>
                                 </tr>
                             <?php endif; ?>
-
                             <?php if (isset($delivery) && !empty($delivery)) : ?>
                                 <tr>
                                     <th class="ttitle"><?php echo __('موعد الاستلام', 'newaqar'); ?></th>
                                     <td class="tvalue"> <?php echo $delivery; ?></td>
                                 </tr>
                             <?php endif; ?>
-
                             <?php if (isset($payment_system_names) && !empty($payment_system_names)) : ?>
                                 <tr>
                                     <th class="ttitle"><?php echo __('انظمة السداد', 'newaqar'); ?></>
@@ -313,45 +305,35 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                         <?php
                                         if ($terms && !is_wp_error($terms)) {
                                             $payment_system_names = array();
-
                                             foreach ($terms as $term) {
                                                 $payment_system_names[] = '<a href="' . esc_url(get_term_link($term)) . '">' . $term->name . '</a>';
                                             }
-
                                             echo implode(' - ', $payment_system_names);
                                         }
                                         ?>
                                     </td>
-
                                 </tr>
                             <?php endif; ?>
-
-
                             <?php if (isset($types_link) && !empty($types_name)) : ?>
-
                             <tr>
                                 <th class="ttitle"><?php _e('Unit Types', 'newaqar'); ?></th>
                                 <td class="tvalue"><a href="<?php echo $types_link; ?>"><?php echo $types_name; ?></a></td>
                             </tr>
                             <?php endif; ?>
-
                             <?php if (isset($project_price) && !empty($project_price)) : ?>
                                 <tr>
                                     <th class="ttitle"><?php _e('سعر المتر', 'newaqar'); ?></th>
                                     <td class="tvalue"><?php echo $project_price; ?> <span class="currency_box"><?php _e('L.E', 'newaqar'); ?></span></td>
                                 </tr>
                             <?php endif; ?>
-
                             </tbody>
                         </table>
-
                     </div>
                     <div>
                         <?php echo do_shortcode('[newaqar_cta]') ?>
                     </div>
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
-
                             <div class="payment-plan">
                                 <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
                                 <div class="side-details">
@@ -361,7 +343,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                             <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                         </div>
                                     <?php endif; ?>
-
                                     <?php if ($installment != "") : ?>
                                         <div class="side-details-box">
                                             <span><?php echo __('تقسيط', 'newaqar'); ?></span>
@@ -370,7 +351,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                             <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                         </div>
                                     <?php endif; ?>
-
                                     <?php if ($delivery != "") : ?>
                                         <div class="side-details-box">
                                             <span><?php echo __('استﻻم', 'newaqar'); ?></span>
@@ -386,11 +366,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     ?>
                                 </div>
                             </div>
-
-
                         <?php endif; ?>
                     </div>
-
                     <div class="table-content my-2 py-3 px-3 ">
                         <?php echo do_shortcode('[fluentform id="7"]'); ?>
                     </div>
@@ -507,7 +484,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
                     <?php if ($down_payment != "") : ?>
-
                     <div class="payment-plan">
                         <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
                         <div class="side-details">
@@ -517,7 +493,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                 </div>
                             <?php endif; ?>
-
                             <?php if ($installment != "") : ?>
                                 <div class="side-details-box">
                                     <span><?php echo __('تقسيط', 'newaqar'); ?></span>
@@ -526,7 +501,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                 </div>
                             <?php endif; ?>
-
                             <?php if ($delivery != "") : ?>
                                 <div class="side-details-box">
                                     <span><?php echo __('استﻻم', 'newaqar'); ?></span>
@@ -542,18 +516,12 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             ?>
                         </div>
                     </div>
-
-
             <?php endif; ?>
                     <div class="message-section">
                         <?php echo do_shortcode('[fluentform id="7"]'); ?>
                     </div>
                 </div>
-
-
-
         </div>
     </div>
 </div>
 <?php echo get_footer(); ?>
-

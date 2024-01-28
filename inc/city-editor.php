@@ -1,5 +1,4 @@
 <?php
-
 // Register City Taxonomy
 function register_city_taxonomy()
 {
@@ -19,7 +18,6 @@ function register_city_taxonomy()
         'menu_name'                  => __('Cities', 'newaqar'),
         'show_in_nav_menus'          => true,
     );
-
     $args = array(
         'labels'            => $labels,
         'hierarchical'      => true,
@@ -29,17 +27,13 @@ function register_city_taxonomy()
         'query_var'         => true,
         'rewrite'           => array('slug' => 'city'),
     );
-
     register_taxonomy('city', 'projects', $args);
 }
-
 add_filter('manage_developer_custom_column', 'display_developer_image_column', 10, 3);
 add_action('init', 'register_city_taxonomy');
-
 // Add custom field to city taxonomy term
 function add_city_image_field() {
     $city_image = ''; // Initialize with an empty string
-
     ?>
     <div class="form-field">
         <label for="city-image"><?php _e('City Image', 'newaqar'); ?></label>
@@ -48,21 +42,17 @@ function add_city_image_field() {
         <button class="button" id="upload-city-image"><?php _e('Upload Image', 'newaqar'); ?></button>
         <p class="description"><?php _e('Enter the URL of the city image or use the "Upload Image" button.', 'newaqar'); ?></p>
     </div>
-
     <script>
         jQuery(document).ready(function ($) {
             var file_frame;
-
             // Media uploader
             $('#upload-city-image').click(function (e) {
                 e.preventDefault();
-
                 // If the media frame already exists, reopen it.
                 if (file_frame) {
                     file_frame.open();
                     return;
                 }
-
                 // Create the media frame.
                 file_frame = wp.media({
                     title: '<?php _e('Select or Upload Image', 'newaqar'); ?>',
@@ -71,14 +61,12 @@ function add_city_image_field() {
                     },
                     multiple: false,
                 });
-
                 // When an image is selected, run a callback.
                 file_frame.on('select', function () {
                     var attachment = file_frame.state().get('selection').first().toJSON();
                     $('#city-image').val(attachment.url);
                     $('#selected-city-image').attr('src', attachment.url); // Set the image source
                 });
-
                 // Finally, open the modal.
                 file_frame.open();
             });
@@ -86,19 +74,15 @@ function add_city_image_field() {
     </script>
     <?php
 }
-
 add_action('city_add_form_fields', 'add_city_image_field');
-
 // Save custom field value when creating or editing city taxonomy term
 function save_city_image_field($term_id) {
     if (isset($_POST['city_image'])) {
         update_term_meta($term_id, 'city_image', esc_url($_POST['city_image']));
     }
 }
-
 add_action('created_city', 'save_city_image_field');
 add_action('edited_city', 'save_city_image_field');
-
 // Display custom field value on the city taxonomy term edit screen
 function edit_city_image_field($term) {
     $city_image = get_term_meta($term->term_id, 'city_image', true);
@@ -119,10 +103,8 @@ function edit_city_image_field($term) {
     <script>
         jQuery(document).ready(function ($) {
             $('#preview-city-image').attr('src', $('#city-image').val());
-
             $('#update-city-image').click(function (e) {
                 e.preventDefault();
-
                 // Create the media frame if it doesn't exist
                 if (typeof file_frame === 'undefined') {
                     file_frame = wp.media({
@@ -132,7 +114,6 @@ function edit_city_image_field($term) {
                         },
                         multiple: false
                     });
-
                     // When an image is selected, run a callback.
                     file_frame.on('select', function () {
                         var attachment = file_frame.state().get('selection').first().toJSON();
@@ -140,7 +121,6 @@ function edit_city_image_field($term) {
                         $('#preview-city-image').attr('src', attachment.url).show(); // Set the image source and display it
                     });
                 }
-
                 // Finally, open the modal.
                 file_frame.open();
             });
@@ -148,16 +128,13 @@ function edit_city_image_field($term) {
     </script>
     <?php
 }
-
 add_action('city_edit_form_fields', 'edit_city_image_field');
-
 // Add custom column to taxonomy term list table
 function add_city_image_column($columns) {
     $columns['city_image'] = __('Image', 'newaqar');
     return $columns;
 }
 add_filter('manage_edit-city_columns', 'add_city_image_column');
-
 // Display custom column content
 function display_city_image_column($content, $column_name, $term_id) {
     if ($column_name === 'city_image') {
@@ -170,9 +147,7 @@ function display_city_image_column($content, $column_name, $term_id) {
 }
 add_filter('manage_city_custom_column', 'display_city_image_column', 10, 3);
 add_action('init', 'register_city_taxonomy');
-
 // functions.php
-
 function register_city_page_sidebar() {
     register_sidebar(array(
         'name'          => __('City Page Sidebar', 'newaqar'),
@@ -227,7 +202,6 @@ function add_city_qa_fields($term) {
             </table>
             <button class="button" id="add-faq-row"><?php _e('Add New Question', 'newaqar'); ?></button>
         </div>
-
         <script>
             jQuery(document).ready(function ($) {
                 // Add a class to the delete button to simplify event delegation
@@ -235,7 +209,6 @@ function add_city_qa_fields($term) {
                     $(this).closest('tr').remove();
                     return false;
                 });
-
                 $('#add-faq-row').on('click', function () {
                     var index = $('.form-faq-city tbody tr').length;
                     var newRow = '<tr>' +
@@ -244,7 +217,6 @@ function add_city_qa_fields($term) {
                         '<td><input type="text" name="faqs[' + index + '][answer]" value="" /></td>' +
                         '<td><button class="button faq-delete-button"><?php _e('Delete', 'newaqar'); ?></button></td>' +
                         '</tr>';
-
                     $('.form-faq-city tbody').append(newRow);
                     return false;
                 });
@@ -257,12 +229,10 @@ function save_city_qa_fields($term_id) {
     if (isset($_POST['faqs'])) {
         $existing_faqs = get_term_meta($term_id, '_faqs', true);
         $faqs = array();
-
         foreach ($_POST['faqs'] as $faq) {
             $question = sanitize_text_field($faq['question']);
             $answer = sanitize_text_field($faq['answer']);
             $id = !empty($faq['id']) ? sanitize_text_field($faq['id']) : uniqid();
-
             // Check uniqueness
             $is_id_used = false;
             if ($existing_faqs) {
@@ -273,17 +243,14 @@ function save_city_qa_fields($term_id) {
                     }
                 }
             }
-
             // Generate a new ID if the current one is used
             if ($is_id_used) {
                 $id = uniqid();
             }
-
             if (!empty($question) || !empty($answer)) {
                 $faqs[] = array('id' => $id, 'question' => $question, 'answer' => $answer);
             }
         }
-
         update_term_meta($term_id, '_faqs', $faqs);
     } else {
         delete_term_meta($term_id, '_faqs');

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the footer
  *
@@ -11,9 +10,7 @@
  *
  * @version 1.0.1
  */
-
 $theme_settings = get_option('newaqar_theme_settings');
-
 if (is_array($theme_settings)) {
     $logo_url = esc_attr($theme_settings['site_logo']);
     $logo_url = esc_attr($theme_settings['site_logo']);
@@ -23,14 +20,12 @@ if (is_array($theme_settings)) {
     $whatsapp_number = esc_attr($theme_settings['whatsapp_number']);
     get_template_part("assets/style");
 } else {
-
     $logo_url = '';
     $phone_number = '';
     $primary_color = '';
     error_log("newaqar_theme_settings is not an array");
 }
 ?>
-
 <style>
     @media only screen and (max-width: 786px) {
     #floating-icons {
@@ -62,7 +57,6 @@ if (is_array($theme_settings)) {
             transition: .5s;
             bottom: 10px;
         }
-
         #floating-icons {
             .main-cta {
             width: 100%;
@@ -74,12 +68,9 @@ if (is_array($theme_settings)) {
                 display: none;
             }
         }
-
-
     }
 </style>
 <footer id="site-footer" role="contentinfo" class="header-footer-group">
-
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -134,39 +125,29 @@ if (is_array($theme_settings)) {
                     </p>
                 </div>
             </div>
-
             <div class="col-lg-4">
                 <?php dynamic_sidebar( 'sidebar-2' ); ?>
             </div>
-
             <div class="col-lg-4">
                 <?php dynamic_sidebar( 'sidebar-3' ); ?>
             </div>
-
         </div>
-
     </div><!-- .section-inner -->
-
 </footer><!-- #site-footer -->
 <div class="copyrights">
     <p class="copywrite-txt">
-        كافة الحقوق محفوظة لـ نيو ستارت  © 2024 رقم السجل الضريبي 223-743-723
+        كافة الحقوق محفوظة لـ نيو ستارت  © 2021 رقم السجل الضريبي 223-743-723
     </p>
 </div>
-
 <?php wp_footer(); ?>
 <style>.skip-link {display: none !important;}</style>
-
 </body>
 </html>
-
 <div id="floating-icons">
 <?php if (is_front_page()) {
  } else { ?>
     <?php echo do_shortcode('[newaqar_cta]'); } ?>
-
 </div>
-
 <?php wp_footer(); ?>
 </body>
 </html>

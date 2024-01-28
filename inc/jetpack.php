@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Jetpack Compatibility File
  *
@@ -7,7 +6,6 @@
  *
  * @package Didos
  */
-
 /**
  * Jetpack setup function.
  *
@@ -22,10 +20,8 @@ function bootscore_jetpack_setup() {
     'render'    => 'bootscore_infinite_scroll_render',
     'footer'    => 'page',
   ));
-
   // Add theme support for Responsive Videos.
   add_theme_support('jetpack-responsive-videos');
-
   // Add theme support for Content Options.
   add_theme_support('jetpack-content-options', array(
     'post-details'    => array(
@@ -43,9 +39,7 @@ function bootscore_jetpack_setup() {
     ),
   ));
 }
-
 add_action('after_setup_theme', 'bootscore_jetpack_setup');
-
 /**
  * Custom render function for Infinite Scroll.
  */

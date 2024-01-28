@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Password protected form
  *
@@ -18,9 +17,7 @@ if (!function_exists('bootscore_pw_form')) :
               . '<input name="post_password" type="password" size="" class="form-control" placeholder="' . __('Password', 'bootscore') . '"/>' . "\n"
               . '<input type="submit" class="btn btn-outline-primary input-group-text" name="Submit" value="' . __('Submit', 'bootscore') . '" />' . "\n"
               . '</form>' . "\n";
-
     return $output;
   }
-
   add_filter("the_password_form", "bootscore_pw_form");
 endif;

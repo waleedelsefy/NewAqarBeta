@@ -13,19 +13,15 @@ function brochure_whatsapp_link_shortcode()
     <?php
     return ob_get_clean();
 }
-
 add_shortcode('wpcode', 'brochure_whatsapp_link_shortcode');
-
 function newaqar_cta_shortcode()
 {
     $theme_settings = get_option('newaqar_theme_settings');
-
     if (is_array($theme_settings)) {
         $logo_url = esc_attr($theme_settings['site_logo']);
         $phone_number = esc_attr($theme_settings['phone_number']);
         $primary_color = esc_attr($theme_settings['primary_color']);
         $whatsapp_number = esc_attr($theme_settings['whatsapp_number']);
-
         get_template_part("assets/style");
     } else {
         $logo_url = '';
@@ -34,8 +30,6 @@ function newaqar_cta_shortcode()
         $whatsapp_number = '';
         error_log("newaqar_theme_settings is not an array");
     }
-
-
     ?>
     <style>
         @media screen and (max-width: 900px) {
@@ -56,15 +50,12 @@ function newaqar_cta_shortcode()
             width: 100%;
             display: flex;
             justify-content: space-around;
-
         }
-
         .main-cta a.cta-mail.meeting-cta {
             background-color: #8cc2c8 !important;
             color: #fff !important;
             border: none;
         }
-
         .main-cta a {
             color: #00a77f !important;
             transition: .3s all ease;
@@ -75,7 +66,6 @@ function newaqar_cta_shortcode()
                 line-height: 34px;
                 font-size: var(--p-content-font-size);
             }
-
             .main-cta a {
                 border-radius: 5px;
                 display: flex;
@@ -94,45 +84,35 @@ function newaqar_cta_shortcode()
                 z-index: 1;
                 position: relative;
             }
-
             .main-cta a.cta-phone {
                 background: var(--primary-color-collapse) !important;
                 border: 0;
                 color: #fff !important;
             }
-
             .main-cta a.cta-wts {
                 background: #00a77f !important;
                 border: 0;
                 color: #FFF !important;
             }
-
             .main-cta a {
                 color: #a0b84f !important;
             }
-
     </style>
-
     <?php
-
     ob_start(); ?>
-
     <div class="main-cta">
         <a href="https://wa.me/2<?php echo $whatsapp_number;?>?text=اريد برشور <?php the_title(); ?> قادم من <?php the_permalink(); ?> aria-label="zoom-meeting" class="cta-mail meeting-cta">
-
             <span class="d-flex gap-2">
                <span class="call-to-action-page"><?php echo esc_html(__('Brochure', 'newaqar')); ?></span>
   <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="#ffffff" width="20" viewBox="0 0 576 512"><path d="M542.2 32.1c-54.8 3.1-163.7 14.4-231 55.6-4.6 2.8-7.3 7.9-7.3 13.2v363.9c0 11.6 12.6 18.9 23.3 13.5 69.2-34.8 169.2-44.3 218.7-46.9 16.9-.9 30-14.4 30-30.7V62.8c0-17.7-15.4-31.7-33.8-30.7zM264.7 87.6C197.5 46.5 88.6 35.2 33.8 32.1 15.4 31 0 45 0 62.8V400.6c0 16.2 13.1 29.8 30 30.7 49.5 2.6 149.6 12.1 218.8 47 10.6 5.4 23.2-1.9 23.2-13.5V100.6c0-5.3-2.6-10.1-7.3-13z"/></svg>            </span>
         </a>
         <a href="tel:+2<?php echo $phone_number; ?>" aria-label="call" class="cta-phone">
-
          <span class="d-flex gap-2">
          <span class="call-to-action-page"><?php echo __('Call Us', 'newaqar'); ?></span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="#ffffff" width="20"
                                                viewBox="0 0 512 512">
                 <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"></path></svg>
          </span>
-
         </a>
         <a target="_blank"
            href="https://wa.me/2<?php echo $whatsapp_number; ?>?text=اريد الاستفسار عن <?php the_title(); ?> قادم من <?php the_permalink(); ?>"
@@ -146,13 +126,10 @@ function newaqar_cta_shortcode()
             </span>
         </a>
     </div>
-
     <?php
     return ob_get_clean();
 }
-
 add_shortcode('newaqar_cta', 'newaqar_cta_shortcode');
-
 function newaqar_post_shortcode($atts) {
     if (isset($atts['ids'])) {
         $ids = explode(',', $atts['ids']);
@@ -183,12 +160,8 @@ function newaqar_post_shortcode($atts) {
         return 'Please specify a list of IDs using the "ids" attribute.';
     }
 }
-
 // Register the shortcode with the name 'newaqar_post'
 add_shortcode('newaqar_post', 'newaqar_post_shortcode');
-
-
-
 /*function show_shortcode_after_paragraphs($content) {
     // Define an array with shortcode IDs and their respective target paragraph numbers
     $shortcodes = array(
@@ -204,31 +177,25 @@ add_shortcode('newaqar_post', 'newaqar_post_shortcode');
         ),
                // Add more shortcodes as needed
     );
-
     // Check if the current post type is 'projects' or 'units'
     $post_type = get_post_type();
     if (!in_array($post_type, array('projects', 'units'))) {
         return $content; // Exit if the post type is not 'projects' or 'units'
     }
-
     foreach ($shortcodes as $shortcode_id => $shortcode_data) {
         // Check if the current post type is allowed for the shortcode
         if (!in_array($post_type, $shortcode_data['post_types'])) {
             continue; // Skip to the next shortcode if the post type is not allowed
         }
-
         // Find the position of the target paragraph closing tag
         $closing_p_pos = strpos_nth($content, '</p>', $shortcode_data['number']);
-
         if ($closing_p_pos !== false) {
             $shortcode_to_insert = do_shortcode("[fluentform id='{$shortcode_data['id']}']");
             $content = substr_replace($content, $shortcode_to_insert, $closing_p_pos + 4, 0);
         }
     }
-
     return $content;
 }
-
 function strpos_nth($haystack, $needle, $nth = 1) {
     $offset = 0;
     for ($i = 1; $i <= $nth; ++$i) {
@@ -239,6 +206,5 @@ function strpos_nth($haystack, $needle, $nth = 1) {
     }
     return $offset;
 }
-
 // Add more shortcodes as needed
 add_filter('the_content', 'show_shortcode_after_paragraphs');*/

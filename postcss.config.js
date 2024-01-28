@@ -1,6 +1,5 @@
 const purgecss = require('@fullhuman/postcss-purgecss');
 const postcssMinify = require('postcss-minify');
-
 module.exports = {
     plugins: [
         require('postcss-import'),

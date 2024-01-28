@@ -24,35 +24,25 @@
         $types_name = esc_html($first_term->name);
         $types_link = get_term_link($first_term);
     }
-
     if ($developer_terms && !is_wp_error($developer_terms)) {
         $first_term = reset($developer_terms);
         $developer_name = esc_html($first_term->name);
         $developer_link = get_term_link($first_term);
     }
-
     if ($city_terms && !is_wp_error($city_terms)) {
         $first_term = reset($city_terms);
         $city_name = esc_html($first_term->name);
         $city_link = get_term_link($first_term);
     }
-
     ?>
-
-
 </head>
-
 <?php
-
 $post_type = get_post_type();
-
 if ($post_type === 'units' || $post_type === 'projects') {
     // Check if the number of paragraphs is greater than 5
     if (get_the_content() && substr_count(get_the_content(), '<p>') > 5) {
-
         // Check if the custom field '_your_custom_field' is set
         $custom_field_value = get_post_meta(get_the_ID(), '_your_custom_field', true);
-
         if (!empty($custom_field_value)) {
             // Display the Fluent Form with ID 4
             echo do_shortcode('[fluentform id="7"]');
@@ -245,13 +235,11 @@ if ($post_type === 'units' || $post_type === 'projects') {
         .schedule-meeting .submit{margin-top:50px; margin-bottom: 0}
     }
 </style>
-
 <div class="container">
     <div class="breadcrumbs-wrapper my-4">
         <?php
         the_breadcrumb();
         ?>
-
     </div>
     <div class="row">
         <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
@@ -260,7 +248,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                     <div class="post-thumbnail d-flex justify-content-center align-items-center">
                     <?php the_post_thumbnail() ?>
                     </div>
-
                     <div class="project-sub-title"><?php echo __('تفاصيل الوحدة', 'newaqar'); ?></div>
                     <div class="content-box">
                         <table class="infotable">
@@ -286,7 +273,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                         </tr>
                                         <?php
                                     }
-
                                     if (isset($types_name) && isset($types_link)) {
                                     ?>
                                     <tr>
@@ -311,7 +297,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                         </tr>
                                         <?php
                                     }
-
                                     if ($sales_number && !is_wp_error($sales_number)) {
                                         ?>
                                         <tr>
@@ -324,15 +309,11 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     </tbody>
                                 </table>
                         </div>
-
                     <div>
-
                             <?php echo do_shortcode('[newaqar_cta]') ?>
-
                     </div>
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
-
                             <div class="payment-plan">
                                 <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
                                 <div class="side-details">
@@ -342,7 +323,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                             <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                         </div>
                                     <?php endif; ?>
-
                                     <?php if ($installment != "") : ?>
                                         <div class="side-details-box">
                                             <span><?php echo __('تقسيط', 'newaqar'); ?></span>
@@ -351,7 +331,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                             <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                         </div>
                                     <?php endif; ?>
-
                                     <?php if ($delivery != "") : ?>
                                         <div class="side-details-box">
                                             <span><?php echo __('استﻻم', 'newaqar'); ?></span>
@@ -367,11 +346,8 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     ?>
                                 </div>
                             </div>
-
-
                         <?php endif; ?>
                     </div>
-
                     <div class="table-content my-2 py-3 px-3 ">
                             <?php the_content(); ?>
                         </div>
@@ -379,7 +355,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             <div class="accordion" id="accordionFAQ">
                                 <?php
                                 $unserialized_data = (get_post_meta($post->ID, '_faqs', true));
-
                                 if ($unserialized_data && is_array($unserialized_data)) {
                                     foreach ($unserialized_data as $index => $qa_pair) :
                                         ?>
@@ -404,9 +379,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                     <div class="row related-section my-5 d-flex justify-content-center">
                         <h3><?php echo __('Similar units', 'newaqar'); ?></h3>
                         <?php
-
                         $unit_project_id = get_post_meta($post->ID, '_unit_project_id', true);
-
                         $args = array(
                             'post_type'      => 'units',
                             'post_status'    => 'publish',
@@ -421,9 +394,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                 ),
                             ),
                         );
-
                         $relatedPosts = new WP_Query($args);
-
                         if ($relatedPosts->have_posts()) {
                             while ($relatedPosts->have_posts()) {
                                 $relatedPosts->the_post();
@@ -433,9 +404,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                 </div>
                                 <?php
                             }
-
                             $remaining_units = 4 - $relatedPosts->post_count;
-
                             if ($remaining_units > 0) {
                                 $random_args = array(
                                     'post_type'      => 'units',
@@ -444,9 +413,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     'orderby'        => 'rand',
                                     'post__not_in'   => array_merge(array($post->ID), wp_list_pluck($relatedPosts->posts, 'ID')),
                                 );
-
                                 $randomPosts = new WP_Query($random_args);
-
                                 if ($randomPosts->have_posts()) {
                                     while ($randomPosts->have_posts()) {
                                         $randomPosts->the_post();
@@ -462,12 +429,9 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         } else {
                             echo __('No similar units', 'newaqar');
                         }
-
                         wp_reset_postdata();
-
                         ?>
                     </div>
-
                 </main>
             </section>
         </div>
@@ -475,7 +439,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
             <div class="side-bar">
                 <?php if ($down_payment != "") : ?>
-
                     <div class="payment-plan">
                         <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
                         <div class="side-details">
@@ -485,7 +448,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                 </div>
                             <?php endif; ?>
-
                             <?php if ($installment != "") : ?>
                                 <div class="side-details-box">
                                     <span><?php echo __('تقسيط', 'newaqar'); ?></span>
@@ -494,7 +456,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                 </div>
                             <?php endif; ?>
-
                             <?php if ($delivery != "") : ?>
                                 <div class="side-details-box">
                                     <span><?php echo __('استﻻم', 'newaqar'); ?></span>
@@ -510,18 +471,12 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             ?>
                         </div>
                     </div>
-
-
                 <?php endif; ?>
                 <div class="message-section">
                     <?php echo do_shortcode('[fluentform id="7"]'); ?>
                 </div>
             </div>
-
-
-
         </div>
-
     </div>
 </div>
     <?php echo get_footer(); ?>

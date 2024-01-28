@@ -1,5 +1,4 @@
 <?php /* Template Name: Front page */ ?>
-
 <?php
 get_header();
 get_template_part('template-parts/front-page/slider-area');

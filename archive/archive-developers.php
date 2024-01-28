@@ -4,10 +4,8 @@
  * Page Template
  * 
  */
-
 get_header();
 ?>
-
 <div class="page_title">
 	<div class="container clearfix">
 		<h1>
@@ -18,19 +16,15 @@ get_header();
 		  	</div>
 	</div>
 </div>
-
 <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
    <div id="main" class="content_area layout-main clearfix">
       <main id="content" class="column main-content">
             <div id="content-wrapper">
                <div class="row">
                  <?php
-
 						if ( have_posts() ) {
-
 							while ( have_posts() ) {
 								the_post(); ?>
-          
 					<div class="col-md-4">
 						<div class="recent-property">
 						   <a href="<?php the_permalink(); ?>" tabindex="0">

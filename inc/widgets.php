@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Register widget area.
  *
@@ -21,9 +20,7 @@ add_filter( 'use_widgets_block_editor', '__return_false' );
  * Register widgets
  */
 if (!function_exists('bootscore_widgets_init')) :
-
     function newaqar_sidebar_registration() {
-
         // Arguments used in all register_sidebar() calls.
         $shared_args = array(
             'before_title'  => '<h2 class="widget-title subheading heading-size-3">',
@@ -31,7 +28,6 @@ if (!function_exists('bootscore_widgets_init')) :
             'before_widget' => '<div class="widget %2$s"><div class="widget-content">',
             'after_widget'  => '</div></div>',
         );
-
         // Footer #1.
         register_sidebar(
             array_merge(
@@ -43,7 +39,6 @@ if (!function_exists('bootscore_widgets_init')) :
                 )
             )
         );
-
         // Footer #2.
         register_sidebar(
             array_merge(
@@ -55,7 +50,6 @@ if (!function_exists('bootscore_widgets_init')) :
                 )
             )
         );
-
         // Footer #3.
         register_sidebar(
             array_merge(
@@ -67,7 +61,6 @@ if (!function_exists('bootscore_widgets_init')) :
                 )
             )
         );
-
         // Footer #4.
         register_sidebar(
             array_merge(
@@ -79,7 +72,6 @@ if (!function_exists('bootscore_widgets_init')) :
                 )
             )
         );
-
         register_sidebar(
             array_merge(
                 $shared_args,
@@ -89,14 +81,8 @@ if (!function_exists('bootscore_widgets_init')) :
                 )
             )
         );
-
     }
-
     add_action( 'widgets_init', 'newaqar_sidebar_registration' );
-
-
-
-
 endif;
 /**
  * Enable shortcodes in HTML-Widget

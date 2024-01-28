@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Template part for displaying results in search pages
  *
@@ -10,7 +9,6 @@
  */
 // Exit if accessed directly
 defined( 'ABSPATH' ) || exit;
-
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="card horizontal mb-4">
@@ -38,7 +36,6 @@ defined( 'ABSPATH' ) || exit;
               ?>
             </p>
           <?php endif; ?>
-
           <p class="card-text">
             <a class="text-body text-decoration-none" href="<?php the_permalink(); ?>">
               <?php echo strip_tags(get_the_excerpt()); ?>

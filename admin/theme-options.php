@@ -11,7 +11,6 @@ $settings_array = array(
     'secondary_color' => '#2ecc71',
     'secondary_color_2' => '#e74c3c',
 );
-
 if (false === get_option('newaqar_theme_settings')) {
     $serialized_settings = serialize($settings_array);
     update_option('newaqar_theme_settings', $serialized_settings);

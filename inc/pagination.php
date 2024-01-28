@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Pagination
  *
@@ -20,7 +19,6 @@ if (!function_exists('bootscore_pagination')) :
     if ($pages == '') {
       global $wp_query;
       $pages = $wp_query->max_num_pages;
-
       if (!$pages) {
         $pages = 1;
       }
@@ -56,18 +54,15 @@ endif;
  */
 add_filter('next_post_link', 'post_link_attributes');
 add_filter('previous_post_link', 'post_link_attributes');
-
 function post_link_attributes($output) {
   $code = 'class="page-link"';
   return str_replace('<a href=', '<a ' . $code . ' href=', $output);
 }
-
 function add_column( $columns ){
     $columns['post_id_clmn'] = 'ID'; // $columns['Column ID'] = 'Column Title';
     return $columns;
 }
 add_filter('manage_posts_columns', 'add_column', 5);
-
 function column_content( $column, $id ){
     if( $column === 'post_id_clmn')
         echo $id;

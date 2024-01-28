@@ -28,7 +28,6 @@ require_once('inc/developer-editor.php');             // city-editor.php page ba
 require_once('inc/schema.php');             // schema.php page header
 require_once('inc/short-cods.php');             // short-cods.php all short cods
 require_once('inc/admin.php');             // admin all short cods
-
 /**
  * Load WooCommerce scripts if plugin is activated
  */
@@ -44,7 +43,6 @@ add_theme_support(
         'caption',
     )
 );
-
 /**
  * Load Bootstrap 5 Nav Walker and registers menus
  * Remove this snippet in v6 and add nav-walker to the enqueue list
@@ -65,17 +63,14 @@ add_action('after_setup_theme', 'register_navwalker');
 if (defined('JETPACK__VERSION')) {
   require get_template_directory() . '/inc/jetpack.php';
 }
-
 function custom_mime_types($mimes) {
     $mimes['webp'] = 'image/webp';
     return $mimes;
 }
 add_filter('upload_mimes', 'custom_mime_types');
-
 function check_upload_image_type($file) {
     $allowed_types = array('image/webp');
     $file_info = wp_check_filetype( $file['name'] );
-
     if (in_array($file_info['type'], $allowed_types)) {
         return $file;
     } else {
@@ -89,7 +84,6 @@ function disable_post_permalink_editor() {
         add_action('admin_head', 'disable_post_permalink_script');
     }
 }
-
 function disable_post_permalink_script() {
     ?>
     <script>
@@ -101,7 +95,6 @@ function disable_post_permalink_script() {
     <?php
 }
 add_action('admin_init', 'disable_post_permalink_editor');
-
 function disable_block_editor() {
     if ('post.php' != $GLOBALS['pagenow'] || !current_user_can('edit_posts')) {
         return;
@@ -123,5 +116,4 @@ function disable_block_editor() {
         });
     }
 }
-
 add_action('admin_init', 'disable_block_editor');

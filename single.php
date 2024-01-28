@@ -4,15 +4,10 @@
  *
  * @version 5.3.1
  */
-
 get_header();
 ?>
-
   <div id="content" class="site-content <?= bootscore_container_class(); ?> py-5 mt-4">
     <div id="primary" class="table-content my-2 py-3 px-3 ">
-
-
-
       <div class="row">
           <main id="main" class="site-main">
             <header class="entry-header">
@@ -29,7 +24,6 @@ get_header();
               </p>
               <?php bootscore_post_thumbnail(); ?>
             </header>
-
               <div class="">
               <?php the_content(); ?>
             </div>
@@ -53,13 +47,9 @@ get_header();
                 </ul>
               </nav>
             </footer>
-
           </main>
-
       </div>
-
     </div>
   </div>
-
 <?php
 get_footer();

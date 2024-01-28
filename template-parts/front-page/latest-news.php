@@ -24,19 +24,13 @@
                     ?>
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="col-lg-4 col-md-6 col-12 mt-4">
-
                             <?php
                             get_template_part('template-parts/single-card');
                             ?>
-
                         </div>
-
                     <?php endwhile; wp_reset_query(); ?>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 </div>

@@ -5,14 +5,12 @@
 <?php
 wp_head();
 $theme_settings = get_option('newaqar_theme_settings');
-
 if (is_array($theme_settings)) {
     $logo_url = esc_attr($theme_settings['site_logo']);
     $phone_number = esc_attr($theme_settings['phone_number']);
     $primary_color = esc_attr($theme_settings['primary_color']);
     get_template_part("assets/style");
 } else {
-
     $logo_url = '';
     $phone_number = '';
     $primary_color = '';
@@ -25,7 +23,6 @@ if (is_array($theme_settings)) {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-BNFNB9W1S6');
 </script>
 <!-- Google Tag Manager -->
@@ -35,7 +32,6 @@ if (is_array($theme_settings)) {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-M56RJK4H');</script>
 <!-- End Google Tag Manager -->
-
 <body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M56RJK4H"

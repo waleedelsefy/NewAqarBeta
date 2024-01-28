@@ -1,13 +1,10 @@
 <?php
 require_once  get_template_directory() . '/admin/int.php';
-
 function theme_contacts_init() {
-
     add_settings_section('theme_contacts_section', __('Contacts Options', 'newaqar'), 'theme_options_section_callback', 'theme-options');
     add_settings_field('phone_number', __('Phone Number', 'newaqar'), 'phone_number_callback', 'theme-options', 'theme_contacts_section');
     add_settings_field('whatsapp_number', __('WhatsApp Number', 'newaqar'), 'whatsapp_number_callback', 'theme-options', 'theme_contacts_section');
     add_settings_field('whatsapp_message', __('WhatsApp Message', 'newaqar'), 'whatsapp_message_callback', 'theme-options', 'theme_contacts_section');
-
 }
 add_action('admin_init', 'theme_contacts_init');
 function phone_number_callback() {
