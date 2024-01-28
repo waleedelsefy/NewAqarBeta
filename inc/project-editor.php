@@ -329,10 +329,10 @@ function display_developer_desc_field($term) {
     $developer_desc = get_term_meta($term->term_id, 'developer_desc', true);
     ?>
     <tr class="form-field">
-        <th scope="row"><label for="developer_desc"><?php _e('Developed content'); ?></label></th>
+        <th scope="row"><label for="developer_desc"><?php _e('Developed content', 'newaqar'); ?></label></th>
         <td>
             <textarea name="developer_desc" id="developer_desc" rows="5"><?php echo esc_textarea($developer_desc); ?></textarea>
-            <p class="description"><?php _e('add Developed content'); ?></p>
+            <p class="description"><?php _e('add Developed content', 'newaqar'); ?></p>
         </td>
     </tr>
     <?php
