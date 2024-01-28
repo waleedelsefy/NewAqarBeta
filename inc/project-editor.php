@@ -319,3 +319,29 @@ function newaqar_save_project_price() {
         wp_send_json_error('يرجى إدخال قيمة صحيحة لسعر المشروع.');
     }
 }
+
+function add_developer_desc_field() {
+    add_action('developers_edit_form_fields', 'display_developer_desc_field');
+    add_action('edited_developers', 'save_developer_desc_field');
+}
+
+function display_developer_desc_field($term) {
+    $developer_desc = get_term_meta($term->term_id, 'developer_desc', true);
+    ?>
+    <tr class="form-field">
+        <th scope="row"><label for="developer_desc"><?php _e('Developed content'); ?></label></th>
+        <td>
+            <textarea name="developer_desc" id="developer_desc" rows="5"><?php echo esc_textarea($developer_desc); ?></textarea>
+            <p class="description"><?php _e('add Developed content'); ?></p>
+        </td>
+    </tr>
+    <?php
+}
+
+function save_developer_desc_field($term_id) {
+    if (isset($_POST['developer_desc'])) {
+        update_term_meta($term_id, 'developer_desc', sanitize_text_field($_POST['developer_desc']));
+    }
+}
+
+add_developer_desc_field();
