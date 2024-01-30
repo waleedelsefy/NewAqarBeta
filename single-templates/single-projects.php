@@ -1,3 +1,4 @@
+
 <?php
 get_header();
 $theme_settings = get_option('newaqar_theme_settings');
@@ -37,6 +38,8 @@ if ($types_terms && !is_wp_error($types_terms)) {
     $types_name = esc_html($first_term->name);
     $types_link = get_term_link($first_term);
 }
+
+
 if ($developer_terms && !is_wp_error($developer_terms)) {
     $first_term = reset($developer_terms);
     $developer_name = esc_html($first_term->name);
@@ -272,7 +275,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 wp_reset_postdata();
                 ?>
                 <main id="content-project" class="column main-content m-0 py-0">
-                    <div class="project-sub-title"><?php echo __('تفاصيل المشروع', 'newaqar'); ?></div>
+                    <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>
                     <div class="content-box">
                         <table class="infotable">
                             <tbody>
@@ -288,19 +291,25 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <?php endif; ?>
                             <?php if (isset($project_space) && !empty($project_space)) : ?>
                                 <tr>
-                                    <th class="ttitle"><?php echo __('مساحة المشروع', 'newaqar'); ?></th>
+                                    <th class="ttitle"><?php echo __('The Project Space', 'newaqar'); ?></th>
                                     <td class="tvalue"> <?php echo $project_space; ?></td>
+                                </tr>
+                            <?php endif; ?>
+                            <?php if (isset($developer_name) && !empty($developer_name)) : ?>
+                                <tr>
+                                    <th class="ttitle"><?php echo __('The Developer', 'newaqar'); ?></th>
+                                    <td class="tvalue"><a href="<?php echo $developer_link; ?>"><?php echo $developer_name; ?></a></td>
                                 </tr>
                             <?php endif; ?>
                             <?php if (isset($delivery) && !empty($delivery)) : ?>
                                 <tr>
-                                    <th class="ttitle"><?php echo __('موعد الاستلام', 'newaqar'); ?></th>
+                                    <th class="ttitle"><?php echo __('receiving date', 'newaqar'); ?></th>
                                     <td class="tvalue"> <?php echo $delivery; ?></td>
                                 </tr>
                             <?php endif; ?>
                             <?php if (isset($payment_system_names) && !empty($payment_system_names)) : ?>
                                 <tr>
-                                    <th class="ttitle"><?php echo __('انظمة السداد', 'newaqar'); ?></>
+                                    <th class="ttitle"><?php echo __('Payment systems', 'newaqar'); ?></>
                                     <td class="tvalue">
                                         <?php
                                         if ($terms && !is_wp_error($terms)) {
@@ -322,7 +331,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <?php endif; ?>
                             <?php if (isset($project_price) && !empty($project_price)) : ?>
                                 <tr>
-                                    <th class="ttitle"><?php _e('سعر المتر', 'newaqar'); ?></th>
+                                    <th class="ttitle"><?php _e('Meter price', 'newaqar'); ?></th>
                                     <td class="tvalue"><?php echo $project_price; ?> <span class="currency_box"><?php _e('L.E', 'newaqar'); ?></span></td>
                                 </tr>
                             <?php endif; ?>
@@ -335,25 +344,25 @@ if ($city_terms && !is_wp_error($city_terms)) {
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
                             <div class="payment-plan">
-                                <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
+                                <div class="side-title"><?php echo __('Payment systems', 'newaqar'); ?></div>
                                 <div class="side-details">
                                     <?php if ($down_payment != "") : ?>
                                         <div class="side-details-box">
-                                            <span><?php echo __('مقدم', 'newaqar'); ?></span>
+                                            <span><?php echo __('Deposit', 'newaqar'); ?></span>
                                             <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($installment != "") : ?>
                                         <div class="side-details-box">
-                                            <span><?php echo __('تقسيط', 'newaqar'); ?></span>
+                                            <span><?php echo __('installment', 'newaqar'); ?></span>
                                             <?php
-                                            if ($installment > 10) {$installment_text = 'سنة';} else { $installment_text = 'سنوات';}?>
+                                            if ($installment > 10) {$installment_text = 'year';} else { $installment_text = 'Years';}?>
                                             <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($delivery != "") : ?>
                                         <div class="side-details-box">
-                                            <span><?php echo __('استﻻم', 'newaqar'); ?></span>
+                                            <span><?php echo __('Receipt', 'newaqar'); ?></span>
                                             <span class="big-detail"><?php echo $delivery; ?> </span>
                                         </div>
                                     <?php endif; ?>
@@ -361,7 +370,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 <div class="price-last-update">
                                     <?php
                                     if (get_the_modified_date() != get_the_date()) {
-                                        echo '<p>' . __('اخر تحديث في : ', 'newaqar') . get_the_modified_date() . '</p>';
+                                        echo '<p>' . __('Latest update on: ', 'newaqar') . get_the_modified_date() . '</p>';
                                     }
                                     ?>
                                 </div>
@@ -485,25 +494,25 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 <div class="side-bar">
                     <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
-                        <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
+                        <div class="side-title"><?php echo __('payment system', 'newaqar'); ?></div>
                         <div class="side-details">
                             <?php if ($down_payment != "") : ?>
                                 <div class="side-details-box">
-                                    <span><?php echo __('مقدم', 'newaqar'); ?></span>
+                                    <span><?php echo __('Deposit', 'newaqar'); ?></span>
                                     <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                 </div>
                             <?php endif; ?>
                             <?php if ($installment != "") : ?>
                                 <div class="side-details-box">
-                                    <span><?php echo __('تقسيط', 'newaqar'); ?></span>
+                                    <span><?php echo __('installment', 'newaqar'); ?></span>
                                     <?php
-                                    if ($installment > 10) {$installment_text = 'سنة';} else { $installment_text = 'سنوات';}?>
+                                    if ($installment > 10) {$installment_text = 'year';} else { $installment_text = 'Years';}?>
                                     <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                 </div>
                             <?php endif; ?>
                             <?php if ($delivery != "") : ?>
                                 <div class="side-details-box">
-                                    <span><?php echo __('استﻻم', 'newaqar'); ?></span>
+                                    <span><?php echo __('Receipt', 'newaqar'); ?></span>
                                     <span class="big-detail"><?php echo $delivery; ?> </span>
                                 </div>
                             <?php endif; ?>
@@ -511,7 +520,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <div class="price-last-update">
                             <?php
                             if (get_the_modified_date() != get_the_date()) {
-                                echo '<p>' . __('اخر تحديث في : ', 'newaqar') . get_the_modified_date() . '</p>';
+                                echo '<p>' . __('No Latest projects', 'newaqar') . get_the_modified_date() . '</p>';
                             }
                             ?>
                         </div>

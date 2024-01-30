@@ -248,7 +248,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                     <div class="post-thumbnail d-flex justify-content-center align-items-center">
                     <?php the_post_thumbnail() ?>
                     </div>
-                    <div class="project-sub-title"><?php echo __('تفاصيل الوحدة', 'newaqar'); ?></div>
+                    <div class="project-sub-title"><?php echo __('Unit details', 'newaqar'); ?></div>
                     <div class="content-box">
                         <table class="infotable">
                             <tbody>
@@ -315,17 +315,17 @@ if ($post_type === 'units' || $post_type === 'projects') {
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
                             <div class="payment-plan">
-                                <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
+                                <div class="side-title"><?php echo __('Payment System', 'newaqar'); ?></div>
                                 <div class="side-details">
                                     <?php if ($down_payment != "") : ?>
                                         <div class="side-details-box">
-                                            <span><?php echo __('مقدم', 'newaqar'); ?></span>
+                                            <span><?php echo __('Deposit', 'newaqar'); ?></span>
                                             <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($installment != "") : ?>
                                         <div class="side-details-box">
-                                            <span><?php echo __('تقسيط', 'newaqar'); ?></span>
+                                            <span><?php echo __('installment', 'newaqar'); ?></span>
                                             <?php
                                             if ($installment > 10) {$installment_text = 'سنة';} else { $installment_text = 'سنوات';}?>
                                             <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
@@ -333,7 +333,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     <?php endif; ?>
                                     <?php if ($delivery != "") : ?>
                                         <div class="side-details-box">
-                                            <span><?php echo __('استﻻم', 'newaqar'); ?></span>
+                                            <span><?php echo __('Receipt', 'newaqar'); ?></span>
                                             <span class="big-detail"><?php echo $delivery; ?> </span>
                                         </div>
                                     <?php endif; ?>
@@ -341,7 +341,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                 <div class="price-last-update">
                                     <?php
                                     if (get_the_modified_date() != get_the_date()) {
-                                        echo '<p>' . __('اخر تحديث في : ', 'newaqar') . get_the_modified_date() . '</p>';
+                                        echo '<p>' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
                                     }
                                     ?>
                                 </div>
@@ -440,17 +440,17 @@ if ($post_type === 'units' || $post_type === 'projects') {
             <div class="side-bar">
                 <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
-                        <div class="side-title"><?php echo __('نظام الدفع', 'newaqar'); ?></div>
+                        <div class="side-title"><?php echo __('Payment System', 'newaqar'); ?></div>
                         <div class="side-details">
                             <?php if ($down_payment != "") : ?>
                                 <div class="side-details-box">
-                                    <span><?php echo __('مقدم', 'newaqar'); ?></span>
+                                    <span><?php echo __('Deposit', 'newaqar'); ?></span>
                                     <span class="big-detail"><?php echo $down_payment; ?> %</span>
                                 </div>
                             <?php endif; ?>
                             <?php if ($installment != "") : ?>
                                 <div class="side-details-box">
-                                    <span><?php echo __('تقسيط', 'newaqar'); ?></span>
+                                    <span><?php echo __('installment', 'newaqar'); ?></span>
                                     <?php
                                     if ($installment > 10) {$installment_text = 'سنة';} else { $installment_text = 'سنوات';}?>
                                     <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
@@ -458,7 +458,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             <?php endif; ?>
                             <?php if ($delivery != "") : ?>
                                 <div class="side-details-box">
-                                    <span><?php echo __('استﻻم', 'newaqar'); ?></span>
+                                    <span><?php echo __('Receipt', 'newaqar'); ?></span>
                                     <span class="big-detail"><?php echo $delivery; ?> </span>
                                 </div>
                             <?php endif; ?>
@@ -466,7 +466,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         <div class="price-last-update">
                             <?php
                             if (get_the_modified_date() != get_the_date()) {
-                                echo '<p>' . __('اخر تحديث في : ', 'newaqar') . get_the_modified_date() . '</p>';
+                                echo '<p>' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
                             }
                             ?>
                         </div>

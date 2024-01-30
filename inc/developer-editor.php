@@ -251,7 +251,7 @@ function display_developer_desc_field($term) {
     $developer_desc = get_term_meta($term->term_id, 'developer_desc', true);
     ?>
     <tr class="form-field">
-        <th scope="row"><label for="developer_desc"><?php _e('وصف المطور', 'newaqar'); ?></label></th>
+        <th scope="row"><label for="developer_desc"><?php _e('Developer description', 'newaqar'); ?></label></th>
         <td>
             <?php
             $settings = array(
@@ -260,7 +260,7 @@ function display_developer_desc_field($term) {
             );
             wp_editor($developer_desc, 'developer_desc', $settings);
             ?>
-            <p class="description"><?php _e('إضافة وصف للمطور هنا.', 'newaqar'); ?></p>
+            <p class="description"><?php _e('Add developer description here.', 'newaqar'); ?></p>
         </td>
     </tr>
     <?php

@@ -76,7 +76,7 @@ if (!function_exists('bootscore_widgets_init')) :
             array_merge(
                 $shared_args,
                 array(
-                    'name'        => __( 'سايدبار الصفحات', 'newaqar' ),
+                    'name'        => __( 'Sidebar Pages', 'newaqar' ),
                     'id'          => 'page-sidebar',
                 )
             )
