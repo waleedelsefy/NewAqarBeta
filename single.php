@@ -28,7 +28,17 @@ get_header();
               <?php the_content(); ?>
             </div>
               <div class="table-content my-2 py-3 px-3 ">
-                    <?php echo do_shortcode('[fluentform id="9"]');  ?>
+<?php
+if (function_exists('pll_current_language')) {
+    $current_language = pll_current_language();
+
+    if ($current_language === 'ar') {
+        echo do_shortcode('[fluentform id="9"]');
+    } elseif ($current_language === 'en') {
+        echo do_shortcode('[fluentform id="10"]');
+    }
+}
+?>
                     </div>
             <footer class="entry-footer clear-both">
               <div class="mb-4">
