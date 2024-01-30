@@ -321,6 +321,15 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                         }
                                         ?>
                                     </td>
+
+                                </tr>
+                                <tr>
+                                    <th class="ttitle"><?php echo __('Sales Number', 'newaqar'); ?></>
+
+                                    <td class="tvalue">
+                                        <a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a>
+                                        ?>
+                                    </td>
                                 </tr>
                             <?php endif; ?>
                             <?php if (isset($types_link) && !empty($types_name)) : ?>
@@ -384,7 +393,20 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <?php the_content(); ?>
                     </div>
                     <div class="table-content my-2 py-3 px-3 ">
-                        <?php echo do_shortcode('[fluentform id="9"]'); ?>
+                    <?php
+if (function_exists('pll_current_language')) {
+    $current_language = pll_current_language();
+
+    if ($current_language === 'ar') {
+        echo do_shortcode('[fluentform id="9"]');
+    } elseif ($current_language === 'en') {
+        echo do_shortcode('[fluentform id="10"]');
+    }
+}
+?>
+
+
+
                     </div>
                     <div class="container-accordion">
                         <div class="accordion" id="accordionFAQ">
@@ -528,6 +550,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
             <?php endif; ?>
                     <div class="message-section">
                         <?php echo do_shortcode('[fluentform id="7"]'); ?>
+
+
                     </div>
                 </div>
         </div>
