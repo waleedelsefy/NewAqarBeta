@@ -258,7 +258,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 if ($unit_query->have_posts()) :
                     ?>
                     <div class="row related-section my-5   d-flex justify-content-center">
-                        <h3><?php echo __('Units Of Projects', 'newaqar'); ?></h3>
+                        <p><?php echo __('Units Of Projects', 'newaqar'); ?></p>
                         <?php
                         while ($unit_query->have_posts()) :
                             $unit_query->the_post();
@@ -325,7 +325,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </tr>
                                 <tr>
                                     <th class="ttitle"><?php echo __('Sales Number', 'newaqar'); ?></>
-
                                     <td class="tvalue">
                                         <a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a>
                                         ?>
