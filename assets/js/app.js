@@ -1,12 +1,15 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
+
 !function (f, m, v, b) {
   b.chatbox_show = function () {
     this.chatbox || (this.chatbox = !0, this.showed_at = Date.now(), this.$div.addClass("aqarchat--chatbox"), this.settings.message_badge && this.$(".aqarchat__badge").hasClass("aqarchat__badge--in") && this.$(".aqarchat__badge").toggleClass("aqarchat__badge--in aqarchat__badge--out"), f(v).trigger("aqarchat:show"));
@@ -22,47 +25,69 @@ __webpack_require__.r(__webpack_exports__);
   ;
   f(e), f(m).on("load", e), v.addEventListener("DOMContentLoaded", e);
 }(jQuery, window, document, window.aqarchat_obj || {});
+
 /***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
 /***/ }),
+
 /***/ "./resources/sass/custom.scss":
 /*!************************************!*\
   !*** ./resources/sass/custom.scss ***!
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
 /***/ }),
+
 /***/ "./resources/sass/input.scss":
 /*!***********************************!*\
   !*** ./resources/sass/input.scss ***!
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
 /***/ }),
+
 /***/ "./resources/sass/admin_variables.scss":
 /*!*********************************************!*\
   !*** ./resources/sass/admin_variables.scss ***!
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
 /***/ }),
+
 /***/ "./resources/sass/input-form.scss":
 /*!****************************************!*\
   !*** ./resources/sass/input-form.scss ***!
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
+
+
 /***/ })
+
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
