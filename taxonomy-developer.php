@@ -25,14 +25,14 @@
                 ?>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="table-content my-2 py-3 px-3 ">
                     <?php
                     $term_id = get_queried_object_id(); // يمكنك استخدام دالة أخرى إذا كنت في سياق مختلف
                     $developer_desc = get_term_meta($term_id, 'developer_desc', true);
                     if (!empty($developer_desc)) {
-                        echo '<div class="taxonomy-description">' . esc_html($developer_desc) . '</div>';
+                        echo '<div class="site-main>' . $developer_desc . '</div>';
                     } else {
-                        the_archive_description('<div class="taxonomy-description">', '</div>');
+                        the_archive_description('<div class="site-main">', '</div>');
                     }
                     ?>
                     <div class="container-accordion">

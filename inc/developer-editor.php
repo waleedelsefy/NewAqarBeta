@@ -268,7 +268,8 @@ function display_developer_desc_field($term) {
 
 function save_developer_desc_field($term_id) {
     if (isset($_POST['developer_desc'])) {
-        update_term_meta($term_id, 'developer_desc', sanitize_text_field($_POST['developer_desc']));
+        $sanitized_content = wp_kses_post($_POST['developer_desc']);
+        update_term_meta($term_id, 'developer_desc', $sanitized_content);
     }
 }
 
