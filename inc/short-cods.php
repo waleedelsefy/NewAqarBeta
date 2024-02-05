@@ -244,3 +244,43 @@ function aqar_social_share_box() {
 }
 
 add_shortcode('social_share_box', 'aqar_social_share_box');
+
+
+function author_info_shortcode() {
+    ob_start();
+
+    // Get the author ID
+    $author_id = get_the_author_meta('ID');
+
+    // Get author data
+    $author_name = get_the_author_meta('display_name', $author_id);
+    $author_email = get_the_author_meta('user_email', $author_id);
+    $author_description = get_the_author_meta('description', $author_id);
+    $author_url = get_the_author_meta('user_login', $author_id);
+    ?>
+
+    <div class="">
+        <hr>
+        <div class="authorbox">
+            <div class="boxflex ">
+                <div class="borderbox box1-3">
+                    <div class="boximgauthor">
+                        <img src="<?php echo esc_url(get_avatar_url($author_id)); ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>">
+                    </div>
+                </div>
+                <div class="borderbox  box1-6 box1-6">
+                    <h4 class="hinfbox"><?php echo esc_html(get_the_author()); ?></h4>
+                    <p><?php echo esc_html($author_description); ?></p>
+                </div>
+                <div class="borderbox box1-3 box1-3">
+                    <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>" class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php
+    return ob_get_clean();
+}
+
+add_shortcode('author_info', 'author_info_shortcode');
