@@ -69,8 +69,32 @@ if (is_array($theme_settings)) {
             }
         }
     }
+
+    /* Subscribe Box */
+    #subscribe-css{position:relative;padding:20px 0;background:#374760;overflow:hidden;border-top:4px solid #eee;}
+    .subscribe-wrapper{color:#fff;font-size:16px;line-height:normal;margin:0;text-align:center;text-transform:none;font-weight:400;width:100%}
+    .subscribe-form{clear:both;display:block;overflow:hidden}
+    form.subscribe-form{clear:both;display:block;margin:0;width:auto;overflow:hidden}
+    .subscribe-css-email-field{background:#415471;color:#ccc;margin:10px 0;padding:15px 20px;width:35%;border:0}
+    .subscribe-css-email-button{background:#3cc091;color:#fff;cursor:pointer;font-weight:700;padding:14px 30px;margin-left:15px;text-transform:none;font-size:16px;border:0;border-radius:3px;transition:all .6s}
+    .subscribe-css-email-button:hover{background:#37b185;}
+    #subscribe-css p.subscribe-note{margin:16px;text-align:center;color:rgba(255,255,255,.6);font-size:180%;font-weight:400;line-height:normal;}
+    #subscribe-css p.subscribe-note span {position:relative;overflow:hidden;font-weight:700;transition:all .5s}
+    #subscribe-css p.subscribe-note span.itatu {font-weight:400;font-style:italic;color:rgba(255,255,255,.6);text-transform:lowercase}
+    #subscribe-css p.subscribe-note span.itatu:before,#subscribe-css p.subscribe-note span.itatu:after{display:none}
+    #subscribe-css p.subscribe-note span:before{content:'';position:absolute;bottom:-2px;left:0;width:0;height:3px;margin:10px 0 0;background:rgba(255,255,255,.1);transition:all .5s}
+    #subscribe-css:hover p.subscribe-note span:before{width:100%;}
 </style>
 <footer id="site-footer" role="contentinfo" class="header-footer-group">
+    <div id='subscribe-css'>
+        <p class='subscribe-note'><span>SUBSCRIBE</span> <span class='itatu'>TO</span> OUR NEWSLETTER</p>
+        <div class='subscribe-wrapper'>
+            <div class='subscribe-form'>
+                <form action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode' class='subscribe-form' method='post' onsubmit='window.open (&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
+                    <input name='uri' type='hidden' value='ArlinaDesign'/><input name='loc' type='hidden' value='en_US'/><input autocomplete='off' class='subscribe-css-email-field' name='email' placeholder='Enter your Email'/><input class='subscribe-css-email-button' title='' type='submit' value='submit'/></form>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
