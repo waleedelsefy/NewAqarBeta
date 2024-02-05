@@ -25,6 +25,20 @@ __webpack_require__.r(__webpack_exports__);
   ;
   f(e), f(m).on("load", e), v.addEventListener("DOMContentLoaded", e);
 }(jQuery, window, document, window.aqarchat_obj || {});
+document.addEventListener("DOMContentLoaded", function () {
+  var textLinkInput = document.getElementById("copy-link");
+  var copyButton = document.getElementById("copy");
+  var copyText = function copyText() {
+    textLinkInput.select();
+    document.execCommand("copy");
+    copyButton.setAttribute("tooltip", "Copied!");
+  };
+  var resetTooltip = function resetTooltip() {
+    copyButton.setAttribute("tooltip", "Copy to clipboard");
+  };
+  copyButton.addEventListener("click", copyText);
+  copyButton.addEventListener("mouseover", resetTooltip);
+});
 
 /***/ }),
 

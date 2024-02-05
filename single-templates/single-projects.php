@@ -398,8 +398,11 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         }
                         ?>
                     </div>
+
                     <div class="table-content my-2 py-3 px-3 ">
-                        <?php the_content(); ?>
+
+                        <?php  echo do_shortcode('[social_share_box]');
+the_content(); ?>
                     </div>
                     <div class="table-content my-2 py-3 px-3 ">
                     <?php

@@ -25,6 +25,7 @@ get_header();
               <?php bootscore_post_thumbnail(); ?>
             </header>
               <div class="">
+              <?php echo do_shortcode('[social_share_box]'); ?>
               <?php the_content(); ?>
             </div>
               <div class="table-content my-2 py-3 px-3 ">

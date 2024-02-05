@@ -164,7 +164,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     /*payment-plan*/
     .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: 10px;display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
     /*side-title*/
-    .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background-color: var(--primary-background-color); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
+    .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background-color: #fcfcfd.fluentform; display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
     /*side-details*/
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
@@ -349,8 +349,21 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         <?php endif; ?>
                     </div>
                     <div class="table-content my-2 py-3 px-3 ">
+                    <?php echo do_shortcode('[social_share_box]'); ?>
                             <?php the_content(); ?>
                         </div>
+                    <?php
+                    if (function_exists('pll_current_language')) {
+                        $current_language = pll_current_language();
+
+                        if ($current_language === 'ar') {
+                            echo do_shortcode('[fluentform id="9"]');
+                        } elseif ($current_language === 'en') {
+                            echo do_shortcode('[fluentform id="10"]');
+                        }
+                    }
+                    ?>
+
                         <div class="container-accordion">
                             <div class="accordion" id="accordionFAQ">
                                 <?php

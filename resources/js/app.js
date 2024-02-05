@@ -29,3 +29,20 @@ import * as Popper from "@popperjs/core"
         f(m).on("load", e),
         v.addEventListener("DOMContentLoaded", e)
 }(jQuery, window, document, window.aqarchat_obj || {});
+document.addEventListener("DOMContentLoaded", function () {
+    const textLinkInput = document.getElementById("copy-link");
+    const copyButton = document.getElementById("copy");
+
+    const copyText = () => {
+        textLinkInput.select();
+        document.execCommand("copy");
+        copyButton.setAttribute("tooltip", "Copied!");
+    };
+
+    const resetTooltip = () => {
+        copyButton.setAttribute("tooltip", "Copy to clipboard");
+    };
+
+    copyButton.addEventListener("click", copyText);
+    copyButton.addEventListener("mouseover", resetTooltip);
+});
