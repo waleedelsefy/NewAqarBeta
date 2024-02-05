@@ -44333,7 +44333,7 @@ img {
   font-size: 1rem;
 }
 .visitBtn {
-  background-color: var(--primary-link-color);
+  background-color: var(--primary-have-color-collapse);
   border-radius:9px;
   display:inline-block;
   cursor:pointer;
