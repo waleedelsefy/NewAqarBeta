@@ -465,7 +465,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                 <div class="side-details-box">
                                     <span><?php echo __('installment', 'newaqar'); ?></span>
                                     <?php
-                                    if ($installment > 10) {$installment_text = 'سنة';} else { $installment_text = 'سنوات';}?>
+                                    if ($installment > 10) {$installment_text = 'year';} else { $installment_text = 'years';}?>
                                     <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                 </div>
                             <?php endif; ?>
