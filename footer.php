@@ -97,7 +97,7 @@ if (is_array($theme_settings)) {
                     if ($current_language === 'ar') {
                         echo do_shortcode('[fluentform id="12"]');
                     } elseif ($current_language === 'en') {
-                        echo do_shortcode('[fluentform id="12"]');
+                        echo do_shortcode('[fluentform id="13"]');
                     }
                 }
                 ?>            </div>
