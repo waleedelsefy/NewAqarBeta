@@ -163,7 +163,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     /*payment-plan*/
     .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: 10px;display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
     /*side-title*/
-    .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); var(--primary-background-color); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
+    .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background:rgb(253 253 253); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
     /*side-details*/
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
@@ -292,7 +292,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <?php if (isset($project_space) && !empty($project_space)) : ?>
                                 <tr>
                                     <th class="ttitle"><?php echo __('The Project Space', 'newaqar'); ?></th>
-                                    <td class="tvalue"> <?php echo $project_space; ?></td>
+                                    <td class="tvalue"> <?php echo $project_space .' ' .__('acre', 'newaqar'); ?></td>
                                 </tr>
                             <?php endif; ?>
                             <?php if (isset($developer_name) && !empty($developer_name)) : ?>
@@ -308,7 +308,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </tr>
                             <?php endif; ?>
                             <?php if (isset($payment_system_names) && !empty($payment_system_names)) : ?>
-                                <tr>
+
+                            <tr>
                                     <th class="ttitle"><?php echo __('Payment systems', 'newaqar'); ?></>
                                     <td class="tvalue">
                                         <?php
@@ -323,14 +324,14 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     </td>
 
                                 </tr>
+                            <?php endif; ?>
+
                                 <tr>
                                     <th class="ttitle"><?php echo __('Sales Number', 'newaqar'); ?></>
                                     <td class="tvalue">
                                         <a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a>
-                                        ?>
                                     </td>
                                 </tr>
-                            <?php endif; ?>
                             <?php if (isset($types_link) && !empty($types_name)) : ?>
                             <tr>
                                 <th class="ttitle"><?php _e('Unit Types', 'newaqar'); ?></th>
@@ -540,7 +541,7 @@ the_content(); ?>
                                 <div class="side-details-box">
                                     <span><?php echo __('installment', 'newaqar'); ?></span>
                                     <?php
-                                    if ($installment > 10) {$installment_text = 'year';} else { $installment_text = 'Years';}?>
+                                    if ($installment > 10) {$installment_text = __('year', 'newaqar');} else { $installment_text = __('years', 'newaqar');}?>
                                     <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                 </div>
                             <?php endif; ?>
@@ -554,7 +555,7 @@ the_content(); ?>
                         <div class="price-last-update">
                             <?php
                             if (get_the_modified_date() != get_the_date()) {
-                                echo '<p>' . __('No Latest projects', 'newaqar') . get_the_modified_date() . '</p>';
+                                echo '<p>' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
                             }
                             ?>
                         </div>

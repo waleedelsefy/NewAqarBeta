@@ -164,7 +164,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     /*payment-plan*/
     .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: 10px;display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
     /*side-title*/
-    .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background-color:var(--primary-background-color); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
+    .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background:rgb(253 253 253); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
     /*side-details*/
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
@@ -297,15 +297,12 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                         </tr>
                                         <?php
                                     }
-                                    if ($sales_number && !is_wp_error($sales_number)) {
                                         ?>
                                         <tr>
                                             <th class="ttitle"><?php _e('Sales Number', 'newaqar'); ?></th>
                                             <td class="tvalue"><a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a></td>
                                         </tr>
-                                        <?php
-                                    }
-                                    ?>
+
                                     </tbody>
                                 </table>
                         </div>
@@ -327,7 +324,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                         <div class="side-details-box">
                                             <span><?php echo __('installment', 'newaqar'); ?></span>
                                             <?php
-                                            if ($installment > 10) {$installment_text = 'year';} else { $installment_text = 'years';}?>
+                                            if ($installment > 10) {$installment_text = __('year', 'newaqar');} else { $installment_text = __('years', 'newaqar');}?>
                                             <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
                                         </div>
                                     <?php endif; ?>

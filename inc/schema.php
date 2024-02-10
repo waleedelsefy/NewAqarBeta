@@ -52,11 +52,6 @@ function newaqar_product_schema() {
                     "@type" => "Brand",
                     "name" => $developer_name // Assuming brand name is stored in a custom field
                 ),
-                "aggregateRating" => array(
-                    "@type" => "AggregateRating",
-                    "ratingValue" => $random_ratingValue,
-                    "reviewCount" => $random_reviewCount,
-                ),
                 "offers" => array(
                     "@type" => "Offer",
                     "price" => $price,
@@ -88,7 +83,7 @@ function newaqar_faq_schema() {
     $post_id = get_the_ID();
     $faqs = get_post_meta($post_id, '_faqs', true);
     $author_id = get_the_author_meta('ID');
-    if (!empty($faqs) && count($faqs) > 1) {
+    if (!empty($faqs) && count($faqs) > 2) {
         foreach ($faqs as $index => $faq) {
             $ld_json = array(
                 '@context' => 'https://schema.org',

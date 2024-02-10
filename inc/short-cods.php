@@ -229,14 +229,6 @@ function aqar_social_share_box() {
             </ul>
 
         </div>
-        <div class="shareLink">
-            <div class="permalink">
-                <input class="textLink" type="text" name="shortlink" value="<?php echo esc_url(home_url() . '?p=' . get_the_ID()); ?>" id="copy-link" readonly="">
-                <span class="copyLink" id="copy" tooltip="Copy to clipboard">
-                    <i class="fa-regular fa-copy"></i>
-                </span>
-            </div>
-        </div>
     </div>
 
     <?php
