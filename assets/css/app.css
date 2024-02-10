@@ -44356,18 +44356,23 @@ h4.hinfbox {
   font-size: 1.1rem;
 }
 /** info author **/
-
-form#fluentform_12 {
+/* Subscribe styles */
+form#fluentform_12,
+form#fluentform_13 {
   width: 60%;
 }
+
 button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
-  color: var(--primary-color-collapse) !important;
+  color: var(--primary-color-collapse);
 }
-.fluentform.ff-default.fluentform_wrapper_12.ffs_default_wrap {
+
+.fluentform.ff-default.ffs_default_wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div#fluentform_12_success {
-  color: var(--primary-color-collapse) !important;
+
+div#fluentform_12_success,
+div#fluentform_13_success {
+  color: var(--primary-color-collapse);
 }
