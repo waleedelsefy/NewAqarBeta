@@ -87,12 +87,20 @@ if (is_array($theme_settings)) {
 </style>
 <footer id="site-footer" role="contentinfo" class="header-footer-group">
     <div id='subscribe-css'>
-        <p class='subscribe-note'><span>SUBSCRIBE</span> <span class='itatu'>TO</span> OUR NEWSLETTER</p>
+        <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span class='itatu'><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER<', 'newaqar'); ?>/p>
         <div class='subscribe-wrapper'>
             <div class='subscribe-form'>
-                <form action='https://feedburner.google.com/fb/a/mailverify?uri=PetaKode' class='subscribe-form' method='post' onsubmit='window.open (&apos;https://feedburner.google.com/fb/a/mailverify?uri=PetaKode&apos;, &apos;popupwindow&apos;, &apos;scrollbars=yes,width=550,height=520&apos;);return true' target='popupwindow'>
-                    <input name='uri' type='hidden' value='ArlinaDesign'/><input name='loc' type='hidden' value='en_US'/><input autocomplete='off' class='subscribe-css-email-field' name='email' placeholder='Enter your Email'/><input class='subscribe-css-email-button' title='' type='submit' value='submit'/></form>
-            </div>
+                <?php
+                if (function_exists('pll_current_language')) {
+                    $current_language = pll_current_language();
+
+                    if ($current_language === 'ar') {
+                        echo do_shortcode('[fluentform id="12"]');
+                    } elseif ($current_language === 'en') {
+                        echo do_shortcode('[fluentform id="12"]');
+                    }
+                }
+                ?>            </div>
         </div>
     </div>
     <div class="container">
