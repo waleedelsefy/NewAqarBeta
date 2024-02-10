@@ -44356,3 +44356,15 @@ h4.hinfbox {
   font-size: 1.1rem;
 }
 /** info author **/
+
+form#fluentform_12 {
+  width: 60%;
+}
+button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
+  color: var(--primary-color) !important;
+}
+.fluentform.ff-default.fluentform_wrapper_12.ffs_default_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
