@@ -27,7 +27,7 @@
                                     $term_name = esc_html($term_details->name);
                                     $term_image = get_term_meta($term_details->term_id, 'developer_image', true);
                                     $term_link = get_term_link($term_details);
-                                    if ($term_image && $count < 8) { // Check if term has image and count is less than 8
+                                    if ($term_image && $count < 6) { // Check if term has image and count is less than 8
                                         ?>
                                         <div class="swiper-slide col-md-2 col-sm-4">
                                             <a class="slider-card" href="<?php echo esc_url($term_link); ?>" target="_self" rel="dofollow">
