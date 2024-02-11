@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NewAqar\n"
-"POT-Creation-Date: 2024-02-05 23:16+0200\n"
-"PO-Revision-Date: 2024-02-05 23:20+0200\n"
+"POT-Creation-Date: 2024-02-11 20:47+0200\n"
+"PO-Revision-Date: 2024-02-11 20:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && "
-"n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && "
+"n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -184,7 +184,19 @@ msgstr "البريد الإلكتروني* (لن يتم نشره)"
 msgid "Website"
 msgstr "الموقع الإلكتروني"
 
-#: footer.php:121
+#: footer.php:90
+msgid "Subscribe"
+msgstr "اشترك"
+
+#: footer.php:90
+msgid "To"
+msgstr "في"
+
+#: footer.php:90
+msgid "OUR NEWSLETTER"
+msgstr "قائمتنا البريدية"
+
+#: footer.php:153
 msgctxt "copyright date format"
 msgid "Y"
 msgstr "سنة"
@@ -401,7 +413,7 @@ msgstr "اضف وصف للمطور ."
 msgid "Payment Systems"
 msgstr "أنظمة الدفع"
 
-#: inc/hooks.php:29 single-templates/single-projects.php:531
+#: inc/hooks.php:29 single-templates/single-projects.php:532
 msgid "payment system"
 msgstr "أنظمة الدفع"
 
@@ -637,9 +649,9 @@ msgstr "شارك"
 
 #: inc/short-cods.php:222
 msgid "The"
-msgstr "الـ"
+msgstr "ال"
 
-#: inc/short-cods.php:276
+#: inc/short-cods.php:268
 msgid "More Posts"
 msgstr "المشاركات"
 
@@ -802,11 +814,11 @@ msgstr "بحث :"
 msgid "We found %s result for your search."
 msgid_plural "We found %s results for your search."
 msgstr[0] "لم يتم العثور على %s نتيجة لبحثك."
-msgstr[1] "وجدنا فقط %s نتيجة لبحثك."
-msgstr[2] "وجدنا فقط %s نتيجة لبحثك."
-msgstr[3] "وجدنا %s نتيجة لبحثك."
-msgstr[4] "وجدنا %s نتيجة لبحثك."
-msgstr[5] "وجدنا %s نتيجة لبحثك."
+msgstr[1] "لم يتم العثور على %s نتيجة لبحثك."
+msgstr[2] "لم يتم العثور على %s نتيجة لبحثك."
+msgstr[3] "لم يتم العثور على %s نتيجة لبحثك."
+msgstr[4] "لم يتم العثور على %s نتيجة لبحثك."
+msgstr[5] "لم يتم العثور على %s نتيجة لبحثك."
 
 #: search.php:33
 msgid ""
@@ -852,6 +864,10 @@ msgstr "لوكيشن المشروع"
 msgid "The Project Space"
 msgstr "مساحة المشروع"
 
+#: single-templates/single-projects.php:295
+msgid "acre"
+msgstr ""
+
 #: single-templates/single-projects.php:300
 msgid "The Developer"
 msgstr "المطور"
@@ -860,66 +876,81 @@ msgstr "المطور"
 msgid "receiving date"
 msgstr "موعد الاستلام"
 
-#: single-templates/single-projects.php:312
-#: single-templates/single-projects.php:355
+#: single-templates/single-projects.php:313
+#: single-templates/single-projects.php:356
 msgid "Payment systems"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-projects.php:327 single-templates/single-units.php:303
+#: single-templates/single-projects.php:330 single-templates/single-units.php:302
 msgid "Sales Number"
 msgstr "رقم المبيعات"
 
-#: single-templates/single-projects.php:336 single-templates/single-units.php:279
+#: single-templates/single-projects.php:337 single-templates/single-units.php:279
 msgid "Unit Types"
 msgstr "نوع الوحدة"
 
-#: single-templates/single-projects.php:342
+#: single-templates/single-projects.php:343
 msgid "Meter price"
 msgstr "سعر المتر"
 
-#: single-templates/single-projects.php:343
+#: single-templates/single-projects.php:344
 msgid "L.E"
 msgstr "جنيه"
 
-#: single-templates/single-projects.php:359
-#: single-templates/single-projects.php:535 single-templates/single-units.php:322
-#: single-templates/single-units.php:462
+#: single-templates/single-projects.php:360
+#: single-templates/single-projects.php:536 single-templates/single-units.php:319
+#: single-templates/single-units.php:459
 msgid "Deposit"
 msgstr "مقدم"
 
-#: single-templates/single-projects.php:365
-#: single-templates/single-projects.php:541 single-templates/single-units.php:328
-#: single-templates/single-units.php:468
+#: single-templates/single-projects.php:366
+#: single-templates/single-projects.php:542 single-templates/single-units.php:325
+#: single-templates/single-units.php:465
+#, fuzzy
 msgid "installment"
 msgstr "تقسيط"
 
-#: single-templates/single-projects.php:373
-#: single-templates/single-projects.php:549 single-templates/single-units.php:336
-#: single-templates/single-units.php:481
+#: single-templates/single-projects.php:374
+#: single-templates/single-projects.php:550 single-templates/single-units.php:333
+#: single-templates/single-units.php:478
 msgid "Receipt"
 msgstr "استلام"
 
-#: single-templates/single-projects.php:381
+#: single-templates/single-projects.php:382
 msgid "Latest update on: "
 msgstr "أخر تحديث في : "
 
-#: single-templates/single-projects.php:456
+#: single-templates/single-projects.php:457
 msgid "Similar Projects"
 msgstr "مشاريع مماثلة"
 
-#: single-templates/single-projects.php:484
+#: single-templates/single-projects.php:485
 msgid "No similar projects"
 msgstr "لا توجد مشاريع مماثلة"
 
-#: single-templates/single-projects.php:493
+#: single-templates/single-projects.php:494
 #: template-parts/front-page/latest-properties.php:7
 msgid "Latest projects"
 msgstr "اخر المشروعات"
 
-#: single-templates/single-projects.php:517
-#: single-templates/single-projects.php:557
+#: single-templates/single-projects.php:518
 msgid "No Latest projects"
 msgstr "لا يوجد مشروعات جديدة"
+
+#: single-templates/single-projects.php:544 single-templates/single-units.php:327
+#: single-templates/single-units.php:468
+msgid "year"
+msgstr "سنة"
+
+#: single-templates/single-projects.php:544 single-templates/single-units.php:327
+#: single-templates/single-units.php:470
+msgid "years"
+msgstr "سنوات"
+
+#: single-templates/single-projects.php:558 single-templates/single-units.php:341
+#: single-templates/single-units.php:486
+msgid "Last updated in:"
+msgstr "أخر تحديث في :"
 
 #: single-templates/single-units.php:251
 msgid "Unit details"
@@ -945,29 +976,17 @@ msgstr "سعر الوحدة"
 msgid "EGP"
 msgstr "جنيه"
 
-#: single-templates/single-units.php:318 single-templates/single-units.php:458
+#: single-templates/single-units.php:315 single-templates/single-units.php:455
 msgid "Payment System"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-units.php:344 single-templates/single-units.php:489
-msgid "Last updated in:"
-msgstr "أخر تحديث في :"
-
-#: single-templates/single-units.php:395
+#: single-templates/single-units.php:392
 msgid "Similar units"
 msgstr "وحدات مماثلة"
 
-#: single-templates/single-units.php:445
+#: single-templates/single-units.php:442
 msgid "No similar units"
 msgstr "لا توجد وحدات متشابهة"
-
-#: single-templates/single-units.php:471
-msgid "year"
-msgstr "سنة"
-
-#: single-templates/single-units.php:473
-msgid "years"
-msgstr "سنوات"
 
 #: template-parts/content-none.php:15
 msgid "Nothing Found for"
