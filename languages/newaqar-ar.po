@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewAqar\n"
 "POT-Creation-Date: 2024-02-11 20:47+0200\n"
-"PO-Revision-Date: 2024-02-11 20:50+0200\n"
+"PO-Revision-Date: 2024-02-11 20:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -906,7 +906,6 @@ msgstr "مقدم"
 #: single-templates/single-projects.php:366
 #: single-templates/single-projects.php:542 single-templates/single-units.php:325
 #: single-templates/single-units.php:465
-#, fuzzy
 msgid "installment"
 msgstr "تقسيط"
 
