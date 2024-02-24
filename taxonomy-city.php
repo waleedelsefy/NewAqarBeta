@@ -58,5 +58,5 @@
         </div>
     </div>
 </div>
-p
+
 <?php get_footer(); ?>
