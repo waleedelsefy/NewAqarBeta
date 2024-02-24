@@ -160,7 +160,6 @@ function newaqar_post_shortcode($atts) {
         return 'Please specify a list of IDs using the "ids" attribute.';
     }
 }
-// Register the shortcode with the name 'newaqar_post'
 add_shortcode('newaqar_post', 'newaqar_post_shortcode');
 /*function show_shortcode_after_paragraphs($content) {
     // Define an array with shortcode IDs and their respective target paragraph numbers
@@ -219,7 +218,7 @@ function aqar_social_share_box() {
             $post_type = get_post_type();
             $post_type_labels = get_post_type_labels(get_post_type_object($post_type));
 
-            echo '<h3 class="socialTitle">' . __('Share', 'newaqar') . ' '.  __('The', 'newaqar') . esc_html($post_type_labels->singular_name) . ':</h3>';
+            echo '<p class="socialTitle">' . __('Share', 'newaqar') . ' '.  __('The', 'newaqar') . esc_html($post_type_labels->singular_name) . ':</p>';
             ?>            <ul class="socialList">
                 <li><a href="https://facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="15" viewBox="0 0 320 512"><path fill="#ffffff" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a></li>
                 <li><a href="https://x.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
@@ -265,7 +264,7 @@ function author_info_shortcode() {
                     <p><?php echo esc_html($author_description); ?></p>
                 </div>
                 <div class="borderbox box1-3 box1-3">
-                    <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>" class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
+                    <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>"  class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
                 </div>
             </div>
         </div>

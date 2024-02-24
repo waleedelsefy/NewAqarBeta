@@ -67,8 +67,17 @@ add_action('add_meta_boxes', 'add_project_details_meta_boxes');
 function render_project_details_metabox($post) {
     // Add nonce for security
     wp_nonce_field('save_project_meta_data', 'project_meta_box_nonce');
-    // Get saved values
+
     $project_details = get_post_meta($post->ID, 'project_details', true);
+    $project_space = '';
+    $project_price = '';
+    $payment_systems = '';
+    $down_payment = '';
+    $delivery = '';
+    $installment = '';
+    $number_of_votes = '';
+    $number_of_voters = '';
+
     if (is_array($project_details) && !empty($project_details)) {
         $project_space = isset($project_details['project_space']) ? esc_attr($project_details['project_space']) : '';
         $project_price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
@@ -76,13 +85,10 @@ function render_project_details_metabox($post) {
         $down_payment = isset($project_details['down_payment']) ? esc_attr($project_details['down_payment']) : '';
         $delivery = isset($project_details['delivery']) ? esc_attr($project_details['delivery']) : '';
         $installment = isset($project_details['installment']) ? esc_attr($project_details['installment']) : '';
-    } else {
-        $project_space = '';
-        $project_price = '';
-        $payment_systems = '';
-        $down_payment = '';
-        $delivery = '';
-        $installment = '';
+        $votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
+        $enable_faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
+        $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : '';
+        $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : '';
     }
     ?>
     <table class="form-table">
@@ -91,17 +97,19 @@ function render_project_details_metabox($post) {
                 <label for="project_details[project_space]"><?php _e('Project Space:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="text" name="project_details[project_space]" value="<?php echo esc_attr($project_space); ?>" placeholder="<?php esc_attr_e('Enter Project Space', 'newaqar'); ?>">
+                <input type="number" name="project_details[project_space]" value="<?php echo esc_attr($project_space); ?>" placeholder="<?php esc_attr_e('Enter Project Space', 'newaqar'); ?>">
             </td>
         </tr>
+        <!-- Project Price -->
         <tr>
             <th scope="row">
                 <label for="project_details[project_price]"><?php _e('Project Price:', 'newaqar'); ?></label>
             </th>
             <td>
-                <input type="text" name="project_details[project_price]" value="<?php echo esc_attr($project_price); ?>" placeholder="<?php esc_attr_e('Enter Project Price', 'newaqar'); ?>">
+                <input type="number" name="project_details[project_price]" value="<?php echo esc_attr($project_price); ?>" placeholder="<?php esc_attr_e('Enter Project Price', 'newaqar'); ?>">
             </td>
         </tr>
+        <!-- Payment Systems -->
         <tr>
             <th scope="row">
                 <label for="project_details[payment_systems]"><?php _e('Payment Systems:', 'newaqar'); ?></label>
@@ -116,6 +124,31 @@ function render_project_details_metabox($post) {
                 <input type="number" min="0" max="30" name="project_details[installment]" value="<?php echo esc_attr($installment); ?>" placeholder="<?php esc_attr_e('Enter installment payment', 'newaqar'); ?>">
             </td>
         </tr>
+        <!-- Votes -->
+        <tr>
+            <th scope="row">
+                <label for="project_details[votes]"><?php _e('Votes:', 'newaqar'); ?></label>
+            </th>
+            <td>
+                <input type="checkbox" name="project_details[votes]" value="true" <?php checked($votes, 'true'); ?>>
+                <label><?php esc_html_e('Enable Votes', 'newaqar'); ?></label>
+
+                <input width="100px" type="number" min="0" max="5" name="project_details[number_of_votes]" id="number-of-votes" value="<?php echo esc_attr($number_of_votes); ?>" placeholder="<?php esc_attr_e('Votes', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
+                <input width="100px"  type="number" min="0" max="1000" name="project_details[number_of_voters]" id="number-of-voters" value="<?php echo esc_attr($number_of_voters); ?>" placeholder="<?php esc_attr_e('Voters', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
+            </td>
+        </tr>
+        <!-- FAQs -->
+        <tr>
+            <th scope="row">
+                <label for="project_details[faqs]"><?php _e('FAQs:', 'newaqar'); ?></label>
+            </th>
+            <td>
+
+                <input type="checkbox" name="project_details[faqs]" value="true" <?php checked($enable_faqs, 'true'); ?>>
+                <label><?php esc_html_e('Enable FAQs', 'newaqar'); ?></label>
+            </td>
+        </tr>
+        <!-- Delivery Time -->
         <tr>
             <th scope="row">
                 <label for="project_details[delivery]"><?php _e('Delivery Time:', 'newaqar'); ?></label>
@@ -147,7 +180,6 @@ function save_project_meta($post_id) {
     $sanitized_project_details = array_map('sanitize_text_field', $_POST['project_details']);
     update_post_meta($post_id, 'project_details', $sanitized_project_details);
 }
-// Hook the save_project_meta function to the save_post action
 add_action('save_post', 'save_project_meta');
 function add_faq_meta_box() {
     add_meta_box(
@@ -174,8 +206,8 @@ function faq_meta_box_callback($post) {
         <?php if ($faqs) : ?>
             <?php foreach ($faqs as $index => $faq) : ?>
                 <tr>
-                    <td><input type="text" name="faqs[<?php echo $index; ?>][question]" value="<?php echo esc_attr($faq['question']); ?>" /></td>
-                    <td><input type="text" name="faqs[<?php echo $index; ?>][answer]" value="<?php echo esc_attr($faq['answer']); ?>" /></td>
+                    <td><input type="text" name="faqs[<?php echo $index; ?>][question]" value="<?php echo esc_attr($faq['question']); ?>" minlength="5" /></td>
+                    <td><input type="text" name="faqs[<?php echo $index; ?>][answer]" value="<?php echo esc_attr($faq['answer']); ?>" minlength="5"/></td>
                     <td>
                         <button class="button faq-delete-button"><?php _e('Delete', 'newaqar');?></button>
                     </td>

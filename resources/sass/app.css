@@ -5,8 +5,7 @@
  *   '
  *   app.scss 1:9  root stylesheet */
 body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
+  font-family: var(--primary-font-family);
   white-space: pre;
   display: block;
   padding: 1em;

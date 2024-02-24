@@ -3282,7 +3282,6 @@ body body, html body {
     color: #000;
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: -.015em;
     text-align: end
 }
 body *, body :after, body :before, html *, html :after, html :before {

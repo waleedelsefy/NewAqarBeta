@@ -53,10 +53,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
 }
 ?>
 <style>
-    a {
-        color: var(--primary-have-color-collapse) !important;
-        text-decoration: none;
-    }
+
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
@@ -254,7 +251,10 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             <tbody>
                                     <tr>
                                         <th class="ttitle"><?php _e('Unit Name', 'newaqar'); ?></th>
-                                        <td class="tvalue"><?php echo get_the_title(); ?></td>
+                                        <td class="tvalue">  <h1 style="font-size: 16px !important; margin:unset!important;">
+                                                <?php echo get_the_title(); ?>
+                                            </h1>
+                                        </td>
                                     </tr>
                                     <?php
                                     if (isset($unit_project)) {

@@ -31,38 +31,7 @@ function save_project_meta_data($post_id) {
     }
 }
 add_action('save_post', 'save_project_meta_data');
-/* for fast theme
-function custom_units_columns($columns) {
-    $columns['project_association'] = esc_html__('Project Association', 'newaqar');
-    return $columns;
-}
-add_filter('manage_units_posts_columns', 'custom_units_columns');
-function units_custom_columns($columns) {
-    $columns['project_association'] = __('Project Association', 'newaqar');
-    return $columns;
-}
-add_filter('manage_units_posts_columns', 'units_custom_columns');
-function custom_units_column_data($column, $post_id) {
-    if ($column == 'project_association') {
-        $project_id = get_post_meta($post_id, '_unit_project_id', true);
-        $projects = get_posts(array('post_type' => 'projects', 'posts_per_page' => -1));
-        $selected_project = ($project_id) ? $project_id : '';
-        echo '<select data-post-id="' . esc_attr($post_id) . '" class="project-association-select">';
-        echo '<option value="">' . esc_html__('Select Project', 'newaqar') . '</option>';
-        foreach ($projects as $project) {
-            echo '<option value="' . esc_attr($project->ID) . '" ' . selected($selected_project, $project->ID, false) . '>' . esc_html($project->post_title) . '</option>';
-        }
-        echo '</select>';
-        if ($project_id) {
-            $edit_link = get_edit_post_link($project_id);
-            if ($edit_link) {
-                echo '<br/><a href="' . esc_url($edit_link) . '">' . __('Edit Project', 'newaqar') . '</a>';
-            }
-        }
-    }
-}
-add_action('manage_units_posts_custom_column', 'custom_units_column_data', 10, 2);
-/* end for fast theme */
+
 function add_project_meta_box() {
     add_meta_box(
         'project_meta_box',
@@ -245,11 +214,14 @@ function newaqar_render_unit_details_metabox($post) {
     $down_payment = isset($unit_details['down_payment']) ? esc_attr($unit_details['down_payment']) : '';
     $delivery = isset($unit_details['delivery']) ? esc_attr($unit_details['delivery']) : '';
     $installment = isset($unit_details['installment']) ? esc_attr($unit_details['installment']) : '';
+    $votes = isset($unit_details['votes']) ? esc_attr($unit_details['votes']) : '';
+    $number_of_votes = isset($unit_details['number_of_votes']) ? esc_attr($unit_details['number_of_votes']) : '';
+    $number_of_voters = isset($unit_details['number_of_voters']) ? esc_attr($unit_details['number_of_voters']) : '';
     $payment_systems = isset($unit_details['payment_systems']) ? esc_attr($unit_details['payment_systems']) : '';
     if (is_numeric($project_price) && is_numeric($unit_space)) {
         $unit_price_auto = $project_price * $unit_space;
     } else {
-        $unit_price_auto = 0; // أو يمكنك تعيين قيمة افتراضية أخرى
+        $unit_price_auto = 0;
         echo 'Cannot calculate the price currently.';
     }
     $unit_price = isset($unit_details['unit_price']) ? esc_attr($unit_details['unit_price']) : $unit_price_auto;
@@ -269,6 +241,19 @@ function newaqar_render_unit_details_metabox($post) {
             </th>
             <td>
                 <input type="number" name="unit_details[unit_price]" value="<?php echo esc_attr($unit_price); ?>" placeholder="<?php esc_attr_e('Enter the unit price', 'newaqar'); ?>" step="any">
+            </td>
+        </tr>
+        <!-- Votes -->
+        <tr>
+            <th scope="row">
+                <label for="unit_details[votes]"><?php _e('Votes:', 'newaqar'); ?></label>
+            </th>
+            <td>
+                <input type="checkbox" name="unit_details[votes]" value="true" <?php checked($votes, 'true'); ?>>
+                <label><?php esc_html_e('Enable Votes', 'newaqar'); ?></label>
+
+                <input width="100px" type="number" min="0" max="5" name="unit_details[number_of_votes]" id="number-of-votes" value="<?php echo esc_attr($number_of_votes); ?>" placeholder="<?php esc_attr_e('Votes', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
+                <input width="100px"  type="number" min="0" max="1000" name="unit_details[number_of_voters]" id="number-of-voters" value="<?php echo esc_attr($number_of_voters); ?>" placeholder="<?php esc_attr_e('Voters', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
             </td>
         </tr>
         <tr>

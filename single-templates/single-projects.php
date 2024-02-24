@@ -1,4 +1,3 @@
-
 <?php
 get_header();
 $theme_settings = get_option('newaqar_theme_settings');
@@ -52,10 +51,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
 }
 ?>
 <style>
-    a {
-        color: var(--primary-have-color-collapse) !important;
-        text-decoration: none;
-    }
+
+
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
@@ -158,13 +155,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
         .author-name{font-size:1.1rem; margin: 0}
         ul.author-contacts{justify-content: flex-start}
     }
-    /*side-bar*/
     .side-bar{position:sticky; top:100px}
-    /*payment-plan*/
     .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: 10px;display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
-    /*side-title*/
     .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background:rgb(253 253 253); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
-    /*side-details*/
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
     .side-details .big-detail{font-size: var(--p-content-font-size); font-weight: 600; color: var(--primary-color-collapse)}
@@ -174,7 +167,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
         .payment-mobile{display:none}
         .side-bar .payment-plan{display: flex; margin-top: 50px}
     }
-    /*side-contact*/
     .side-contact form{display:block;padding:0 10px}
     .side-contact .form-title{font-weight: 700; font-size: 1.1rem}
     .side-contact .form-bg,.side-contact .comment{width:100%;padding-right:15px;height:40px;line-height:38px;color:var(--primary-color-collapse);display:block;font-family: var(--primary-font-family);font-size:0.85rem;margin-top:15px;border:1px solid #C0C0C0;font-weight: bold;background-color: #FFFFFF;border-radius: 10px}
@@ -189,7 +181,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .side-contact .form-bg::placeholder,.side-contact .comment::placeholder{opacity:.5}
     .side-contact .submit{margin:15px 0;float:left;background-color:var(--primary-color-collapse);line-height:32px;padding:0 20px 3px;color:#FFF;font-size:1rem;border:0;transition:0.5s;border-radius: 10px;font-family: 'Cairo', sans-serif;}
     .side-contact .submit:hover{cursor:pointer;background-color: var(--primary-color-collapse)}
-    /*side-bar main-cta*/
     .side-bar .main-cta{}
     .side-bar .main-cta a{background-color: #8CC2C8;color:#FFF;border:none;}
     .side-bar .main-cta a:hover{transform: translateY(3px)}
@@ -199,12 +190,10 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .side-bar .main-cta .cta-wts i, .side-bar .main-cta .cta-phone i{color:#FFFFFF }
     .contact-form.project-form{padding:10px 2%}
     .contact-form.project-form .form-title{padding-top:10px;padding-right:15px;font-size: 1.2rem;margin-bottom: 0}
-    /*related-projects*/
     .related-projects{padding:20px 0;margin-top:20px}
     @media only screen and (min-width:992px){
         .related-projects{padding:60px 0;}
     }
-    /*.schedule-meeting*/
     .schedule-meeting form{display: flex; flex-wrap: wrap;padding:15px; justify-content: space-between}
     .schedule-meeting .form-inside-title{font-weight: bold; font-size: 0.9rem;margin-bottom: 5px; padding-right: 5px}
     .schedule-meeting .input-box{width:98%;margin:0 1%}
@@ -243,10 +232,15 @@ if ($city_terms && !is_wp_error($city_terms)) {
     <div class="row">
         <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
             <div class="main-content">
+                <div class="container">
+                <p><?php echo __('Units Of Projects', 'newaqar'); ?></p>
+                    <div class="carousel">
+
+                    <div class="units-of-projects">
                 <?php
                 $args = array(
                     'post_type' => 'units',
-                    'posts_per_page' => 4,
+                    'posts_per_page' => -1,
                     'meta_query' => array(
                         array(
                             'key' => '_unit_project_id',
@@ -257,23 +251,25 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 $unit_query = new WP_Query($args);
                 if ($unit_query->have_posts()) :
                     ?>
-                    <div class="row related-section my-5   d-flex justify-content-center">
-                        <p><?php echo __('Units Of Projects', 'newaqar'); ?></p>
                         <?php
                         while ($unit_query->have_posts()) :
                             $unit_query->the_post();
                             ?>
-                            <div class="col-lg-6 col-md-6 w-45 col-12 mt-4 ">
+                            <div class="col-lg-6 col-md-6 mt-2 mb-2">
                                 <?php get_template_part('template-parts/single-card'); ?>
                             </div>
                         <?php
                         endwhile;
                         ?>
-                    </div>
                 <?php
                 endif;
                 wp_reset_postdata();
                 ?>
+</div>
+                        <button class="prev-button"><?php echo __('Next', 'newaqar'); ?></button>
+                        <button class="next-button"><?php echo __('Prev', 'newaqar'); ?></button>
+</div>
+                </div>
                 <main id="content-project" class="column main-content m-0 py-0">
                     <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>
                     <div class="content-box">
@@ -281,7 +277,11 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <tbody>
                             <tr>
                                 <th class="ttitle"><?php _e('Project Name', 'newaqar'); ?></th>
-                                <td class="tvalue"><?php echo get_the_title(); ?></td>
+                                <td class="tvalue">
+                                    <h1 style="font-size: 16px !important; margin:unset!important;">
+                                        <?php echo get_the_title(); ?>
+                                    </h1>
+                                </td>
                             </tr>
                             <?php if (isset($city_link) && isset($city_name) && !empty($city_name)) : ?>
                                 <tr>
@@ -349,6 +349,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                     </div>
                     <div>
                         <?php echo do_shortcode('[newaqar_cta]') ?>
+
+
                     </div>
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
@@ -421,6 +423,10 @@ the_content(); ?>
 
 
                     </div>
+<?php
+$faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
+
+if ($faqs === 'true') { ?>
                     <div class="container-accordion">
                         <div class="accordion" id="accordionFAQ">
                             <?php
@@ -453,6 +459,7 @@ the_content(); ?>
                             ?>
                         </div>
                     </div>
+          <?php } ?>
                     <div class="row related-section my-5   d-flex justify-content-center">
                         <h3><?php echo __('Similar Projects', 'newaqar'); ?></h3>
                         <?php
@@ -525,6 +532,7 @@ the_content(); ?>
                 </main>
             </div>
         </div>
+
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
                     <?php if ($down_payment != "") : ?>

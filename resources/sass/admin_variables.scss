@@ -23,3 +23,6 @@
 div#wpfooter {
   display: none;
 }
+input#number-of-voters, input#number-of-votes {
+  min-width: 100px;
+}
