@@ -130,6 +130,7 @@ function newaqar_cta_shortcode()
     return ob_get_clean();
 }
 add_shortcode('newaqar_cta', 'newaqar_cta_shortcode');
+
 function newaqar_post_shortcode($atts) {
     if (isset($atts['ids'])) {
         $ids = explode(',', $atts['ids']);
@@ -142,12 +143,10 @@ function newaqar_post_shortcode($atts) {
         $query = new WP_Query($args);
         if ($query->have_posts()) {
             ob_start();
-            echo '<div class="container  my-2 py-3">';
+            echo '<div class="container  posts-short my-2 py-3">';
             while ($query->have_posts()) {
                 $query->the_post();
-                echo '<div class="col-lg-6 col-md-6 w-45 col-12 mt-4">';
                 get_template_part('template-parts/single-card');
-                echo '</div>';
             }
             echo '</div>';
             wp_reset_postdata();

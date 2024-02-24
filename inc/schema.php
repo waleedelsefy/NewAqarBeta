@@ -41,7 +41,7 @@ function newaqar_product_schema() {
                 "image" => get_the_post_thumbnail_url($post_id, 'full'),
                 "sku" => $post_id,
                 "brand" => array(
-                    "@type" => 'brand' ,
+                    "@type" => 'Organization' ,
                     "name" => $developer_name
                 ),
                 "offers" => array(

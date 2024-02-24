@@ -11159,7 +11159,7 @@ input[type=submit] {
     padding: 8px 0px;
     width: 100%;
     color: var(--secondary-color-2);
-    font-size: 17px;
+    font-size: 14px;
     display: inline-flex;
     gap: 8px;
   }
@@ -11206,7 +11206,7 @@ input[type=submit] {
     padding: 8px 25px;
     width: 100%;
     color: var(--secondary-color-2);
-    font-size: 17px;
+    font-size: 14px;
     display: inline-flex;
     gap: 8px;
   }

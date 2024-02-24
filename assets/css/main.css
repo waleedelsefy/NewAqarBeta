@@ -3253,14 +3253,7 @@ body body, body html, html body, html html {
     margin: 0;
     padding: 0
 }
-body address, body big, body blockquote, body button, body caption, body cite, body code, body em, body fieldset, body font, body form, body h1, body h2, body h3, body h4, body h5, body h6, body img, body label, body legend, body li, body ol, body p, body small, body strike, body sub, body sup, body table, body td, body th, body tr, body ul, html address, html big, html blockquote, html button, html caption, html cite, html code, html em, html fieldset, html font, html form, html h1, html h2, html h3, html h4, html h5, html h6, html img, html label, html legend, html li, html ol, html p, html small, html strike, html sub, html sup, html table, html td, html th, html tr, html ul {
-    border: none;
-    font-size: var(--p-content-font-size);
-    line-height: 1.8em;
-    margin: 10px;
-    padding: 0;
-    text-align: inherit
-}
+
 body blockquote:after, body blockquote:before, html blockquote:after, html blockquote:before {
     content: ""
 }
@@ -3344,27 +3337,7 @@ body .screen-reader-text:focus, html .screen-reader-text:focus {
 body main, html main {
     display: block
 }
-body h1, html h1 {
-    font-size: 1.6rem;
-    line-height: 1.138888889
-}
-body h2, html h2 {
-    font-size: 1.2rem
-}
-body .heading-size-3, body h3, html .heading-size-3, html h3 {
-    font-size: 1.8rem
-}
-body h4, html h4 {
-    font-size: 1.4rem
-}
-body h5, html h5 {
-    font-size: 1.1rem
-}
-body h6, html h6 {
-    font-size: 1.6rem;
-    letter-spacing: .03125em;
-    text-transform: uppercase
-}
+
 body dfn, body em, body i, body q, html dfn, html em, html i, html q {
     font-style: italic
 }
@@ -4263,15 +4236,6 @@ body form.searchandfilter ul, html form.searchandfilter ul {
 }
 body .page_title, html .page_title {
     background-position: 50%;
-    font-family: "Segoe UI"
-}
-body .page_title h1, html .page_title h1 {
-    color: #000;
-    font-size: 15pt;
-    margin: 20px 0;
-    padding: 10px 0 0;
-    text-align: start;
-    text-transform: uppercase
 }
 body .page_title p, html .page_title p {
     color: #000;

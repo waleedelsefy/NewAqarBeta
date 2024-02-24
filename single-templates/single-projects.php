@@ -407,6 +407,44 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <?php  echo do_shortcode('[social_share_box]');
 the_content(); ?>
                     </div>
+
+                    <?php
+                    $faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
+
+                    if ($faqs === 'true') { ?>
+                        <div class="container-accordion">
+                            <div class="accordion" id="accordionFAQ">
+                                <?php
+                                $unserialized_data = (get_post_meta($post->ID, '_faqs', true));
+                                if ($unserialized_data && is_array($unserialized_data)) {
+                                    foreach ($unserialized_data as $index => $qa_pair) :
+                                        ?>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="heading<?php echo esc_attr($index + 1); ?>">
+                                                <button class="accordion-button <?php echo ($index === 0) ? 'collapsed' : ''; ?>"
+                                                        type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapse<?php echo esc_attr($index + 1); ?>"
+                                                        aria-expanded="<?php echo ($index === 0) ? 'true' : 'false'; ?>"
+                                                        aria-controls="collapse<?php echo esc_attr($index + 1); ?>">
+                                                    <?php echo esc_html($qa_pair['question']); ?>
+                                                </button>
+                                            </h2>
+                                            <div id="collapse<?php echo esc_attr($index + 1); ?>"
+                                                 class="accordion-collapse collapse <?php echo ($index === 0) ? 'show' : ''; ?>"
+                                                 aria-labelledby="heading<?php echo esc_attr($index + 1); ?>"
+                                                 data-bs-parent="#accordionFAQ">
+                                                <div class="accordion-body">
+                                                    <strong><?php echo esc_html($qa_pair['answer']); ?></strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                    endforeach;
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    <?php } ?>
                     <div class="table-content my-2 py-3 px-3 ">
                     <?php
                         if (function_exists('pll_current_language')) {
@@ -423,43 +461,7 @@ the_content(); ?>
 
 
                     </div>
-<?php
-$faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
 
-if ($faqs === 'true') { ?>
-                    <div class="container-accordion">
-                        <div class="accordion" id="accordionFAQ">
-                            <?php
-                            $unserialized_data = (get_post_meta($post->ID, '_faqs', true));
-                            if ($unserialized_data && is_array($unserialized_data)) {
-                                foreach ($unserialized_data as $index => $qa_pair) :
-                                    ?>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="heading<?php echo esc_attr($index + 1); ?>">
-                                            <button class="accordion-button <?php echo ($index === 0) ? 'collapsed' : ''; ?>"
-                                                    type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse<?php echo esc_attr($index + 1); ?>"
-                                                    aria-expanded="<?php echo ($index === 0) ? 'true' : 'false'; ?>"
-                                                    aria-controls="collapse<?php echo esc_attr($index + 1); ?>">
-                                                <?php echo esc_html($qa_pair['question']); ?>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse<?php echo esc_attr($index + 1); ?>"
-                                             class="accordion-collapse collapse <?php echo ($index === 0) ? 'show' : ''; ?>"
-                                             aria-labelledby="heading<?php echo esc_attr($index + 1); ?>"
-                                             data-bs-parent="#accordionFAQ">
-                                            <div class="accordion-body">
-                                                <strong><?php echo esc_html($qa_pair['answer']); ?></strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php
-                                endforeach;
-                            }
-                            ?>
-                        </div>
-                    </div>
-          <?php } ?>
                     <div class="row related-section my-5   d-flex justify-content-center">
                         <h3><?php echo __('Similar Projects', 'newaqar'); ?></h3>
                         <?php

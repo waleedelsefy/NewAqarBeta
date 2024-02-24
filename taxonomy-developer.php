@@ -4,6 +4,7 @@
         div#developer-desc {
             background: white;
             padding: 30px;
+            margin-top:25px ;
             border-radius: 20px;
             box-shadow: var(--primary-box-shadow);
         }
@@ -11,26 +12,26 @@
     @media screen and (min-width: 120px) and (max-width: 767px) {
         div#developer-desc {
             background: white;
-            padding: 5px;
             border-radius: 20px;
+            margin-top:25px ;
             box-shadow: var(--primary-box-shadow);
         }
     }
 </style>
 <div class="container">
-    <div class="row">
         <div id="content-wrapper" class="w-80">
-            <div class="page_title">
-                <div class="container clearfix">
-                    <h1>
-                        <span><?php the_archive_title(); ?></span>
-                    </h1>
-                    <div class="breadcrumbs-wrapper">
-                        <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+
+            <div id="developer-desc" class="row mb-5">
+                <div class="page_title">
+                    <div class="container clearfix">
+                        <h1>
+                            <span><?php the_archive_title(); ?></span>
+                        </h1>
+                        <div class="breadcrumbs-wrapper">
+                            <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div id="developer-desc" class="row mb-5">
                 <div class="row mb-5">
                     <?php
                     if (have_posts()) {
@@ -47,10 +48,10 @@
                 <div class="col-md-12">
 
                 <?php
-                    $term_id = get_queried_object_id(); // يمكنك استخدام دالة أخرى إذا كنت في سياق مختلف
+                    $term_id = get_queried_object_id();
                     $developer_desc = get_term_meta($term_id, 'developer_desc', true);
                     if (!empty($developer_desc)) {
-                        echo '<div class="site-main">' . $developer_desc . '</div>';
+                        echo '<div class="site-main">' . htmlspecialchars_decode($developer_desc) . '</div>';
                     } else {
                         the_archive_description('<div class="site-main">', '</div>');
                     }
@@ -84,6 +85,5 @@
                 </div>
             </div>
         </div>
-    </div>
 </div>
 <?php get_footer(); ?>
