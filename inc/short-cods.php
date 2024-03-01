@@ -240,8 +240,16 @@ function newaqar_developer_shortcode($atts) {
         <p class="jobTitle">تواصل مع مندوب الشركة</p>
 
         <div>
-            <?php echo do_shortcode('[fluentform id="11"]'); ?>
-        </div>
+            <?php
+            if (function_exists('pll_current_language')) {
+                $current_language = pll_current_language();
+                if ($current_language === 'ar') {
+                    echo do_shortcode('[fluentform id="15"]');
+                } elseif ($current_language === 'en') {
+                    echo do_shortcode('[fluentform id="16"]');
+                }
+            }
+            ?>        </div>
 
     </div>
 </div>
