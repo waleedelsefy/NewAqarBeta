@@ -12,10 +12,8 @@ function newaqar_product_schema() {
             $developer_terms = get_the_terms($unit_project, 'developer');
         } elseif (is_singular('projects')) {
             $project_details = get_post_meta($post->ID, 'project_details', true);
-
             $developer_terms = get_the_terms(get_the_ID(), 'developer');
             $votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
-
             if (is_array($project_details) && !empty($project_details)) {
                 $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
                 $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
@@ -26,12 +24,10 @@ function newaqar_product_schema() {
                 $payment_systems = '';
             }
         }
-
         if ($developer_terms && !is_wp_error($developer_terms)) {
             $first_term = reset($developer_terms);
             $developer_name = esc_html($first_term->name);
             $developer_link = get_term_link($first_term);
-
             $ld_json = array(
                 "@context" => "https://schema.org/",
                 "@type" => "Product",
@@ -61,7 +57,6 @@ function newaqar_product_schema() {
                     "acceptedPaymentMethod" => 'LoanOrCredit',
                 ),
             );
-
             if ($votes === 'true') {
                 $ld_json['aggregateRating'] = array(
                     "@type" => "AggregateRating",
@@ -69,7 +64,6 @@ function newaqar_product_schema() {
                     "reviewCount" => $number_of_voters
                 );
             }
-
             echo '<script type="application/ld+json">';
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             echo '</script>';
@@ -87,25 +81,22 @@ function newaqar_faq_schema() {
     $post_id = get_the_ID();
     $faqs = get_post_meta($post_id, '_faqs', true);
     $author_id = get_the_author_meta('ID');
-
     if (is_singular('projects') || is_singular('units')) {
         if (is_singular('units')) {
             $project_details = get_post_meta($unit_project, 'project_details', true);
             $faqs_sutue = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
-
         } elseif (is_singular('projects')) {
             $project_details = get_post_meta($post->ID, 'project_details', true);
             $faqs_sutue = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
             } else {
              }
         }
-    if ($faqs_sutue === 'true') {
+    if ( is_single() && $faqs_sutue === 'true') {
         foreach ($faqs as $index => $faq) {
             // Check if the question has less than 5 characters, if so, skip this iteration
             if (strlen($faq['question']) < 5) {
                 continue;
             }
-
             // Process the FAQ if the question meets the criteria
             $ld_json = array(
                 '@context' => 'https://schema.org',
@@ -137,7 +128,6 @@ function newaqar_faq_schema() {
                     'suggestedAnswer' => array(),
                 ),
             );
-
             // Output the JSON-LD script
             echo '<script type="application/ld+json">';
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
@@ -193,10 +183,8 @@ function newaqar_breadcrumb_schema() {
         echo '</script>';
     }
 }
-
 function newaqar_auther_schema() {
     global $post;
-
     // Get author information
     $author_id = $post->post_author;
     $author_name = get_the_author_meta('display_name', $author_id);
@@ -213,15 +201,14 @@ function newaqar_auther_schema() {
         'name' =>  $author_name,
         'url' =>  $author_url
     );
-
     $json_ld_script = '<script type="application/ld+json">';
     $json_ld_script .= json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     $json_ld_script .= '</script>';
-
     echo $json_ld_script;
 }
-
 add_action('wp_head', 'newaqar_product_schema');
 add_action('wp_head', 'newaqar_auther_schema');
 add_action('wp_head', 'newaqar_faq_schema');
 add_action('wp_head', 'newaqar_breadcrumb_schema');
+
+

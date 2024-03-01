@@ -53,7 +53,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
 }
 ?>
 <style>
-
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
@@ -166,7 +165,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
     .side-details .big-detail{font-size: var(--p-content-font-size); font-weight: 600; color: var(--primary-color-collapse)}
-    .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF; border-radius: 0 0 9px 9px; text-align: center}
+    .price-last-update{background-color: var(--primary-have-color-collapse); color: #FFF; border-radius: 0 0 9px 9px; text-align: center}
     .side-bar .payment-plan{display: block}
     @media only screen and (min-width:992px){
         .payment-mobile{display:none}
@@ -302,7 +301,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                             <th class="ttitle"><?php _e('Sales Number', 'newaqar'); ?></th>
                                             <td class="tvalue"><a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a></td>
                                         </tr>
-
                                     </tbody>
                                 </table>
                         </div>
@@ -338,7 +336,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                 <div class="price-last-update">
                                     <?php
                                     if (get_the_modified_date() != get_the_date()) {
-                                        echo '<p>' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
+                                        echo '<p style="color: #fff">' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
                                     }
                                     ?>
                                 </div>
@@ -350,11 +348,9 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             <?php the_content(); ?>
                         </div>
                     <?php echo do_shortcode('[author_info]'); ?>
-
                     <?php
                     if (function_exists('pll_current_language')) {
                         $current_language = pll_current_language();
-
                         if ($current_language === 'ar') {
                             echo do_shortcode('[fluentform id="9"]');
                         } elseif ($current_language === 'en') {
@@ -362,7 +358,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         }
                     }
                     ?>
-
                         <div class="container-accordion">
                             <div class="accordion" id="accordionFAQ">
                                 <?php
@@ -450,6 +445,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
         </div>
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
             <div class="side-bar">
+
                 <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
                         <div class="side-title"><?php echo __('Payment System', 'newaqar'); ?></div>
@@ -493,7 +489,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
                      <?php
                         if (function_exists('pll_current_language')) {
                             $current_language = pll_current_language();
-
                             if ($current_language === 'ar') {
                                 echo do_shortcode('[fluentform id="7"]');
                             } elseif ($current_language === 'en') {

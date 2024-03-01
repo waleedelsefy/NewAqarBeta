@@ -20,7 +20,6 @@
 </style>
 <div class="container">
         <div id="content-wrapper" class="w-80">
-
             <div id="developer-desc" class="row mb-5">
                 <div class="page_title">
                     <div class="container clearfix">
@@ -44,9 +43,7 @@
                     }
                     ?>
                 </div>
-
                 <div class="col-md-12">
-
                 <?php
                     $term_id = get_queried_object_id();
                     $developer_desc = get_term_meta($term_id, 'developer_desc', true);

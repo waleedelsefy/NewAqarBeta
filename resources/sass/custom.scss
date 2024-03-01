@@ -9,6 +9,7 @@
   --primary-color-collapse:#000080;
   --primary-color-link:#000080;
   --primary-have-color-collapse: #37424FFF;
+  --primary-have-color-button: #37424F;
   --primary-link-color: #000080;
   --primary-font-family: 'newaqarfont', Tahoma, Geneva, Verdana, sans-serif;
   --primary-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
@@ -36,7 +37,6 @@
   font-family: 'newaqarfont';
   src:url('../fonts/newaqar-Regular.woff2') format('woff'),
   url('../fonts/newaqar.woff2') format('woff2');
-
 }
 .breadcrumb-item {
   font-size: 14px;
@@ -55,7 +55,6 @@
     --content-line-heigh:2rem;
     --p-margin-heigh:0.5rem;
     --unit-card-width:290px;
-
   }
 }
 html body {
@@ -67,7 +66,6 @@ html body {
   letter-spacing: 1px;
     word-spacing: normal;
   text-align: end
-
 }
 a {
   color: var(--primary-color-collapse);
@@ -325,6 +323,7 @@ a {
     width: 100%;
     min-width: 100%;
     height: 285px;
+    border-bottom: 1px solid #00000070;
   }
   .swiper-button-prev svg {
     fill: #3e4146;
@@ -492,7 +491,7 @@ a {
       width: 50%
     }
     .project-location, .project-space {
-      border-top: 1px solid var(--primary-background-color);
+      border-top: 1px solid var(--call-to-action-font-color);
       display: inline-flex;
       gap: 10px;
       padding-inline-start: 18px !important;
@@ -532,7 +531,7 @@ a {
   }
   @media screen and (min-width: 1440px) and (max-width: 2560px) {
     .project-location, .project-space {
-      border-top: 1px solid var(--primary-background-color);
+      border-top: 1px solid var(--call-to-action-font-color);
       display: inline-flex;
       gap: 10px;
       padding-inline-start: 18px !important;
@@ -599,17 +598,15 @@ a {
       font-weight: 400;
     }
       .project-location, .project-space {
-        border-top: 1px solid var(--primary-background-color);
+        border-top: 1px solid #00000021;
         display: inline-flex;
         gap: 10px;
         color: #000000e0;
-
         padding-inline-start: 18px !important;
         padding-top: 3px;
         height: 30px;
       }
     }
-
   /***** Only Mobile ****/
   @media screen and (min-width: 100px) and (max-width: 769px) {
     .slider-area {
@@ -773,8 +770,6 @@ a {
         font-size: var(--h1-hero-font-size);
       }
     }
-
-
   }
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
@@ -790,7 +785,6 @@ a {
       min-height: 204px;
       padding-top: 100px;
     }
-
     .posts-short {
       display: flex;
       flex-wrap: wrap;
@@ -941,14 +935,38 @@ a {
     .side-bar-mob {
       display: none;
     }
+    .developer-card {
+      background: #0000801f;
+      box-shadow: 0 0 4px 1px #0000008f;
+      max-width: 300px;
+      padding-top: 20px;
+      .developer-card-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5%;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
+      }
+      .personal-img-logo {
+        width: 130px;
+        border-radius: 76px;
+        border: 1px solid #00000052;
+        padding: 0;
+        background: #ffff;
+      }
+      p.jobTitle {
+        display: flex;
+        justify-content: center;
+      }
+      p.name.text-start.d-flex {
+        font-weight: 600;
+      }
+
+    }
 
   }
-  .price-last-update p {
-    background-color: var(--primary-have-color-collapse);
-    color: #FFF !important;
-    border-radius: 0 0 9px 9px;
-    text-align: center;
-  }
+
   /**** Start of fluent form ****/
   .fluentform {
     padding: 11px;
@@ -966,7 +984,6 @@ a {
     p , li  {
       color: var(--all-p-content-color);
     }
-
     li {
       margin-inline-start: 5%;
     }
@@ -1006,7 +1023,6 @@ a {
       font-weight: 600;
       line-height: var(--content-line-heigh)!important;
     }
-
   }
   .table-content {
     border: 0.1rem solid #dcd7ca;
@@ -1033,7 +1049,6 @@ a {
   width: 100%;
   padding: 15px;
 }
-
 .shareSocial {
   display: flex;
   flex-flow: row;
@@ -1057,7 +1072,6 @@ a {
     justify-content: center;
     flex-wrap: nowrap !important;
     flex-direction: row;
-
     li {
       margin: 2px !important;
       &:first-child {
@@ -1107,7 +1121,6 @@ a {
     }
   }
 }
-
 .shareLink {
   .permalink {
     position: relative;
@@ -1218,9 +1231,6 @@ img {
   min-width: 0;
   word-wrap: break-word;
   font-size: .875rem;
-  margin-top: 30px;
-  background: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.15);
   margin-bottom: 30px;
   border-radius: 6px;
   flex-direction: column;
@@ -1372,17 +1382,14 @@ form#fluentform_12,
 form#fluentform_13 {
   width: 60%;
 }
-
 button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
   color: var(--primary-color-collapse);
 }
-
 .fluentform.ff-default.ffs_default_wrap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 div#fluentform_12_success,
 div#fluentform_13_success {
   color: var(--primary-color-collapse);
@@ -1392,26 +1399,137 @@ div#fluentform_13_success {
   overflow-x: hidden;
   width: 100%;
 }
-
 .units-of-projects {
   display: flex;
   transition: transform 0.5s ease;
+}
+.card-buo {
+  display: flex !important;
+  justify-content: center;
 }
 .prev-button,
 .next-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--primary-color-collapse);
+  background-color: var(--primary-have-color-button);
   border: none;
   padding: 10px;
   cursor: pointer;
 }
-
 .prev-button {
   left: 0;
 }
-
 .next-button {
   right: 0;
 }
+@media screen and (max-width: 900px) {
+  .main-cta a {
+    font-size: 14px;
+  }
+  .developer-card {
+    background: var(--primary-have-color-button);
+    box-shadow: 0 0 4px 1px #0000008f;
+    padding-top: 20px;
+    border-radius: 8px;
+    margin-top: 16px;
+    a.name.text-start.d-flex {
+      color: white;
+      line-height: 2;
+      font-weight: 600;
+    }
+    .developer-card-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15%;
+      padding-inline-start: 25px;
+      padding-inline-end: 20px;
+    }
+    .personal-img-logo {
+      width: 130px;
+      border-radius: 76px;
+      border: 1px solid #00000052;
+      padding: 0;
+      background: #ffff;
+    }
+    p.jobTitle {
+      display: flex;
+      justify-content: center;
+      color: #a7a7a7 !important;
+      }
+      p.name.text-start.d-flex {
+      font-weight: 600;
+        line-height: 2;
+    }
+    form#fluentform_11 {
+      width: 80%;
+    }
+
+  }
+  button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
+    background: var(--primary-have-color-button) !important;
+    color: aliceblue;
+  }
+}
+.table-content {
+  .main-cta {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+.main-cta {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.main-cta a.cta-mail.meeting-cta {
+  background-color: #8cc2c8 !important;
+  color: #fff !important;
+  border: none;
+}
+.main-cta a {
+  color: #00a77f !important;
+  transition: .3s all ease;
+}
+.main-cta a,
+.project-box .project-cta a {
+  height: 36px;
+  line-height: 34px;
+  font-size: var(--p-content-font-size);
+}
+.main-cta a {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  margin: 5px;
+  font-size: var(--p-content-font-size) !important;
+  transition: .3s;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  z-index: 1;
+  position: relative;
+}
+.main-cta a.cta-phone {
+  background: var(--primary-color-collapse) !important;
+  border: 0;
+  color: #fff !important;
+}
+.main-cta a.cta-wts {
+  background: #00a77f !important;
+  border: 0;
+  color: #FFF !important;
+}
+.main-cta a {
+  color: #a0b84f !important;
+}
+

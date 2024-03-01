@@ -12,3 +12,4 @@ function register_custom_button() {
     add_filter('mce_buttons', 'add_custom_button');
 }
 add_action('init', 'register_custom_button');
+

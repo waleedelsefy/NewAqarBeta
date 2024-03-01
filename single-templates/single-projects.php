@@ -33,11 +33,11 @@ if (is_array($project_details) && !empty($project_details)) {
 }
 $types_terms = get_the_terms(get_the_ID(), 'type');
 if ($types_terms && !is_wp_error($types_terms)) {
-    $first_term = reset($types_terms);
-    $types_name = esc_html($first_term->name);
-    $types_link = get_term_link($first_term);
+    foreach ($types_terms as $term) {
+        $types_name = esc_html($term->name);
+        $types_link = get_term_link($term);
+    }
 }
-
 
 if ($developer_terms && !is_wp_error($developer_terms)) {
     $first_term = reset($developer_terms);
@@ -51,8 +51,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
 }
 ?>
 <style>
-
-
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
@@ -161,11 +159,11 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
     .side-details .big-detail{font-size: var(--p-content-font-size); font-weight: 600; color: var(--primary-color-collapse)}
-    .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF; border-radius: 0 0 9px 9px; text-align: center}
+    .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF !important; padding-top: 10px; border-radius: 0 0 9px 9px; text-align: center}
     .side-bar .payment-plan{display: block}
     @media only screen and (min-width:992px){
         .payment-mobile{display:none}
-        .side-bar .payment-plan{display: flex; margin-top: 50px}
+        .side-bar .payment-plan{display: flex; margin-top: 25px}
     }
     .side-contact form{display:block;padding:0 10px}
     .side-contact .form-title{font-weight: 700; font-size: 1.1rem}
@@ -232,18 +230,13 @@ if ($city_terms && !is_wp_error($city_terms)) {
     <div class="row">
         <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
             <div class="main-content">
-                <div class="container">
-                <p><?php echo __('Units Of Projects', 'newaqar'); ?></p>
-                    <div class="carousel">
-
-                    <div class="units-of-projects">
                 <?php
                 $args = array(
-                    'post_type' => 'units',
+                    'post_type'      => 'units',
                     'posts_per_page' => -1,
-                    'meta_query' => array(
+                    'meta_query'     => array(
                         array(
-                            'key' => '_unit_project_id',
+                            'key'   => '_unit_project_id',
                             'value' => get_the_ID(),
                         ),
                     ),
@@ -251,25 +244,30 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 $unit_query = new WP_Query($args);
                 if ($unit_query->have_posts()) :
                     ?>
-                        <?php
-                        while ($unit_query->have_posts()) :
-                            $unit_query->the_post();
-                            ?>
-                            <div class="col-lg-6 col-md-6 mt-2 mb-2">
-                                <?php get_template_part('template-parts/single-card'); ?>
+                    <div class="container">
+                        <p><?php echo __('Units Of Projects', 'newaqar'); ?></p>
+                        <div class="carousel">
+                            <div class="units-of-projects">
+                                <?php
+                                while ($unit_query->have_posts()) :
+                                    $unit_query->the_post();
+                                    ?>
+                                    <div class="col-lg-6 col-md-6 mt-2 mb-2">
+                                        <?php get_template_part('template-parts/single-card'); ?>
+                                    </div>
+                                <?php
+                                endwhile;
+                                ?>
+
                             </div>
-                        <?php
-                        endwhile;
-                        ?>
+                            <button class="prev-button"><?php echo __('Next', 'newaqar'); ?></button>
+                            <button class="next-button"><?php echo __('Prev', 'newaqar'); ?></button>
+                        </div>
+                    </div>
                 <?php
                 endif;
                 wp_reset_postdata();
                 ?>
-</div>
-                        <button class="prev-button"><?php echo __('Next', 'newaqar'); ?></button>
-                        <button class="next-button"><?php echo __('Prev', 'newaqar'); ?></button>
-</div>
-                </div>
                 <main id="content-project" class="column main-content m-0 py-0">
                     <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>
                     <div class="content-box">
@@ -308,7 +306,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </tr>
                             <?php endif; ?>
                             <?php if (isset($payment_system_names) && !empty($payment_system_names)) : ?>
-
                             <tr>
                                     <th class="ttitle"><?php echo __('Payment systems', 'newaqar'); ?></>
                                     <td class="tvalue">
@@ -322,10 +319,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                         }
                                         ?>
                                     </td>
-
                                 </tr>
                             <?php endif; ?>
-
                                 <tr>
                                     <th class="ttitle"><?php echo __('Sales Number', 'newaqar'); ?></>
                                     <td class="tvalue">
@@ -333,11 +328,23 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     </td>
                                 </tr>
                             <?php if (isset($types_link) && !empty($types_name)) : ?>
-                            <tr>
-                                <th class="ttitle"><?php _e('Unit Types', 'newaqar'); ?></th>
-                                <td class="tvalue"><a href="<?php echo $types_link; ?>"><?php echo $types_name; ?></a></td>
-                            </tr>
+                                <tr>
+                                    <th class="ttitle"><?php _e('Unit Types', 'newaqar'); ?></th>
+                                    <td class="tvalue">
+                                        <?php
+                                        $separator = '';
+                                        foreach ($types_terms as $term) {
+                                            echo $separator;
+                                            $types_name = esc_html($term->name);
+                                            $types_link = get_term_link($term);
+                                            echo '<a href="' . esc_url($types_link) . '">' . $types_name . '</a>';
+                                            $separator = ', ';
+                                        }
+                                        ?>
+                                    </td>
+                                </tr>
                             <?php endif; ?>
+
                             <?php if (isset($project_price) && !empty($project_price)) : ?>
                                 <tr>
                                     <th class="ttitle"><?php _e('Meter price', 'newaqar'); ?></th>
@@ -349,8 +356,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                     </div>
                     <div>
                         <?php echo do_shortcode('[newaqar_cta]') ?>
-
-
                     </div>
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
@@ -381,10 +386,14 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 <div class="price-last-update">
                                     <?php
                                     if (get_the_modified_date() != get_the_date()) {
-                                        echo '<p>' . __('Latest update on: ', 'newaqar') . get_the_modified_date() . '</p>';
+                                        echo '<p style="color: #fff;">' . __('Latest update on: ', 'newaqar') . get_the_modified_date() . '</p>';
                                     }
                                     ?>
                                 </div>
+                                <div>
+                                    <?php if ($developer_name) { echo do_shortcode('[newaqar_developer]');} ?>
+                                </div>
+
                             </div>
                         <?php endif; ?>
                     </div>
@@ -392,7 +401,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                          <?php
                         if (function_exists('pll_current_language')) {
                             $current_language = pll_current_language();
-
                             if ($current_language === 'ar') {
                                 echo do_shortcode('[fluentform id="7"]');
                             } elseif ($current_language === 'en') {
@@ -401,16 +409,12 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         }
                         ?>
                     </div>
-
                     <div class="table-content my-2 py-3 px-3 ">
-
                         <?php  echo do_shortcode('[social_share_box]');
-the_content(); ?>
+                                the_content(); ?>
                     </div>
-
                     <?php
                     $faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
-
                     if ($faqs === 'true') { ?>
                         <div class="container-accordion">
                             <div class="accordion" id="accordionFAQ">
@@ -449,7 +453,6 @@ the_content(); ?>
                     <?php
                         if (function_exists('pll_current_language')) {
                             $current_language = pll_current_language();
-
                             if ($current_language === 'ar') {
                                 echo do_shortcode('[fluentform id="9"]');
                             } elseif ($current_language === 'en') {
@@ -457,11 +460,7 @@ the_content(); ?>
                             }
                         }
                         ?>
-
-
-
                     </div>
-
                     <div class="row related-section my-5   d-flex justify-content-center">
                         <h3><?php echo __('Similar Projects', 'newaqar'); ?></h3>
                         <?php
@@ -534,9 +533,12 @@ the_content(); ?>
                 </main>
             </div>
         </div>
-
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
+                    <div>
+                        <?php if ($developer_name) { echo do_shortcode('[newaqar_developer]');} ?>
+                    </div>
+
                     <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
                         <div class="side-title"><?php echo __('payment system', 'newaqar'); ?></div>
@@ -565,24 +567,13 @@ the_content(); ?>
                         <div class="price-last-update">
                             <?php
                             if (get_the_modified_date() != get_the_date()) {
-                                echo '<p>' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
+                                echo '<p style="color: #fff;">' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
                             }
                             ?>
                         </div>
                     </div>
             <?php endif; ?>
                     <div class="message-section">
-                     <?php
-                        if (function_exists('pll_current_language')) {
-                            $current_language = pll_current_language();
-
-                            if ($current_language === 'ar') {
-                                echo do_shortcode('[fluentform id="7"]');
-                            } elseif ($current_language === 'en') {
-                                echo do_shortcode('[fluentform id="11"]');
-                            }
-                        }
-                        ?>
 
                     </div>
                 </div>

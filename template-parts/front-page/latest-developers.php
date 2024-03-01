@@ -46,7 +46,6 @@
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
-
                     <script>
                         var swiper = new Swiper('.swiper-container', {
                             slidesPerView: 'auto',

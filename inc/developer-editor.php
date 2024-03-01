@@ -239,14 +239,12 @@ add_action('developer_edit_form_fields', 'add_developer_qa_fields');
 add_action('edited_developer', 'save_developer_qa_fields');
 add_action('developer_add_form_fields', 'add_developer_qa_fields');
 add_action('created_developer', 'save_developer_qa_fields');
-
 // في ملف functions.php في قالبك
 function add_developer_desc_field() {
     add_action('developer_edit_form_fields', 'display_developer_desc_field');
     add_action('edited_developer', 'save_developer_desc_field');
     add_action('admin_enqueue_scripts', 'enqueue_custom_styles');
 }
-
 function display_developer_desc_field($term) {
     $developer_desc = get_term_meta($term->term_id, 'developer_desc', true);
     ?>
@@ -265,14 +263,12 @@ function display_developer_desc_field($term) {
     </tr>
     <?php
 }
-
 function save_developer_desc_field($term_id) {
     if (isset($_POST['developer_desc'])) {
         $sanitized_content = wp_kses_post($_POST['developer_desc']);
         update_term_meta($term_id, 'developer_desc', $sanitized_content);
     }
 }
-
 function enqueue_custom_styles() {
     echo '<style>
         div#wp-developer_desc-wrap {
@@ -280,21 +276,14 @@ function enqueue_custom_styles() {
 }
     </style>';
 }
-
 add_developer_desc_field();
-
 // functions.php
-
 add_action('wp_ajax_load_more_units', 'load_more_units');
 add_action('wp_ajax_nopriv_load_more_units', 'load_more_units');
-
 function load_more_units() {
-
-
     $response = array(
         'success' => true,
         'data' => '<div class="col-lg-4 col-md-6 col-12 mt-4">الوحدة الجديدة 1</div><div class="col-lg-4 col-md-6 col-12 mt-4">الوحدة الجديدة 2</div>',
     );
-
     wp_send_json($response);
 }

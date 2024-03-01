@@ -69,7 +69,6 @@ if (is_array($theme_settings)) {
             }
         }
     }
-
     /* Subscribe Box */
     #subscribe-css{position:relative;padding:20px 0;background:#374760;overflow:hidden;border-top:4px solid #eee;}
     .subscribe-wrapper{color:#fff;font-size:16px;line-height:normal;margin:0;text-align:center;text-transform:none;font-weight:400;width:100%}
@@ -93,7 +92,6 @@ if (is_array($theme_settings)) {
                 <?php
                 if (function_exists('pll_current_language')) {
                     $current_language = pll_current_language();
-
                     if ($current_language === 'ar') {
                         echo do_shortcode('[fluentform id="12"]');
                     } elseif ($current_language === 'en') {

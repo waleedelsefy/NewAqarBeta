@@ -67,7 +67,6 @@ add_action('add_meta_boxes', 'add_project_details_meta_boxes');
 function render_project_details_metabox($post) {
     // Add nonce for security
     wp_nonce_field('save_project_meta_data', 'project_meta_box_nonce');
-
     $project_details = get_post_meta($post->ID, 'project_details', true);
     $project_space = '';
     $project_price = '';
@@ -77,7 +76,6 @@ function render_project_details_metabox($post) {
     $installment = '';
     $number_of_votes = '';
     $number_of_voters = '';
-
     if (is_array($project_details) && !empty($project_details)) {
         $project_space = isset($project_details['project_space']) ? esc_attr($project_details['project_space']) : '';
         $project_price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
@@ -132,7 +130,6 @@ function render_project_details_metabox($post) {
             <td>
                 <input type="checkbox" name="project_details[votes]" value="true" <?php checked($votes, 'true'); ?>>
                 <label><?php esc_html_e('Enable Votes', 'newaqar'); ?></label>
-
                 <input width="100px" type="number" min="0" max="5" name="project_details[number_of_votes]" id="number-of-votes" value="<?php echo esc_attr($number_of_votes); ?>" placeholder="<?php esc_attr_e('Votes', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
                 <input width="100px"  type="number" min="0" max="1000" name="project_details[number_of_voters]" id="number-of-voters" value="<?php echo esc_attr($number_of_voters); ?>" placeholder="<?php esc_attr_e('Voters', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
             </td>
@@ -143,7 +140,6 @@ function render_project_details_metabox($post) {
                 <label for="project_details[faqs]"><?php _e('FAQs:', 'newaqar'); ?></label>
             </th>
             <td>
-
                 <input type="checkbox" name="project_details[faqs]" value="true" <?php checked($enable_faqs, 'true'); ?>>
                 <label><?php esc_html_e('Enable FAQs', 'newaqar'); ?></label>
             </td>

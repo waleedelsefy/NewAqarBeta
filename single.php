@@ -32,7 +32,6 @@ get_header();
 <?php
 if (function_exists('pll_current_language')) {
     $current_language = pll_current_language();
-
     if ($current_language === 'ar') {
         echo do_shortcode('[fluentform id="9"]');
     } elseif ($current_language === 'en') {
