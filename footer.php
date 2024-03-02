@@ -28,23 +28,23 @@ if (is_array($theme_settings)) {
 ?>
 <style>
     @media only screen and (max-width: 786px) {
-    #floating-icons {
-        width: auto;
-        top: auto;
-        background-color: #fff;
-        right: 0;
-        left: 0;
-        padding: 2px;
-        display: flex;
-        bottom: 0;
-        justify-content: space-around;
-        box-shadow: 0 0 5px rgba(0,0,0,.2);
-    }
-    #floating-icons {
-        position: fixed;
-        z-index: 20;
-        transition: .5s;
-    }
+        #floating-icons {
+            width: auto;
+            top: auto;
+            background-color: #fff;
+            right: 0;
+            left: 0;
+            padding: 2px;
+            display: flex;
+            bottom: 0;
+            justify-content: space-around;
+            box-shadow: 0 0 5px rgba(0,0,0,.2);
+        }
+        #floating-icons {
+            position: fixed;
+            z-index: 20;
+            transition: .5s;
+        }
     }
     @media only screen and (min-width: 787px) {
         #floating-icons {
@@ -59,11 +59,11 @@ if (is_array($theme_settings)) {
         }
         #floating-icons {
             .main-cta {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            flex-direction: column;
-        }
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+            }
             .call-to-action-page {
                 display: none;
             }
@@ -84,141 +84,66 @@ if (is_array($theme_settings)) {
     #subscribe-css p.subscribe-note span:before{content:'';position:absolute;bottom:-2px;left:0;width:0;height:3px;margin:10px 0 0;background:rgba(255,255,255,.1);transition:all .5s}
     #subscribe-css:hover p.subscribe-note span:before{width:100%;}
 </style>
-<footer id="site-footer" role="contentinfo" class="header-footer-group">
-    <div id='subscribe-css'>
-        <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span class='itatu'><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
-        <div class='subscribe-wrapper'>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="footer-widget widget-about">
-                    <?php dynamic_sidebar( 'sidebar-1' ); ?>
-                    <ul class="social-icons">
-                        <li>
-                            <a href="https://www.facebook.com/NewStartrealestatemarketing" target="_blank" rel="noopener">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/StartEstate" target="_blank" rel="noopener">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCC-nNZHb4fs2agyz581xjEw" target="_blank" rel="noopener">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/newstarteg/" target="_blank" rel="noopener">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/company/newstart-eg" target="_blank" rel="noopener">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.snapchat.com/add/newaqar?share_id=yTmLad20vqc&locale=ar-EG" target="_blank" rel="noopener">
-                                <i class="fab fa-snapchat"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.tiktok.com/@Newstart_eg" target="_blank" rel="noopener">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copywrite-txt">
-                        جميع الحقوق محفوظة
-
-
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <?php dynamic_sidebar( 'sidebar-2' ); ?>
-            </div>
-            <div class="col-lg-4">
-
-            </div>
-        </div>
-    </div><!-- .section-inner -->
-</footer><!-- #site-footer -->
-<?php wp_footer(); ?>
 <style>.skip-link {display: none !important;}</style>
-</body>
-</html>
 <div id="floating-icons">
-<?php if (is_front_page()) {
- } else { ?>
-    <?php echo do_shortcode('[newaqar_cta]'); } ?>
+    <?php if (is_front_page()) {
+    } else { ?>
+        <?php echo do_shortcode('[newaqar_cta]'); } ?>
 </div>
-
-
-
-
-
-<!-- Remove the container if you want to extend the Footer to full width. -->
-    <!-- Footer -->
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background-color: #000"
-    >
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-            <!-- Section: Links -->
-            <section class="">
-                <!--Grid row-->
-                <div class="row">
-                    <!-- Grid column -->
-                    <hr class="w-100 clearfix d-md-none" />
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mt-3 ">
-                        <?php dynamic_sidebar( 'sidebar-1'); ?>
-                    </div>
-                    <!-- Grid column -->
-
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <!-- Grid column -->
-                    <hr class="w-100 clearfix d-md-none" />
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                        <?php dynamic_sidebar( 'sidebar-2'); ?>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                        <?php dynamic_sidebar( 'sidebar-3'); ?>
-                    </div>
-
+<footer id="site-footer"
+        class="text-center text-lg-start text-white"
+        style="background-color: #000"
+>
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+            <!--Grid row-->
+            <div class="row">
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mt-3 ">
+                    <?php dynamic_sidebar( 'sidebar-1'); ?>
                 </div>
-                <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
-        </div>
-        <!-- Grid container -->
+                <!-- Grid column -->
 
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgb(55 71 96)">
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none" />
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <?php dynamic_sidebar( 'sidebar-2'); ?>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <?php dynamic_sidebar( 'sidebar-3'); ?>
+                </div>
+
+            </div>
+            <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(55 71 96)">
 
 
-            <?php bloginfo( 'name' ); ?>  &copy; <?php
-            echo date_i18n(
-                _x( 'Y', 'copyright date format', 'twentytwenty' )
-            );
-            ?>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-<!-- End of .container -->
+        <?php bloginfo( 'name' ); ?>  &copy; <?php
+        echo date_i18n(
+            _x( 'Y', 'copyright date format', 'twentytwenty' )
+        );
+        ?>
+    </div>
+    <!-- Copyright -->
+</footer>
+
 <?php wp_footer(); ?>
 </body>
 </html>
