@@ -51,6 +51,10 @@ if ($city_terms && !is_wp_error($city_terms)) {
 }
 ?>
 <style>
+    form.fluent_form_15 .ff-btn-submit:not(.ff_btn_no_style) {
+        background-color: #212529 !important;
+        color: #ffffff;
+    }
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
