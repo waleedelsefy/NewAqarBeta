@@ -88,9 +88,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
     .content-box h3{color:var(--primary-link-color)}
     .content-box img{max-width: 100%;height:auto}
     .content-box .headline-p {line-height: 30px;transition: 0.5s;text-align: start;font-size: 1.2rem;position: relative;font-weight: bold;margin: 15px 0;color: var(--primary-have-color-collapse);padding-right:10px;border-right: 4px solid var(--primary-have-color-collapse)}
-    .project-sub-title{font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
+    .project-sub-title{display:flex; font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
     .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: 10px;height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
-    .project-sub-title::after{right:10px; width:80px;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
+    .project-sub-title::after{margin-inline-start:10px; width:10%;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
     table.infotable {border-collapse: collapse;width:calc(100% + 30px);color: #646A70;margin:0px 0px 0px -7px;}
     table.infotable tr:nth-child(even){background-color: #F9F9F9}
     table.infotable th.ttitle {width: 35%;font-size: 0.8rem;padding-left:0;border-left:1px solid #e0dcd6;background-color: var(--primary-color-collapse); color:  #FFFFFF}
@@ -98,7 +98,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}
     @media only screen and (min-width:992px){
-        table.infotable th.ttitle {font-size: 0.9rem; width: 20%}
+        table.infotable th.ttitle {font-size: 0.9rem; width: 20%; padding-inline-start: 20px;}
         table.infotable td, table.infotable th {font-size: 1rem; padding: 7px 25px 7px 15px}
     }
     .facility-img img{height:25px;width:auto;display: block; margin-inline-end: 5px}

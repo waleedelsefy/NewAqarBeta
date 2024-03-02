@@ -43703,7 +43703,12 @@ a {
 
     }
     .header-icons {
-      display: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--all-h-content-color);
     }
     .mobile-menu {
       display: inline-block;
@@ -43741,10 +43746,10 @@ a {
       width: -webkit-fill-available;
     }
     #site-link {
-      height: 70px;
+      height: 55px;
       margin-inline-start: 19px;
       transition: all .3s ease;
-      width: 155px;
+      width: 140px;
       z-index: 10;
     }
     /*End header*/
@@ -43963,22 +43968,24 @@ a {
       .li {
         display: flex;
         flex-direction: row;
-        gap: 11px;
+        gap: 4px;
         align-items: center;
         flex-wrap: nowrap;
       }
       .cil {
         color: #000;
         display: flex;
-        background:#00008000;
+        background: #00008000;
         text-decoration: none;
         position: relative;
         height: 40px;
-        border-radius: 3px;
-        box-shadow: 0px 0px 4px -1.9px #0000004f;
-        padding: 0 10px 0 5px;
+        border-radius: 9px;
+        box-shadow: 0px 0px 10px 1.1px #0000004f;
+        padding-inline-start: 10px;
+        padding-inline-end: 10px;
         text-align: center;
-        margin-inline-start: 23px;
+        margin-inline-start: 11px;
+
       }
     }
     project-details {
@@ -44020,7 +44027,7 @@ a {
     }
     .card-block {
       display: flex;
-      max-width: 33%;
+      max-width: 400px;
       margin-top: 10px;
       margin-bottom: 10px;
       align-items: center;
@@ -44033,7 +44040,7 @@ a {
       background: #0000801f;
       box-shadow: 0 0 4px 1px #0000008f;
       max-width: 300px;
-      padding-top: 20px;
+      padding-top: 10px;
       .developer-card-info {
         display: flex;
         align-items: center;
