@@ -88,17 +88,6 @@ if (is_array($theme_settings)) {
     <div id='subscribe-css'>
         <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span class='itatu'><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
         <div class='subscribe-wrapper'>
-            <div class='subscribe-form'>
-                <?php
-                if (function_exists('pll_current_language')) {
-                    $current_language = pll_current_language();
-                    if ($current_language === 'ar') {
-                        echo do_shortcode('[fluentform id="12"]');
-                    } elseif ($current_language === 'en') {
-                        echo do_shortcode('[fluentform id="13"]');
-                    }
-                }
-                ?>            </div>
         </div>
     </div>
     <div class="container">
@@ -145,13 +134,8 @@ if (is_array($theme_settings)) {
                     </ul>
                     <p class="copywrite-txt">
                         جميع الحقوق محفوظة
-                        &copy;
-                        <?php
-                        echo date_i18n(
-                            _x( 'Y', 'copyright date format', 'twentytwenty' )
-                        );
-                        ?>
-                        <?php bloginfo( 'name' ); ?>.
+
+
                     </p>
                 </div>
             </div>
@@ -159,16 +143,11 @@ if (is_array($theme_settings)) {
                 <?php dynamic_sidebar( 'sidebar-2' ); ?>
             </div>
             <div class="col-lg-4">
-                <?php dynamic_sidebar( 'sidebar-3' ); ?>
+
             </div>
         </div>
     </div><!-- .section-inner -->
 </footer><!-- #site-footer -->
-<div class="copyrights">
-    <p class="copywrite-txt">
-        كافة الحقوق محفوظة لـ نيو ستارت  © 2021 رقم السجل الضريبي 223-743-723
-    </p>
-</div>
 <?php wp_footer(); ?>
 <style>.skip-link {display: none !important;}</style>
 </body>
@@ -178,6 +157,68 @@ if (is_array($theme_settings)) {
  } else { ?>
     <?php echo do_shortcode('[newaqar_cta]'); } ?>
 </div>
+
+
+
+
+
+<!-- Remove the container if you want to extend the Footer to full width. -->
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #000"
+    >
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-4 col-xl-2 mx-auto mt-3 ">
+                        <?php dynamic_sidebar( 'sidebar-1'); ?>
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <?php dynamic_sidebar( 'sidebar-2'); ?>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <?php dynamic_sidebar( 'sidebar-3'); ?>
+                    </div>
+
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgb(55 71 96)">
+
+
+            <?php bloginfo( 'name' ); ?>  &copy; <?php
+            echo date_i18n(
+                _x( 'Y', 'copyright date format', 'twentytwenty' )
+            );
+            ?>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+<!-- End of .container -->
 <?php wp_footer(); ?>
 </body>
 </html>

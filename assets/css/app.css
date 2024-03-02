@@ -44081,8 +44081,7 @@ a {
 
   /**** Start of fluent form ****/
   .fluentform {
-    padding: 11px;
-    background:var(--recent-property-background-color) ;
+
   }
   button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style {
     background: var(--primary-color);
@@ -44496,6 +44495,11 @@ form#fluentform_13 {
 }
 button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
   color: var(--primary-color-collapse);
+  background: var(--primary-color-disabled);
+}
+.fluentform .ff-el-group {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .fluentform.ff-default.ffs_default_wrap {
   display: flex;
@@ -44667,4 +44671,8 @@ img {
   display: none;
 }
 }
-
+h2.widget-title {
+  color: var(--primary-color-disabled);
+  text-align: start;
+  font-size: var(--h2-content-font-size);
+}

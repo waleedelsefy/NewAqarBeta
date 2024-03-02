@@ -3809,9 +3809,7 @@ body .widget-content > div > :first-child, body .widget:first-child, html .widge
 body .widget-content > div > :last-child, html .widget-content > div > :last-child {
     margin-bottom: 0
 }
-body .widget .widget-title, html .widget .widget-title {
-    margin: 0 0 2rem
-}
+
 body .widget li, html .widget li {
     margin: 2rem 0 0
 }
@@ -3989,9 +3987,7 @@ body #site-footer a:focus, body #site-footer a:hover, html #site-footer a:focus,
     body .nav-links > *, html .nav-links > * {
         margin: 2.5rem 0 0 4rem
     }
-    body .widget .widget-title, html .widget .widget-title {
-        margin-bottom: 3rem
-    }
+
     body .footer-menu, html .footer-menu {
         font-size: 2.4rem;
         margin: -.8rem 0 0 -1.6rem
@@ -4202,11 +4198,6 @@ body .footer-widget, html .footer-widget {
 }
 body #site-footer a:focus, body #site-footer a:hover, html #site-footer a:focus, html #site-footer a:hover {
     color: #ed82e2
-}
-body .widget .widget-title, html .widget .widget-title {
-    color: #fff;
-    font-family: var(--primary-font-family);
-    font-size: 20px
 }
 body .widget_text p, html .widget_text p {
     color: #fff

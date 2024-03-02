@@ -88,3 +88,4 @@ endif;
  * Enable shortcodes in HTML-Widget
  */
 add_filter('widget_text', 'do_shortcode');
+
