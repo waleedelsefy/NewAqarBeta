@@ -44677,3 +44677,12 @@ h2.widget-title {
   text-align: start;
   font-size: var(--h2-content-font-size);
 }
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 20px;
+}
