@@ -44656,6 +44656,7 @@ div#fluentform_13_success {
   align-content: center;
   align-items: center;
   background: url(../img/gb.svg);
+  border-radius: 10px;
 img {
   display: none;
 }
@@ -44667,6 +44668,7 @@ img {
   align-content: center;
   align-items: center;
     background: url(../img/eg.svg);
+  border-radius: 10px;
 img {
   display: none;
 }
