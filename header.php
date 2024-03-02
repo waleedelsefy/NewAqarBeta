@@ -85,7 +85,6 @@ if (is_array($theme_settings)) {
             </div>
             <div class="mobile-panel-cta">
             <?php echo do_shortcode('[newaqar_cta]'); ?>
-                <div><?php echo do_shortcode('[language_dropdown]'); ?></div>
 
             </div>
         </div>

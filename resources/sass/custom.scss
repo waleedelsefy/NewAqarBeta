@@ -624,6 +624,12 @@ a {
     .hero-title {
       font-size: 3.4rem !important;
     }
+    .form-block {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     /*start header*/
     .header {
       display: flex;
@@ -1588,7 +1594,7 @@ div#fluentform_13_success {
   color: #a0b84f !important;
 }
 
-#menu-item-56636-en a, #menu-item-56639-en a {
+#menu-item-56636-en a, .nav-item-56636-en a, #menu-item-56639-en a {
   display: flex;
   width: 55px;
   height: 40px;
@@ -1599,7 +1605,7 @@ img {
   display: none;
 }
 }
-#menu-item-56635-ar a, #menu-item-56638-ar a {
+#menu-item-56635-ar a, .nav-item-56635-ar a,  #menu-item-56638-ar a {
   display: flex;
   width: 55px;
   height: 40px;
