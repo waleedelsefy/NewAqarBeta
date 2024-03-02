@@ -1,7 +1,8 @@
 <?php
 function newaqar_product_schema() {
     global $post;
-    $unit_project = get_post_meta($post->ID, '_unit_project_id', true);
+    if ($post != null) {
+        $unit_project = get_post_meta($post->ID, '_unit_project_id', true);
     $post_id = get_the_ID();
     $unit_details = get_post_meta($post->ID, 'unit_details', true);
     if (is_singular('projects') || is_singular('units')) {
@@ -72,10 +73,13 @@ function newaqar_product_schema() {
             echo '<!-- Developer terms not available. -->';
         }
     }
+    }
 }
 function newaqar_faq_schema() {
     global $post;
-    $unit_project = get_post_meta($post->ID, '_unit_project_id', true);
+    if ($post != null) {
+
+        $unit_project = get_post_meta($post->ID, '_unit_project_id', true);
     $post_id = get_the_ID();
     $unit_details = get_post_meta($post->ID, 'unit_details', true);
     $post_id = get_the_ID();
@@ -91,13 +95,11 @@ function newaqar_faq_schema() {
             } else {
              }
         }
-    if ( is_single() && $faqs_sutue === 'true') {
-        foreach ($faqs as $index => $faq) {
-            // Check if the question has less than 5 characters, if so, skip this iteration
-            if (strlen($faq['question']) < 5) {
+        if ( ( is_singular('projects') || is_singular('units') ) && $faqs_sutue === 'true' && is_array($faqs)) {
+            foreach ($faqs as $index => $faq) {
+                if (isset($faq['question']) && is_string($faq['question']) && strlen($faq['question']) < 5) {
                 continue;
             }
-            // Process the FAQ if the question meets the criteria
             $ld_json = array(
                 '@context' => 'https://schema.org',
                 '@type' => 'QAPage',
@@ -133,6 +135,7 @@ function newaqar_faq_schema() {
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             echo '</script>';
         }
+    }
     }
 }
 function get_best_answer($faqs) {
@@ -185,7 +188,9 @@ function newaqar_breadcrumb_schema() {
 }
 function newaqar_auther_schema() {
     global $post;
-    // Get author information
+    if ($post != null) {
+
+        // Get author information
     $author_id = $post->post_author;
     $author_name = get_the_author_meta('display_name', $author_id);
     $author_email = get_the_author_meta('user_email', $author_id);
@@ -205,6 +210,7 @@ function newaqar_auther_schema() {
     $json_ld_script .= json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     $json_ld_script .= '</script>';
     echo $json_ld_script;
+}
 }
 add_action('wp_head', 'newaqar_product_schema');
 add_action('wp_head', 'newaqar_auther_schema');

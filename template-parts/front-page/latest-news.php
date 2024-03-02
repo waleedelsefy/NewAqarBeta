@@ -23,7 +23,7 @@
                     );
                     ?>
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                        <div class="col-lg-4 col-md-6 col-12 mt-4">
+                        <div class="card-block">
                             <?php
                             get_template_part('template-parts/single-card');
                             ?>

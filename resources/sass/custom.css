@@ -11578,7 +11578,11 @@ a.title {
     display: none;
   }
   .mobile-menu {
-    display: inline-block;
+    isplay: inline-block;
+    z-index: 150;
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
   .mobile-panel {
     display: none;
@@ -11667,7 +11671,7 @@ a.title {
   }
   /*start header*/
   nav#block-dar-main-menu {
-    width: 70%;
+    width: 50%;
   }
   .logo {
     width: 100%;

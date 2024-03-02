@@ -2103,12 +2103,6 @@ body .row, html .row {
     margin-inline-end: -15px;
     margin-inline-start: -15px
 }
-body .col-lg-12, body .col-lg-3, body .col-lg-4, body .col-lg-6, body .col-lg-8, body .col-lg-9, body .col-md-12, body .col-md-2, body .col-md-3, body .col-md-4, body .col-md-6, body .col-md-8, body .col-md-9, body .col-sm-4, body .col-xs-12, body .col-xs-4, html .col-lg-12, html .col-lg-3, html .col-lg-4, html .col-lg-6, html .col-lg-8, html .col-lg-9, html .col-md-12, html .col-md-2, html .col-md-3, html .col-md-4, html .col-md-6, html .col-md-8, html .col-md-9, html .col-sm-4, html .col-xs-12, html .col-xs-4 {
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative
-}
 body .col-xs-12, body .col-xs-4, html .col-xs-12, html .col-xs-4 {
     float: left
 }
@@ -4074,6 +4068,8 @@ body .content_area, html .content_area {
     position: relative
 }
 body #block-dar-main-menu ul, html #block-dar-main-menu ul {
+    display: flex;
+    align-items: center;
     float: right;
     list-style-type: none;
     margin: 0;

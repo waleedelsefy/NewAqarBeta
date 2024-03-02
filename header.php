@@ -62,7 +62,13 @@ if (is_array($theme_settings)) {
             ));
             ?>
         </nav>
-        <div class="mobile-panel">
+    <div class="mobile-panel">
+            <div class="mobile-panel-menu">
+            <a id="site-link" href="<?php echo home_url(); ?>">
+                <div class="logo mb-54">
+                    <img src="<?php echo $logo_url; ?>" alt="Site Logo">
+                </div>
+            </a>
             <ul>
                 <?php
                 if (has_nav_menu('main-menu')) {
@@ -76,6 +82,12 @@ if (is_array($theme_settings)) {
                 }
                 ?>
             </ul>
+            </div>
+            <div class="mobile-panel-cta">
+            <?php echo do_shortcode('[newaqar_cta]'); ?>
+                <div><?php echo do_shortcode('[language_dropdown]'); ?></div>
+
+            </div>
         </div>
         <span class="mobile-menu">
             <svg xmlns="http://www.w3.org/2000/svg" fill="<?php echo $primary_color?>" height="24" width="24" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>

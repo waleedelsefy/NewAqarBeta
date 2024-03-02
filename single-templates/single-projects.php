@@ -98,7 +98,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}
     @media only screen and (min-width:992px){
-        table.infotable th.ttitle {font-size: 0.9rem; width: 15%}
+        table.infotable th.ttitle {font-size: 0.9rem; width: 20%}
         table.infotable td, table.infotable th {font-size: 1rem; padding: 7px 25px 7px 15px}
     }
     .facility-img img{height:25px;width:auto;display: block; margin-inline-end: 5px}
@@ -484,7 +484,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             while ($relatedPosts->have_posts()) {
                                 $relatedPosts->the_post();
                                 ?>
-                                <div class="col-lg-6 col-md-6 w-45 col-12 mt-4 ">
+                                <div class="card-block">
                                     <?php get_template_part('template-parts/single-card'); ?>
                                 </div>
                                 <?php
@@ -536,7 +536,26 @@ if ($city_terms && !is_wp_error($city_terms)) {
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
                     <div>
-                        <?php if ($developer_name) { echo do_shortcode('[newaqar_developer]');} ?>
+                        <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
+                        else { ?>
+                             <div class="message-section">
+                     <?php
+                        if (function_exists('pll_current_language')) {
+                            $current_language = pll_current_language();
+
+                            if ($current_language === 'ar') {
+                                echo do_shortcode('[fluentform id="7"]');
+                            } elseif ($current_language === 'en') {
+                                echo do_shortcode('[fluentform id="11"]');
+                            }
+                        }
+
+                        ?>
+
+                    </div>
+                        <?php
+                        }
+                        ?>
                     </div>
 
                     <?php if ($down_payment != "") : ?>
@@ -573,9 +592,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         </div>
                     </div>
             <?php endif; ?>
-                    <div class="message-section">
 
-                    </div>
                 </div>
         </div>
     </div>

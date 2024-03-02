@@ -485,17 +485,27 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         </div>
                     </div>
                 <?php endif; ?>
-                <div class="message-section">
-                     <?php
-                        if (function_exists('pll_current_language')) {
-                            $current_language = pll_current_language();
-                            if ($current_language === 'ar') {
-                                echo do_shortcode('[fluentform id="7"]');
-                            } elseif ($current_language === 'en') {
-                                echo do_shortcode('[fluentform id="11"]');
+                <div>
+                    <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
+                    else { ?>
+                        <div class="message-section">
+                            <?php
+                            if (function_exists('pll_current_language')) {
+                                $current_language = pll_current_language();
+
+                                if ($current_language === 'ar') {
+                                    echo do_shortcode('[fluentform id="7"]');
+                                } elseif ($current_language === 'en') {
+                                    echo do_shortcode('[fluentform id="11"]');
+                                }
                             }
-                        }
-                        ?>
+
+                            ?>
+
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
