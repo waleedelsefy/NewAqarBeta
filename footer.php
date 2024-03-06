@@ -77,7 +77,7 @@ if (is_array($theme_settings)) {
     .subscribe-css-email-field{background:#415471;color:#ccc;margin:10px 0;padding:15px 20px;width:35%;border:0}
     .subscribe-css-email-button{background:#3cc091;color:#fff;cursor:pointer;font-weight:700;padding:14px 30px;margin-left:15px;text-transform:none;font-size:16px;border:0;border-radius:3px;transition:all .6s}
     .subscribe-css-email-button:hover{background:#37b185;}
-    #subscribe-css p.subscribe-note{margin:16px;text-align:center;color:rgba(255,255,255,.6);font-size:180%;font-weight:400;line-height:normal;}
+    #subscribe-css p.subscribe-note{margin:16px;text-align:center;color:rgb(255 255 255);font-size:180%;font-weight:400;line-height:normal;}
     #subscribe-css p.subscribe-note span {position:relative;overflow:hidden;font-weight:700;transition:all .5s}
     #subscribe-css p.subscribe-note span.itatu {font-weight:400;font-style:italic;color:rgba(255,255,255,.6);text-transform:lowercase}
     #subscribe-css p.subscribe-note span.itatu:before,#subscribe-css p.subscribe-note span.itatu:after{display:none}
@@ -91,7 +91,7 @@ if (is_array($theme_settings)) {
         <?php echo do_shortcode('[newaqar_cta]'); } ?>
 </div>
 <div id='subscribe-css'>
-    <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span class='itatu'><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
+    <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
     <div class='subscribe-wrapper'>
         <div class='subscribe-form'>
                 <?php
