@@ -147,13 +147,19 @@ function get_upvote_count($answer) {
     return $random_upvotes;
 }
 function newaqar_breadcrumb_schema() {
-    // Check if it is a category or single post
-    if (is_category() || is_single()) {
+    global $post;
+
+    // Check if $post is not null and if it's a singular post
+    if ($post != null && is_singular()) {
+        // Initialize an empty array to store breadcrumb items
         $breadcrumb_items = [];
-        $counter = 2;
+        $counter = 1; // Start counter from 1
+
         // Get the terms for developers and cities
-        $developer_terms = get_the_terms(get_the_ID(), 'developer');
-        $city_terms = get_the_terms(get_the_ID(), 'city');
+        $developer_terms = get_the_terms($post->ID, 'developer');
+        $city_terms = get_the_terms($post->ID, 'city');
+
+        // Add developer terms to breadcrumb items
         if ($developer_terms && !is_wp_error($developer_terms)) {
             foreach ($developer_terms as $developer_term) {
                 $breadcrumb_items[] = [
@@ -165,6 +171,8 @@ function newaqar_breadcrumb_schema() {
                 $counter++;
             }
         }
+
+        // Add city terms to breadcrumb items
         if ($city_terms && !is_wp_error($city_terms)) {
             foreach ($city_terms as $city_term) {
                 $breadcrumb_items[] = [
@@ -176,16 +184,20 @@ function newaqar_breadcrumb_schema() {
                 $counter++;
             }
         }
-        // Output the JSON-LD script
-        echo '<script type="application/ld+json">';
-        echo json_encode([
-            "@context" => "https://schema.org",
-            "@type" => "BreadcrumbList",
-            "itemListElement" => $breadcrumb_items,
-        ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
-        echo '</script>';
+
+        // Output the JSON-LD script if breadcrumb items exist
+        if (!empty($breadcrumb_items)) {
+            echo '<script type="application/ld+json">';
+            echo json_encode([
+                "@context" => "https://schema.org",
+                "@type" => "BreadcrumbList",
+                "itemListElement" => $breadcrumb_items,
+            ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            echo '</script>';
+        }
     }
 }
+
 function newaqar_auther_schema() {
     global $post;
     if ($post != null) {
