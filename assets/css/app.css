@@ -43456,6 +43456,16 @@ a {
     margin-top: 1rem;
   }
   @media only screen and (min-width: 769px) {
+    .swiper-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+
     .sidebar {
       position: sticky;
       margin-inline-start: 15px;
@@ -43660,6 +43670,17 @@ a {
     }
   /***** Only Mobile ****/
   @media screen and (min-width: 100px) and (max-width: 769px) {
+    .des-only {
+      display: none;
+    }
+     .mob-only {
+      display:block;
+    }
+
+    .prev-button,
+    .next-button {
+      font-size: 14px;
+    }
     .slider-area {
       background: var(--ar_front_page_hero_background);
       background-position: -246px 0 !important;
@@ -43866,6 +43887,13 @@ a {
   }
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
+    .des-only {
+      display: block;
+    }
+    .mob-only {
+      display:none;
+    }
+
     .slider-area {
       background: var(--ar_front_page_hero_background);
       background-position: -246px 0 !important;
@@ -44518,19 +44546,36 @@ div#fluentform_13_success {
 .units-of-projects {
   display: flex;
   transition: transform 0.5s ease;
+  gap: 10px;
 }
 .card-buo {
   display: flex !important;
   justify-content: center;
 }
+.prev-button {
+  border-start-end-radius: 80px 80px;
+  border-start-start-radius: 80px 80px;
+  writing-mode: vertical-rl;
+  height: 97px;
+}
+.next-button {
+  border-end-end-radius: 80px 80px;
+  border-end-start-radius: 80px 80px;
+  writing-mode: vertical-rl;
+  height: 97px;
+}
+
 .prev-button,
 .next-button {
   position: absolute;
   top: 50%;
+  padding-inline-start: 4px;
+  background-color: #8cc2c8;
+  width: 32px;
+  font-size: 14px;
   transform: translateY(-50%);
-  background-color: var(--primary-have-color-button);
   border: none;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
 }
 .prev-button {
@@ -44678,11 +44723,12 @@ h2.widget-title {
   font-size: var(--h2-content-font-size);
 }
 
-.swiper-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  gap: 20px;
+
+
+.pulse {
+  animation: pulse 3s infinite ease-in-out alternate;
+}
+@keyframes pulse {
+  from { transform: scale(0.7); }
+  to { transform: scale(1.0); }
 }

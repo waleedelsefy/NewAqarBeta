@@ -264,8 +264,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 ?>
 
                             </div>
-                            <button class="prev-button"><?php echo __('Next', 'newaqar'); ?></button>
-                            <button class="next-button"><?php echo __('Prev', 'newaqar'); ?></button>
+                            <button class="prev-button "><?php echo __('Next', 'newaqar'); ?></button>
+                            <button class="next-button "><?php echo __('Prev', 'newaqar'); ?></button>
                         </div>
                     </div>
                 <?php
@@ -394,14 +394,16 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     }
                                     ?>
                                 </div>
-                                <div>
-                                    <?php if ($developer_name) { echo do_shortcode('[newaqar_developer]');} ?>
-                                </div>
+
 
                             </div>
                         <?php endif; ?>
+                        <div>
+                                    <?php if ($developer_name) { echo do_shortcode('[newaqar_developer]');} ?>
+                                </div>
+
                     </div>
-                    <div class="table-content my-2 py-3 px-3 ">
+                    <div class="des-only table-content my-2 py-3 px-3 ">
                          <?php
                         if (function_exists('pll_current_language')) {
                             $current_language = pll_current_language();
