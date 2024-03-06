@@ -20,8 +20,7 @@
                             <?php
                             $taxonomy = 'developer';
                             $terms = get_terms($taxonomy);
-                            $orderby           = date();
-                            $order             = DESC();
+
                             $count = 0; // Counter to track the number of terms displayed
                             foreach ($terms as $term) {
                                 $term_details = get_term_by('id', $term->term_id, $taxonomy);
