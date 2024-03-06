@@ -52,3 +52,129 @@ function register_payment_systems_taxonomy() {
     register_taxonomy('payment_systems', array('projects', 'units'), $args_installment);
 }
 add_action('init', 'register_payment_systems_taxonomy');
+
+
+function generate_table_of_contents() {
+    global $post;
+
+    // Get the post content
+    $content = $post->post_content;
+
+    // Initialize an empty array to store headings
+    $headings = [];
+
+    // Regular expression pattern to match headings
+    $pattern = '/<h([2-6]).*?>(.*?)<\/h\1>/i';
+
+    // Match headings in the content
+    preg_match_all($pattern, $content, $matches, PREG_SET_ORDER);
+
+    // Loop through matched headings
+    foreach ($matches as $match) {
+        $level = intval($match[1]); // Heading level
+        $text = strip_tags($match[2]); // Heading text
+
+        // Add heading to the array
+        $headings[] = [
+            'level' => $level,
+            'text' => $text,
+        ];
+    }
+
+    // If there are no headings, return an empty string
+    if (empty($headings)) {
+        return '';
+    }
+
+    // Initialize an empty string to store the table of contents
+$toc = '<div class="table-of-contents"><h2>' . __('Table of Contents', 'newaqar') . '</h2><ul>';
+
+    // Loop through headings to build the table of contents
+    foreach ($headings as $heading) {
+        $level = $heading['level'];
+        $text = $heading['text'];
+
+        // Generate a unique ID for the heading
+        $id = sanitize_title_with_dashes($text); // Generate a unique ID based on the heading text
+
+        // Add opening list item tag for the current heading
+        $toc .= '<li>';
+
+        // Add link to the heading
+        $toc .= '<a href="#' . $id . '">' . $text . '</a>';
+
+        // Add closing list item tag for the current heading
+        $toc .= '</li>';
+    }
+
+    // Close the unordered list
+    $toc .= '</ul></div>';
+
+    return $toc;
+}
+// functions.php
+
+// Add function to add heading IDs
+function add_heading_ids($content) {
+    // Regular expression pattern to match headings
+    $pattern = '/<h([2-6]).*?>(.*?)<\/h\1>/i';
+
+    // Match headings in the content
+    preg_match_all($pattern, $content, $matches, PREG_SET_ORDER);
+
+    // Loop through matched headings
+    foreach ($matches as $match) {
+        $level = intval($match[1]); // Heading level
+        $text = strip_tags($match[2]); // Heading text
+
+        // Generate a unique ID for the heading
+        $id = sanitize_title_with_dashes($text); // Generate a unique ID based on the heading text
+
+        // Replace the heading in the content with the heading including the ID
+        $content = str_replace($match[0], '<h' . $level . ' id="' . $id . '">' . $match[2] . '</h' . $level . '>', $content);
+    }
+
+    return $content;
+}
+
+// Add filter to apply the function to the content
+add_filter('the_content', 'add_heading_ids');
+
+// Enqueue the JavaScript code directly
+add_action('wp_footer', 'add_table_of_contents_script');
+function add_table_of_contents_script() {
+    ?>
+    <script>
+        jQuery(document).ready(function($) {
+            // Find all headings in the content
+            var headings = $('h2, h3, h4, h5, h6');
+
+            // Counter for numbering
+            var counter = 1;
+
+            // Loop through each heading
+            headings.each(function() {
+                // Get the heading text
+                var text = $(this).text();
+
+                // Generate a unique ID for the heading
+                var id = $(this).attr('id');
+
+                // If the heading doesn't have an ID, generate one
+                if (!id) {
+                    id = 'heading_' + counter;
+                    $(this).attr('id', id);
+                }
+
+                // Create a list item for the table of contents
+
+                // Append the list item to the table of contents
+                $('.table-of-contents ul').append(listItem);
+
+                // Increment the counter
+                counter++;
+            });
+        });
+    </script>
+    <?php
+}

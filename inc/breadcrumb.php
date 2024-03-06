@@ -46,3 +46,5 @@ if (!function_exists('the_breadcrumb')) :
     }
     add_filter('breadcrumbs', 'breadcrumbs');
 endif;
+
+

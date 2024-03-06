@@ -90,6 +90,22 @@ if (is_array($theme_settings)) {
     } else { ?>
         <?php echo do_shortcode('[newaqar_cta]'); } ?>
 </div>
+<div id='subscribe-css'>
+    <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span class='itatu'><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
+    <div class='subscribe-wrapper'>
+        <div class='subscribe-form'>
+                <?php
+                if (function_exists('pll_current_language')) {
+                    $current_language = pll_current_language();
+                    if ($current_language === 'ar') {
+                        echo do_shortcode('[fluentform id="12"]');
+                    } elseif ($current_language === 'en') {
+                        echo do_shortcode('[fluentform id="13"]');
+                    }
+                }
+                ?>            </div>
+    </div>
+</div>
 <footer id="site-footer"
         class="text-center text-lg-start text-white"
         style="background-color: #000"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NewAqar\n"
-"POT-Creation-Date: 2024-03-04 21:37+0200\n"
-"PO-Revision-Date: 2024-03-04 21:43+0200\n"
+"POT-Creation-Date: 2024-03-06 21:01+0200\n"
+"PO-Revision-Date: 2024-03-06 21:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -11,8 +11,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && "
+"n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -79,8 +79,7 @@ msgid "Copywrite Text"
 msgstr "نص حقوق الموقع"
 
 #: admin/int/theme_footer_section.php:25 admin/int/theme_options_section.php:21
-#: admin/int/theme_options_section.php:36
-#: admin/int/theme_options_section.php:51
+#: admin/int/theme_options_section.php:36 admin/int/theme_options_section.php:51
 msgid "Choose Image"
 msgstr "اختار صورة"
 
@@ -185,7 +184,19 @@ msgstr "البريد الإلكتروني* (لن يتم نشره)"
 msgid "Website"
 msgstr "الموقع الإلكتروني"
 
-#: footer.php:140
+#: footer.php:94
+msgid "Subscribe"
+msgstr "اشترك"
+
+#: footer.php:94
+msgid "To"
+msgstr "في"
+
+#: footer.php:94
+msgid "OUR NEWSLETTER"
+msgstr "النشرة البريدية"
+
+#: footer.php:156
 msgctxt "copyright date format"
 msgid "Y"
 msgstr "سنة"
@@ -383,8 +394,7 @@ msgid "Developer Image"
 msgstr "شعار المطور"
 
 #: inc/developer-editor.php:40 inc/developer-editor.php:96
-msgid ""
-"Enter the URL of the developer image or use the \"Upload Image\" button."
+msgid "Enter the URL of the developer image or use the \"Upload Image\" button."
 msgstr "أدخل عنوان URL لصورة المطور أو استخدم زر \"تحميل الصورة\"."
 
 #: inc/developer-editor.php:87
@@ -403,7 +413,7 @@ msgstr "اضف وصف للمطور ."
 msgid "Payment Systems"
 msgstr "أنظمة الدفع"
 
-#: inc/hooks.php:29 single-templates/single-projects.php:567
+#: inc/hooks.php:29 single-templates/single-projects.php:537
 msgid "payment system"
 msgstr "أنظمة الدفع"
 
@@ -430,6 +440,10 @@ msgstr "اضف نظام دفع جديد"
 #: inc/hooks.php:35
 msgid "New Payment System Name"
 msgstr "أسم نظام الدفع الجديد"
+
+#: inc/hooks.php:90
+msgid "Table of Contents"
+msgstr "عناوين المحتوى"
 
 #: inc/pagination.php:28
 msgid "Page navigation"
@@ -799,8 +813,7 @@ msgid "Footer #1"
 msgstr "تذييل #1"
 
 #: inc/widgets.php:38
-msgid ""
-"Widgets in this area will be displayed in the first column in the footer."
+msgid "Widgets in this area will be displayed in the first column in the footer."
 msgstr "سيتم عرض الأدوات في هذه المنطقة في العمود الأول في التذييل."
 
 #: inc/widgets.php:47
@@ -887,8 +900,7 @@ msgstr "السابق"
 msgid "Project Details"
 msgstr "تفاصيل المشروع"
 
-#: single-templates/single-projects.php:281
-#: single-templates/single-units.php:262
+#: single-templates/single-projects.php:281 single-templates/single-units.php:262
 msgid "Project Name"
 msgstr "اسم المشروع"
 
@@ -917,13 +929,11 @@ msgstr "موعد الاستلام"
 msgid "Payment systems"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-projects.php:329
-#: single-templates/single-units.php:301
+#: single-templates/single-projects.php:329 single-templates/single-units.php:301
 msgid "Sales Number"
 msgstr "رقم المبيعات"
 
-#: single-templates/single-projects.php:336
-#: single-templates/single-units.php:278
+#: single-templates/single-projects.php:336 single-templates/single-units.php:278
 msgid "Unit Types"
 msgstr "نوع الوحدة"
 
@@ -936,20 +946,20 @@ msgid "L.E"
 msgstr "جنيه"
 
 #: single-templates/single-projects.php:371
-#: single-templates/single-projects.php:571
-#: single-templates/single-units.php:317 single-templates/single-units.php:455
+#: single-templates/single-projects.php:541 single-templates/single-units.php:317
+#: single-templates/single-units.php:455
 msgid "Deposit"
 msgstr "مقدم"
 
 #: single-templates/single-projects.php:377
-#: single-templates/single-projects.php:577
-#: single-templates/single-units.php:323 single-templates/single-units.php:461
+#: single-templates/single-projects.php:547 single-templates/single-units.php:323
+#: single-templates/single-units.php:461
 msgid "installment"
 msgstr "تقسيط"
 
 #: single-templates/single-projects.php:385
-#: single-templates/single-projects.php:585
-#: single-templates/single-units.php:331 single-templates/single-units.php:474
+#: single-templates/single-projects.php:555 single-templates/single-units.php:331
+#: single-templates/single-units.php:474
 msgid "Receipt"
 msgstr "استلام"
 
@@ -957,35 +967,35 @@ msgstr "استلام"
 msgid "Latest update on: "
 msgstr "أخر تحديث في : "
 
-#: single-templates/single-projects.php:469
+#: single-templates/single-projects.php:462
 msgid "Similar Projects"
 msgstr "مشاريع مماثلة"
 
-#: single-templates/single-projects.php:497
+#: single-templates/single-projects.php:490
 msgid "No similar projects"
 msgstr "لا توجد مشاريع مماثلة"
 
-#: single-templates/single-projects.php:506
+#: single-templates/single-projects.php:499 single.php:53
 #: template-parts/front-page/latest-properties.php:7
 msgid "Latest projects"
 msgstr "اخر المشروعات"
 
-#: single-templates/single-projects.php:530
+#: single-templates/single-projects.php:523
 msgid "No Latest projects"
 msgstr "لا يوجد مشروعات جديدة"
 
-#: single-templates/single-projects.php:579
-#: single-templates/single-units.php:325 single-templates/single-units.php:464
+#: single-templates/single-projects.php:549 single-templates/single-units.php:325
+#: single-templates/single-units.php:464
 msgid "year"
 msgstr "سنة"
 
-#: single-templates/single-projects.php:579
-#: single-templates/single-units.php:325 single-templates/single-units.php:466
+#: single-templates/single-projects.php:549 single-templates/single-units.php:325
+#: single-templates/single-units.php:466
 msgid "years"
 msgstr "سنوات"
 
-#: single-templates/single-projects.php:593
-#: single-templates/single-units.php:339 single-templates/single-units.php:482
+#: single-templates/single-projects.php:563 single-templates/single-units.php:339
+#: single-templates/single-units.php:482
 msgid "Last updated in:"
 msgstr "أخر تحديث في :"
 
@@ -1025,14 +1035,17 @@ msgstr "وحدات مماثلة"
 msgid "No similar units"
 msgstr "لا توجد وحدات متشابهة"
 
+#: single.php:54 template-parts/front-page/latest-properties.php:8
+msgid "New Aqar website publishes the latest real estate projects"
+msgstr "موقع نيو عقار ينشر أحدث مشاريع العقارات"
+
 #: template-parts/content-none.php:15
 msgid "Nothing Found for"
 msgstr "لم يتم العثور على أي شيء لـ"
 
 #: template-parts/content-none.php:22
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "جاهز لنشر أول مقالة لك؟ <a href=\"%1$s\">ابدأ هنا</a>."
 
 #: template-parts/content-none.php:33
@@ -1045,8 +1058,8 @@ msgstr ""
 
 #: template-parts/content-none.php:38
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr "يبدو أننا لا نستطيع العثور على ما تبحث عنه. ربما يمكن أن يساعد البحث."
 
 #: template-parts/front-page/latest-developers.php:10
@@ -1060,10 +1073,6 @@ msgstr "أحدث الأخبار"
 #: template-parts/front-page/latest-news.php:8
 msgid "View the latest real estate and project news"
 msgstr "عرض أحدث أخبار العقارات والمشاريع"
-
-#: template-parts/front-page/latest-properties.php:8
-msgid "New Aqar website publishes the latest real estate projects"
-msgstr "موقع نيو عقار ينشر أحدث مشاريع العقارات"
 
 #: template-parts/front-page/search-form.php:5
 msgctxt "placeholder"
@@ -1100,11 +1109,11 @@ msgid ""
 "NewAqar is a sleek and modern WordPress theme tailored for real estate "
 "companies. Developed with Bootstrap and powered by PHP 8.2, it offers a "
 "responsive design for optimal user experience across devices. With advanced "
-"search options, interactive maps, and customizable property listings, "
-"NewAqar provides a user-friendly platform to showcase properties "
-"effectively. Its intuitive admin panel allows easy customization, making it "
-"an ideal choice for real estate agencies, developers, and individual "
-"realtors seeking a powerful and visually appealing online presence."
+"search options, interactive maps, and customizable property listings, NewAqar "
+"provides a user-friendly platform to showcase properties effectively. Its "
+"intuitive admin panel allows easy customization, making it an ideal choice for "
+"real estate agencies, developers, and individual realtors seeking a powerful "
+"and visually appealing online presence."
 msgstr ""
 "NewAqar هو قالب NewAqar أنيق وحديث مصمم خصيصًا لشركات العقارات. تم تطويره "
 "باستخدام NewAqar ويعتمد على PHP 8.2 ، ويقدم تصميمًا استجابيًا لتحقيق تجربة "
