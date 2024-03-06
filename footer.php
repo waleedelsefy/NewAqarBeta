@@ -91,7 +91,7 @@ if (is_array($theme_settings)) {
         <?php echo do_shortcode('[newaqar_cta]'); } ?>
 </div>
 <div id='subscribe-css'>
-    <p class='subscribe-note'><span><?php echo __('Subscribe', 'newaqar'); ?></span> <span><?php echo __('To', 'newaqar'); ?></span> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
+    <p class='subscribe-note'><?php echo __('Subscribe', 'newaqar'); ?> <?php echo __('To', 'newaqar'); ?> <?php echo __('OUR NEWSLETTER', 'newaqar'); ?></p>
     <div class='subscribe-wrapper'>
         <div class='subscribe-form'>
                 <?php
