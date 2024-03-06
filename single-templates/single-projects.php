@@ -403,18 +403,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </div>
 
                     </div>
-                    <div class="des-only table-content my-2 py-3 px-3 ">
-                         <?php
-                        if (function_exists('pll_current_language')) {
-                            $current_language = pll_current_language();
-                            if ($current_language === 'ar') {
-                                echo do_shortcode('[fluentform id="7"]');
-                            } elseif ($current_language === 'en') {
-                                echo do_shortcode('[fluentform id="11"]');
-                            }
-                        }
-                        ?>
-                    </div>
                     <div class="table-content my-2 py-3 px-3 ">
                         <?php  echo do_shortcode('[social_share_box]');
                                 the_content(); ?>
@@ -541,6 +529,40 @@ if ($city_terms && !is_wp_error($city_terms)) {
         </div>
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
+                    <?php if ($down_payment != "") : ?>
+                        <div class="payment-plan">
+                            <div class="side-title"><?php echo __('payment system', 'newaqar'); ?></div>
+                            <div class="side-details">
+                                <?php if ($down_payment != "") : ?>
+                                    <div class="side-details-box">
+                                        <span><?php echo __('Deposit', 'newaqar'); ?></span>
+                                        <span class="big-detail"><?php echo $down_payment; ?> %</span>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($installment != "") : ?>
+                                    <div class="side-details-box">
+                                        <span><?php echo __('installment', 'newaqar'); ?></span>
+                                        <?php
+                                        if ($installment > 10) {$installment_text = __('year', 'newaqar');} else { $installment_text = __('years', 'newaqar');}?>
+                                        <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($delivery != "") : ?>
+                                    <div class="side-details-box">
+                                        <span><?php echo __('Receipt', 'newaqar'); ?></span>
+                                        <span class="big-detail"><?php echo $delivery; ?> </span>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                            <div class="price-last-update">
+                            <?php
+                            if (get_the_modified_date() != get_the_date()) {
+                                echo '<p style="color: #fff;">' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
+                            }
+                            ?>
+                        </div>
+                        </div>
+                    <?php endif; ?>
                     <div>
                         <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
                         else { ?>
@@ -564,40 +586,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         ?>
                     </div>
 
-                    <?php if ($down_payment != "") : ?>
-                    <div class="payment-plan">
-                        <div class="side-title"><?php echo __('payment system', 'newaqar'); ?></div>
-                        <div class="side-details">
-                            <?php if ($down_payment != "") : ?>
-                                <div class="side-details-box">
-                                    <span><?php echo __('Deposit', 'newaqar'); ?></span>
-                                    <span class="big-detail"><?php echo $down_payment; ?> %</span>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($installment != "") : ?>
-                                <div class="side-details-box">
-                                    <span><?php echo __('installment', 'newaqar'); ?></span>
-                                    <?php
-                                    if ($installment > 10) {$installment_text = __('year', 'newaqar');} else { $installment_text = __('years', 'newaqar');}?>
-                                    <span class="big-detail"><?php echo $installment; ?> <?php echo esc_html($installment_text); ?></span>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($delivery != "") : ?>
-                                <div class="side-details-box">
-                                    <span><?php echo __('Receipt', 'newaqar'); ?></span>
-                                    <span class="big-detail"><?php echo $delivery; ?> </span>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                        <div class="price-last-update">
-                            <?php
-                            if (get_the_modified_date() != get_the_date()) {
-                                echo '<p style="color: #fff;">' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
-                            }
-                            ?>
-                        </div>
-                    </div>
-            <?php endif; ?>
+
 
                 </div>
         </div>

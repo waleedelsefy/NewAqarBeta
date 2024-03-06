@@ -25,7 +25,7 @@
                     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                         <div class="card-block">
                             <?php
-                            get_template_part('template-parts/single-card');
+                            get_template_part('template-parts/single-card-none');
                             ?>
                         </div>
                     <?php endwhile; wp_reset_query(); ?>

@@ -250,7 +250,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             <tbody>
                                     <tr>
                                         <th class="ttitle"><?php _e('Unit Name', 'newaqar'); ?></th>
-                                        <td class="tvalue">  <h1 class="table-title">
+                                        <td class="tvalue">  <h1 style="font-size: 16px !important; margin:unset!important;" class="table-title">
                                                 <?php echo get_the_title(); ?>
                                             </h1>
                                         </td>

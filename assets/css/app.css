@@ -43486,6 +43486,11 @@ a {
     overflow-x: hidden !important;
     z-index: 99999;
   }
+  .title-none {
+    color: #000000e0;
+    font-size: var(--p-content-font-size);
+    font-weight: 600;
+  }
   .title-container {
     padding-inline-start: 13px;
     padding-inline-end: 0px;
@@ -43517,12 +43522,13 @@ a {
     width: 100%;
   }
   img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
-    width: 94%;
+    width: auto;
     border-radius: 5px;
     box-shadow: 0px -1px 20px 4px #00000066;
     background: linear-gradient(307deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     color: transparent;
+    max-height: 41vh;
   }
   /* free size card buttons */
   #phone-num {
@@ -43632,6 +43638,14 @@ a {
     width: 100%;
     background:var(--recent-property-background-color);
     height: 420px;
+    border-radius: var(--recent-property-border-radius);
+    display: block;
+  }
+  .recent-property-none {
+    padding: 0;
+    width: 100%;
+    background:var(--recent-property-background-color);
+    height: 350px;
     border-radius: var(--recent-property-border-radius);
     display: block;
   }
@@ -44695,8 +44709,8 @@ div#fluentform_13_success {
 }
 #menu-item-56636-en a, .nav-item-56636-en a, #menu-item-56639-en a {
   display: flex;
-  width: 55px;
-  height: 40px;
+  width: 40px;
+  height: 30px;
   align-content: center;
   align-items: center;
   background: url(../img/gb.svg);
@@ -44707,8 +44721,8 @@ img {
 }
 #menu-item-56635-ar a, .nav-item-56635-ar a,  #menu-item-56638-ar a {
   display: flex;
-  width: 55px;
-  height: 40px;
+  width: 40px;
+  height: 30px;
   align-content: center;
   align-items: center;
     background: url(../img/eg.svg);

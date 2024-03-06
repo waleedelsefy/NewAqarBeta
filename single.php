@@ -44,18 +44,36 @@ if (function_exists('pll_current_language')) {
               <div class="mb-4">
                 <?php bootscore_tags(); ?>
               </div>
-              <!-- Related posts using bS Swiper plugin -->
-              <?php if (function_exists('bootscore_related_posts')) bootscore_related_posts(); ?>
-              <nav aria-label="bS page navigation">
-                <ul class="pagination justify-content-center">
-                  <li class="page-item">
-                    <?php previous_post_link('%link'); ?>
-                  </li>
-                  <li class="page-item">
-                    <?php next_post_link('%link'); ?>
-                  </li>
-                </ul>
-              </nav>
+                <div class="latest-properties">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="sec-heading center">
+                    <?php
+                    echo '<h2>' . esc_html__('Latest projects', 'newaqar') . '</h2>';
+                    echo  '<p>' . esc_html__('New Aqar website publishes the latest real estate projects', 'newaqar') . '</p>';
+                    ?>
+                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <?php
+                            $loop = new WP_Query( array(
+                                    'post_type' => 'projects',
+                                    'posts_per_page' => 3,
+                                )
+                            );
+                            ?>
+                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                                <div class="card-block">
+						<?php
+                        get_template_part('template-parts/single-card');
+						?>
+					 </div>
+                            <?php endwhile; wp_reset_query(); ?>
+                        </div>
+                    </div>
+                </div>
             </footer>
           </main>
       </div>

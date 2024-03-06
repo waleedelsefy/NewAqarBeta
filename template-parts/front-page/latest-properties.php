@@ -10,7 +10,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
             <?php
             $loop = new WP_Query( array(
                     'post_type' => 'projects',
@@ -27,4 +27,4 @@
             <?php endwhile; wp_reset_query(); ?>
         </div>
     </div>
-</div><!-- end properties -->
+</div>
