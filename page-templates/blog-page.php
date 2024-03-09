@@ -1,32 +1,25 @@
 <?php /* Template Name: Blog page */ ?>
 
 <?php get_header(); ?>
-<div class="container">
-    <div class="row">
-        <div id="content-wrapper" class="w-80">
-            <div class="page_title">
-                <div class="container clearfix">
-                    <h1>
-                        <span><?php the_archive_title(); ?></span>
-                    </h1>
-                    <div class="breadcrumbs-wrapper">
-                        <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-5">
+<div class="grid-wrapper">
+    <div class="grid-wrapper-blog">
+        <?php
+        $loop = new WP_Query( array(
+                'post_type' => 'post',
+                'posts_per_page' => -1,
+                'paged' => 1,
+                'ignore_sticky_posts' => 1
+            )
+        );
+        ?>
+        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+            <div class="card-block">
                 <?php
-                if (have_posts()) {
-                    while (have_posts()) {
-                        the_post(); ?>
-                        <div class="col-lg-4 col-md-6 col-12 mt-4">
-                            <?php get_template_part('template-parts/single-card'); ?>
-                        </div>
-                    <?php }
-                }
+                get_template_part('template-parts/single-card-none');
                 ?>
             </div>
-        </div>
+        <?php endwhile; wp_reset_query(); ?>
     </div>
+</div>
 </div>
 <?php get_footer(); ?>

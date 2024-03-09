@@ -1416,9 +1416,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 input[type=submit] {
     font-size: 1rem !important
 }
-a.phone {
-    color: var(--primary-color) !important;
-}
+
 .swiper-button-prev svg {
     fill: #3e4146;
     height: auto;

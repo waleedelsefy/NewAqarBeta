@@ -43055,15 +43055,15 @@ textarea.form-control-lg {
   --call-to-action-font-size: 14px;
   --call-to-action-font-color: black;
   --call-to-action-font-weight:600;
-  --primary-color-disabled: #fff;
+  --primary-link-color-disabled: #fff;
   --primary-background-color: rgba(252, 252, 253, 0.75);
-  --primary-color-collapse:#000080;
-  --primary-color-link:#000080;
+  --primary-link-color-collapse:#000080;
+  --primary-link-color-link:#000080;
   --primary-have-color-collapse: #37424FFF;
   --primary-have-color-button: #37424F;
   --primary-link-color: #000080;
   --primary-font-family: 'newaqarfont', Tahoma, Geneva, Verdana, sans-serif;
-  --primary-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
+  --primary-link-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
   --recent-property-background-color: #fff;
   --recent-property-border-radius: 5px;
@@ -43081,7 +43081,7 @@ textarea.form-control-lg {
   --content-line-heigh:2;
   --ar_front_page_hero_background:url('https://www.newaqar.net/wp-content/uploads/2022/08/web_winter_lrg-f24c1c214c382225e3cc.webp');
   --p-margin-heigh:1rem;
-  --all-h-content-color:var(--primary-color-collapse);
+  --all-h-content-color:var(--primary-link-color-collapse);
   --all-p-content-color: #2f2f2f;
   --unit-card-width:380px;
 }
@@ -43122,13 +43122,19 @@ html body {
   text-align: end
 }
 a {
-  color: var(--primary-color-collapse);
+  color: var(--primary-link-color-collapse);
 }
 #tvalueName {
   font-size: var(--p-content-font-size) !important;
   color: var(--all-p-content-color)!important;
 }
+a.phone {
+  color: var(--primary-link-color-collapse);
+  display: flex;
+  gap: 8px;
+}
  html {
+
   .post-thumbnail {
     display: flex;
     justify-content: center;
@@ -43176,8 +43182,8 @@ a {
   body .button, body button, body input[type=button], body input[type=reset], body input[type=submit], html .button, html button, html input[type=button], html input[type=reset], html input[type=submit] {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: var(--primary-color-collapse);
-    color: var(--primary-color-disabled);
+    background: var(--primary-link-color-collapse);
+    color: var(--primary-link-color-disabled);
     border: none;
     border-radius: 0;
     cursor: pointer;
@@ -43229,7 +43235,7 @@ a {
   }
   input[type="submit"] {
     font-size: 1rem !important;
-    background: var(--primary-color-collapse);
+    background: var(--primary-link-color-collapse);
   }
   @media screen and (min-width: 220px) and (max-width: 769px) {
     /* Add any additional styles for .recent-property within this media query */
@@ -43251,7 +43257,7 @@ a {
     }
     .call-now {
       padding: 8px 11px;
-      background: var(--primary-color);
+      background: var(--primary-link-color);
       color: #fff;
       font-size: 16px;
       display: inline-flex;
@@ -43301,7 +43307,7 @@ a {
     }
     .call-now {
       padding: 8px 11px;
-      background: var(--primary-color);
+      background: var(--primary-link-color);
       color: #fff;
       font-size: var(--call-to-action-font-size);
       display: inline-flex;
@@ -43336,7 +43342,7 @@ a {
     }
     .call-now {
       padding: 8px 11px;
-      background: var(--primary-color);
+      background: var(--primary-link-color);
       color: #fff;
       font-size: var(--call-to-action-font-size);
       display: inline-flex;
@@ -43407,12 +43413,12 @@ a {
     margin: 0;
   }
   button.accordion-button.collapsed {
-    background-color: var(--primary-color);
-    color: var(--primary-color-disabled);
-    background: var(--primary-color-collapse);
+    background-color: var(--primary-link-color);
+    color: var(--primary-link-color-disabled);
+    background: var(--primary-link-color-collapse);
   }
   .accordion-button:not(.collapsed) {
-    background: var(--primary-color-not-collapsed);
+    background: var(--primary-link-color-not-collapsed);
     color: white;
     text-decoration: unset;
   }
@@ -43480,7 +43486,7 @@ a {
     }
   }
   form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) {
-    background-color: var(--primary-color) !important;
+    background-color: var(--primary-link-color) !important;
     color: #ffffff !important;
   }
   ul#iti-0__country-listbox {
@@ -43528,14 +43534,14 @@ a {
     width: auto;
     border-radius: 5px;
     box-shadow: 0px -1px 20px 4px #00000066;
-    background: linear-gradient(307deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(307deg, var(--primary-link-color), var(--secondary-color));
     -webkit-background-clip: text;
     color: transparent;
     max-height: 41vh;
   }
   /* free size card buttons */
   #phone-num {
-    background-color: var(--primary-color);
+    background-color: var(--primary-link-color);
     font-weight:var(--call-to-action-font-weight) ;
     padding: 0;
     border-end-end-radius: var(--recent-property-border-radius);
@@ -43569,7 +43575,7 @@ a {
       height: 30px;
     }
     .call-now {
-      background: var(--primary-color);
+      background: var(--primary-link-color);
       color: #fff
     }
     .col-xs-12.project-space {
@@ -43613,7 +43619,7 @@ a {
       font-weight: 700
     }
     .call-now {
-      background: var(--primary-color);
+      background: var(--primary-link-color);
       color: #fff
     }
     .col-xs-12.project-space {
@@ -43719,6 +43725,7 @@ a {
       justify-content: center;
       align-items: center;
     }
+
     /*start header*/
     .header {
       display: flex;
@@ -43734,6 +43741,9 @@ a {
       align-items: center;
       align-content: center;
       box-shadow: var(--primary-box-shadow);
+    }
+    .phone-text {
+      display: none;
     }
     #contact-us {
       display: none;
@@ -44083,7 +44093,6 @@ a {
       margin-bottom: 10px;
       align-items: center;
       align-content: center;
-      flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -44123,13 +44132,21 @@ a {
     }
 
   }
-
+   .grid-wrapper-blog {
+     display: flex;
+     flex-direction: row;
+     gap: 2%;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+   }
   /**** Start of fluent form ****/
   .fluentform {
 
   }
   button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style {
-    background: var(--primary-color);
+    background: var(--primary-link-color);
   }
   .fluentform .ff-text-left {
     text-align: end;
@@ -44539,8 +44556,8 @@ form#fluentform_13 {
   width: 60%;
 }
 button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
-  color: var(--primary-color-collapse);
-  background: var(--primary-color-disabled);
+  color: var(--primary-link-color-collapse);
+  background: var(--primary-link-color-disabled);
 }
 .fluentform .ff-el-group {
   margin-bottom: 20px;
@@ -44553,7 +44570,7 @@ button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style.wpf_has_custom_css {
 }
 div#fluentform_12_success,
 div#fluentform_13_success {
-  color: var(--primary-color-collapse);
+  color: var(--primary-link-color-collapse);
 }
 .carousel {
   position: relative;
@@ -44698,7 +44715,7 @@ div#fluentform_13_success {
   position: relative;
 }
 .main-cta a.cta-phone {
-  background: var(--primary-color-collapse) !important;
+  background: var(--primary-link-color-collapse) !important;
   border: 0;
   color: #fff !important;
 }
@@ -44735,7 +44752,7 @@ img {
 }
 }
 h2.widget-title {
-  color: var(--primary-color-disabled);
+  color: var(--primary-link-color-disabled);
   text-align: start;
   font-size: var(--h2-content-font-size);
 }
