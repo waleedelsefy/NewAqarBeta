@@ -11663,6 +11663,8 @@ a.title {
     padding-right: 0 !important;
   }
 }
+
+
 /**** Only Desktop ****/
 @media screen and (min-width: 770px) and (max-width: 3024px) {
   .row-body {
@@ -11696,6 +11698,7 @@ a.title {
     justify-content: center;
     align-items: center;
   }
+
   .mobile-panel, .mobile-menu {
     display: none;
   }

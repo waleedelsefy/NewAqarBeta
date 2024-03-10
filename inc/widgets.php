@@ -118,3 +118,20 @@ function load_more_posts() {
 
     die();
 }
+function language_switch_button_shortcode() {
+    ob_start();
+    if (function_exists('pll_the_languages')) {
+        $languages = pll_the_languages(array('raw' => 1));
+        ?>
+        <div class="language-switch-container">
+            <?php foreach ($languages as $language) : ?>
+                <?php if (!$language['current_lang']): ?>
+                    <a href="<?php echo esc_url($language['url']); ?>" class="language-switch-button lang-<?php echo esc_attr($language['slug']); ?>"></a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </div>
+        <?php
+    }
+    return ob_get_clean();
+}
+add_shortcode('language_switch_button', 'language_switch_button_shortcode');

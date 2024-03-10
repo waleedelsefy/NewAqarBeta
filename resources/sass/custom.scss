@@ -714,11 +714,13 @@ a.phone {
     }
     .header-icons {
       display: flex;
-      justify-content: space-between;
-      gap: 10px;
+      justify-content: flex-end;
+      gap: 20px;
       font-size: 22px;
       font-weight: 600;
       color: var(--all-h-content-color);
+      margin-inline-start: 20%;
+      align-items: center;
     }
     .mobile-menu {
       display: inline-block;
@@ -1689,7 +1691,7 @@ div#fluentform_13_success {
 .main-cta a {
   color: #a0b84f !important;
 }
-#menu-item-56636-en a, .nav-item-56636-en a, #menu-item-56639-en a {
+#menu-item-56636-en a, .nav-item-56636-en a, #menu-item-56639-en a , .lang-en {
   display: flex;
   width: 40px;
   height: 30px;
@@ -1701,7 +1703,7 @@ img {
   display: none;
 }
 }
-#menu-item-56635-ar a, .nav-item-56635-ar a,  #menu-item-56638-ar a {
+#menu-item-56635-ar a, .nav-item-56635-ar a,  #menu-item-56638-ar , .lang-ar {
   display: flex;
   width: 40px;
   height: 30px;
