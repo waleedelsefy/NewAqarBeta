@@ -225,7 +225,11 @@ function newaqar_developer_shortcode($atts) {
         $developer_image = '';
     }
 
-    ob_start(); ?>
+    ob_start();
+    if (isset($developer_link)) {
+
+    ?>
+
 <div class="card-buo" >
     <div class="developer-card">
         <div class="developer-card-info">
@@ -233,7 +237,13 @@ function newaqar_developer_shortcode($atts) {
                 <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name;?>">
             </div>
             <div class="personal-info">
-                <a href="<?php echo esc_url($developer_link); ?>" class="name text-start d-flex"><?php echo $developer_name;?></a>
+                <a href="<?php
+                if (isset($developer_link)) {
+                    echo '<a href="' . esc_url($developer_link) . '" class="name text-start d-flex">' . $developer_name . '</a>';
+                } else {
+                    echo '<p>Developer link is not available</p>';
+                }
+              ?></a>
             </div>
 
         </div>
@@ -255,6 +265,7 @@ function newaqar_developer_shortcode($atts) {
 </div>
 
     <?php
+    }
     return ob_get_clean();
 }
 add_shortcode('newaqar_developer', 'newaqar_developer_shortcode');

@@ -7,41 +7,7 @@
   \*****************************/
 /***/ (() => {
 
-var prev = document.querySelector("#prev");
-var next = document.querySelector("#next");
-var carouselVp = document.querySelector("#carousel-vp");
-var cCarouselInner = document.querySelector("#cCarousel-inner");
-var carouselInnerHeight = cCarouselInner.getBoundingClientRect().height;
-var topValue = 0;
 
-// Variable used to set the carousel movement value (card's height + gap)
-var totalMovementSize = parseFloat(document.querySelector(".cCarousel-item").getBoundingClientRect().height, 10) + parseFloat(window.getComputedStyle(cCarouselInner).getPropertyValue("gap"), 10);
-prev.addEventListener("click", function () {
-  if (!topValue) {
-    topValue -= totalMovementSize;
-    cCarouselInner.style.top = topValue + "px";
-  }
-});
-next.addEventListener("click", function () {
-  var carouselVpHeight = carouselVp.getBoundingClientRect().height;
-  if (carouselInnerHeight - Math.abs(topValue) > carouselVpHeight) {
-    topValue -= totalMovementSize;
-    cCarouselInner.style.top = topValue + "px";
-  }
-});
-var mediaQuery510 = window.matchMedia("(max-width: 510px)");
-var mediaQuery770 = window.matchMedia("(max-width: 770px)");
-mediaQuery510.addEventListener("change", mediaManagement);
-mediaQuery770.addEventListener("change", mediaManagement);
-var oldViewportHeight = window.innerHeight;
-function mediaManagement(event) {
-  var newViewportHeight = window.innerHeight;
-  if (topValue <= -totalMovementSize && oldViewportHeight < newViewportHeight || topValue <= -totalMovementSize && oldViewportHeight > newViewportHeight) {
-    topValue += event.matches ? totalMovementSize : -totalMovementSize;
-    cCarouselInner.style.top = topValue + "px";
-    oldViewportHeight = newViewportHeight;
-  }
-}
 
 /***/ }),
 

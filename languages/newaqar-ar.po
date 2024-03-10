@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NewAqar\n"
-"POT-Creation-Date: 2024-03-10 00:44+0200\n"
-"PO-Revision-Date: 2024-03-10 00:45+0200\n"
+"POT-Creation-Date: 2024-03-10 02:04+0200\n"
+"PO-Revision-Date: 2024-03-10 02:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -840,6 +840,10 @@ msgstr "سايدبار الصفحات"
 #: index.php:79 index.php:138 template-parts/content-search.php:46
 msgid "Read more »"
 msgstr "المزيد »"
+
+#: page-templates/blog-page.php:26
+msgid "Load More"
+msgstr "المزيد"
 
 #: page-templates/page-blank-without-container.php:20
 msgid "Pages:"

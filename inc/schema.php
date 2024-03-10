@@ -58,6 +58,8 @@ function newaqar_product_schema() {
                     "acceptedPaymentMethod" => 'LoanOrCredit',
                 ),
             );
+            $votes = ''; // Initialize $votes with an empty string
+
             if ($votes === 'true') {
                 $ld_json['aggregateRating'] = array(
                     "@type" => "AggregateRating",
@@ -65,6 +67,7 @@ function newaqar_product_schema() {
                     "reviewCount" => $number_of_voters
                 );
             }
+
             echo '<script type="application/ld+json">';
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             echo '</script>';

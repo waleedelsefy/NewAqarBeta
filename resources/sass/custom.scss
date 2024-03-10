@@ -27,6 +27,7 @@
   --h5-content-font-size:16px;
   --h6-content-font-size:16px;
   --recent-height-property-none:400;
+  --recent-height-propertye:400;
   --content-line-heigh:2;
   --ar_front_page_hero_background:url('https://www.newaqar.net/wp-content/uploads/2022/08/web_winter_lrg-f24c1c214c382225e3cc.webp');
   --p-margin-heigh:1rem;
@@ -42,6 +43,11 @@
 .breadcrumb-item {
   font-size: 14px;
   letter-spacing: normal;
+}
+button#load-more-btn {
+  font-size: var(--p-content-font-size);
+  border-radius: 25px;
+  margin: 50px;
 }
 @media screen and (max-width: 900px) {
   :root {
@@ -60,6 +66,7 @@
 
   }
 }
+
 html body {
   background: var(--primary-background-color);
   box-sizing: border-box;
@@ -1102,6 +1109,12 @@ a.phone {
   }
   /**** end of fluent form ****/
   /**** content ****/
+   #developer-desc, .taxonomy-description {
+     p {
+       display: flex;
+        justify-content: center;
+     }
+   }
   main#content-project, .taxonomy-description {
     p , li  {
       color: var(--all-p-content-color);
@@ -1704,14 +1717,4 @@ h2.widget-title {
   color: var(--primary-link-color-disabled);
   text-align: start;
   font-size: var(--h2-content-font-size);
-}
-
-
-
-.pulse {
-  animation: pulse 3s infinite ease-in-out alternate;
-}
-@keyframes pulse {
-  from { transform: scale(0.7); }
-  to { transform: scale(1.0); }
 }

@@ -53,6 +53,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
 }
 ?>
 <style>
+
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
@@ -95,7 +96,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .project-sub-title::after{margin-inline-start:10px; width:80px;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
     table.infotable {border-collapse: collapse;width:calc(100% + 30px);color: #646A70;margin:0px 0px 0px -7px;}
     table.infotable tr:nth-child(even){background-color: #F9F9F9}
-    table.infotable th.ttitle {width: 35%;font-size: 0.8rem;padding-left:0;border-left:1px solid #e0dcd6;background-color: var(--primary-color-collapse); color:  #FFFFFF}
+    table.infotable th.ttitle {width: 35%;font-size: 0.8rem;padding-left:0;border-left:1px solid #e0dcd6;background-color: var(--primary-link-color-link); color:  #FFFFFF}
     table.infotable tr:nth-child(even) th.ttitle{background-color:#212529}
     table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}
@@ -165,7 +166,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
     .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
     .side-details .big-detail{font-size: var(--p-content-font-size); font-weight: 600; color: var(--primary-color-collapse)}
-    .price-last-update{background-color: var(--primary-have-color-collapse); color: #FFF; border-radius: 0 0 9px 9px; text-align: center}
+    .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF; border-radius: 0 0 9px 9px; text-align: center}
     .side-bar .payment-plan{display: block}
     @media only screen and (min-width:992px){
         .payment-mobile{display:none}
@@ -239,73 +240,76 @@ if ($post_type === 'units' || $post_type === 'projects') {
     </div>
     <div class="row">
         <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
-             <div class="main-content">
+            <div class="main-content">
                 <main id="content" class="column main-content">
                     <div class="post-thumbnail d-flex justify-content-center align-items-center">
-                    <?php the_post_thumbnail() ?>
+                        <?php the_post_thumbnail() ?>
                     </div>
                     <div class="project-sub-title"><?php echo __('Unit details', 'newaqar'); ?></div>
                     <div class="content-box">
                         <table class="infotable">
                             <tbody>
-                                    <tr>
-                                        <th class="ttitle"><?php _e('Unit Name', 'newaqar'); ?></th>
-                                        <td class="tvalue">  <h1 style="font-size: 16px !important; margin:unset!important;" class="table-title">
-                                                <?php echo get_the_title(); ?>
-                                            </h1>
-                                        </td>
-                                    </tr>
-                                    <?php
-                                    if (isset($unit_project)) {
-                                        ?>
-                                        <tr>
-                                            <th class="ttitle"><?php _e('Project Name', 'newaqar'); ?></th>
-                                            <td class="tvalue"><a href="<?php echo get_permalink($unit_project); ?>"><?php echo get_the_title($unit_project); ?></a></td>
-                                        </tr>
-                                        <?php
-                                    }
-                                    if (isset($developer_name) && isset($developer_link)) {
-                                        ?>
-                                        <tr>
-                                            <th class="ttitle"><?php _e('Developing Company', 'newaqar'); ?></th>
-                                            <td class="tvalue"><a href="<?php echo $developer_link; ?>"><?php echo $developer_name; ?></a></td>
-                                        </tr>
-                                        <?php
-                                    }
-                                    if (isset($types_name) && isset($types_link)) {
-                                    ?>
-                                    <tr>
-                                        <th class="ttitle"><?php _e('Unit Types', 'newaqar'); ?></th>
-                                        <td class="tvalue"><a href="<?php echo $types_link; ?>"><?php echo $types_name; ?></a></td>
-                                    </tr>
-                                    <?php
-                                    }
-                                    if (isset($city_name) && isset($city_link)) {
-                                        ?>
-                                        <tr>
-                                            <th class="ttitle"><?php _e('Unit Location', 'newaqar'); ?></th>
-                                            <td class="tvalue"><a href="<?php echo $city_link; ?>"><?php echo $city_name; ?></a></td>
-                                        </tr>
-                                        <?php
-                                    }
-                                    if (isset($unit_price) && isset($unit_price)) {
-                                        ?>
-                                        <tr>
-                                            <th class="ttitle"><?php _e('Unit price', 'newaqar'); ?></th>
-                                            <td class="tvalue"><span><?php echo $unit_price . ' ' . esc_html__('EGP', 'newaqar'); ?></span></td>
-                                        </tr>
-                                        <?php
-                                    }
-                                        ?>
-                                        <tr>
-                                            <th class="ttitle"><?php _e('Sales Number', 'newaqar'); ?></th>
-                                            <td class="tvalue"><a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                        </div>
+                            <tr>
+                                <th class="ttitle"><?php _e('Unit Name', 'newaqar'); ?></th>
+                                <td class="tvalue">
+
+                                    <h1 style="font-size: 16px !important; margin:unset!important;">
+                                        <?php echo get_the_title(); ?>
+                                    </h1>
+                                </td>
+                            </tr>
+                            <?php
+                            if (isset($unit_project)) {
+                                ?>
+                                <tr>
+                                    <th class="ttitle"><?php _e('Project Name', 'newaqar'); ?></th>
+                                    <td class="tvalue"><a href="<?php echo get_permalink($unit_project); ?>"><?php echo get_the_title($unit_project); ?></a></td>
+                                </tr>
+                                <?php
+                            }
+                            if (isset($developer_name) && isset($developer_link)) {
+                                ?>
+                                <tr>
+                                    <th class="ttitle"><?php _e('Developing Company', 'newaqar'); ?></th>
+                                    <td class="tvalue"><a href="<?php echo $developer_link; ?>"><?php echo $developer_name; ?></a></td>
+                                </tr>
+                                <?php
+                            }
+                            if (isset($types_name) && isset($types_link)) {
+                                ?>
+                                <tr>
+                                    <th class="ttitle"><?php _e('Unit Types', 'newaqar'); ?></th>
+                                    <td class="tvalue"><a href="<?php echo $types_link; ?>"><?php echo $types_name; ?></a></td>
+                                </tr>
+                                <?php
+                            }
+                            if (isset($city_name) && isset($city_link)) {
+                                ?>
+                                <tr>
+                                    <th class="ttitle"><?php _e('Unit Location', 'newaqar'); ?></th>
+                                    <td class="tvalue"><a href="<?php echo $city_link; ?>"><?php echo $city_name; ?></a></td>
+                                </tr>
+                                <?php
+                            }
+                            if (isset($unit_price) && isset($unit_price)) {
+                                ?>
+                                <tr>
+                                    <th class="ttitle"><?php _e('Unit price', 'newaqar'); ?></th>
+                                    <td class="tvalue"><span><?php echo $unit_price . ' ' . esc_html__('EGP', 'newaqar'); ?></span></td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                            <tr>
+                                <th class="ttitle"><?php _e('Sales Number', 'newaqar'); ?></th>
+                                <td class="tvalue"><a href="tel:+2<?php echo esc_attr($sales_number); ?>"><?php echo esc_html($sales_number); ?></a></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                     <div>
-                            <?php echo do_shortcode('[newaqar_cta]') ?>
+                        <?php echo do_shortcode('[newaqar_cta]') ?>
                     </div>
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
@@ -336,7 +340,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                 <div class="price-last-update">
                                     <?php
                                     if (get_the_modified_date() != get_the_date()) {
-                                        echo '<p style="color: #fff">' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
+                                        echo '<p>' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
                                     }
                                     ?>
                                 </div>
@@ -344,13 +348,15 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         <?php endif; ?>
                     </div>
                     <div class="table-content my-2 py-3 px-3 ">
-                    <?php echo do_shortcode('[social_share_box]'); ?>
-                            <?php the_content(); ?>
-                        </div>
+                        <?php echo do_shortcode('[social_share_box]'); ?>
+                        <?php the_content(); ?>
+                    </div>
                     <?php echo do_shortcode('[author_info]'); ?>
+
                     <?php
                     if (function_exists('pll_current_language')) {
                         $current_language = pll_current_language();
+
                         if ($current_language === 'ar') {
                             echo do_shortcode('[fluentform id="9"]');
                         } elseif ($current_language === 'en') {
@@ -358,31 +364,32 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         }
                     }
                     ?>
-                        <div class="container-accordion">
-                            <div class="accordion" id="accordionFAQ">
-                                <?php
-                                $unserialized_data = (get_post_meta($post->ID, '_faqs', true));
-                                if ($unserialized_data && is_array($unserialized_data)) {
-                                    foreach ($unserialized_data as $index => $qa_pair) :
-                                        ?>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading<?php echo esc_attr($index + 1); ?>">
-                                                <button class="accordion-button <?php echo ($index === 0) ? 'collapsed' : ''; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo esc_attr($index + 1); ?>" aria-expanded="<?php echo ($index === 0) ? 'true' : 'false'; ?>" aria-controls="collapse<?php echo esc_attr($index + 1); ?>">
-                                                    <?php echo esc_html($qa_pair['question']); ?>
-                                                </button>
-                                            </h2>
-                                            <div id="collapse<?php echo esc_attr($index + 1); ?>" class="accordion-collapse collapse <?php echo ($index === 0) ? 'show' : ''; ?>" aria-labelledby="heading<?php echo esc_attr($index + 1); ?>" data-bs-parent="#accordionFAQ">
-                                                <div class="accordion-body">
-                                                    <strong><?php echo esc_html($qa_pair['answer']); ?></strong>
-                                                </div>
+
+                    <div class="container-accordion">
+                        <div class="accordion" id="accordionFAQ">
+                            <?php
+                            $unserialized_data = (get_post_meta($post->ID, '_faqs', true));
+                            if ($unserialized_data && is_array($unserialized_data)) {
+                                foreach ($unserialized_data as $index => $qa_pair) :
+                                    ?>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading<?php echo esc_attr($index + 1); ?>">
+                                            <button class="accordion-button <?php echo ($index === 0) ? 'collapsed' : ''; ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?php echo esc_attr($index + 1); ?>" aria-expanded="<?php echo ($index === 0) ? 'true' : 'false'; ?>" aria-controls="collapse<?php echo esc_attr($index + 1); ?>">
+                                                <?php echo esc_html($qa_pair['question']); ?>
+                                            </button>
+                                        </h2>
+                                        <div id="collapse<?php echo esc_attr($index + 1); ?>" class="accordion-collapse collapse <?php echo ($index === 0) ? 'show' : ''; ?>" aria-labelledby="heading<?php echo esc_attr($index + 1); ?>" data-bs-parent="#accordionFAQ">
+                                            <div class="accordion-body">
+                                                <strong><?php echo esc_html($qa_pair['answer']); ?></strong>
                                             </div>
                                         </div>
-                                    <?php
-                                    endforeach;
-                                }
-                                ?>
-                            </div>
+                                    </div>
+                                <?php
+                                endforeach;
+                            }
+                            ?>
                         </div>
+                    </div>
                     <div class="row related-section my-5 d-flex justify-content-center">
                         <h3><?php echo __('Similar units', 'newaqar'); ?></h3>
                         <?php
@@ -440,12 +447,11 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         ?>
                     </div>
                 </main>
-            </section>
-        </div>
+                </section>
+            </div>
         </div>
         <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
             <div class="side-bar">
-
                 <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
                         <div class="side-title"><?php echo __('Payment System', 'newaqar'); ?></div>
@@ -485,25 +491,16 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         </div>
                     </div>
                 <?php endif; ?>
-                <div>
-                    <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
-                    else { ?>
-                        <div class="message-section">
-                            <?php
-                            if (function_exists('pll_current_language')) {
-                                $current_language = pll_current_language();
+                <div class="message-section">
+                    <?php
+                    if (function_exists('pll_current_language')) {
+                        $current_language = pll_current_language();
 
-                                if ($current_language === 'ar') {
-                                    echo do_shortcode('[fluentform id="7"]');
-                                } elseif ($current_language === 'en') {
-                                    echo do_shortcode('[fluentform id="11"]');
-                                }
-                            }
-
-                            ?>
-
-                        </div>
-                        <?php
+                        if ($current_language === 'ar') {
+                            echo do_shortcode('[fluentform id="7"]');
+                        } elseif ($current_language === 'en') {
+                            echo do_shortcode('[fluentform id="11"]');
+                        }
                     }
                     ?>
                 </div>
@@ -511,4 +508,4 @@ if ($post_type === 'units' || $post_type === 'projects') {
         </div>
     </div>
 </div>
-    <?php echo get_footer(); ?>
+<?php echo get_footer(); ?>
