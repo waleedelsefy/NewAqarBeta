@@ -12,8 +12,8 @@ function newaqar_product_schema() {
             $price = isset($unit_details['unit_price']) ? esc_attr($unit_details['unit_price']) : '';
             $developer_terms = get_the_terms($unit_project, 'developer');
         } elseif (is_singular('projects')) {
-            $project_details = get_post_meta($post->ID, 'project_details', true);
             $developer_terms = get_the_terms(get_the_ID(), 'developer');
+            $project_details = get_post_meta($post->ID, 'project_details', true);
             $votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
             if (is_array($project_details) && !empty($project_details)) {
                 $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
@@ -58,9 +58,8 @@ function newaqar_product_schema() {
                     "acceptedPaymentMethod" => 'LoanOrCredit',
                 ),
             );
-            $votes = ''; // Initialize $votes with an empty string
 
-            if ($votes === 'true') {
+            if ($votes === "true") {
                 $ld_json['aggregateRating'] = array(
                     "@type" => "AggregateRating",
                     "ratingValue" => $number_of_votes,
@@ -72,8 +71,40 @@ function newaqar_product_schema() {
             echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             echo '</script>';
         } else {
-            // Handle the case when $developer_terms is not set or is a WordPress error
             echo '<!-- Developer terms not available. -->';
+        }
+
+        if ($votes === "true") {
+            // Assuming you have access to the WordPress post object, you can retrieve the datePublished from it
+            global $post;
+            $date_published = get_post_time('Y-m-d', true, $post);
+            $rating_value = min($number_of_votes + 1, 4.6);
+            $bestRating = min($number_of_votes + 1.3, 4.9);
+            $worstRating = max($number_of_votes - 1.3, 3.7);
+
+            // Define the review data
+            $ld_json = array(
+                "@type" => "Review",
+                "author" => "Lucas",
+                "datePublished" => $date_published,
+                "reviewBody" => "Great microwave for the price. It is small and fits in my apartment.",
+                "name" => "Value purchase",
+                "reviewRating" => array(
+                    "@type" => "Rating",
+                    "bestRating" => $bestRating,
+                    "ratingValue" => $rating_value,
+                    "worstRating" => $worstRating
+                ),
+                // Add aggregate rating
+                "aggregateRating" => array(
+                    "@type" => "AggregateRating",
+                    "ratingValue" => $number_of_votes,
+                    "reviewCount" => $number_of_voters
+                )
+            );
+            echo '<script type="application/ld+json">';
+            echo json_encode($ld_json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+            echo '</script>';
         }
     }
     }
@@ -175,7 +206,6 @@ function newaqar_breadcrumb_schema() {
             }
         }
 
-        // Add city terms to breadcrumb items
         if ($city_terms && !is_wp_error($city_terms)) {
             foreach ($city_terms as $city_term) {
                 $breadcrumb_items[] = [
@@ -204,8 +234,6 @@ function newaqar_breadcrumb_schema() {
 function newaqar_auther_schema() {
     global $post;
     if ($post != null) {
-
-        // Get author information
     $author_id = $post->post_author;
     $author_name = get_the_author_meta('display_name', $author_id);
     $author_email = get_the_author_meta('user_email', $author_id);
@@ -216,7 +244,7 @@ function newaqar_auther_schema() {
     $ld_json = array(
         '@context' => 'https://schema.org',
         '@type' =>  'Person',
-        'email' =>  "mailto:$author_email",
+        'email' =>  $author_email,
         'image' =>  $author_image,
         'name' =>  $author_name,
         'url' =>  $author_url

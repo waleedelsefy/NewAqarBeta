@@ -5,8 +5,11 @@ $whatsapp_number = esc_attr($theme_settings['whatsapp_number']);
 $sales_number = esc_attr($theme_settings['phone_number']);
 $developer_terms = get_the_terms(get_the_ID(), 'developer');
 $city_terms = get_the_terms(get_the_ID(), 'city');
+
 $project_location = get_post_meta($post->ID, 'project_location', true);
 $project_details = get_post_meta($post->ID, 'project_details', true);
+$votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
+
 $payment_systems = get_the_terms(get_the_ID(), 'payment_systems');
 if (!empty($payment_systems)) {
     $terms = wp_get_post_terms(get_the_ID(), 'payment_systems');
@@ -235,6 +238,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
             <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
                 <div class="main-content">
                     <?php
+                    echo "yyyyy".$votes ;
                     $args = array(
                         'post_type'      => 'units',
                         'posts_per_page' => -1,

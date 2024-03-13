@@ -250,7 +250,7 @@ function newaqar_render_unit_details_metabox($post) {
             <td>
                 <input type="checkbox" name="unit_details[votes]" value="true" <?php checked($votes, 'true'); ?>>
                 <label><?php esc_html_e('Enable Votes', 'newaqar'); ?></label>
-                <input width="100px" type="number" min="0" max="5" name="unit_details[number_of_votes]" id="number-of-votes" value="<?php echo esc_attr($number_of_votes); ?>" placeholder="<?php esc_attr_e('Votes', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
+                <input width="100px" type="number" step=".01" min="3" max="5" name="unit_details[number_of_votes]" id="number-of-votes" value="<?php echo esc_attr($number_of_votes); ?>" placeholder="<?php esc_attr_e('Votes', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
                 <input width="100px"  type="number" min="0" max="1000" name="unit_details[number_of_voters]" id="number-of-voters" value="<?php echo esc_attr($number_of_voters); ?>" placeholder="<?php esc_attr_e('Voters', 'newaqar'); ?>" <?php echo ($votes === 'true') ? '' : 'style="display: none;"'; ?>>
             </td>
         </tr>
