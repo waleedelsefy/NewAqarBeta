@@ -238,7 +238,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
             <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
                 <div class="main-content">
                     <?php
-                    echo "yyyyy".$votes ;
                     $args = array(
                         'post_type'      => 'units',
                         'posts_per_page' => -1,
