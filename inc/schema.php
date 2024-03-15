@@ -62,19 +62,12 @@ function newaqar_product_schema() {
                     ),
                 );
 
-                if ($votes === "true") {
                     $ld_json['aggregateRating'] = array(
                         "@type" => "AggregateRating",
                         "ratingValue" => $number_of_votes,
                         "reviewCount" => $number_of_voters
                     );
-                }else {
-                    $ld_json['aggregateRating'] = array(
-                        "@type" => "AggregateRating",
-                        "ratingValue" => '',
-                        "reviewCount" => ''
-                    );
-                }
+
 
                 echo '<script type="application/ld+json">';
                 echo json_encode($ld_json, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
@@ -87,9 +80,13 @@ function newaqar_product_schema() {
                 // Assuming you have access to the WordPress post object, you can retrieve the datePublished from it
                 global $post;
                 $date_published = get_post_time('Y-m-d', true, $post);
-                $rating_value = min($number_of_votes + 1, 4.6);
-                $bestRating = min($number_of_votes + 1.3, 4.9);
-                $worstRating = max($number_of_votes - 1.3, 3.7);
+
+                // Calculate rating value with validation
+                $rating_value = (!empty($number_of_votes)) ? min(intval($number_of_votes) + 1, 4.6) : 0;
+
+                // Calculate best and worst ratings
+                $bestRating = (!empty($number_of_votes)) ? min($number_of_votes + 1.3, 4.9) : 0;
+                $worstRating = (!empty($number_of_votes)) ? max($number_of_votes - 1.3, 3.7) : 0;
 
                 // Define the review data
                 $ld_json = array(
@@ -111,6 +108,8 @@ function newaqar_product_schema() {
                         "reviewCount" => $number_of_voters
                     )
                 );
+
+                // Output JSON-LD script
                 echo '<script type="application/ld+json">';
                 echo json_encode($ld_json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
                 echo '</script>';
