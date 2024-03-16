@@ -239,72 +239,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
         <div class="row">
             <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
                 <div class="main-content">
-                    <?php
-
-                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-                    $args = array(
-                        'post_type'      => 'units',
-                        'posts_per_page' => 2,
-                        'paged'          => $paged,
-                        'meta_query'     => array(
-                            array(
-                                'key'   => '_unit_project_id',
-                                'value' => $post_id,
-                            ),
-                        ),
-                    );
-                    $unit_query = new WP_Query($args);
-                    if ($unit_query->have_posts()) :
-                        ?>
-                        <div class="container">
-                            <div class="units-of-projects">
-                                <?php
-                                while ($unit_query->have_posts()) :
-                                    $unit_query->the_post();
-                                    ?>
-                                    <div class="col-lg-6 col-md-6 mt-2 mb-2 unit-of-projects">
-                                        <?php get_template_part('template-parts/single-card'); ?>
-                                    </div>
-                                <?php
-                                endwhile;
-                                ?>
-                            </div>
-                            <?php if ($unit_query->max_num_pages > 1) : ?>
-                                <button id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'newaqar');  ?></button>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
-                    <script>
-                        jQuery(function($) {
-                            $('#load-more-units').on('click', function() {
-                                var nextPage = $(this).data('next-page');
-                                $.ajax({
-                                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                                    type: 'POST',
-                                    data: {
-                                        security: '<?php echo wp_create_nonce('load_more_units_projects_nonce'); ?>',
-                                        action: 'load_more_units_projects',
-                                        page: nextPage,
-                                        project_id: <?php echo $post_id; ?>
-                                    },
-                                    beforeSend: function() {
-                                        $('#load-more-units').text('<?php echo __('Loading...', 'newaqar'); ?>');
-                                    },
-                                    success: function(response) {
-                                        $('#load-more-units').text('<?php echo __('Load More', 'newaqar'); ?>');
-                                        if (response) {
-                                            $('.units-of-projects').append(response);
-                                            $('#load-more-units').data('next-page', nextPage + 1);
-                                        } else {
-                                            $('#load-more-units').hide();
-                                        }
-                                    }
-                                });
-                            });
-                        });
-                    </script>
-
-                    <main id="content-project" class="column main-content m-0 py-0">
+                                    <main id="content-project" class="column main-content m-0 py-0">
                         <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>
                         <div class="content-box">
                             <table class="infotable">
@@ -393,6 +328,74 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <div>
                             <?php echo do_shortcode('[newaqar_cta]') ?>
                         </div>
+                                        <div>
+                                            <?php
+
+                                            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                                            $args = array(
+                                                'post_type'      => 'units',
+                                                'posts_per_page' => 2,
+                                                'paged'          => $paged,
+                                                'meta_query'     => array(
+                                                    array(
+                                                        'key'   => '_unit_project_id',
+                                                        'value' => $post_id,
+                                                    ),
+                                                ),
+                                            );
+                                            $unit_query = new WP_Query($args);
+                                            if ($unit_query->have_posts()) :
+                                                ?>
+                                                <div class="container">
+                                                    <div class="units-of-projects">
+                                                        <?php
+                                                        while ($unit_query->have_posts()) :
+                                                            $unit_query->the_post();
+                                                            ?>
+                                                            <div class="unit-of-projects">
+                                                                <?php get_template_part('template-parts/single-card'); ?>
+                                                            </div>
+                                                        <?php
+                                                        endwhile;
+                                                        ?>
+                                                    </div>
+                                                    <?php if ($unit_query->max_num_pages > 1) : ?>
+                                                    <div class="d-flex justify-content-center">
+                                                        <button class="cta-phone" id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'newaqar');  ?></button>
+                                                    <?php endif; ?>
+                                                    </div>
+                                                </div>
+                                            <?php endif; ?>
+                                            <script>
+                                                jQuery(function($) {
+                                                    $('#load-more-units').on('click', function() {
+                                                        var nextPage = $(this).data('next-page');
+                                                        $.ajax({
+                                                            url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                                                            type: 'POST',
+                                                            data: {
+                                                                security: '<?php echo wp_create_nonce('load_more_units_projects_nonce'); ?>',
+                                                                action: 'load_more_units_projects',
+                                                                page: nextPage,
+                                                                project_id: <?php echo $post_id; ?>
+                                                            },
+                                                            beforeSend: function() {
+                                                                $('#load-more-units').text('<?php echo __('Loading...', 'newaqar'); ?>');
+                                                            },
+                                                            success: function(response) {
+                                                                $('#load-more-units').text('<?php echo __('Load More', 'newaqar'); ?>');
+                                                                if (response) {
+                                                                    $('.units-of-projects').append(response);
+                                                                    $('#load-more-units').data('next-page', nextPage + 1);
+                                                                } else {
+                                                                    $('#load-more-units').hide();
+                                                                }
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            </script>
+                                        </div>
                         <div class="side-bar-mob">
                             <?php if ($down_payment != "") : ?>
                                 <div class="payment-plan">

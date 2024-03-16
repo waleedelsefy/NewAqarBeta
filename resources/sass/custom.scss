@@ -1542,9 +1542,14 @@ div#fluentform_13_success {
   width: 100%;
 }
 .units-of-projects {
+  padding: 20px;
   display: flex;
   transition: transform 0.5s ease;
-  gap: 10px;
+  gap: 59px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 .card-buo {
   display: flex !important;
@@ -1677,6 +1682,31 @@ div#fluentform_13_success {
   font-weight: 600;
   z-index: 1;
   position: relative;
+}
+#load-more-units {
+  background: var(--primary-link-color-collapse) !important;
+  border: 0;
+  color: #fff !important;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+  text-align: center;
+  margin: 5px;
+  font-size: 0.8rem;
+  transition: 0.3s;
+  background-color: #FFFFFF;
+  border: 1px solid #9A9A9A;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+  z-index: 1;
+  position: relative;
+  max-width: 25%;
+
 }
 .main-cta a.cta-phone {
   background: var(--primary-link-color-collapse) !important;
