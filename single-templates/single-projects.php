@@ -330,7 +330,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         </div>
                                         <div>
                                             <?php
-
+                                            $post_id =get_the_ID() ;
                                             $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                                             $args = array(
                                                 'post_type'      => 'units',
@@ -339,7 +339,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                                 'meta_query'     => array(
                                                     array(
                                                         'key'   => '_unit_project_id',
-                                                        'value' =>  get_the_ID(),
+                                                        'value' => $post_id ,
                                                     ),
                                                 ),
                                             );
@@ -379,7 +379,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                                                 action: 'load_more_units_projects',
                                                                 page: nextPage,
                                                                 project_id: <?php
-                                                                $post_id = get_the_ID();
                                                                 echo $post_id; ?>
                                                             },
                                                             beforeSend: function() {
