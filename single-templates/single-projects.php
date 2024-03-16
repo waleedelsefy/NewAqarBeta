@@ -445,7 +445,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <?php echo generate_table_of_contents(); ?>
 
 
-                            <?php  echo  the_content(); ?>
+                            <?php  echo  get_the_content(); ?>
                         </div>
                         <?php
                         $faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
