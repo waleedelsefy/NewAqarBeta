@@ -339,7 +339,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                                 'meta_query'     => array(
                                                     array(
                                                         'key'   => '_unit_project_id',
-                                                        'value' => $post_id,
+                                                        'value' =>  get_the_ID(),
                                                     ),
                                                 ),
                                             );
@@ -378,7 +378,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                                                 security: '<?php echo wp_create_nonce('load_more_units_projects_nonce'); ?>',
                                                                 action: 'load_more_units_projects',
                                                                 page: nextPage,
-                                                                project_id: <?php echo $post_id; ?>
+                                                                project_id: <?php
+                                                                $post_id = get_the_ID();
+                                                                echo $post_id; ?>
                                                             },
                                                             beforeSend: function() {
                                                                 $('#load-more-units').text('<?php echo __('Loading...', 'newaqar'); ?>');
