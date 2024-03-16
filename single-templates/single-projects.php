@@ -563,7 +563,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             </table>
                         </div>
                     </main>
-                </div>
             </div>
             <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
