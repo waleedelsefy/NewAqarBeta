@@ -374,9 +374,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <div class="table-content my-2 py-3 px-3 ">
                             <?php  echo do_shortcode('[social_share_box]');?>
                             <?php echo generate_table_of_contents(); ?>
+                            <?php the_content(); ?>
 
-
-                            <?php  echo  get_the_content(); ?>
                         </div>
                         <?php
                         $faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
