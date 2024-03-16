@@ -362,8 +362,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                                     <?php if ($unit_query->max_num_pages > 1) : ?>
                                                     <div class="d-flex justify-content-center">
                                                         <button class="cta-phone" id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'newaqar');  ?></button>
-                                                    <?php endif; ?>
                                                     </div>
+                                                    <?php endif; ?>
+
                                                 </div>
                                             <?php endif; ?>
                                             <script>
@@ -563,6 +564,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             </table>
                         </div>
                     </main>
+                </div>
             </div>
             <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
                 <div class="side-bar">
