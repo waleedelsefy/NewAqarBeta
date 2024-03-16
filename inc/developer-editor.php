@@ -277,13 +277,3 @@ function enqueue_custom_styles() {
     </style>';
 }
 add_developer_desc_field();
-// functions.php
-add_action('wp_ajax_load_more_units', 'load_more_units');
-add_action('wp_ajax_nopriv_load_more_units', 'load_more_units');
-function load_more_units() {
-    $response = array(
-        'success' => true,
-        'data' => '<div class="col-lg-4 col-md-6 col-12 mt-4">الوحدة الجديدة 1</div><div class="col-lg-4 col-md-6 col-12 mt-4">الوحدة الجديدة 2</div>',
-    );
-    wp_send_json($response);
-}

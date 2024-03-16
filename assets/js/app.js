@@ -7,7 +7,48 @@
   \*****************************/
 /***/ (() => {
 
-
+var wiperTrack = document.querySelector(".wiper-track");
+var wipes = Array.from(wiperTrack.children);
+var wipePrevBtn = document.querySelector(".wiper-button__right");
+var wipeNextBtn = document.querySelector(".wiper-button__left");
+var wipeWidth = wipes[0].getBoundingClientRect().width;
+var arrowsBehaviour = function arrowsBehaviour(wipePrevBtn, wipeNextBtn, index) {
+  if (index === 0) {
+    wipePrevBtn.classList.add("is-hidden");
+    wipeNextBtn.classList.remove("is-hidden");
+  } else if (index === wipes.length - 1) {
+    wipePrevBtn.classList.remove("is-hidden");
+    wipeNextBtn.classList.add("is-hidden");
+  } else {
+    wipePrevBtn.classList.remove("is-hidden");
+    wipeNextBtn.classList.remove("is-hidden");
+  }
+};
+var wipeSlide = function wipeSlide(wiperTrack, activeSlide, nextSlide, targetIndex) {
+  wiperTrack.style.transform = "translateX(-" + (wipeWidth + 24) * (targetIndex - 1) + "px)";
+  activeSlide.classList.remove("active-swipe");
+  activeSlide.style.transform = "scale(1)";
+  nextSlide.classList.add("active-swipe");
+  nextSlide.style.transform = "scale(1.1)";
+};
+wipeNextBtn.addEventListener("click", function (e) {
+  var activeSlide = wiperTrack.querySelector(".active-swipe");
+  var nextSlide = activeSlide.nextElementSibling;
+  var targetIndex = wipes.findIndex(function (slide) {
+    return slide === nextSlide;
+  });
+  wipeSlide(wiperTrack, activeSlide, nextSlide, targetIndex);
+  arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+});
+wipePrevBtn.addEventListener("click", function (e) {
+  var activeSlide = wiperTrack.querySelector(".active-swipe");
+  var nextSlide = activeSlide.previousElementSibling;
+  var targetIndex = wipes.findIndex(function (slide) {
+    return slide === nextSlide;
+  });
+  wipeSlide(wiperTrack, activeSlide, nextSlide, targetIndex);
+  arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
+});
 
 /***/ }),
 

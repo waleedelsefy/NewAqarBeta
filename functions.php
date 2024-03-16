@@ -28,6 +28,7 @@ require_once('inc/developer-editor.php');             // city-editor.php page ba
 require_once('inc/schema.php');             // schema.php page header
 require_once('inc/short-cods.php');             // short-cods.php all short cods
 require_once('inc/admin.php');             // admin all short cods
+require_once('inc/ajax.php');             // all ajax
 /**
  * Load WooCommerce scripts if plugin is activated
  */

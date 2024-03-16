@@ -1,11 +1,13 @@
 <?php
+$post_id = get_the_ID();
+
 get_header();
+
 $theme_settings = get_option('newaqar_theme_settings');
 $whatsapp_number = esc_attr($theme_settings['whatsapp_number']);
 $sales_number = esc_attr($theme_settings['phone_number']);
 $developer_terms = get_the_terms(get_the_ID(), 'developer');
 $city_terms = get_the_terms(get_the_ID(), 'city');
-
 $project_location = get_post_meta($post->ID, 'project_location', true);
 $project_details = get_post_meta($post->ID, 'project_details', true);
 $votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
@@ -238,13 +240,16 @@ if ($city_terms && !is_wp_error($city_terms)) {
             <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
                 <div class="main-content">
                     <?php
+
+                    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                     $args = array(
                         'post_type'      => 'units',
-                        'posts_per_page' => -1,
+                        'posts_per_page' => 2,
+                        'paged'          => $paged,
                         'meta_query'     => array(
                             array(
                                 'key'   => '_unit_project_id',
-                                'value' => get_the_ID(),
+                                'value' => $post_id,
                             ),
                         ),
                     );
@@ -252,29 +257,53 @@ if ($city_terms && !is_wp_error($city_terms)) {
                     if ($unit_query->have_posts()) :
                         ?>
                         <div class="container">
-                            <p><?php echo __('Units Of Projects', 'newaqar'); ?></p>
-                            <div class="carousel">
-                                <div class="units-of-projects">
-                                    <?php
-                                    while ($unit_query->have_posts()) :
-                                        $unit_query->the_post();
-                                        ?>
-                                        <div class="col-lg-6 col-md-6 mt-2 mb-2">
-                                            <?php get_template_part('template-parts/single-card'); ?>
-                                        </div>
-                                    <?php
-                                    endwhile;
+                            <div class="units-of-projects">
+                                <?php
+                                while ($unit_query->have_posts()) :
+                                    $unit_query->the_post();
                                     ?>
-
-                                </div>
-                                <button class="prev-button "><?php echo __('Next', 'newaqar'); ?></button>
-                                <button class="next-button "><?php echo __('Prev', 'newaqar'); ?></button>
+                                    <div class="col-lg-6 col-md-6 mt-2 mb-2 unit-of-projects">
+                                        <?php get_template_part('template-parts/single-card'); ?>
+                                    </div>
+                                <?php
+                                endwhile;
+                                ?>
                             </div>
+                            <?php if ($unit_query->max_num_pages > 1) : ?>
+                                <button id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'newaqar');  ?></button>
+                            <?php endif; ?>
                         </div>
-                    <?php
-                    endif;
-                    wp_reset_postdata();
-                    ?>
+                    <?php endif; ?>
+                    <script>
+                        jQuery(function($) {
+                            $('#load-more-units').on('click', function() {
+                                var nextPage = $(this).data('next-page');
+                                $.ajax({
+                                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                                    type: 'POST',
+                                    data: {
+                                        security: '<?php echo wp_create_nonce('load_more_units_projects_nonce'); ?>',
+                                        action: 'load_more_units_projects',
+                                        page: nextPage,
+                                        project_id: <?php echo $post_id; ?>
+                                    },
+                                    beforeSend: function() {
+                                        $('#load-more-units').text('<?php echo __('Loading...', 'newaqar'); ?>');
+                                    },
+                                    success: function(response) {
+                                        $('#load-more-units').text('<?php echo __('Load More', 'newaqar'); ?>');
+                                        if (response) {
+                                            $('.units-of-projects').append(response);
+                                            $('#load-more-units').data('next-page', nextPage + 1);
+                                        } else {
+                                            $('#load-more-units').hide();
+                                        }
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+
                     <main id="content-project" class="column main-content m-0 py-0">
                         <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>
                         <div class="content-box">

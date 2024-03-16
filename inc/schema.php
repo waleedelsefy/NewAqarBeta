@@ -14,7 +14,6 @@ function newaqar_product_schema() {
             } elseif (is_singular('projects')) {
                 $developer_terms = get_the_terms(get_the_ID(), 'developer');
                 $project_details = get_post_meta($post->ID, 'project_details', true);
-                $votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
                 if (is_array($project_details) && !empty($project_details)) {
                     $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
                     $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
@@ -75,6 +74,7 @@ function newaqar_product_schema() {
             } else {
                 echo '<!-- Developer terms not available. -->';
             }
+            $votes = isset($project_details['votes']) ? esc_attr($project_details['votes']) : '';
 
             if ($votes === "true") {
                 // Assuming you have access to the WordPress post object, you can retrieve the datePublished from it
