@@ -18,7 +18,7 @@ function newaqar_product_schema() {
                     $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
                     $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
                     $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : '';
-                    $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : '';
+                    $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : '55';
                 } else {
                     $price = '50000';
                     $payment_systems = '';
@@ -64,7 +64,7 @@ function newaqar_product_schema() {
                     $ld_json['aggregateRating'] = array(
                         "@type" => "AggregateRating",
                         "ratingValue" => $number_of_votes,
-                        "reviewCount" => $number_of_voters
+                        "reviewCount" => $post_id
                     );
 
 
@@ -82,11 +82,11 @@ function newaqar_product_schema() {
                 $date_published = get_post_time('Y-m-d', true, $post);
 
                 // Calculate rating value with validation
-                $rating_value = (!empty($number_of_votes)) ? min(intval($number_of_votes) + 1, 4.6) : 0;
+                $rating_value = (!empty($number_of_votes)) ? min(intval($number_of_votes) + 1, 4.6) : 4.7;
 
                 // Calculate best and worst ratings
-                $bestRating = (!empty($number_of_votes)) ? min($number_of_votes + 1.3, 4.9) : 0;
-                $worstRating = (!empty($number_of_votes)) ? max($number_of_votes - 1.3, 3.7) : 0;
+                $bestRating = (!empty($number_of_votes)) ? min($number_of_votes + 1.3, 4.9) : 5;
+                $worstRating = (!empty($number_of_votes)) ? max($number_of_votes - 1.3, 3.7) : 3;
 
                 // Define the review data
                 $ld_json = array(
@@ -104,8 +104,8 @@ function newaqar_product_schema() {
                     // Add aggregate rating
                     "aggregateRating" => array(
                         "@type" => "AggregateRating",
-                        "ratingValue" => $number_of_votes,
-                        "reviewCount" => $number_of_voters
+                        "ratingValue" => $rating_value,
+                        "reviewCount" => $post_id/20
                     )
                 );
 
