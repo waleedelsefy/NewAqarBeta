@@ -691,7 +691,7 @@
     left: 0;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width:var(--full-width);
     z-index: var(--bs-backdrop-zindex)
 }
 .modal-backdrop.fade {
@@ -1032,7 +1032,7 @@
     left: 0;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width:var(--full-width);
     z-index: 1040
 }
 .offcanvas-backdrop.fade {

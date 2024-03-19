@@ -19,7 +19,7 @@
     }
 </style>
 <div class="container">
-        <div id="content-wrapper" class="w-80">
+        <div id="content-wrapper" class="full-width">
             <div id="developer-desc" class="row mb-5">
                 <div class="page_title">
                     <div class="container clearfix">

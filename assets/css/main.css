@@ -691,7 +691,7 @@
     left: 0;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width:var(--full-width);
     z-index: var(--bs-backdrop-zindex)
 }
 .modal-backdrop.fade {
@@ -1032,7 +1032,7 @@
     left: 0;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width:var(--full-width);
     z-index: 1040
 }
 .offcanvas-backdrop.fade {
@@ -1334,7 +1334,7 @@
 }
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important
+    background-color: rgb(248 249 250 / 0%) !important;
 }
 .bg-primary-subtle {
     background-color: var(--bs-primary-bg-subtle) !important
@@ -3409,10 +3409,7 @@ body ul ul, html ul ul {
 body ul ul ul, html ul ul ul {
     list-style: square
 }
-body ol, html ol {
-    list-style: decimal;
-    margin-inline-start: 19px;
-}
+
 body ol ol, html ol ol {
     list-style: lower-alpha
 }
@@ -3657,6 +3654,7 @@ body .archive-header, html .archive-header {
     margin-top: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    display: none;
 }
 body .archive-title, html .archive-title {
     font-size: 2.4rem;
@@ -4101,6 +4099,7 @@ body input[type=color], body input[type=date], body input[type=datetime], body i
     padding: 15px 20px
 }
 body .top-cities, html .top-cities {
+    width:var(--full-width);
     background: #fff;
     margin: 0;
     overflow: hidden;
@@ -4160,6 +4159,7 @@ body .img-wrap-content span, html .img-wrap-content span {
     font-size: 16px
 }
 body .latest-properties, html .latest-properties {
+    width:var(--full-width);
     background: #f6f6f6;
     margin: 0;
     overflow: hidden;
@@ -4167,6 +4167,7 @@ body .latest-properties, html .latest-properties {
     position: relative
 }
 body .latest-news, html .latest-news {
+    width:var(--full-width);
     background: #f6f6f6;
     margin: 0;
     overflow: hidden;
@@ -4174,6 +4175,7 @@ body .latest-news, html .latest-news {
     position: relative
 }
 body .latest-developers, html .latest-developers {
+    width:var(--full-width);
     background: #ffecfd;
     margin: 0;
     overflow: hidden;

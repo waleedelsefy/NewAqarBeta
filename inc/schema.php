@@ -17,7 +17,7 @@ function newaqar_product_schema() {
                 if (is_array($project_details) && !empty($project_details)) {
                     $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
                     $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
-                    $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : '';
+                    $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : '4.7';
                     $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : '55';
                 } else {
                     $price = '50000';

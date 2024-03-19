@@ -475,7 +475,7 @@
                                         case "Esc":
                                             this.dropdown.hide();
                                             break;
-                                        case "ArrowRight":
+                                        case "Arrowright":
                                             if (this.state.actions.ArrowLeft)
                                                 return;
                                         case "Tab":
@@ -908,7 +908,7 @@
                                     case "ArrowDown":
                                         this.state.dropdown.visible || this.dropdown.show();
                                         break;
-                                    case "ArrowRight":
+                                    case "Arrowright":
                                     {
                                         let e = this.state.inputSuggestion || this.state.ddItemData;
                                         if (e && t.autoComplete.rightKey)
@@ -11953,7 +11953,7 @@
                                 if ("rank-math/command" !== i.name)
                                     return !1;
                                 if (a && (0,
-                                    o.includes)(["ArrowLeft", "ArrowRight"], t.code))
+                                    o.includes)(["ArrowLeft", "Arrowright"], t.code))
                                     return n("ArrowLeft" === t.code),
                                         void (a = !1);
                                 if ("Backspace" !== t.code && (a = "KeyA" === t.code),

@@ -17,3 +17,454 @@ Use this theme to make something cool, have fun, and share what you've learned w
 /*
 All style editing is done via scss/custom.scss
 */
+
+popup.popup--holder {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #0000007a;
+    transition: .3s all ease;
+    opacity: 0;
+    visibility: hidden;
+}
+popup.popup--holder > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+popup.popup--holder .popup--contents {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 20px;
+    background: #FFFF;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px #00000024;
+}
+popup.popup--holder .popup--contents .tabs , #zoom-popup .tabs {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+}
+popup.popup--holder .popup--contents .tabs span,#zoom-popup .tabs span {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 10px;
+    background: #ddd6;
+    border-radius: 7px;
+    font-weight: bold;
+}
+popup.popup--holder .popup--contents .tabs span.active,#zoom-popup .tabs span.active {
+    background: #233f5a;
+    color: #FFF;
+}
+popup.popup--holder .forms--contents {
+    width: 410px;
+}
+popup.popup--holder .forms--contents input {
+    display: block;
+    width: 100%;
+    font-family: Cairo,sans-serif;
+    margin-top: 15px;
+    border: 1px solid #DDD;
+    height: 40px;
+    border-radius: 5px;
+    padding: 5px 19px;
+    font-size: 15px;
+}
+popup.popup--holder .forms--contents form {
+    display: none;
+}
+popup.popup--holder .forms--contents form.active {
+    display: block;
+}
+popup.popup--holder .forms--contents input[type="submit"] {
+    cursor: pointer;
+    font-weight: bold;
+}
+popup.popup--holder.opened {
+    opacity: 1;
+    visibility: visible;
+}
+.forms--contents .messegs {
+    display: block;
+    background: #d4e0e9;
+    padding: 7px 15px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid #ebebeb;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid;
+    border-color: #233f5a transparent;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.meeting--loading {
+    display: flex;
+    direction: rtl;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 30px;
+    width: 100%;
+    gap: 15px;
+}
+.meeting--loading h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    order: 2;
+}
+.meetingINfo {
+    padding: 5px 5px;
+}
+.meetingINfo .input--box {
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.meetingINfo .input--box input {
+    flex: 1;
+    background: #eee;
+    padding: 8px 20px;
+    border-radius: 5px;
+    width: 250px;
+}
+.meetingINfo .input--box > span {
+    min-width: 120px;
+}
+.meetingINfo .input--box > span.CopyPass {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-width: 64px;
+    font-size: 13px;
+    font-weight: bold;
+    bottom: 0;
+    background: #DDD;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    cursor: pointer;
+}
+.meetingINfo a.join--url {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #233f5a;
+    color: #FFF;
+    padding: 6px;
+    border-radius: 8px;
+    gap: 10px;
+    font-weight: bold;
+}
+popup#zoom--meeting .popup--contents {
+    transform: translate(-50%,-50%);
+    top: 50%;
+    width: 470px;
+    max-width: 95%;
+}
+.meetingINfo > h3 {
+    margin: 0 0 20px;
+    padding: 0;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 13px;
+    line-height: 20px;
+}
+.meetingINfo .input--box > span.CopyPass.done {
+    min-width: 100px;
+}
+.meetings--list ul {
+    list-style: none;
+    max-height: 350px;
+    overflow: auto;
+}
+.meetings--list ul li {
+    background: #e6f2ff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+}
+.meetings--list ul li a {
+    display: flex;
+    align-items: center;
+    padding: 3px 15px;
+    gap: 10px;
+    width: 100%;
+}
+.meetings--list ul li i {
+    font-size: 20px;
+}
+.meetings--list ul li .info {
+    flex: 1;
+}
+.meetings--list ul li .info span {
+    display: block;
+}
+.meetings--list ul li:last-child {
+    margin: 0;
+}
+.meetings--list ul::-webkit-scrollbar {
+    width: 3px;
+}
+.meetings--list ul::-webkit-scrollbar-thumb {
+    transition: 150ms all ease;
+}
+.meetings--list ul::-webkit-scrollbar-thumb {
+    background: #233f5a;
+}
+.meetings--list ul::-webkit-scrollbar-track {
+    background: #c8c8c8;
+}
+.meetings--list ul li .info span:nth-child(2) {
+    font-size: 13px;
+    font-weight: bold;
+    color: #9f9f9f;
+}
+.meetings--list ul li .info span:nth-child(1) {
+    font-weight: bold;
+}
+.meetings--list ul li .status {
+    font-weight: bold;
+    font-size: 12px;
+    background: #dce3ef;
+    border: 1px solid #233f5a;
+    padding: 1px 12px;
+    border-radius: 6px
+}
+#zoom-popup .add-property-form {
+    width: 600px;
+    max-width: 90%;
+    background: #FFF;
+}
+#zoom-popup .tabs {
+    margin-bottom: 15px;
+}
+#zoom-popup .content-box {
+    margin: 0 0 10px;
+}
+.tab--contents {
+    display: none;
+}
+.tab--contents.active {
+    display: block;
+}
+.name-phone {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: -10px;
+    flex-wrap: wrap;
+}
+.name-phone input {
+    font-family: Cairo,sans-serif;
+    padding: 11px 10px;
+    flex: 1;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    background: #fcfcfc;
+}
+.name-phone input.create--meeting {
+    flex: 0 0 100%;
+    cursor: pointer;
+    background: #233f5a;
+    color: #FFF;
+    border: 0;
+}
+.project-box .project-data .fav--project {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 1.5rem;
+    z-index: 1
+}
+.imgLoader{
+    opacity: 1;
+    transition: .3s all ease;
+}
+.imgLoader.Loaded{
+    opacity: 1;
+}
+.schedule-meeting form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: space-between
+}
+.schedule-meeting .form-inside-title {
+    font-weight: 700;
+    font-size: .9rem;
+    margin-bottom: 5px;
+    padding-right: 5px
+}
+.schedule-meeting .input-box {
+    width: 98%;
+    margin: 0 1%
+}
+.schedule-meeting .input-box label {
+    font-size: .9rem;
+    margin-bottom: 5px;
+    font-weight: 700
+}
+.schedule-meeting .comment,.schedule-meeting .form-bg {
+    width: 100%;
+    padding-right: 15px;
+    height: 40px;
+    line-height: 38px;
+    color: #233f5a;
+    display: block;
+    font-family: Cairo;
+    font-size: .85rem;
+    margin-bottom: 15px;
+    border: 1px solid silver;
+    font-weight: 700;
+    background-color: #fff;
+    border-radius: 10px
+}
+.schedule-meeting .comment {
+    height: 100px
+}
+.schedule-meeting .search-select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-position: 2%;
+    background-repeat: no-repeat;
+    color: rgba(35,63,90,.7)
+}
+.schedule-meeting .comment::placeholder,.schedule-meeting .form-bg::placeholder {
+    opacity: .5
+}
+.schedule-meeting .submit {
+    margin: 15px 0;
+    background-color: #233f5a;
+    line-height: 32px;
+    padding: 0 20px 3px;
+    color: #fff;
+    font-size: 1rem;
+    border: 0;
+    transition: .5s;
+    border-radius: 10px;
+    font-family: Cairo,sans-serif;
+    align-self: flex-end
+}
+.schedule-meeting .submit:hover {
+    cursor: pointer;
+    background-color: var(--sacnd-link-color)
+}
+.schedule-meeting .radio-box {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    list-style-type: none;
+    padding-right: 0;
+    margin-bottom: 15px
+}
+.schedule-meeting .radio-box [type=radio] {
+    display: none
+}
+.schedule-meeting .radio-box label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5px 10px;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #70777e;
+    font-size: .9rem;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #dadada;
+    transition: .2s
+}
+.schedule-meeting .radio-box input:checked~label,.schedule-meeting .radio-box label:hover {
+    background-color: #edf5f6;
+    border-color: #00b0c4;
+    color: #00b0c4
+}
+@media only screen and (min-width: 992px) {
+    .schedule-meeting .input-box {
+        width:48%;
+        margin: 0 1%
+    }
+    .schedule-meeting .search-select {
+        width: 60%
+    }
+    .schedule-meeting .submit {
+        margin-top: 50px;
+        margin-bottom: 0
+    }
+}
+#zoom-popup form.siteform {
+    padding: 0;
+}
+#zoom-popup .schedule-meeting .submit {
+    margin-top: 0;
+    position: relative;
+    top: -15px;
+}
+#zoom-popup .schedule-meeting .radio-box label {
+    padding: 3px 5px;
+    margin: 0;
+    width: 100%;
+    display: block;
+}
+.banner .slick-slide{
+    min-height: 350px;
+    opacity: 0;
+    transition: .3s .4s all ease;
+}
+.slick-slide.slick-active{
+    opacity: 1 !important;
+    transition: .3s .4s all ease;
+}
+#zoom-popup .content-box li {
+    min-width: 100px;
+}
+.shrink-me .logo img:nth-child(2) , .hp-header .logo img:nth-child(1) {
+    opacity: 1;
+}
+header .logo img:nth-child(2) {
+    position: absolute;
+}

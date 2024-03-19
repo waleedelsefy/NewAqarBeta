@@ -27,7 +27,12 @@ if (is_array($theme_settings)) {
             </div>
         </a>
         <div class="title-container">
-            <a  href="<?php the_permalink(); ?>" class="title" itemprop="name"><?php the_title(); ?></a>
+            <a  href="<?php the_permalink(); ?>" class="title" itemprop="name"><?php
+                $the_title = get_the_title();
+                $max_words = 5;
+                $trimmed_title = wp_trim_words( $the_title, $max_words, '...' );
+                echo $trimmed_title;
+                 ?></a>
             <?php
             $terms = wp_get_post_terms($post->ID, 'city');
             $output = array();

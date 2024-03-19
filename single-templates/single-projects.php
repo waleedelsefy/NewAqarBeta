@@ -230,16 +230,14 @@ if ($city_terms && !is_wp_error($city_terms)) {
             .schedule-meeting .submit{margin-top:50px; margin-bottom: 0}
         }
     </style>
-    <div class="container">
-        <div class="breadcrumbs-wrapper mt-4">
-            <?php
-            the_breadcrumb();
-            ?>
-        </div>
-        <div class="row">
-            <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
-                <div class="main-content">
-                                    <main id="content-project" class="column main-content m-0 py-0">
+<div class="content-body">
+            <div class="main-content two-third">
+                <div class="breadcrumbs-wrapper mt-4">
+                    <?php
+                    the_breadcrumb();
+                    ?>
+                </div>
+                <main id="content-project" class="column main-content m-0 py-0">
                         <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>
                         <div class="content-box">
                             <table class="infotable">
@@ -495,10 +493,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             </table>
                         </div>
                     </main>
-                </div>
             </div>
-            <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
-                <div class="side-bar">
+            <div class="one-third">
+            <div class="side-bar">
                     <?php if ($down_payment != "") : ?>
                         <div class="payment-plan">
                             <div class="side-title"><?php echo __('payment system', 'newaqar'); ?></div>
@@ -558,8 +555,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
 
 
 
+
                 </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
 <?php echo get_footer(); ?>
