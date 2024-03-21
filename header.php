@@ -47,7 +47,7 @@ $us_flag = Assets::getAseetsFileContent('images/usa-flag.svg');
 
     header .logo{transition:0.5s;flex-grow: 1;text-align: right;}
 
-    header .logo img{height:40px;width:auto;float:right;transition: 0.5s;padding:7px 0}
+    header .logo img{height:50px;width:auto;float:right;transition: 0.5s;padding:7px 0}
 
     header .logo-light-bg{display:inline-block}
 

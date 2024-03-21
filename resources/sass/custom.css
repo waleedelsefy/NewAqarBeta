@@ -11857,6 +11857,7 @@ textarea.form-control-lg {
   --primary-have-color-button: #37424F;
   --primary-link-color: #000080;
   --sacnd-link-color: #00a77f;
+  --sacnd-color: var(--sacnd-color);
   --primary-font-family: "newaqarfont", Tahoma, Geneva, Verdana, sans-serif;
   --primary-link-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
@@ -12024,7 +12025,7 @@ html body td, html body th, html html td, html html th {
 html body .button, html body button, html body input[type=button], html body input[type=reset], html body input[type=submit], html html .button, html html button, html html input[type=button], html html input[type=reset], html html input[type=submit] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  background: var(--primary-link-color-collapse);
+  background: var(--sacnd-color);
   color: var(--primary-link-color-disabled);
   border: none;
   border-radius: 0;
@@ -12341,7 +12342,7 @@ html .title-none {
 html .title-container {
   padding-inline-start: 13px;
   padding-inline-end: 0px;
-  height: 45px;
+  height: fit-content;
   line-height: 31px;
   background: transparent;
   padding-top: 8px;
@@ -12413,7 +12414,7 @@ html .headline::after, html .headline::before {
   position: absolute;
   border-radius: 10px;
   height: 6px;
-  background-color: #8cc2c8;
+  background-color: var(--sacnd-color);
   bottom: -10px;
 }
 @media screen and (min-width: 320px) and (max-width: 769px) {
@@ -13550,7 +13551,7 @@ div#fluentform_13_success {
   position: absolute;
   top: 50%;
   padding-inline-start: 4px;
-  background-color: #8cc2c8;
+  background-color: var(--sacnd-color);
   width: 32px;
   font-size: 14px;
   transform: translateY(-50%);
@@ -13630,7 +13631,7 @@ div#fluentform_13_success {
 }
 
 .main-cta a.cta-mail.meeting-cta {
-  background-color: #8cc2c8 !important;
+  background-color: var(--sacnd-color) !important;
   color: #fff !important;
   border: none;
 }
@@ -13920,7 +13921,7 @@ h2.widget-title, .widget-title.h2 {
 #floating-icons a {
   display: block;
   width: 40px;
-  background-color: #8CC2C8;
+  background-color: var(--sacnd-color);
   border-radius: 5px;
   margin: 10px 0;
   font-size: 1rem;

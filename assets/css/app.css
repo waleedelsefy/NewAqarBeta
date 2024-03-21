@@ -43063,6 +43063,7 @@ textarea.form-control-lg {
   --primary-have-color-button: #37424F;
   --primary-link-color: #000080;
   --sacnd-link-color: #00a77f;
+  --sacnd-color: var(--sacnd-color);
   --primary-font-family: 'newaqarfont', Tahoma, Geneva, Verdana, sans-serif;
   --primary-link-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
@@ -43212,7 +43213,7 @@ a.phone {
   body .button, body button, body input[type=button], body input[type=reset], body input[type=submit], html .button, html button, html input[type=button], html input[type=reset], html input[type=submit] {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: var(--primary-link-color-collapse);
+    background: var(--sacnd-color);
     color: var(--primary-link-color-disabled);
     border: none;
     border-radius: 0;
@@ -43533,7 +43534,7 @@ a.phone {
   .title-container {
     padding-inline-start: 13px;
     padding-inline-end: 0px;
-    height: 45px;
+    height: fit-content;
     line-height: 31px;
     background: transparent;
     padding-top: 8px;
@@ -43607,7 +43608,7 @@ a.phone {
      position: absolute;
      border-radius: 10px;
      height: 6px;
-     background-color: #8cc2c8;
+     background-color: var(--sacnd-color);
      bottom: -10px;
    }
   /*end footer*/
@@ -44725,7 +44726,7 @@ div#fluentform_13_success {
   position: absolute;
   top: 50%;
   padding-inline-start: 4px;
-  background-color: #8cc2c8;
+  background-color: var(--sacnd-color);
   width: 32px;
   font-size: 14px;
   transform: translateY(-50%);
@@ -44803,7 +44804,7 @@ div#fluentform_13_success {
   justify-content: space-around;
 }
 .main-cta a.cta-mail.meeting-cta {
-  background-color: #8cc2c8 !important;
+  background-color: var(--sacnd-color) !important;
   color: #fff !important;
   border: none;
 }
@@ -45025,7 +45026,7 @@ h2.widget-title {
 
 #form-btn{display: none}
 
-#floating-icons a{display: block; width:40px;background-color: #8CC2C8;border-radius: 5px;margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
+#floating-icons a{display: block; width:40px;background-color: var(--sacnd-color);border-radius: 5px;margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
 #floating-icons .float-phone{background-color: #192F43;color: #FFFFFF}
 

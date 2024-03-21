@@ -8,9 +8,61 @@ $about = Template::setting('dido_about_'.$lang );
 $email = Template::setting('dido_email');
 ?>
 <style>
-    @charset "utf-8";
+    @media only screen and (max-width: 786px) {
+        span.d-flex.gap-2 {
+            display: flex;
+            justify-content: center;
+        }
+        #floating-icons {
+            width: auto;
+            top: auto;
+            background-color: #fff;
+            right: 0;
+            left: 0;
+            padding: 2px;
+            display: flex;
+            bottom: 0;
+            justify-content: space-around;
+            box-shadow: 0 0 5px rgba(0,0,0,.2);
+        }
+        #floating-icons {
+            position: fixed;
+            z-index: 20;
+            transition: .5s;
+        }
+    }
+    @media only screen and (min-width: 787px) {
+        span.d-flex.gap-2 {
+            display: flex;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        #floating-icons {
+            z-index: 201;
+        }
+        #floating-icons {
+            position: fixed;
+            z-index: 20;
+            right: 10px;
+            transition: .5s;
+            bottom: 10px;
+        }
+        #floating-icons {
+        .main-cta {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        .call-to-action-page {
+            display: none;
+        }
+    }
+    }
 
-
+    .skip-link {display: none !important;}
 
     /*Footer Top*/
 
@@ -129,9 +181,9 @@ $email = Template::setting('dido_email');
 
 <a href="#" id="back-top"><i class="icon-up-big"></i></a>
 <div id="floating-icons">
-    <a target="_blank" href="<?php echo $whatsapp_link; ?>" aria-label="whatsapp" class="float-wts"><i class="icon-whatsapp"></i><span class="hide-pc"><?php Dido::t('whatsapp') ?></span></a>
-    <a href="tel:<?php echo $phone; ?>" aria-label="call" class="float-phone"><i class="icon-phone"></i><span class="hide-pc"><?php Dido::t('Call') ?></span><span class="floating-phone"><?php echo $phone; ?></span></a>
-    <a target="_blank" href="<?php echo $whatsapp_link . the_title() .'برشور' ;?>" aria-label="contact-us" class="float-mail meeting-cta"><i class="icon-book"></i><span class="hide-pc"><?php Dido::t('whatsapp') ?></span></a>
+    <?php if (is_front_page()) {
+    } else { ?>
+        <?php echo do_shortcode('[newaqar_cta]'); } ?>
 </div>
 <?php
 // Wp Scripts
