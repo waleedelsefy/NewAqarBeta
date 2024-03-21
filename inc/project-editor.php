@@ -53,7 +53,6 @@ function register_types_taxonomy() {
         'hierarchical'      => true,
         'public'            => true,
         'show_ui'           => true,
-        'show_admin_column' => true,
         'query_var'         => true,
         'rewrite'           => array('slug' => 'type'),
     );
@@ -317,25 +316,7 @@ function save_project_gallery($post_id) {
 }
 add_action('add_meta_boxes', 'project_gallery_meta_box');
 add_action('save_post', 'save_project_gallery');
-function newaqar_manage_projects_columns($columns) {
-    $columns['project_price'] = 'سعر المتر فى المشروع';
-    return $columns;
-}
-function newaqar_manage_projects_column_content($column_name, $post_ID) {
-    if ($column_name == 'project_price') {
-        $project_details = get_post_meta($post_ID, 'project_details', true);
-        $project_price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
-        echo '<input type="number" name="project_details[project_price]" value="' . esc_attr($project_price) . '" placeholder="' . esc_attr__('Enter project Meter price', 'newaqar') . '" step="1">';
-        echo ' <button type="submit" class="button button-primary" name="save_project_button">' . esc_html__('Save', 'newaqar') . '</button>';
-    }
-}
-function newaqar_manage_projects_columns_sortable($columns) {
-    $columns['project_price'] = 'project_price';
-    return $columns;
-}
-add_filter('manage_projects_posts_columns', 'newaqar_manage_projects_columns');
-add_action('manage_projects_posts_custom_column', 'newaqar_manage_projects_column_content', 10, 2);
-add_filter('manage_edit-projects_sortable_columns', 'newaqar_manage_projects_columns_sortable');
+
 add_action('wp_ajax_save_project_price', 'newaqar_save_project_price');
 function newaqar_save_project_price() {
     $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;

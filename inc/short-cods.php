@@ -225,6 +225,14 @@ function newaqar_developer_shortcode($atts) {
         $developer_image = '';
     }
 
+    $finle_developer_link = ''; // Initializing the variable
+
+    if (isset($developer_link)) {
+        $finle_developer_link = '<a href="' . esc_url($developer_link) . '" class="name text-start d-flex">' . $developer_name . '</a>';
+    } else {
+        $finle_developer_link = '<p>Developer link is not available</p>';
+    }
+
     ob_start();
     if (isset($developer_link)) {
 
@@ -237,13 +245,7 @@ function newaqar_developer_shortcode($atts) {
                 <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name;?>">
             </div>
             <div class="personal-info">
-                <a href="<?php
-                if (isset($developer_link)) {
-                    echo '<a href="' . esc_url($developer_link) . '" class="name text-start d-flex">' . $developer_name . '</a>';
-                } else {
-                    echo '<p>Developer link is not available</p>';
-                }
-              ?></a>
+                <a href="<?php echo $developer_link?>"><?php echo $developer_name;?></a>
             </div>
 
         </div>

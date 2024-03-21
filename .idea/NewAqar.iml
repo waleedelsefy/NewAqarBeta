@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/htmlburger/carbon-fields-yoast" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-i18n" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-math" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-servicemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-crypt" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/mehedimi/wp-query-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/jjgrainger/posttypes" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laminas/laminas-filter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/htmlburger/carbon-fields" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/waleedelsefy/ar-php" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

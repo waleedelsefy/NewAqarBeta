@@ -10,6 +10,30 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/app/vendor/htmlburger/carbon-fields-yoast" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-i18n" />
+      <path value="$PROJECT_DIR$/app/vendor/composer" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-math" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-servicemanager" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-stdlib" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-escaper" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-crypt" />
+      <path value="$PROJECT_DIR$/app/vendor/mehedimi/wp-query-builder" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-validator" />
+      <path value="$PROJECT_DIR$/app/vendor/jjgrainger/posttypes" />
+      <path value="$PROJECT_DIR$/app/vendor/laminas/laminas-filter" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/app/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/app/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/app/vendor/htmlburger/carbon-fields" />
+      <path value="$PROJECT_DIR$/app/vendor/waleedelsefy/ar-php" />
+    </include_path>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />

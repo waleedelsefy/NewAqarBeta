@@ -11904,6 +11904,11 @@ textarea.form-control-lg {
     --tow-third:99vw;
   }
 }
+body {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
 @font-face {
   font-family: "newaqarfont";
   src: url("../fonts/newaqar-Regular.woff2") format("woff"), url("../fonts/newaqar.woff2") format("woff2");

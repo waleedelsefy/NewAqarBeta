@@ -29,7 +29,7 @@ if (is_array($theme_settings)) {
         <div class="title-container">
             <a  href="<?php the_permalink(); ?>" class="title" itemprop="name"><?php
                 $the_title = get_the_title();
-                $max_words = 5;
+                $max_words = 8;
                 $trimmed_title = wp_trim_words( $the_title, $max_words, '...' );
                 echo $trimmed_title;
                  ?></a>

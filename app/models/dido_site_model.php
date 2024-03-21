@@ -90,52 +90,7 @@ class DidoSiteData
 
     // Taxonomies
     return [
-      [
-        'data' => ['name' => 'city','singular' => __('city'),'plural' => __('cities'),'slug' => 'city'],
-        'options' => [ 'rewrite' => ['slug' => 'city', 'with_front' => false] ],
-        'posttype' => 'projects',
-      ],
-      [
-        'data' => ['name' => 'developer','singular' => __('developer'),'plural' => __('developers'),'slug' => 'developer'],
-        'options' => [ 'rewrite' => ['slug' => 'developer', 'with_front' => false] ],
-        'posttype' => 'projects',
-      ],
-      [
-        'data' => ['name' => 'type','singular' => __('type'),'plural' => __('types')],
-        'options' => [ 'rewrite' => ['slug' => 'type', 'with_front' => false] ],
-        'posttype' => 'projects',
-      ],
-      [
-        'data' => ['name' => 'facility','singular' => __('facility'),'plural' => __('Facilities'),'slug' => 'facility'],
-        'options' => [ 'rewrite' => ['slug' => 'facility', 'with_front' => false] ],
-        'posttype' => 'projects',
-      ],
-      [
-        'data' => ['name' => 'unit-type','singular' => __('unit-type'),'plural' => __('unit-types'),'slug' => 'unit-type'],
-        'options' => [ 'rewrite' => ['slug' => 'unit-type', 'with_front' => false] ],
-        'posttype' => 'projects',
-      ],
-      [
-        'data' => ['name' => 'delivery-date','singular' => __('delivery-date'),'plural' => __('delivery-date'),'slug' => 'delivery-date'],
-        'options' => [ 'rewrite' => ['slug' => 'delivery-date', 'with_front' => false] ],
-        'posttype' => 'projects',
-      ],
-      [
-        'data' => ['name' => 'videos','singular' => __('videos category'),'plural' => __('videos category'),'slug' => 'videos'],
-        'options' => [ 'rewrite' => ['slug' => 'videos', 'with_front' => false] ],
-        'posttype' => 'videos',
-      ],
 
-      [
-        'data' => ['name' => 'category','singular' => __('category'),'plural' => __('category'),'slug' => 'category'],
-        'options' => [ 'rewrite' => ['slug' => 'category', 'with_front' => false] ],
-        'posttype' => 'blog',
-      ],
-      [
-        'data' => ['name' => 'post_tag','singular' => __('post_tag'),'plural' => __('post_tag'),'slug' => 'tag'],
-        'options' => [ 'rewrite' => ['slug' => 'tag', 'with_front' => false] ],
-        'posttype' => 'blog',
-      ],
 
     ];
 
@@ -298,54 +253,6 @@ class DidoSiteData
       // projects MetaBoxs
       ------------------------------------------------------------ */
 
-      [
-        'type' => 'post_meta',
-        'title' => 'Project Settings',
-        'where' => ['dataType' => 'post_type','condation' => 'IN','value' => ['projects']],
-        'tabs' => [
-          [
-            'title' => 'Project Details',
-            'fields' => [
-              ['html','dido_title_0965224','','<h2>مشروع مميز</h2>'],
-              ['checkbox','dido_featured','مميز'],
-              ['html','dido_title_0009124','','<h2>بيانات المشروع</h2>'],
-              ['text','dido_price','السعر يبدأ من (رقم فقط بدون فوصل او كلمات)'],
-              ['text','dido_space','المساحات تبدأ من'],
-              ['text','dido_down_payment','المقدم'],
-              ['text','dido_installment','تقسيط على'],
-              ['text','dido_finishing','نوع التشطيب'],
-              ['text','dido_location','موقع المشروع'],
-
-              ['html','dido_title_096roi224','','<h2>ROI</h2>'],
-              ['text','dido_roi','ROI'],
-            ]
-          ],
-          [
-            'title' => 'Map',
-            'fields' => [
-              ['textarea','dido_map_code','Map Code'],
-            ]
-          ],
-          [
-            'title' => 'Media AND Gallery',
-            'fields' => [
-              ['image','dido_outline','مخطط المشروع'],
-              ['media_gallery','dido_media_gallery','Images Gallery'],
-            ]
-          ],
-          [
-            'title' => 'FAQ',
-            'fields' => [
-              ['complex','dido_faq','FAQ','fields' =>
-                [
-                  ['text','dido_faq_title','Question'],
-                  ['textarea','dido_faq_description','Answer'],
-                ]
-              ],
-            ]
-          ],
-        ]
-      ],
 
 
 
@@ -353,20 +260,6 @@ class DidoSiteData
       // videos MetaBoxs
       ------------------------------------------------------------ */
 
-      [
-        'type' => 'post_meta',
-        'title' => 'videos Settings',
-        'where' => ['dataType' => 'post_type','condation' => 'IN','value' => ['videos']],
-        'tabs' => [
-          [
-            'title' => 'video Details',
-            'fields' => [
-              ['html','dido_title_0965224','','<h2>Youtube Url</h2>'],
-              ['text','dido_yt_url','Youtube Url'],
-            ]
-          ],
-        ]
-      ],
 
 
 
