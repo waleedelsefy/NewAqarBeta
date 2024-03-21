@@ -1,5 +1,6 @@
 <?php
 $post_id = get_the_ID();
+$postx_id = get_the_ID();
 
 get_header();
 
@@ -235,6 +236,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 <div class="breadcrumbs-wrapper mt-4">
                     <?php
                     the_breadcrumb();
+                    $the_content= get_the_content();
+
                     ?>
                 </div>
                 <main id="content-project" class="column main-content m-0 py-0">
@@ -439,7 +442,10 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <div class="table-content my-2 py-3 px-3 ">
                             <?php  echo do_shortcode('[social_share_box]');?>
                             <?php echo generate_table_of_contents(); ?>
-                            <?php the_content(); ?>
+                            <?php
+                            echo $the_content;
+
+                            ; ?>
 
                         </div>
                         <?php
