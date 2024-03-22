@@ -492,7 +492,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             }
                             ?>
                         </div>
-                        <div class="row related-section my-5   d-flex justify-content-center">
+                        <div class="units-of-projects">
                             <h3><?php echo __('Similar Projects', 'newaqar'); ?></h3>
                             <?php
                             $customTaxonomyTerms = wp_get_object_terms($post->ID, 'city', array('fields' => 'ids'));

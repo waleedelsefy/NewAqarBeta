@@ -423,8 +423,9 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             ?>
                         </div>
                     </div>
-                    <div class="row related-section my-5 d-flex justify-content-center">
-                        <h3><?php echo __('Similar units', 'newaqar'); ?></h3>
+            <div class="row related-section my-5   d-flex justify-content-center">
+                        <div class="project-sub-title"><?php echo __('Similar units', 'newaqar'); ?></div>
+                        <div class="units-of-projects">
                         <?php
                         $unit_project_id = get_post_meta($post->ID, '_unit_project_id', true);
                         $args = array(
@@ -446,7 +447,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             while ($relatedPosts->have_posts()) {
                                 $relatedPosts->the_post();
                                 ?>
-                                <div class="col-lg-6 col-md-6 w-45 col-12 mt-4">
+                                <div class="card-block">
                                     <?php get_template_part('template-parts/single-card'); ?>
                                 </div>
                                 <?php
@@ -465,7 +466,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                                     while ($randomPosts->have_posts()) {
                                         $randomPosts->the_post();
                                         ?>
-                                        <div class="col-lg-6 col-md-6 w-45 col-12 mt-4">
+                                        <div class="card-block">
                                             <?php get_template_part('template-parts/single-card'); ?>
                                         </div>
                                         <?php
@@ -478,6 +479,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         }
                         wp_reset_postdata();
                         ?>
+                        </div>
                     </div>
                 </section>
         </div>
