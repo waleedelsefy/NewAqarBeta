@@ -224,7 +224,7 @@
                 "issues": "https://github.com/jjgrainger/posttypes/issues",
                 "source": "https://github.com/jjgrainger/posttypes"
             },
-            "time": "2022-05-21T14:15:12+00:00"
+            "time": "2024-05-21T14:15:12+00:00"
         },
         {
             "name": "khaled.alshamaa/ar-php",
@@ -260,8 +260,8 @@
             ],
             "authors": [
                 {
-                    "name": "Khaled Al-Sham'aa",
-                    "email": "khaled@ar-php.org",
+                    "name": "Waleed El-sefy",
+                    "email": "waleedelsefy@gmail.com",
                     "homepage": "http://www.ar-php.org",
                     "role": "Developer"
                 }
@@ -413,7 +413,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-10-10T10:11:09+00:00"
+            "time": "2024-10-10T10:11:09+00:00"
         },
         {
             "name": "laminas/laminas-filter",
@@ -577,7 +577,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-12-02T17:15:52+00:00"
+            "time": "2024-12-02T17:15:52+00:00"
         },
         {
             "name": "laminas/laminas-math",
@@ -644,7 +644,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-10-16T14:22:28+00:00"
+            "time": "2024-10-16T14:22:28+00:00"
         },
         {
             "name": "laminas/laminas-servicemanager",
@@ -734,7 +734,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-12-01T17:03:38+00:00"
+            "time": "2024-12-01T17:03:38+00:00"
         },
         {
             "name": "laminas/laminas-stdlib",
@@ -793,7 +793,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-12-03T18:48:01+00:00"
+            "time": "2024-12-03T18:48:01+00:00"
         },
         {
             "name": "laminas/laminas-validator",
@@ -927,7 +927,7 @@
                 "issues": "https://github.com/mehedimi/wp-query-builder/issues",
                 "source": "https://github.com/mehedimi/wp-query-builder/tree/0.7"
             },
-            "time": "2022-08-20T13:51:05+00:00"
+            "time": "2024-08-20T13:51:05+00:00"
         },
         {
             "name": "psr/container",
@@ -1095,7 +1095,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-01-02T09:53:40+00:00"
+            "time": "2024-01-02T09:53:40+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -1254,7 +1254,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-03T14:55:06+00:00"
+            "time": "2024-11-03T14:55:06+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1337,7 +1337,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-11-03T14:55:06+00:00"
+            "time": "2024-11-03T14:55:06+00:00"
         }
     ],
     "packages-dev": [],

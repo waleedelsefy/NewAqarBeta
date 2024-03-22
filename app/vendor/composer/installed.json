@@ -199,7 +199,7 @@
                 "phpunit/phpunit": "8.*",
                 "squizlabs/php_codesniffer": "3.*"
             },
-            "time": "2022-05-21T14:15:12+00:00",
+            "time": "2024-05-21T14:15:12+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -266,8 +266,8 @@
             ],
             "authors": [
                 {
-                    "name": "Khaled Al-Sham'aa",
-                    "email": "khaled@ar-php.org",
+                    "name": "Waleed El-sefy",
+                    "email": "waleedelsefy@gmail.com",
                     "homepage": "http://www.ar-php.org",
                     "role": "Developer"
                 }
@@ -393,7 +393,7 @@
                 "psalm/plugin-phpunit": "^0.17.0",
                 "vimeo/psalm": "^4.22.0"
             },
-            "time": "2022-10-10T10:11:09+00:00",
+            "time": "2024-10-10T10:11:09+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -557,7 +557,7 @@
                 "laminas/laminas-validator": "You should install this package to use the provided validators",
                 "laminas/laminas-view": "You should install this package to use the provided view helpers"
             },
-            "time": "2022-12-02T17:15:52+00:00",
+            "time": "2024-12-02T17:15:52+00:00",
             "type": "library",
             "extra": {
                 "laminas": {
@@ -627,7 +627,7 @@
                 "ext-bcmath": "If using the bcmath functionality",
                 "ext-gmp": "If using the gmp functionality"
             },
-            "time": "2022-10-16T14:22:28+00:00",
+            "time": "2024-10-16T14:22:28+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -714,7 +714,7 @@
             "suggest": {
                 "ocramius/proxy-manager": "ProxyManager ^2.1.1 to handle lazy initialization of services"
             },
-            "time": "2022-12-01T17:03:38+00:00",
+            "time": "2024-12-01T17:03:38+00:00",
             "bin": [
                 "bin/generate-deps-for-config-factory",
                 "bin/generate-factory-for-class"
@@ -788,7 +788,7 @@
                 "psalm/plugin-phpunit": "^0.18.0",
                 "vimeo/psalm": "^5.0.0"
             },
-            "time": "2022-12-03T18:48:01+00:00",
+            "time": "2024-12-03T18:48:01+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -935,7 +935,7 @@
                 "symfony/var-dumper": "^5.4",
                 "vlucas/phpdotenv": "^5.4"
             },
-            "time": "2022-08-20T13:51:05+00:00",
+            "time": "2024-08-20T13:51:05+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1087,7 +1087,7 @@
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2022-01-02T09:53:40+00:00",
+            "time": "2024-01-02T09:53:40+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1242,7 +1242,7 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2022-11-03T14:55:06+00:00",
+            "time": "2024-11-03T14:55:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1322,7 +1322,7 @@
             "require": {
                 "php": ">=7.1"
             },
-            "time": "2022-11-03T14:55:06+00:00",
+            "time": "2024-11-03T14:55:06+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {

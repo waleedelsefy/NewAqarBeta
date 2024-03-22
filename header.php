@@ -2,14 +2,12 @@
 <html lang="<?php echo Dido::getLang(); ?>" dir="<?php echo Dido::getContentDir(); ?>">
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 <?php echo Dido::getContentDir(); ?>">
     <?php wp_head(); ?>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
     </style>
-    <style type="text/css">
-        <?php require_once (get_template_directory()."/style.css"); ?>
-    </style>
+
     <?php
     /* $getContents = file_get_contents($file_url);
      $getContents = preg_replace('/\s+/', '', preg_replace( "/\r|\n/", "", $getContents));
@@ -425,7 +423,7 @@ $us_flag = Assets::getAseetsFileContent('images/usa-flag.svg');
 
     /*header button*/
 
-    .header-btn{display: inline-block; padding:5px;line-height: 30px; background-color: var(--sacnd-link-color); color:#FFFFFF; border-radius: 5px;margin:0 5px;font-weight: 600;white-space: nowrap;transition:0.2s;order:1}
+    .header-btn{display: inline-block; padding:5px;line-height: 20px; background-color: var(--sacnd-link-color); color:#FFFFFF; border-radius: 5px;margin:0 5px;font-weight: 600;white-space: nowrap;transition:0.2s;order:1}
 
     .header-btn:hover{background-color: #233F5A}
 
@@ -495,7 +493,6 @@ $us_flag = Assets::getAseetsFileContent('images/usa-flag.svg');
                     <a href="<?php echo home_url() ?>" title="<?php echo get_bloginfo( "name" ) ?>" aria-label="<?php echo get_bloginfo( "name" ) ?>">
 
                         <img class="imgLoader" src="<?php echo get_template_directory_uri() ?>/assets/images/newaqaar.jpg" alt="<?php echo SITE_NAME; ?>" width="207" height="73" class="logo-light-bg"/>
-                        <img class="imgLoader" src="<?php echo get_template_directory_uri() ?>/assets/images/<?=(!is_page_template("page-home.php")) ? "newaqaar.jpg" : "newaqaar.jpg" ?>" alt="<?php echo SITE_NAME; ?>" width="207" height="73" class="logo-dark-bg"/>
                     </a>
                 </div>
                 <div class="navi">

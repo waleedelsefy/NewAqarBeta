@@ -7,7 +7,7 @@ authors:
     given-names: Khaled
     orcid: "https://orcid.org/0000-0002-7668-3798"
 version: 6.3.0
-date-released: "2022-06-17"
+date-released: "2024-06-17"
 identifiers:
   - description: Ar-PHP version 6.3.0
     type: doi

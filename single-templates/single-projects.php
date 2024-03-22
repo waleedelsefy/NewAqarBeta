@@ -75,8 +75,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
         }
         .main-cta a{border-radius: 5px;display: flex;align-items: center;justify-content: center;width:100%;height:30px;line-height: 28px;text-align: center;color:var(--primary-color-collapse);margin:5px;font-size: 0.8rem;transition: 0.3s;background-color: #FFFFFF;border:1px solid #9A9A9A;white-space: nowrap; overflow: hidden;font-weight: 600;z-index: 1;position:relative}
         .main-cta a:hover{background-color: var(--primary-color-collapse);color: #FFFFFF;border-color:var(--primary-color-collapse)}
-        .main-cta i{font-size: 0.9rem;margin-inline-end: 2px;margin-inline-start: -5px; color: #8CC2C8}
-        .main-cta .cta-wts i{color: #9BB73D}
+        .main-cta i{font-size: 1.4rem;margin-inline-end: 2px;margin-inline-start: -5px; color: #8CC2C8}
+        .main-cta .cta-wts i{color: #fff9f9}
         .main-cta .cta-phone i{color: var(--primary-color-collapse)}
         @media only screen and (min-width:992px){
             .main-cta a{height:36px;line-height: 34px;font-size: 0.9rem;}
@@ -108,7 +108,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
         table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
         table.infotable a:hover{color: var(--primary-have-color-collapse)}
         @media only screen and (min-width:992px){
-            table.infotable th.ttitle {font-size: 0.9rem; width: 20%; padding-inline-start: 20px;}
+            table.infotable th.ttitle {font-size: 0.9rem; width: 25%; padding-inline-start: 20px;}
             table.infotable td, table.infotable th {font-size: 1rem; padding: 7px 25px 7px 15px}
         }
         .facility-img img{height:25px;width:auto;display: block; margin-inline-end: 5px}
@@ -230,6 +230,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
             .schedule-meeting .search-select{width:60%}
             .schedule-meeting .submit{margin-top:50px; margin-bottom: 0}
         }
+        .post-thumbnail {
+            margin-top: 40px !important;
+        }
     </style>
 <div class="content-body">
             <div class="main-content two-third">
@@ -239,6 +242,10 @@ if ($city_terms && !is_wp_error($city_terms)) {
                     $the_content = apply_filters('the_content', get_post_field('post_content', $postx_id));
 
                     ?>
+                    <div class="gallery-half post-thumbnail d-flex justify-content-center align-items-center">
+                        <?php the_post_thumbnail() ?>
+                    </div>
+
                 </div>
                 <main id="content-project" class="column main-content m-0 py-0">
                         <div class="project-sub-title"><?php echo __('Project Details', 'newaqar'); ?></div>

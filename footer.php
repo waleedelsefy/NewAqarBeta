@@ -53,6 +53,7 @@ $email = Template::setting('dido_email');
         }
         #floating-icons {
         .main-cta {
+            font-size: 1.4rem;
             width: 100%;
             display: flex;
             justify-content: space-around;

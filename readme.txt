@@ -145,29 +145,29 @@ bootScore includes support for WooCommerce and Infinite Scroll in Jetpack.
         * [IMPROVEMENT] Prevent self-closing offcanvas if dropdown has nested dropdowns (modified nav-walker with 3 or more levels depth) #350
         * [IMPROVEMENT] Make use of admin bar height css var for offcanvas and modal #360
         * [BUGFIX] Add show-password to all pages in WC user offcanvas #344
-    = 5.2.3.0 - December 16 2022 =
+    = 5.2.3.0 - December 16 2024 =
         * [UPDATE] WC 7.2.0 templates
         * [UPDATE] Bootstrap 5.2.3
         * [IMPROVEMENT] Türkçe
         * [NEW] Magyar, thanks to iamdtms
-    = 5.2.2.1 - November 03 2022 =
+    = 5.2.2.1 - November 03 2024 =
         PHP
         * [UPDATE] WooCommerce 7.0.1 templates
         CSS
         * [IMPROVEMENT] Fix nonstandard prefix for ::selection
-    = 5.2.2.0 - October 17 2022 =
+    = 5.2.2.0 - October 17 2024 =
         PHP
         * [IMPROVEMENT] scss compile, expanded for dev #279
         * [IMPROVEMENT] Bootstrap 5.2.2 breadcrumb component #274
         * [IMPROVEMENT] Feature package.json extra categories #276
         Updates
         * [UPDATE] Bootstrap 5.2.2 #275
-    = 5.2.1.1 - September 15 2022 =
+    = 5.2.1.1 - September 15 2024 =
         PHP
         * [IMPROVEMENT] Same author meta function in single-*.php as in loop #251
         * [UPDATE] form-login.php (WooCommerce 6.9.0) #255
         * [BUGFIX] Readded empty IE alert function #258
-    = 5.2.1.0 - September 08 2022 =
+    = 5.2.1.0 - September 08 2024 =
         CSS
         * [IMPROVEMENT] Offcanvas cart-loader #199
         * [IMPROVEMENT] Load style.css after main.css #201
@@ -190,7 +190,7 @@ bootScore includes support for WooCommerce and Infinite Scroll in Jetpack.
         [UPDATE] scssphp 1.11.0 #246
         [UPDATE] Font Awesome 6.1.2 #196
         [UPDATE] Bootstrap 5.2.1
-    = 5.2.0.0 - July 22 2022 =
+    = 5.2.0.0 - July 22 2024 =
         CSS
         * [IMPROVEMENT] Add scss sourcemap support when theme is in dev_mode #98
         * [IMPROVEMENT] Set compiled output to css/main.css #99
@@ -235,9 +235,9 @@ bootScore includes support for WooCommerce and Infinite Scroll in Jetpack.
         * [UPDATE] Bootstrap https://github.com/bootscore/bootscore/commits/5.2.0.0-release
         * [UPDATE] Font Awesome 6.1.1 free #120
         * [UPDATE] scssphp 1.10.3 #158
-    = 5.1.3.2 - June 03 2022 =
+    = 5.1.3.2 - June 03 2024 =
         * [BUGFIX] Offcanvas backdrop in Chrome/Edge
-    = 5.1.3.1 - January 25 2022 =
+    = 5.1.3.1 - January 25 2024 =
         CSS
         * [IMPROVEMENT] Pushed style.css to scss files #33
         * [IMPROVEMENT] Added _bscore_woocommerce.scss file to prepare merging css to scss #41

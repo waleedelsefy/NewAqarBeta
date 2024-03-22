@@ -3465,10 +3465,7 @@ body ol ol, html ol ol {
 body ol ol ol, html ol ol ol {
     list-style: lower-roman
 }
-body li, html li {
-    line-height: 2em;
-    margin: 0 2rem 0 0
-}
+
 body li > ol, body li > ul, html li > ol, html li > ul {
     margin: 1rem 2rem 0 0
 }

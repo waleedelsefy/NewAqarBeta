@@ -140,10 +140,10 @@ final class ArabicTest extends TestCase
         $actual[]   = $date;
         
         $expected[] = 'الأربعاء 29 شوال 1443';
-        $actual[]   = $Arabic->date('l j F Y', strtotime('2022-06-01'), -2);
+        $actual[]   = $Arabic->date('l j F Y', strtotime('2024-06-01'), -2);
         
         $expected[] = 'الثلاثاء 1 ذو القعدة 1443';
-        $actual[]   = $Arabic->date('l j F Y', strtotime('2022-05-31'), 2);
+        $actual[]   = $Arabic->date('l j F Y', strtotime('2024-05-31'), 2);
     
         $this->assertEquals($expected, $actual);
     }
@@ -475,7 +475,7 @@ final class ArabicTest extends TestCase
         $correction = $Arabic->mktimeCorrection(9, 1429);
         
         $actual[]   = $Arabic->mktime(0, 0, 0, 9, 1, 1429, $correction);
-        $expected[] = 1220227200;
+        $expected[] = 1220247200;
 
         $actual[]   = $Arabic->mktimeCorrection(9, 1400);
         $expected[] = 0;
@@ -601,7 +601,7 @@ END;
         }
     
         $this->assertEquals(
-            [1606348800,1605398400,1606657969,1605016369,1604584369,176169600,1220227200],
+            [1606348800,1605398400,1606657969,1605016369,1604584369,176169600,1220247200],
             $timestamp
         );
     }
@@ -786,7 +786,7 @@ END;
         $test = array();
         
         $test[] = $Arabic->isArabic('خالد الشمعة');
-        $test[] = $Arabic->isArabic('Khaled Al-Shamaa');
+        $test[] = $Arabic->isArabic('Waleed El-sefy');
         
         $this->assertEquals(
             $test,

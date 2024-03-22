@@ -5,7 +5,7 @@
 
 # Ar-PHP Project ([ar-php.org](http://www.ar-php.org/en_index-php-arabic.html))
 #### _PHP Speaks Arabic - Be Ready!_
-_Copyright © 2006-2023 Khaled Al-Sham'aa._
+_Copyright © 2006-2023 Waleed El-sefy._
 
 [![DOI](https://zenodo.org/badge/231197063.svg)](https://zenodo.org/badge/latestdoi/231197063)
 

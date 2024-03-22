@@ -80,7 +80,7 @@
                 "issues": "https://github.com/dealerdirect/phpcodesniffer-composer-installer/issues",
                 "source": "https://github.com/dealerdirect/phpcodesniffer-composer-installer"
             },
-            "time": "2022-02-04T12:51:07+00:00"
+            "time": "2024-02-04T12:51:07+00:00"
         },
         {
             "name": "doctrine/instantiator",
@@ -150,7 +150,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-03T08:28:38+00:00"
+            "time": "2024-03-03T08:28:38+00:00"
         },
         {
             "name": "laminas/laminas-coding-standard",
@@ -206,7 +206,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2022-08-24T17:45:47+00:00"
+            "time": "2024-08-24T17:45:47+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -265,7 +265,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-03T13:19:32+00:00"
+            "time": "2024-03-03T13:19:32+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -321,7 +321,7 @@
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.1"
             },
-            "time": "2022-09-04T07:30:47+00:00"
+            "time": "2024-09-04T07:30:47+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -432,7 +432,7 @@
                 "issues": "https://github.com/phar-io/version/issues",
                 "source": "https://github.com/phar-io/version/tree/3.2.1"
             },
-            "time": "2022-02-21T01:04:05+00:00"
+            "time": "2024-02-21T01:04:05+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
@@ -476,7 +476,7 @@
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
                 "source": "https://github.com/phpstan/phpdoc-parser/tree/1.5.1"
             },
-            "time": "2022-05-05T11:32:40+00:00"
+            "time": "2024-05-05T11:32:40+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -553,7 +553,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-30T12:24:04+00:00"
+            "time": "2024-08-30T12:24:04+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -896,7 +896,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-25T03:44:45+00:00"
+            "time": "2024-09-25T03:44:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -1137,7 +1137,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-14T12:41:17+00:00"
+            "time": "2024-09-14T12:41:17+00:00"
         },
         {
             "name": "sebastian/complexity",
@@ -1323,7 +1323,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-03T09:37:03+00:00"
+            "time": "2024-04-03T09:37:03+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -1400,7 +1400,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-14T06:03:37+00:00"
+            "time": "2024-09-14T06:03:37+00:00"
         },
         {
             "name": "sebastian/global-state",
@@ -1464,7 +1464,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-14T08:28:10+00:00"
+            "time": "2024-02-14T08:28:10+00:00"
         },
         {
             "name": "sebastian/lines-of-code",
@@ -1807,7 +1807,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-12T14:47:03+00:00"
+            "time": "2024-09-12T14:47:03+00:00"
         },
         {
             "name": "sebastian/version",
@@ -1921,7 +1921,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-05-25T10:58:12+00:00"
+            "time": "2024-05-25T10:58:12+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -1977,7 +1977,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2022-06-18T07:21:10+00:00"
+            "time": "2024-06-18T07:21:10+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -2082,7 +2082,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-02-15T19:52:12+00:00"
+            "time": "2024-02-15T19:52:12+00:00"
         }
     ],
     "aliases": [],

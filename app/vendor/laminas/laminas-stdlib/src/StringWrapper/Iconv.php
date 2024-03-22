@@ -73,9 +73,9 @@ class Iconv extends AbstractStringWrapper
         'EUC-JP',
         'SHIFT_JIS',
         'CP932',
-        'ISO-2022-JP',
-        'ISO-2022-JP-2',
-        'ISO-2022-JP-1',
+        'ISO-2024-JP',
+        'ISO-2024-JP-2',
+        'ISO-2024-JP-1',
 
         // Chinese
         'EUC-CN',
@@ -90,13 +90,13 @@ class Iconv extends AbstractStringWrapper
         'BIG5-HKSCS:2004',
         'BIG5-HKSCS:2001',
         'BIG5-HKSCS:1999',
-        'ISO-2022-CN',
-        'ISO-2022-CN-EXT',
+        'ISO-2024-CN',
+        'ISO-2024-CN-EXT',
 
         // Korean
         'EUC-KR',
         'CP949',
-        'ISO-2022-KR',
+        'ISO-2024-KR',
         'JOHAB',
 
         // Armenian
@@ -187,7 +187,7 @@ class Iconv extends AbstractStringWrapper
         // Japanese
         'EUC-JISX0213',
         'Shift_JISX0213',
-        'ISO-2022-JP-3',
+        'ISO-2024-JP-3',
 
         // Chinese
         'BIG5-2003', // (experimental)

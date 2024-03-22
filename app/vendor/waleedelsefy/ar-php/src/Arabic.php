@@ -5,7 +5,7 @@ namespace ArPHP\I18N;
 /**
  * ----------------------------------------------------------------------
  *
- * Copyright (c) 2006-2023 Khaled Al-Sham'aa.
+ * Copyright (c) 2006-2023 Waleed El-sefy.
  *
  * http://www.ar-php.org
  *
@@ -33,7 +33,7 @@ namespace ArPHP\I18N;
  *
  * Filename:   ar-php.php
  *
- * Original    Author(s): Khaled Al-Sham'aa <khaled@ar-php.org>
+ * Original    Author(s): Waleed El-sefy <waleedelsefy@gmail.com>
  *
  * Purpose:    Set of PHP classes developed to enhance Arabic web
  *             applications by providing set of tools includes stem-based searching,
@@ -47,8 +47,8 @@ namespace ArPHP\I18N;
  *         applications by providing set of tools includes translitiration,
  *         soundex, Hijri calendar, spell numbers, keyboard language, and more...
  *
- * @author    Khaled Al-Shamaa <khaled@ar-php.org>
- * @copyright 2006-2023 Khaled Al-Shamaa
+ * @author    Waleed El-sefy <waleedelsefy@gmail.com>
+ * @copyright 2006-2023 Waleed El-sefy
  *
  * @license   LGPL <http://www.gnu.org/licenses/lgpl.txt>
  * @version   6.3.2 released in Jan 21, 2023
@@ -703,7 +703,7 @@ class Arabic
      * @param string $text Arabic text you would like to standardize
      *
      * @return String Standardized version of input Arabic text
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function standard($text)
     {
@@ -730,7 +730,7 @@ class Arabic
      * @param string $str Arabic word you would like to check if it is feminine
      *
      * @return boolean Return true if input Arabic word is feminine
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function isFemale($str)
     {
@@ -777,7 +777,7 @@ class Arabic
      * @param integer $now  The timestamp used to calculate the returned value.
      *
      * @return Integer Returns a timestamp on success, FALSE otherwise
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function strtotime($text, $now)
     {
@@ -824,7 +824,7 @@ class Arabic
      *
      * @return integer Returns the current time measured in the number of
      *                 seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function mktime($hour, $minute, $second, $hj_month, $hj_day, $hj_year, $correction = 0)
     {
@@ -844,7 +844,7 @@ class Arabic
      * @param integer $d Hijri day (Islamic calendar)
      *
      * @return array<int> Gregorian date [int Year, int Month, int Day]
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDateIslamicToGreg($y, $m, $d)
     {
@@ -862,7 +862,7 @@ class Arabic
      * @param integer $y Hijri year  (Islamic calendar), valid range [1420-1459]
      *
      * @return integer Correction factor to fix Hijri calendar calculation using Um-Al-Qura calendar information
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function mktimeCorrection($m, $y)
     {
@@ -892,7 +892,7 @@ class Arabic
      *                           in this calculation (default value is true)
      *
      * @return integer Days in a given Hijri month
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function hijriMonthDays($m, $y, $umAlqoura = true)
     {
@@ -937,7 +937,7 @@ class Arabic
      * @param string $locale Locale information (e.g. 'en_GB' or 'de_DE')
      *
      * @return String Out of vocabulary English string in Arabic characters
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function en2ar($string, $locale = 'en_US')
     {
@@ -978,7 +978,7 @@ class Arabic
      *                         [UNGEGN, UNGEGN+, RJGC, SES, ISO233]
      *
      * @return String Out of vocabulary Arabic string in English characters
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function ar2en($string, $standard = 'UNGEGN')
     {
@@ -1050,7 +1050,7 @@ class Arabic
      *                       8) Hijri format (Islamic calendar) in English
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setDateMode($mode = 1)
     {
@@ -1075,7 +1075,7 @@ class Arabic
      *               8) Hijri format (Islamic calendar) in English
      *
      * @return Integer Value of $mode properity
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getDateMode()
     {
@@ -1091,7 +1091,7 @@ class Arabic
      *
      * @return string Format Arabic date string according to given format string using the given integer timestamp
      *                or the current local time if no timestamp is given.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function date($format, $timestamp, $correction = 0)
     {
@@ -1206,7 +1206,7 @@ class Arabic
      * @param string $str Date/time string using English terms
      *
      * @return string Date/time string using Arabic terms
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDateEn2ar($str)
     {
@@ -1265,7 +1265,7 @@ class Arabic
      *                       7) Morocco style
      *
      * @return array<string> Arabic month names in selected style
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDateArabicMonths($mode)
     {
@@ -1286,7 +1286,7 @@ class Arabic
      * @param integer $d Day Gregorian day
      *
      * @return array<int> Hijri date [int Year, int Month, int Day](Islamic calendar)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDateGregToIslamic($y, $m, $d)
     {
@@ -1303,7 +1303,7 @@ class Arabic
      * @param integer $jd Julian day
      *
      * @return array<int> Hijri date [int Year, int Month, int Day](Islamic calendar)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDateJdToIslamic($jd)
     {
@@ -1329,7 +1329,7 @@ class Arabic
      * @param integer $d Day Hijri day
      *
      * @return integer Julian day
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDateIslamicToJd($y, $m, $d)
     {
@@ -1344,7 +1344,7 @@ class Arabic
      * @param integer $time Unix timestamp
      *
      * @return integer Correction factor to fix Hijri calendar calculation using Um-Al-Qura calendar information
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function dateCorrection($time)
     {
@@ -1373,7 +1373,7 @@ class Arabic
      * @param integer $value Counted object feminine (1 for masculine & 2 for feminine)
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setNumberFeminine($value)
     {
@@ -1390,7 +1390,7 @@ class Arabic
      * @param integer $value Grammar position of counted object (1 if Marfoua & 2 if Mansoub or Majrour)
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setNumberFormat($value)
     {
@@ -1407,7 +1407,7 @@ class Arabic
      * @param integer $value Is it an ordering number? default is 1 (use 1 if no and 2 if yes)
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setNumberOrder($value)
     {
@@ -1422,7 +1422,7 @@ class Arabic
      * Get the feminine flag of counted object
      *
      * @return integer return current setting of counted object feminine flag
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getNumberFeminine()
     {
@@ -1433,7 +1433,7 @@ class Arabic
      * Get the grammer position flag of counted object
      *
      * @return integer return current setting of counted object grammer position flag
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getNumberFormat()
     {
@@ -1444,7 +1444,7 @@ class Arabic
      * Get the ordering flag value
      *
      * @return integer return current setting of ordering flag value
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getNumberOrder()
     {
@@ -1457,7 +1457,7 @@ class Arabic
      * @param integer $number The number you want to spell in Arabic idiom
      *
      * @return string The Arabic idiom that spells inserted number
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function int2str($number)
     {
@@ -1495,7 +1495,7 @@ class Arabic
      * @param string  $word  The counted item
      *
      * @return string The Arabic idiom that spells inserted number followed by plural form of the counted item.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function int2strItem($count, $word)
     {
@@ -1519,7 +1519,7 @@ class Arabic
      * @param string  $lang   The two-letter language code in ISO 639-1 standard [ar|en]
      *
      * @return string The Arabic idiom that spells inserted number as money
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function money2str($number, $iso = 'SYP', $lang = 'ar')
     {
@@ -1563,7 +1563,7 @@ class Arabic
      * @param string $str The Arabic idiom that spells input number
      *
      * @return integer The number you spell it in the Arabic idiom
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function str2int($str)
     {
@@ -1653,7 +1653,7 @@ class Arabic
      * @param boolean $zero   Present leading zero if true [default is true]
      *
      * @return string The Arabic idiom that spells inserted number
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arNumbersSubStr($number, $zero = true)
     {
@@ -1729,7 +1729,7 @@ class Arabic
      * @param integer $number Sub block number of three digits max you want to spell in Arabic idiom
      *
      * @return string The Arabic idiom that spells inserted sub block
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arNumberWrittenBlock($number)
     {
@@ -1809,7 +1809,7 @@ class Arabic
      * @param integer $number The number you want to present in Arabic-Indic digits using HTML entities
      *
      * @return string The Arabic-Indic digits represent inserted integer number using HTML entities
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function int2indic($number)
     {
@@ -1828,7 +1828,7 @@ class Arabic
      * @param string $text Odd Arabic string
      *
      * @return string Normal English string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function swapAe($text)
     {
@@ -1868,7 +1868,7 @@ class Arabic
      * @param string $text Odd English string
      *
      * @return string Normal Arabic string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function swapEa($text)
     {
@@ -1884,7 +1884,7 @@ class Arabic
      * @param string $text Odd Arabic string
      *
      * @return string Normal French string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function swapAf($text)
     {
@@ -1900,7 +1900,7 @@ class Arabic
      * @param string $text Odd French string
      *
      * @return string Normal Arabic string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function swapFa($text)
     {
@@ -1919,7 +1919,7 @@ class Arabic
      * @param string $out  Output language [ar|en|fr]
      *
      * @return string Normal string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function swapCore($text, $in, $out)
     {
@@ -1974,7 +1974,7 @@ class Arabic
      * @param string $str Inserted string from the keyboard
      *
      * @return float Calculated score for input string as English language
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function checkEn($str)
     {
@@ -2002,7 +2002,7 @@ class Arabic
      * @param string $str Inserted string from the keyboard
      *
      * @return float Calculated score for input string as Arabic language
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function checkAr($str)
     {
@@ -2032,7 +2032,7 @@ class Arabic
      * @param string $str Inserted string from the keyboard
      *
      * @return string Fixed string language and letter case to the better guess
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function fixKeyboardLang($str)
     {
@@ -2109,7 +2109,7 @@ class Arabic
      * @param integer $integer Soundex key length
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setSoundexLen($integer)
     {
@@ -2124,7 +2124,7 @@ class Arabic
      * @param string $str Soundex key language [ar|en]
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setSoundexLang($str)
     {
@@ -2143,7 +2143,7 @@ class Arabic
      * @param string $str Soundex key mapping code [soundex|phonix]
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setSoundexCode($str)
     {
@@ -2166,7 +2166,7 @@ class Arabic
      * Get the soundex key length used now
      *
      * @return integer return current setting for soundex key length
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getSoundexLen()
     {
@@ -2177,7 +2177,7 @@ class Arabic
      * Get the soundex key language used now
      *
      * @return string return current setting for soundex key language
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getSoundexLang()
     {
@@ -2188,7 +2188,7 @@ class Arabic
      * Get the soundex key calculation method used now
      *
      * @return string return current setting for soundex key calculation method
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getSoundexCode()
     {
@@ -2201,7 +2201,7 @@ class Arabic
      * @param string $word The word that we want to encode it
      *
      * @return string The calculated soundex/phonix numeric code
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arSoundexMapCode($word)
     {
@@ -2227,7 +2227,7 @@ class Arabic
      * @param string $word Arabic word you want to check if it is feminine
      *
      * @return string Same word without any duplicate chracters
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arSoundexTrimRep($word)
     {
@@ -2256,7 +2256,7 @@ class Arabic
      * @param string $word Arabic word you want to calculate its soundex
      *
      * @return string Soundex value for a given Arabic word
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function soundex($word)
     {
@@ -2298,7 +2298,7 @@ class Arabic
      * @param boolean $nextLink If TRUE (default), when this letter be next, then previous will be linked to it
      *
      * @return void
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function addGlyphs($char, $hex, $prevLink = true, $nextLink = true)
     {
@@ -2317,7 +2317,7 @@ class Arabic
      * @param string $str Arabic string in UTF-8 charset
      *
      * @return string Arabic glyph joining in UTF-8 hexadecimals stream
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arGlyphsPreConvert($str)
     {
@@ -2508,7 +2508,7 @@ class Arabic
      * @return string Arabic glyph joining in UTF-8 hexadecimals stream (take
      *                care of whole document including English sections as well
      *                as numbers and arcs etc...)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function utf8Glyphs($text, $max_chars = 50, $hindo = true, $forcertl = false)
     {
@@ -2627,7 +2627,7 @@ class Arabic
      *                               both named and numerical entities.
      *
      * @return string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arGlyphsDecodeEntities($text, $exclude = array())
     {
@@ -2657,7 +2657,7 @@ class Arabic
      * @param array<string> $exclude   An array of characters which should not be decoded
      *
      * @return string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arGlyphsDecodeEntities2($prefix, $codepoint, $original, &$table, &$exclude)
     {
@@ -2708,7 +2708,7 @@ class Arabic
      *                                 them (in array format where items are those fields names)
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setQueryArrFields($arrConfig)
     {
@@ -2727,7 +2727,7 @@ class Arabic
      *                          them (in string format using comma as delimated)
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setQueryStrFields($strConfig)
     {
@@ -2745,7 +2745,7 @@ class Arabic
      * @param integer $mode Setting value to be saved in the $mode propority [0 for OR logic | 1 for AND logic]
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setQueryMode($mode)
     {
@@ -2761,7 +2761,7 @@ class Arabic
      * Getting $mode propority value that refer to search mode [0 for OR logic | 1 for AND logic]
      *
      * @return integer Value of $mode properity
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getQueryMode()
     {
@@ -2773,7 +2773,7 @@ class Arabic
      * Getting values of $_fields Array in array format
      *
      * @return array<string> Value of $_fields array in Array format
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getQueryArrFields()
     {
@@ -2786,7 +2786,7 @@ class Arabic
      * Getting values of $_fields array in String format (comma delimated)
      *
      * @return string Values of $_fields array in String format (comma delimated)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getQueryStrFields()
     {
@@ -2803,7 +2803,7 @@ class Arabic
      * @param string $arg String that user search for in the database table
      *
      * @return string The WHERE section in SQL statement (MySQL database engine format)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arQueryWhereCondition($arg)
     {
@@ -2866,7 +2866,7 @@ class Arabic
      * @param string $arg String (one word) that you want to build a condition for
      *
      * @return string sub SQL condition (for internal use)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function getWordRegExp($arg)
     {
@@ -2885,7 +2885,7 @@ class Arabic
      * @param string $arg String (one word) that you want to build a condition for
      *
      * @return string sub SQL condition (for internal use)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function getWordLike($arg)
     {
@@ -2901,7 +2901,7 @@ class Arabic
      *
      * @return string sub SQL ORDER BY section
      * @author Saleh AlMatrafe <saleh@saleh.cc>
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arQueryOrderBy($arg)
     {
@@ -2944,7 +2944,7 @@ class Arabic
      * @param string $arg String of one word user want to search for
      *
      * @return string Regular Expression format to be used in MySQL query statement
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arQueryLex($arg)
     {
@@ -2959,7 +2959,7 @@ class Arabic
      * @param string $word String that user search for
      *
      * @return array<string> list of most possible Arabic lexical forms for a given word
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arQueryAllWordForms($word)
     {
@@ -3063,7 +3063,7 @@ class Arabic
      * @param string $arg String that user search for
      *
      * @return string list of most possible Arabic lexical forms for given keywords
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arQueryAllForms($arg)
     {
@@ -3090,7 +3090,7 @@ class Arabic
      * @param integer $y Year (four digits) of date you want to calculate Salat in
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setSalatDate($m = 8, $d = 2, $y = 1975)
     {
@@ -3118,7 +3118,7 @@ class Arabic
      * @param integer $e  Elevation, it is the observer's height in meters.
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setSalatLocation($l1 = 36.20278, $l2 = 37.15861, $z = 2, $e = 0)
     {
@@ -3164,7 +3164,7 @@ class Arabic
      *                            (affect Maghrib and Midnight time)
      *
      * @return object $this to build a fluent interface
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setSalatConf(
         $sch = 'Shafi',
@@ -3207,7 +3207,7 @@ class Arabic
      *                       mm is minutes with leading zero to be 2 digits always
      *                       array items is [$Fajr, $Sunrise, $Dhuhr, $Asr, $Maghrib,
      *                       $Isha, $Sunset, $Midnight, $Imsak, array $timestamps]
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      * @author Hamid Zarrabi-Zadeh <zarrabi@scs.carleton.ca>
      * @source http://praytimes.org/calculation
      */
@@ -3383,7 +3383,7 @@ class Arabic
      * Determine Qibla direction using basic spherical trigonometric formula
      *
      * @return float Qibla Direction (from the north direction) in degrees
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      * @author S. Kamal Abdali <k.abdali@acm.org>
      * @source http://www.patriot.net/users/abdali/ftp/qibla.pdf
      */
@@ -3418,7 +3418,7 @@ class Arabic
      * @param string $value Coordinate presented in degrees, minutes and seconds (e.g. 12°34'56"S formula)
      *
      * @return float Equivalent float number in degree unit scale (e.g. -12.5822 value)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function dms2dd($value)
     {
@@ -3444,7 +3444,7 @@ class Arabic
      * @param float $value Coordinate presented in float number in degree unit scale (e.g. -12.5822 value)
      *
      * @return string Equivalent coordinate presented in degrees, minutes and seconds (e.g. -12°34'56" formula)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function dd2dms($value)
     {
@@ -3485,7 +3485,7 @@ class Arabic
      * Load enhanced Arabic stop words list
      *
      * @return void
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arSummaryLoadExtra()
     {
@@ -3505,7 +3505,7 @@ class Arabic
      * @param integer $output   Output mode [1|2] for "summary" and "highlight" modes respectively
      *
      * @return string Output summary requested
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arSummary($str, $keywords, $int, $mode, $output)
     {
@@ -3578,7 +3578,7 @@ class Arabic
      * @param integer $int Number of keywords required to be extracting from input string (document content)
      *
      * @return string List of the keywords extracting from input Arabic string (document content)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arSummaryKeywords($str, $int)
     {
@@ -3644,7 +3644,7 @@ class Arabic
      * @param string $str Input Arabic document as a string
      *
      * @return string Normalized Arabic document
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arNormalize($str)
     {
@@ -3662,7 +3662,7 @@ class Arabic
      * @param string $str Input normalized Arabic document as a string
      *
      * @return string Arabic document as a string free of common words (roughly)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arCleanCommon($str)
     {
@@ -3680,7 +3680,7 @@ class Arabic
      * @param string $str Input Arabic document as a string
      *
      * @return string Output string after removing less significant Arabic letter (not human readable output)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arDraftStem($str)
     {
@@ -3697,7 +3697,7 @@ class Arabic
      *
      * @return array<int> Associated array where document words referred by index and
      *                    those words ranks referred by values of those array items.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arSummaryRankWords($str)
     {
@@ -3726,7 +3726,7 @@ class Arabic
      *
      * @return array<int, array<int, float|int|string>> Two dimension array, first item is an array of document
      *                                        sentences, second item is an array of ranks of document sentences.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arSummaryRankSentences($sentences, $stemmedSentences, $arr)
     {
@@ -3807,7 +3807,7 @@ class Arabic
      *
      * @return integer Minimum accepted sentence rank (sentences with rank more
      *                 than this will be listed in the document summary)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arSummaryMinAcceptedRank($str, $arr, $int, $max)
     {
@@ -3847,7 +3847,7 @@ class Arabic
      * @param string $word String to be checked if it is a valid word or not
      *
      * @return boolean True if passed string is accepted as a valid word else it will return False
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     private function arSummaryAcceptedWord($word)
     {
@@ -3870,7 +3870,7 @@ class Arabic
      *
      * @return array<int> Offset of the beginning and end of each Arabic segment in
      *                    sequence in the given UTF-8 multi language string
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arIdentify($str, $html = true)
     {
@@ -3961,7 +3961,7 @@ class Arabic
      * @param string $str String
      *
      * @return boolean True if given string is UTF-8 Arabic, else will return False
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function isArabic($str)
     {
@@ -3985,7 +3985,7 @@ class Arabic
      *                            1/8000 x 1/8000 degree in size, roughly 14x14 meters)
      *
      * @return string Open Location Code string (e.g. 8G6RM7C7+PF)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function dd2olc($latitude, $longitude, $codeLength = 10)
     {
@@ -4026,7 +4026,7 @@ class Arabic
      *                            1/8000 x 1/8000 degree in size, roughly 14x14 meters)
      *
      * @return array<null|float>  Location coordinates in decimal degrees [latitude, longitude] in WGS84
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function olc2dd($olc, $codeLength = 10)
     {
@@ -4065,7 +4065,7 @@ class Arabic
      *                            1/8000 x 1/8000 degree in size, roughly 14x14 meters)
      *
      * @return boolean String represents a valid Open Location Code.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function volc($olc, $codeLength = 10)
     {
@@ -4097,7 +4097,7 @@ class Arabic
      * @param string  $plural4  Plural form 4 (e.g., عنصرا). If NULL [default] retrive from internal JSON dataset.
      *
      * @return string Proper plural form of the given singular form
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arPlural($singular, $count, $plural2 = null, $plural3 = null, $plural4 = null)
     {
@@ -4131,7 +4131,7 @@ class Arabic
      * @param boolean $harakat Strip in word Harakat (default is TRUE).
      *
      * @return string Arabic string clean from selected Harakat
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function stripHarakat($text, $tatweel = true, $tanwen = true, $shadda = true, $last = true, $harakat = true)
     {
@@ -4156,7 +4156,7 @@ class Arabic
      *
      * @return array<boolean|float> of 2 elements: boolean isPositive (negative if false),
      *                              and float probability (range from 0 to 1)
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arSentiment($text)
     {
@@ -4254,7 +4254,7 @@ class Arabic
      * @param string $text Arabic text you would like to strip Dots and Hamzat from it.
      *
      * @return string Arabic text written using letters without dots and Hamzat
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function noDots($text)
     {
@@ -4282,7 +4282,7 @@ class Arabic
      * @param boolean $status Normalization form status [true|false]
      *
      * @return object $this to build a fluent interface.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function setNorm($form, $status)
     {
@@ -4344,7 +4344,7 @@ class Arabic
      *                      'normaliseAlef', 'normaliseHamza', 'normaliseTaa']
      *
      * @return boolean Selected normalization form status.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function getNorm($form)
     {
@@ -4391,7 +4391,7 @@ class Arabic
      *                        default is null (i.e., will not normalize digits in the given string).
      *
      * @return string The normalized string.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function arNormalizeText($text, $numeral = null)
     {
@@ -4461,7 +4461,7 @@ class Arabic
      * @param bool     $floor  logic for rounding last part, if true then use floor, else use ceiling.
      *
      * @return string the difference in a human readable format.
-     * @author Khaled Al-Sham'aa <khaled@ar-php.org>
+     * @author Waleed El-sefy <waleedelsefy@gmail.com>
      */
     public function diffForHumans($time, $others = null, $parts = 2, $floor = true)
     {

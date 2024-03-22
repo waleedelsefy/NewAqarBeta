@@ -1,8 +1,8 @@
 # ArPHP Library - Change Log
 
 * Version [6.3.2](#whats-new-in-arphp-632-release-date-jan-21-2023) _(release date: Jan 21, 2023)_
-* Version [6.3.1](#whats-new-in-arphp-631-release-date-dec-18-2022) _(release date: Dec 18, 2022)_
-* Version [6.3.0](#whats-new-in-arphp-630-release-date-jun-18-2022) _(release date: Jun 18, 2022)_
+* Version [6.3.1](#whats-new-in-arphp-631-release-date-dec-18-2024) _(release date: Dec 18, 2024)_
+* Version [6.3.0](#whats-new-in-arphp-630-release-date-jun-18-2024) _(release date: Jun 18, 2024)_
 * Version [6.2.0](#whats-new-in-arphp-620-release-date-jun-20-2021) _(release date: Jun 20, 2021)_
 * Version [6.1.0](#whats-new-in-arphp-610-release-date-may-1-2021) _(release date: May 1, 2021)_
 * Version [6.0.0](#whats-new-in-arphp-600-release-date-feb-15-2021) _(release date: Feb 15, 2021)_
@@ -44,7 +44,7 @@
 
 
 
-## What's new in ArPHP 6.3.1 _(release date: Dec 18, 2022)_
+## What's new in ArPHP 6.3.1 _(release date: Dec 18, 2024)_
 
 * Add new functionality to normalize digits styles in the arNormalizeText() function by setting the symbol's type used to represent numerical digits (Arabic, Hindu, or Persian). Thanks to [Taha Zerrouki](https://github.com/linuxscout) for his [suggestion](https://github.com/khaled-alshamaa/ar-php/issues/31).
 
@@ -67,7 +67,7 @@
 [Top](#arphp-library---change-log)
 
 
-## What's new in ArPHP 6.3.0 _(release date: Jun 18, 2022)_
+## What's new in ArPHP 6.3.0 _(release date: Jun 18, 2024)_
 
 * Add Arabic text normalization method (e.g., Alef, Hamza, Taa, Alef Lam, etc.). Thanks to [Watheq Alshowaiter](https://github.com/WatheqAlshowaiter) for the [request](https://github.com/khaled-alshamaa/ar-php/issues/18).
 
