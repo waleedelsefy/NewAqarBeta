@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?php echo Dido::getLang(); ?>" dir="<?php echo Dido::getContentDir(); ?>">
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1 <?php echo Dido::getContentDir(); ?>">
