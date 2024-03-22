@@ -29,7 +29,7 @@
         $developer_name = esc_html($first_term->name);
         $developer_link = get_term_link($first_term);
         $developer_link = get_term_link($first_term);
-        $developer_image = get_term_field('developer_image', $first_term);
+        $developer_image = get_term_meta($first_term->term_id, 'developer_image', true);
         $max_words = 4;
         $trimmed_developer_name = wp_trim_words($developer_name, $max_words, '...');
 
@@ -316,7 +316,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                             <div class="developer-card mob-only">
                                 <div class="developer-card-info">
                                     <div class="personal-img">
-                                        <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name; ?>">
+                                        <img class="personal-img-logo" src="<?php echo $developer_image; ?>" alt="<?php echo $developer_name; ?>">
                                     </div>
                                     <div class="personal-info">
                                         <a href="<?php echo $developer_link ?>"><?php echo $trimmed_developer_name ?></a>
