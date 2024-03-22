@@ -87,7 +87,7 @@ function generate_table_of_contents() {
     }
 
     // Initialize an empty string to store the table of contents
-$toc = '<div class="table-of-contents"><h2>' . __('Table of Contents', 'newaqar') . '</h2><ul>';
+    $toc = '<div class="table-of-contents"><div class="head-table-of-contents"><p>' . __('Table of Contents', 'newaqar') . '</p><button id="toggleToc">' . __('show', 'newaqar') . '</button></div><ul class="toc-list" style="display: none;">';
 
     // Loop through headings to build the table of contents
     foreach ($headings as $heading) {
@@ -109,6 +109,26 @@ $toc = '<div class="table-of-contents"><h2>' . __('Table of Contents', 'newaqar'
 
     // Close the unordered list
     $toc .= '</ul></div>';
+
+    ?>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get the button element
+        var toggleButton = document.getElementById("toggleToc");
+
+        var tocList = document.querySelector(".toc-list");
+
+        toggleButton.addEventListener("click", function() {
+            tocList.style.display = (tocList.style.display === "none") ? "block" : "none";
+
+            // Change the button text based on the visibility of the <ul> element
+            toggleButton.textContent = (tocList.style.display === "none") ? "<?php echo __('show', 'newaqar')  ?>" : "<?php echo __('hidden', 'newaqar')  ?>";
+        });
+    });
+
+    </script>
+    <?php
 
     return $toc;
 }

@@ -17,8 +17,17 @@ function newaqar_product_schema() {
                 if (is_array($project_details) && !empty($project_details)) {
                     $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
                     $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
-                    $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : '4.7';
-                    $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : '55';
+                    $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : 4.7;
+                    if ($number_of_votes < 3) {
+                        $number_of_votes = '4.7';
+                    }
+                    $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : intval($post_id/20);
+
+                    if ($number_of_voters < 5) {
+                        $number_of_voters = intval($post_id/20);
+                    }
+
+
                 } else {
                     $price = '50000';
                     $payment_systems = '';
@@ -26,8 +35,7 @@ function newaqar_product_schema() {
             }
             if ($developer_terms && !is_wp_error($developer_terms)) {
                 $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
-                $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : '';
-                $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : '';
+                $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) :'';
                 $first_term = reset($developer_terms);
                 $developer_name = esc_html($first_term->name);
                 $developer_link = get_term_link($first_term);
@@ -64,7 +72,7 @@ function newaqar_product_schema() {
                     $ld_json['aggregateRating'] = array(
                         "@type" => "AggregateRating",
                         "ratingValue" => $number_of_votes,
-                        "reviewCount" => $post_id
+                        "reviewCount" => $number_of_voters
                     );
 
 
@@ -87,25 +95,26 @@ function newaqar_product_schema() {
                 // Calculate best and worst ratings
                 $bestRating = (!empty($number_of_votes)) ? min($number_of_votes + 1.3, 4.9) : 5;
                 $worstRating = (!empty($number_of_votes)) ? max($number_of_votes - 1.3, 3.7) : 3;
-
-                // Define the review data
+                $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : ($post_id/20);
+                $author_name = get_the_author_meta('display_name');
+                $project_description = isset($project_details['description']) ? $project_details['description'] : '';
+                $short_description = wp_trim_words($project_description, 20);
                 $ld_json = array(
                     "@type" => "Review",
-                    "author" => "Lucas",
+                    "author" => $author_name,
                     "datePublished" => $date_published,
-                    "reviewBody" => "Great microwave for the price. It is small and fits in my apartment.",
-                    "name" => "Value purchase",
+                    "reviewBody" => $short_description,
                     "reviewRating" => array(
                         "@type" => "Rating",
                         "bestRating" => $bestRating,
-                        "ratingValue" => $rating_value,
+                        "ratingValue" => $number_of_votes,
                         "worstRating" => $worstRating
                     ),
                     // Add aggregate rating
                     "aggregateRating" => array(
                         "@type" => "AggregateRating",
-                        "ratingValue" => $rating_value,
-                        "reviewCount" => $post_id/20
+                        "ratingValue" => $number_of_votes,
+                        "reviewCount" => $number_of_voters
                     )
                 );
 

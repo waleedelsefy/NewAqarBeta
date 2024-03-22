@@ -12,7 +12,7 @@
   --primary-have-color-button: #37424F;
   --primary-link-color: #000080;
   --sacnd-link-color: #00a77f;
-  --sacnd-color: var(--sacnd-color);
+  --sacnd-color: #8cc2c8;
   --primary-font-family: 'newaqarfont', Tahoma, Geneva, Verdana, sans-serif;
   --primary-link-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
@@ -39,6 +39,7 @@
   --full-width:100vw;
   --one-third:32vw;
   --tow-third:63vw;
+  --card-unts-gap:50px;
 }
 @media screen and (max-width: 900px) {
   :root {
@@ -57,6 +58,7 @@
     --full-width:99vw;
     --one-third:99vw;
     --tow-third:99vw;
+    --card-unts-gap:15px;
   }
 }
 body {
@@ -68,6 +70,21 @@ body {
   src:url('../fonts/newaqar-Regular.woff2') format('woff'),
   url('../fonts/newaqar.woff2') format('woff2');
 }
+
+.head-table-of-contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 17px;
+  padding-inline-end: 17px;
+
+  p {
+    font-size: var(--h2-content-font-size) !important;
+    font-weight: 600 !important;
+  }
+}
+
 hih.breadcrumb-item {
   font-size: 14px;
   letter-spacing: normal;
@@ -84,6 +101,12 @@ button#load-more-btn {
 .taxonomy-full-width {
   width: var(--full-width);
   display: flex;
+}
+button#toggleToc {
+  color: #fff9f9;
+  font-size: var(--p-content-font-size);
+  border-radius: 25px;
+  background: var(--sacnd-color);
 }
 html body {
   background: var(--primary-background-color);
@@ -695,6 +718,10 @@ a.phone {
     }
   /***** Only Mobile ****/
   @media screen and (min-width: 100px) and (max-width: 769px) {
+
+    .personal-info a {
+      color:white;
+    }
     .taxonomy-full-width {
       width: 98vw;
       display: flex;
@@ -882,7 +909,7 @@ a.phone {
       padding: 0;
       width: 100%;
       background: var(--recent-property-background-color);
-      height: 300px;
+      height: 260px;
       border-radius: var(--recent-property-border-radius);
       display: block;
     }
@@ -1159,19 +1186,19 @@ a.phone {
     .developer-card {
       background: #0000801f;
       box-shadow: 0 0 4px 1px #0000008f;
-      max-width: 300px;
+      width: 320px;
       padding-top: 10px;
       .developer-card-info {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 5%;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 9px;
         padding-inline-start: 10px;
         padding-inline-end: 10px;
       }
       .personal-img-logo {
-        width: 130px;
-        border-radius: 76px;
+        width: 90px;
+        border-radius: 15px;
         border: 1px solid #00000052;
         padding: 0;
         background: #ffff;
@@ -1647,7 +1674,7 @@ div#fluentform_13_success {
   padding: 20px;
   display: flex;
   transition: transform 0.5s ease;
-  gap: 59px;
+  gap: var(--card-unts-gap);
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -1699,6 +1726,7 @@ div#fluentform_13_success {
     padding-top: 20px;
     border-radius: 8px;
     margin-top: 16px;
+    width: 77vw;
     a.name.text-start.d-flex {
       color: white;
       line-height: 2;
@@ -1708,13 +1736,13 @@ div#fluentform_13_success {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15%;
+      gap: 5%;
       padding-inline-start: 25px;
       padding-inline-end: 20px;
     }
     .personal-img-logo {
-      width: 130px;
-      border-radius: 76px;
+      width: 90px;
+      border-radius: 15px;
       border: 1px solid #00000052;
       padding: 0;
       background: #ffff;

@@ -139,7 +139,7 @@ function aqar_social_share_box() {
             <?php
             $post_type = get_post_type();
             $post_type_labels = get_post_type_labels(get_post_type_object($post_type));
-            echo '<p class="socialTitle">' . __('Share', 'newaqar') . ' '.  __('The', 'newaqar') . esc_html($post_type_labels->singular_name) . ':</p>';
+            echo '<p class="socialTitle">' . __('Share', 'newaqar') . ' '.  __('The Content', 'newaqar') . ':</p>';
             ?>            <ul class="socialList">
                 <li><a href="https://facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="15" viewBox="0 0 320 512"><path fill="#ffffff" d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg></a></li>
                 <li><a href="https://x.com/intent/tweet?url=<?php echo urlencode(get_permalink()); ?>" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 512 512"><path fill="#ffffff" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg></a></li>
@@ -246,10 +246,10 @@ function newaqar_developer_shortcode($atts) {
             </div>
             <div class="personal-info">
                 <a href="<?php echo $developer_link?>"><?php echo $developer_name;?></a>
+                <p class="jobTitle">تواصل مع مندوب الشركة</p>
             </div>
 
         </div>
-        <p class="jobTitle">تواصل مع مندوب الشركة</p>
 
         <div>
             <?php

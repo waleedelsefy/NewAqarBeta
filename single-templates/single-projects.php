@@ -328,6 +328,29 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         </div>
                         <div>
                             <?php echo do_shortcode('[newaqar_cta]') ?>
+
+                        </div>
+                        <div class="mob-only">
+                            <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
+                            else { ?>
+                                <div class="message-section">
+                                    <?php
+                                    if (function_exists('pll_current_language')) {
+                                        $current_language = pll_current_language();
+
+                                        if ($current_language === 'ar') {
+                                            echo do_shortcode('[fluentform id="7"]');
+                                        } elseif ($current_language === 'en') {
+                                            echo do_shortcode('[fluentform id="11"]');
+                                        }
+                                    }
+
+                                    ?>
+
+                                </div>
+                                <?php
+                            }
+                            ?>
                         </div>
                     <div>
                         <?php
@@ -423,14 +446,6 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                             </div>
                                         <?php endif; ?>
                                     </div>
-                                    <div class="price-last-update">
-                                        <?php
-                                        if (get_the_modified_date() != get_the_date()) {
-                                            echo '<p style="color: #fff;">' . __('Latest update on: ', 'newaqar') . get_the_modified_date() . '</p>';
-                                        }
-                                        ?>
-                                    </div>
-
 
                                 </div>
                             <?php endif; ?>
@@ -598,16 +613,9 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                     </div>
                                 <?php endif; ?>
                             </div>
-                            <div class="price-last-update">
-                                <?php
-                                if (get_the_modified_date() != get_the_date()) {
-                                    echo '<p style="color: #fff;">' . __('Last updated in:', 'newaqar') . get_the_modified_date() . '</p>';
-                                }
-                                ?>
-                            </div>
                         </div>
                     <?php endif; ?>
-                    <div>
+                    <div class="des-only">
                         <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
                         else { ?>
                             <div class="message-section">

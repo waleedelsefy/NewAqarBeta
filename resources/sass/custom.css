@@ -11857,7 +11857,7 @@ textarea.form-control-lg {
   --primary-have-color-button: #37424F;
   --primary-link-color: #000080;
   --sacnd-link-color: #00a77f;
-  --sacnd-color: var(--sacnd-color);
+  --sacnd-color: #8cc2c8;
   --primary-font-family: "newaqarfont", Tahoma, Geneva, Verdana, sans-serif;
   --primary-link-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
@@ -11884,6 +11884,7 @@ textarea.form-control-lg {
   --full-width:100vw;
   --one-third:32vw;
   --tow-third:63vw;
+  --card-unts-gap:50px;
 }
 
 @media screen and (max-width: 900px) {
@@ -11903,6 +11904,7 @@ textarea.form-control-lg {
     --full-width:99vw;
     --one-third:99vw;
     --tow-third:99vw;
+    --card-unts-gap:15px;
   }
 }
 body {
@@ -11914,6 +11916,19 @@ body {
   font-family: "newaqarfont";
   src: url("../fonts/newaqar-Regular.woff2") format("woff"), url("../fonts/newaqar.woff2") format("woff2");
 }
+.head-table-of-contents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline-start: 17px;
+  padding-inline-end: 17px;
+}
+.head-table-of-contents p {
+  font-size: var(--h2-content-font-size) !important;
+  font-weight: 600 !important;
+}
+
 hih.breadcrumb-item {
   font-size: 14px;
   letter-spacing: normal;
@@ -11932,6 +11947,13 @@ button#load-more-btn {
 .taxonomy-full-width {
   width: var(--full-width);
   display: flex;
+}
+
+button#toggleToc {
+  color: #fff9f9;
+  font-size: var(--p-content-font-size);
+  border-radius: 25px;
+  background: var(--sacnd-color);
 }
 
 html body {
@@ -12554,6 +12576,9 @@ html .unit-card .project-location, html .unit-card .project-space {
     /**start of post card**/
     /**End of post card**/
   }
+  html .personal-info a {
+    color: white;
+  }
   html .taxonomy-full-width {
     width: 98vw;
     display: flex;
@@ -12734,7 +12759,7 @@ html .unit-card .project-location, html .unit-card .project-space {
     padding: 0;
     width: 100%;
     background: var(--recent-property-background-color);
-    height: 300px;
+    height: 260px;
     border-radius: var(--recent-property-border-radius);
     display: block;
   }
@@ -13009,20 +13034,20 @@ html .unit-card .project-location, html .unit-card .project-space {
   html .developer-card {
     background: rgba(0, 0, 128, 0.1215686275);
     box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5607843137);
-    max-width: 300px;
+    width: 320px;
     padding-top: 10px;
   }
   html .developer-card .developer-card-info {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 5%;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 9px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
   html .developer-card .personal-img-logo {
-    width: 130px;
-    border-radius: 76px;
+    width: 90px;
+    border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.3215686275);
     padding: 0;
     background: white;
@@ -13520,7 +13545,7 @@ div#fluentform_13_success {
   padding: 20px;
   display: flex;
   transition: transform 0.5s ease;
-  gap: 59px;
+  gap: var(--card-unts-gap);
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -13578,6 +13603,7 @@ div#fluentform_13_success {
     padding-top: 20px;
     border-radius: 8px;
     margin-top: 16px;
+    width: 77vw;
   }
   .developer-card a.name.text-start.d-flex {
     color: white;
@@ -13588,13 +13614,13 @@ div#fluentform_13_success {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 15%;
+    gap: 5%;
     padding-inline-start: 25px;
     padding-inline-end: 20px;
   }
   .developer-card .personal-img-logo {
-    width: 130px;
-    border-radius: 76px;
+    width: 90px;
+    border-radius: 15px;
     border: 1px solid rgba(0, 0, 0, 0.3215686275);
     padding: 0;
     background: white;
