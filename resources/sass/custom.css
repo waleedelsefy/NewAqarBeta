@@ -195,7 +195,7 @@ html h6 span {
 html body td, html body th, html html td, html html th {
   background-color: #fff;
   border: 0.1rem solid #dcd7ca;
-  line-height: 1.4;
+  line-height: var(--content-line-heigh) !important;
   margin: 0;
   font-size: 16px;
   overflow: visible;
@@ -213,7 +213,7 @@ html body .button, html body button, html body input[type=button], html body inp
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.0333em;
-  line-height: 1.25;
+  line-height: var(--content-line-heigh) !important;
   margin: 0;
   opacity: 1;
   padding: 1.1em 1.44em;
@@ -255,7 +255,7 @@ html input[type=submit] {
   }
   html html .recent-property .title, html body .recent-property .title {
     font-size: var(--p-content-font-size);
-    line-height: 27px;
+    line-height: var(--content-line-heigh) !important;
     min-height: 102px;
     max-height: 460px;
     text-align: center;
@@ -306,7 +306,7 @@ html .latest-section-link {
   }
   html html .recent-property .title, html body .recent-property .title {
     font-size: var(--p-content-font-size);
-    line-height: 27px;
+    line-height: var(--content-line-heigh) !important;
     min-height: 102px;
     text-align: center;
     color: #000;
@@ -523,7 +523,7 @@ html .title-container {
   padding-inline-start: 13px;
   padding-inline-end: 0px;
   height: fit-content;
-  line-height: 31px;
+  line-height: var(--content-line-heigh) !important;
   background: transparent;
   padding-top: 8px;
 }
@@ -911,7 +911,7 @@ html .unit-card .project-location, html .unit-card .project-space {
     padding-inline-start: 6px;
     padding-inline-end: 6px;
     height: fit-content;
-    line-height: normal;
+    line-height: var(--content-line-heigh) !important;
     background: transparent;
     padding-top: 8px;
   }
@@ -937,7 +937,7 @@ html .unit-card .project-location, html .unit-card .project-space {
   }
   html body h1, html html h1 {
     font-size: 1.6rem;
-    line-height: normal;
+    line-height: var(--content-line-heigh) !important;
   }
   html .dido-forms {
     display: flex;
@@ -971,7 +971,7 @@ html .unit-card .project-location, html .unit-card .project-space {
   html body .img-wrap-content h4, html html .img-wrap-content h4 {
     color: #fff;
     font-size: var(--h4-content-font-size);
-    line-height: normal;
+    line-height: var(--content-line-heigh) !important;
     margin: 0;
   }
   html .hero .hero-title {

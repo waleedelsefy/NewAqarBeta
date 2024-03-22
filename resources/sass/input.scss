@@ -300,7 +300,7 @@ i.mce-ico.mce-i-structured-content {
   display: block;
   font-size: 1em;
   height: auto;
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
   padding: 15px 23px 14px;
   right: 5px;
   text-decoration: none;
@@ -1952,7 +1952,7 @@ button.swiper-pagination-bullet {
   border: 1px solid #aaa;
   background: url(../img/chosen-sprite.png) 100% -20px no-repeat;
   font-size: 1rem !important;
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
   border-radius: 0
 }
 .chosen-container-single .chosen-drop {
@@ -2046,7 +2046,7 @@ button.swiper-pagination-bullet {
   background: 0 0!important;
   -webkit-box-shadow: none;
   box-shadow: none;
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
   border-radius: 0;
   width: 25px
 }
@@ -9197,7 +9197,7 @@ a,path {
   font-weight: 700;
   height: auto;
   right: 5px;
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
   padding: 15px 23px 14px;
   text-decoration: none;
   top: 5px;
@@ -9217,7 +9217,7 @@ a,path {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
   padding: 15px 23px 14px;
   z-index: 100000;
   right: auto

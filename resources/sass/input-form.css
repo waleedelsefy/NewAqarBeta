@@ -84,10 +84,10 @@ textarea {
   width: 100%;
 }
 input::-webkit-input-placeholder {
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
 }
 input:-ms-input-placeholder {
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
 }
 input::-moz-placeholder {
   line-height: revert;
@@ -151,7 +151,7 @@ input[type=search] {
 input[type=checkbox], input[type=radio] {
   margin: 4px 0 0;
   margin-top: 1px\9 ;
-  line-height: normal;
+  line-height: var(--content-line-heigh) !important;
 }
 input[type=file] {
   display: block;
