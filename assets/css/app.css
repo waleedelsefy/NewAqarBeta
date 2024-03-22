@@ -43562,6 +43562,7 @@ a.phone {
     line-height: var(--content-line-heigh) !important;
     background: transparent;
     padding-top: 8px;
+    padding-bottom: 8px;
   }
   .accordion-button:focus {
     z-index: 3;
@@ -44233,13 +44234,19 @@ a.phone {
     }
     .card-block {
       display: flex;
-      max-width: 400px;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      max-width: var(--unit-card-width);
+      margin:10px;
       align-items: center;
       align-content: center;
       flex-wrap: wrap;
       justify-content: center;
+    }
+    h3.gs_logo_title{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: normal;
     }
     .developer-card {
       background: #0000801f;

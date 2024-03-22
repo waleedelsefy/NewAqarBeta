@@ -526,6 +526,7 @@ html .title-container {
   line-height: var(--content-line-heigh) !important;
   background: transparent;
   padding-top: 8px;
+  padding-bottom: 8px;
 }
 html .accordion-button:focus {
   z-index: 3;
@@ -1187,13 +1188,19 @@ html .unit-card .project-location, html .unit-card .project-space {
   }
   html .card-block {
     display: flex;
-    max-width: 400px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    max-width: var(--unit-card-width);
+    margin: 10px;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  html h3.gs_logo_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: normal;
   }
   html .developer-card {
     background: rgba(0, 0, 128, 0.1215686275);

@@ -28,19 +28,22 @@
                                     $term_name = esc_html($term_details->name);
                                     $term_image = get_term_meta($term_details->term_id, 'developer_image', true);
                                     $term_link = get_term_link($term_details);
+                                    $max_words = 4;
+                                    $trimmed_developer_name = wp_trim_words( $term_name, $max_words, '...' );
+
                                     if ($term_image && $count < 6) { // Check if term has image and count is less than 8
                                         ?>
                                         <div class="swiper-slide col-md-2 col-sm-4">
                                             <a class="slider-card" href="<?php echo esc_url($term_link); ?>" target="_self" rel="dofollow">
                                                 <img width="221" height="221" src="<?php echo esc_url($term_image); ?>">
                                             </a>
-                                            <h3 class="gs_logo_title" style="font-size: 16px; font-weight: 400;"><?php echo esc_html($term_name); ?></h3>
+                                            <h3 class="gs_logo_title" style="font-size: 16px; font-weight: 400;"><?php echo esc_html($trimmed_developer_name); ?></h3>
                                         </div>
                                         <?php
-                                        $count++; // Increment the counter
+                                        $count++;
                                     }
                                 }
-                                if ($count >= 8) break; // Break the loop once 8 terms are displayed
+                                if ($count >= 8) break;
                             }
                             ?>
                         </div>
