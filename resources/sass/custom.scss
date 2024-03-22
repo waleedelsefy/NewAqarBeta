@@ -50,7 +50,7 @@
     --h5-content-font-size:16px;
     --h6-content-font-size:14px;
     --h1-hero-font-size:36px;
-    --content-line-heigh:2;
+    --content-line-heigh: normal;
     --p-margin-heigh:0.5rem;
     --unit-card-width:290px;
     --recent-height-property-none:280px;
@@ -904,7 +904,7 @@ a.phone {
       padding-inline-start: 6px;
       padding-inline-end: 6px;
       height: fit-content;
-      line-height: 27px;
+      line-height: normal;
       background: transparent;
       padding-top: 8px;
     }
@@ -931,7 +931,7 @@ a.phone {
     }
     body h1, html h1 {
       font-size: 1.6rem;
-      line-height: 1.14;
+      line-height: normal;
     }
     .dido-forms {
       display: flex;
@@ -965,7 +965,7 @@ a.phone {
     body .img-wrap-content h4, html .img-wrap-content h4 {
       color: #fff;
       font-size: var(--h4-content-font-size);
-      line-height: 36px;
+      line-height: normal;
       margin: 0;
     }
     .hero {
