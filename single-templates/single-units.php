@@ -104,9 +104,9 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .project-sub-title{display:flex; font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
     .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: var(--all-border-radius);height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
     .project-sub-title::after{margin-inline-start:10px; width:10%;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
-    table.infotable {border-collapse: collapse;width:calc(100% + 30px);color: #646A70;margin:0px 0px 0px -7px;}
+    table.infotable {border-collapse: collapse;width:calc(100% + 30px);color: #646A70;margin:0px 0px 0px 0px;}
     table.infotable tr:nth-child(even){background-color: #F9F9F9}
-    table.infotable th.ttitle {width: 35%;font-size: 0.8rem;padding-left:0;border-left:1px solid #e0dcd6;background-color: var(--primary-link-color-link); color:  #FFFFFF}
+    table.infotable th.ttitle {width: 35%;font-size: 0.8rem; padding-inline-start: 5px;border-left:1px solid #e0dcd6;background-color: var(--primary-link-color-link); color:  #FFFFFF}
     table.infotable tr:nth-child(even) th.ttitle{background-color:#212529}
     table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}

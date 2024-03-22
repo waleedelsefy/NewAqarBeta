@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NewAqar\n"
-"POT-Creation-Date: 2024-03-04 21:37+0200\n"
-"PO-Revision-Date: 2024-03-04 21:42+0200\n"
+"POT-Creation-Date: 2024-03-22 12:35+0200\n"
+"PO-Revision-Date: 2024-03-22 12:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.0.9\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && "
+"n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -79,8 +79,7 @@ msgid "Copywrite Text"
 msgstr "نص حقوق الموقع"
 
 #: admin/int/theme_footer_section.php:25 admin/int/theme_options_section.php:21
-#: admin/int/theme_options_section.php:36
-#: admin/int/theme_options_section.php:51
+#: admin/int/theme_options_section.php:36 admin/int/theme_options_section.php:51
 msgid "Choose Image"
 msgstr "اختار صورة"
 
@@ -113,8 +112,192 @@ msgid "Theme options description goes here."
 msgstr "وصف خيارات القالب يأتي هنا."
 
 #: admin/theme-options.php:30
+#: app/vendor/htmlburger/carbon-fields/templates/Container/common/options-page.php:52
 msgid "Save Changes"
 msgstr "حفظ التغييرات"
+
+#: app/models/dido_site_model.php:73
+msgid "project"
+msgstr "مشروع"
+
+#: app/models/dido_site_model.php:73
+msgid "projects"
+msgstr "المشاريع"
+
+#: app/models/dido_site_model.php:116
+msgid "h1"
+msgstr "عنوان 1"
+
+#: app/models/dido_site_model.php:117
+msgid "search text"
+msgstr "نص البحث"
+
+#: app/models/dido_site_model.php:120
+msgid "Slider Projects"
+msgstr "سلايدر المشروعات"
+
+#: app/models/dido_site_model.php:126 app/models/dido_site_model.php:128
+msgid "Sections"
+msgstr "قسم"
+
+#: app/models/dido_site_model.php:131
+msgid "section Type"
+msgstr "نوعيه القسم"
+
+#: app/models/dido_site_model.php:140 app/models/dido_site_model.php:141
+msgid "Choose City"
+msgstr "اختر مدينة"
+
+#: app/models/dido_site_model.php:142
+msgid "Choose Types"
+msgstr "اختار الانواع"
+
+#: app/models/dido_site_model.php:144 app/models/dido_site_model.php:145
+msgid "Blog text"
+msgstr "نص المدونة"
+
+#: app/models/dido_site_model.php:610
+msgid "photo"
+msgstr "صورة"
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:287
+msgid "The parent must be 'array', 'string' or 'null'."
+msgstr "الوالد يجب أن يكون 'مصفوفة'، 'سلسلة نصية' أو 'قيمة فارغة'."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:316
+msgid "The position of inner blocks must be 'above' or 'below'."
+msgstr "موقع الكتل الداخلية يجب أن يكون 'أعلى' أو 'أسفل'."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:334
+msgid "The template must be an 'array' or 'null'."
+msgstr "يجب أن يكون القالب 'مصفوفة' أو 'فارغة'."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:352
+msgid "The template lock must be 'all', 'insert', 'false' or 'null'."
+msgstr "قفل القالب يجب أن يكون \"الكل\"، \"إدراج\"، \"خطأ\"، أو \"فارغة\"."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:370
+msgid "The allowed blocks must be an 'array' or 'null'."
+msgstr "الكتل المسموح بها يجب أن تكون \"مصفوفة\" أو \"فارغة\"."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:472
+msgid "'render_callback' is required for the blocks."
+msgstr "التابع 'render_callback' مطلوب للكتل."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Block_Container.php:476
+msgid "'render_callback' must be a callable."
+msgstr "'render_callback' يجب أن يكون قابلًا للدعوة."
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Container.php:741
+msgid "General"
+msgstr "عام"
+
+#: app/vendor/htmlburger/carbon-fields/core/Container/Theme_Options_Container.php:207
+msgid "Settings saved."
+msgstr "تم حفظ الإعدادات."
+
+#: app/vendor/htmlburger/carbon-fields/core/Field/Footer_Scripts_Field.php:20
+msgid ""
+"If you need to add scripts to your footer (like Google Analytics tracking "
+"code), you should enter them in this box."
+msgstr ""
+"إذا كنت بحاجة لإضافة نصوص إلى تذييل الصفحة (مثل رمز تتبع Google Analytics) ، "
+"فيجب عليك إدخالها في هذا الصندوق."
+
+#: app/vendor/htmlburger/carbon-fields/core/Field/Gravity_Form_Field.php:47
+msgid "No form"
+msgstr "لا يوجد نموذج"
+
+#: app/vendor/htmlburger/carbon-fields/core/Field/Header_Scripts_Field.php:20
+msgid "If you need to add scripts to your header, you should enter them here."
+msgstr "إذا كنت بحاجة لإضافة نصوص إلى رأس الصفحة، يجب عليك إدخالها هنا."
+
+#: app/vendor/htmlburger/carbon-fields/core/Field/Sidebar_Field.php:74
+msgctxt "sidebar"
+msgid "Add New"
+msgstr "اضاف جديد"
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:69
+msgid "Please enter a name for the sidebar."
+msgstr "يرجى إدخال اسم الشريط الجانبي."
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:72
+msgid "Unknown action attempted."
+msgstr "العملية المطلوبة غير معروفة."
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:102
+msgid "Sidebar with the same ID is already registered."
+msgstr "الشريط الجانبي بنفس المعرف مُسجّل بالفعل."
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:112
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:142
+msgid ""
+"Failed to update option storing your custom sidebars. Please contact support."
+msgstr "فشل تحديث الخيار في تخزين أشرطة جانبية مخصصة. يرجى الاتصال بالدعم."
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:137
+msgid "Sidebar not found."
+msgstr "الشريط الجانبي غير موجود."
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:181
+msgid "Add Sidebar"
+msgstr "إضافة الشريط الجانبي"
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:182
+msgid "Please enter the name of the new sidebar:"
+msgstr "من فضلك، أدخل اسم الشريط الجانبي الجديد:"
+
+#: app/vendor/htmlburger/carbon-fields/core/Libraries/Sidebar_Manager/Sidebar_Manager.php:183
+msgid "Are you sure you wish to remove this sidebar?"
+msgstr "هل أنت متأكد أنك ترغب في إزالة هذا الشريط الجانبي؟"
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:414
+msgid "No option names provided"
+msgstr "لا توجد أسماء خيارات"
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:425
+msgid "Theme Options updated."
+msgstr "تم تحديث خيارات القالب."
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:447
+msgid "Sorry, you are not allowed to read blocks of this post."
+msgstr "عذرًا، ليس لديك الإذن لقراءة البلوكات في هذا المنشور."
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:457
+msgid "Sorry, you are not allowed to read blocks as this user."
+msgstr "آسف، ليس لديك الإذن لقراءة الكتل كهذا المستخدم."
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:478
+msgid "The requested type: ID or URL."
+msgstr "النوع المطلوب: معرف أو رابط URL."
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:483
+msgid "The ID / URL of the attachment"
+msgstr "معرف / رابط URL للمرفق"
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:500
+msgid "The name of the block."
+msgstr "اسم الكتلة"
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:505
+msgid "The content of the block."
+msgstr "محتوى البلوك."
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:509
+msgid "ID of the post context."
+msgstr "معرّف سياق المنشور."
+
+#: app/vendor/htmlburger/carbon-fields/core/REST_API/Router.php:540
+msgid "Invalid block."
+msgstr "بلوك تالف"
+
+#: app/vendor/htmlburger/carbon-fields/templates/Container/common/options-page.php:43
+msgid "Actions"
+msgstr "الحركات"
+
+#: app/vendor/htmlburger/carbon-fields/templates/Container/widget.php:4
+msgid "No options are available for this widget."
+msgstr "لا تتوفر خيارات لهذا الودجة."
 
 #. translators: %s: post title
 #: comments.php:30
@@ -184,11 +367,6 @@ msgstr "البريد الإلكتروني* (لن يتم نشره)"
 #: comments.php:106
 msgid "Website"
 msgstr "الموقع الإلكتروني"
-
-#: footer.php:140
-msgctxt "copyright date format"
-msgid "Y"
-msgstr "سنة"
 
 #: inc/city-editor.php:6 inc/city-editor.php:18
 msgid "Cities"
@@ -278,19 +456,19 @@ msgid "ID"
 msgstr "ID"
 
 #: inc/city-editor.php:178 inc/developer-editor.php:157
-#: inc/project-editor.php:197
+#: inc/project-editor.php:196
 msgid "Question"
 msgstr "سؤال"
 
 #: inc/city-editor.php:179 inc/developer-editor.php:158
-#: inc/project-editor.php:198
+#: inc/project-editor.php:197
 msgid "Answer"
 msgstr "إجابة"
 
 #: inc/city-editor.php:190 inc/city-editor.php:198 inc/city-editor.php:218
 #: inc/developer-editor.php:169 inc/developer-editor.php:177
-#: inc/developer-editor.php:197 inc/project-editor.php:208
-#: inc/project-editor.php:216 inc/project-editor.php:229
+#: inc/developer-editor.php:197 inc/project-editor.php:207
+#: inc/project-editor.php:215 inc/project-editor.php:228
 msgid "Delete"
 msgstr "حذف"
 
@@ -383,8 +561,7 @@ msgid "Developer Image"
 msgstr "شعار المطور"
 
 #: inc/developer-editor.php:40 inc/developer-editor.php:96
-msgid ""
-"Enter the URL of the developer image or use the \"Upload Image\" button."
+msgid "Enter the URL of the developer image or use the \"Upload Image\" button."
 msgstr "أدخل عنوان URL لصورة المطور أو استخدم زر \"تحميل الصورة\"."
 
 #: inc/developer-editor.php:87
@@ -403,7 +580,7 @@ msgstr "اضف وصف للمطور ."
 msgid "Payment Systems"
 msgstr "أنظمة الدفع"
 
-#: inc/hooks.php:29 single-templates/single-projects.php:567
+#: inc/hooks.php:29 single-templates/single-projects.php:577
 msgid "payment system"
 msgstr "أنظمة الدفع"
 
@@ -430,6 +607,18 @@ msgstr "اضف نظام دفع جديد"
 #: inc/hooks.php:35
 msgid "New Payment System Name"
 msgstr "أسم نظام الدفع الجديد"
+
+#: inc/hooks.php:90
+msgid "Table of Contents"
+msgstr "جدول المحتوى"
+
+#: inc/hooks.php:90 inc/hooks.php:126
+msgid "show"
+msgstr "عرض"
+
+#: inc/hooks.php:126
+msgid "hidden"
+msgstr "اخفاء"
 
 #: inc/pagination.php:28
 msgid "Page navigation"
@@ -545,111 +734,103 @@ msgstr "اسم النوع الجديد"
 msgid "Types"
 msgstr "الانواع"
 
-#: inc/project-editor.php:95
+#: inc/project-editor.php:94
 msgid "Project Space:"
 msgstr "مساحة المشروع:"
 
-#: inc/project-editor.php:98
+#: inc/project-editor.php:97
 msgid "Enter Project Space"
 msgstr "أدخل مساحة المشروع"
 
-#: inc/project-editor.php:104
+#: inc/project-editor.php:103
 msgid "Project Price:"
 msgstr "سعر المشروع:"
 
-#: inc/project-editor.php:107
+#: inc/project-editor.php:106
 msgid "Enter Project Price"
 msgstr "أدخل سعر المشروع"
 
-#: inc/project-editor.php:113 inc/unit-editor.php:259
+#: inc/project-editor.php:112 inc/unit-editor.php:267
 msgid "Payment Systems:"
 msgstr "أنظمة الدفع:"
 
-#: inc/project-editor.php:117
+#: inc/project-editor.php:116
 msgid "Cash"
 msgstr "نقدي"
 
-#: inc/project-editor.php:118
+#: inc/project-editor.php:117
 msgid "Installment"
 msgstr "تقسيط"
 
-#: inc/project-editor.php:119
+#: inc/project-editor.php:118
 msgid "Both Cash and Installment"
 msgstr "كاش وقسط"
 
-#: inc/project-editor.php:121 inc/unit-editor.php:263
+#: inc/project-editor.php:120 inc/unit-editor.php:271
 msgid "Enter down payment"
 msgstr "ادخل سعر المقدم"
 
-#: inc/project-editor.php:122
+#: inc/project-editor.php:121
 msgid "Enter installment payment"
 msgstr "ادخل نظام الدفع"
 
-#: inc/project-editor.php:128 inc/unit-editor.php:248
+#: inc/project-editor.php:127 inc/unit-editor.php:256
 msgid "Votes:"
 msgstr "التصويتات:"
 
-#: inc/project-editor.php:132 inc/unit-editor.php:252
+#: inc/project-editor.php:131 inc/unit-editor.php:260
 msgid "Enable Votes"
 msgstr "تفعيل التصويتات (ضروري)"
 
-#: inc/project-editor.php:133 inc/unit-editor.php:253
+#: inc/project-editor.php:132 inc/unit-editor.php:261
 msgid "Votes"
 msgstr "التقييم"
 
-#: inc/project-editor.php:134 inc/unit-editor.php:254
+#: inc/project-editor.php:133 inc/unit-editor.php:262
 msgid "Voters"
 msgstr "عدد المصوتين"
 
-#: inc/project-editor.php:140
+#: inc/project-editor.php:139
 msgid "FAQs:"
 msgstr "الأسئلة الشائعة:"
 
-#: inc/project-editor.php:144
+#: inc/project-editor.php:143
 msgid "Enable FAQs"
 msgstr "تفعيل الأسئلة الشائعة"
 
-#: inc/project-editor.php:150
+#: inc/project-editor.php:149
 msgid "Delivery Time:"
 msgstr "موعد التسليم :"
 
-#: inc/project-editor.php:153
+#: inc/project-editor.php:152
 msgid "Enter delivery year"
 msgstr "أدخل موعد تسليم المشروع"
 
-#: inc/project-editor.php:183
+#: inc/project-editor.php:182
 msgid "FAQs"
 msgstr "الأسئلة الشائعة"
 
-#: inc/project-editor.php:221
+#: inc/project-editor.php:220
 msgid "Add New Question "
 msgstr "إضافة سؤال جديد "
 
-#: inc/project-editor.php:259
+#: inc/project-editor.php:258
 msgid "Project Gallery"
 msgstr "معرض صور المشروع"
 
-#: inc/project-editor.php:271
+#: inc/project-editor.php:270
 msgid "Project Gallery:"
 msgstr "معرض صور المشروع :"
 
-#: inc/project-editor.php:273
+#: inc/project-editor.php:272
 msgid "Upload Gallery"
 msgstr "تحميل معرض الصور"
-
-#: inc/project-editor.php:328
-msgid "Enter project Meter price"
-msgstr "أدخل سعر المتر في المشروع"
-
-#: inc/project-editor.php:329 inc/unit-editor.php:181
-msgid "Save"
-msgstr "حفظ"
 
 #: inc/short-cods.php:33
 msgid "Brochure"
 msgstr "البرشور"
 
-#: inc/short-cods.php:38 search.php:90
+#: inc/short-cods.php:40
 msgid "Call Us"
 msgstr "اتصل بنا"
 
@@ -657,29 +838,34 @@ msgstr "اتصل بنا"
 msgid "Whatsapp"
 msgstr "واتساب"
 
-#: inc/short-cods.php:142
+#: inc/short-cods.php:139
 msgid "Share"
 msgstr "شارك"
 
-#: inc/short-cods.php:142
-msgid "The"
-msgstr "ال"
+#: inc/short-cods.php:139
+msgid "The Content"
+msgstr "المحتوى"
 
-#: inc/short-cods.php:180
+#: inc/short-cods.php:329 inc/short-cods.php:346
 msgid "More Posts"
 msgstr "المشاركات"
 
-#: inc/short-cods.php:218
+#: inc/short-cods.php:390
 msgid "Unknown Developer"
 msgstr "مطور غير مسجل"
 
-#: inc/short-cods.php:219
+#: inc/short-cods.php:391
 msgid "No description available for the developer"
 msgstr "لا يوجد وصف للمطور"
 
-#: inc/short-cods.php:223
+#: inc/short-cods.php:395
 msgid "Developer ID is required"
 msgstr "ID المطور مطلوب"
+
+#: inc/short-cods.php:423 single-templates/single-units.php:323
+#: single-templates/single-units.php:536
+msgid "Contact the company representative"
+msgstr "تواصل مع ممثل الشركة."
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:39
@@ -722,75 +908,71 @@ msgstr "اختر المشروع:"
 msgid "Select Project"
 msgstr "اختر المشروع"
 
-#: inc/unit-editor.php:137 inc/unit-editor.php:148
+#: inc/unit-editor.php:163 inc/unit-editor.php:174
 msgid "Units"
 msgstr "الوحدات"
 
-#: inc/unit-editor.php:138
+#: inc/unit-editor.php:164
 msgid "Unit"
 msgstr "وحدة"
 
-#: inc/unit-editor.php:139 inc/unit-editor.php:140
+#: inc/unit-editor.php:165 inc/unit-editor.php:166
 msgid "Add New Unit"
 msgstr "إضافة وحدة جديدة"
 
-#: inc/unit-editor.php:141
+#: inc/unit-editor.php:167
 msgid "Edit Unit"
 msgstr "تحرير الوحدة"
 
-#: inc/unit-editor.php:142
+#: inc/unit-editor.php:168
 msgid "New Unit"
 msgstr "وحدة جديدة"
 
-#: inc/unit-editor.php:143
+#: inc/unit-editor.php:169
 msgid "All Units"
 msgstr "جميع الوحدات"
 
-#: inc/unit-editor.php:144
+#: inc/unit-editor.php:170
 msgid "View Unit"
 msgstr "شاهد الوحدة"
 
-#: inc/unit-editor.php:145
+#: inc/unit-editor.php:171
 msgid "Search for Unit"
 msgstr "البحث عن وحدة"
 
-#: inc/unit-editor.php:146
+#: inc/unit-editor.php:172
 msgid "No unit found"
 msgstr "لم يتم العثور على وحدة"
 
-#: inc/unit-editor.php:147
+#: inc/unit-editor.php:173
 msgid "No unit found in trash"
 msgstr "لم يتم العثور على وحدة في سلة المهملات"
 
-#: inc/unit-editor.php:180
-msgid "Enter unit Space"
-msgstr "أدخل مساحة الوحدة"
-
-#: inc/unit-editor.php:231
+#: inc/unit-editor.php:239
 msgid "Unit Space:"
 msgstr "مساحة الوحدة:"
 
-#: inc/unit-editor.php:234
+#: inc/unit-editor.php:242
 msgid "Enter the unit space"
 msgstr "أدخل مساحة الوحدة"
 
-#: inc/unit-editor.php:239
+#: inc/unit-editor.php:247
 msgid "Unit Price:"
 msgstr "سعر الوحدة:"
 
-#: inc/unit-editor.php:242
+#: inc/unit-editor.php:250
 msgid "Enter the unit price"
 msgstr "أدخل سعر الوحدة"
 
-#: inc/unit-editor.php:262
+#: inc/unit-editor.php:270
 msgid "Enter payment systems"
 msgstr "أدخل أنظمة الدفع"
 
-#: inc/unit-editor.php:264
+#: inc/unit-editor.php:272
 msgid "Enter unit installment"
 msgstr "أدخل أقساط الوحدة"
 
-#: inc/unit-editor.php:265
+#: inc/unit-editor.php:273
 msgid "Enter unit delivery"
 msgstr "موعد تسليم الوحدة"
 
@@ -799,8 +981,7 @@ msgid "Footer #1"
 msgstr "تذييل #1"
 
 #: inc/widgets.php:38
-msgid ""
-"Widgets in this area will be displayed in the first column in the footer."
+msgid "Widgets in this area will be displayed in the first column in the footer."
 msgstr "سيتم عرض الأدوات في هذه المنطقة في العمود الأول في التذييل."
 
 #: inc/widgets.php:47
@@ -828,15 +1009,20 @@ msgstr "سايدبار الصفحات"
 msgid "Read more »"
 msgstr "المزيد »"
 
+#: page-templates/blog-page.php:26 single-templates/single-projects.php:373
+#: single-templates/single-projects.php:396
+msgid "Load More"
+msgstr "تحميل المزيد"
+
 #: page-templates/page-blank-without-container.php:20
 msgid "Pages:"
 msgstr "الصفحات:"
 
-#: search.php:18
+#: search.php:49
 msgid "Search:"
 msgstr "بحث :"
 
-#: search.php:25
+#: search.php:56
 #, php-format
 msgid "We found %s result for your search."
 msgid_plural "We found %s results for your search."
@@ -847,7 +1033,7 @@ msgstr[3] "تم العثور على %s نتيجة لبحثك."
 msgstr[4] "تم العثور على %s نتيجة لبحثك."
 msgstr[5] "تم العثور على %s نتيجة لبحثك."
 
-#: search.php:33
+#: search.php:64
 msgid ""
 "We could not find any results for your search. You can give it another try "
 "through the search form below."
@@ -855,7 +1041,7 @@ msgstr ""
 "لم نتمكن من العثور على أي نتائج لبحثك. يمكنك تجربتها مرة أخرى من خلال نموذج "
 "البحث أدناه."
 
-#: search.php:70
+#: search.php:103
 msgid "search again"
 msgstr "ابحث مرة اخرى"
 
@@ -871,157 +1057,141 @@ msgstr "فتح القائمة الجانبية"
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
-#: single-templates/single-projects.php:252
-msgid "Units Of Projects"
-msgstr "وحدات المشروع"
-
-#: single-templates/single-projects.php:267
-msgid "Next"
-msgstr "التالي"
-
-#: single-templates/single-projects.php:268
-msgid "Prev"
-msgstr "السابق"
-
-#: single-templates/single-projects.php:276
+#: single-templates/single-projects.php:251
 msgid "Project Details"
 msgstr "تفاصيل المشروع"
 
-#: single-templates/single-projects.php:281
-#: single-templates/single-units.php:262
+#: single-templates/single-projects.php:256 single-templates/single-units.php:267
 msgid "Project Name"
 msgstr "اسم المشروع"
 
-#: single-templates/single-projects.php:290
+#: single-templates/single-projects.php:265
 msgid "Project Location"
 msgstr "لوكيشن المشروع"
 
-#: single-templates/single-projects.php:296
+#: single-templates/single-projects.php:271
 msgid "The Project Space"
 msgstr "مساحة المشروع"
 
-#: single-templates/single-projects.php:297
+#: single-templates/single-projects.php:272
 msgid "acre"
-msgstr ""
+msgstr "فدان"
 
-#: single-templates/single-projects.php:302
+#: single-templates/single-projects.php:277
 msgid "The Developer"
 msgstr "المطور"
 
-#: single-templates/single-projects.php:308
+#: single-templates/single-projects.php:283
 msgid "receiving date"
 msgstr "موعد الاستلام"
 
-#: single-templates/single-projects.php:314
-#: single-templates/single-projects.php:367
+#: single-templates/single-projects.php:289
+#: single-templates/single-projects.php:412
 msgid "Payment systems"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-projects.php:329
-#: single-templates/single-units.php:301
+#: single-templates/single-projects.php:304 single-templates/single-units.php:306
 msgid "Sales Number"
 msgstr "رقم المبيعات"
 
-#: single-templates/single-projects.php:336
-#: single-templates/single-units.php:278
+#: single-templates/single-projects.php:311 single-templates/single-units.php:283
 msgid "Unit Types"
 msgstr "نوع الوحدة"
 
-#: single-templates/single-projects.php:354
+#: single-templates/single-projects.php:329
 msgid "Meter price"
 msgstr "سعر المتر"
 
-#: single-templates/single-projects.php:355
+#: single-templates/single-projects.php:330
 msgid "L.E"
 msgstr "جنيه"
 
-#: single-templates/single-projects.php:371
-#: single-templates/single-projects.php:571
-#: single-templates/single-units.php:317 single-templates/single-units.php:455
+#: single-templates/single-projects.php:393
+msgid "Loading..."
+msgstr "تحميل..."
+
+#: single-templates/single-projects.php:416
+#: single-templates/single-projects.php:581 single-templates/single-units.php:354
+#: single-templates/single-units.php:494
 msgid "Deposit"
 msgstr "مقدم"
 
-#: single-templates/single-projects.php:377
-#: single-templates/single-projects.php:577
-#: single-templates/single-units.php:323 single-templates/single-units.php:461
+#: single-templates/single-projects.php:422
+#: single-templates/single-projects.php:587 single-templates/single-units.php:360
+#: single-templates/single-units.php:500
 msgid "installment"
 msgstr "تقسيط"
 
-#: single-templates/single-projects.php:385
-#: single-templates/single-projects.php:585
-#: single-templates/single-units.php:331 single-templates/single-units.php:474
+#: single-templates/single-projects.php:430
+#: single-templates/single-projects.php:595 single-templates/single-units.php:368
+#: single-templates/single-units.php:513
 msgid "Receipt"
 msgstr "استلام"
 
-#: single-templates/single-projects.php:393
-msgid "Latest update on: "
-msgstr "أخر تحديث في : "
-
-#: single-templates/single-projects.php:469
+#: single-templates/single-projects.php:503
 msgid "Similar Projects"
 msgstr "مشاريع مماثلة"
 
-#: single-templates/single-projects.php:497
+#: single-templates/single-projects.php:531
 msgid "No similar projects"
 msgstr "لا توجد مشاريع مماثلة"
 
-#: single-templates/single-projects.php:506
+#: single-templates/single-projects.php:540
 #: template-parts/front-page/latest-properties.php:7
 msgid "Latest projects"
 msgstr "اخر المشروعات"
 
-#: single-templates/single-projects.php:530
+#: single-templates/single-projects.php:564
 msgid "No Latest projects"
 msgstr "لا يوجد مشروعات جديدة"
 
-#: single-templates/single-projects.php:579
-#: single-templates/single-units.php:325 single-templates/single-units.php:464
+#: single-templates/single-projects.php:589 single-templates/single-units.php:362
+#: single-templates/single-units.php:503
 msgid "year"
 msgstr "سنة"
 
-#: single-templates/single-projects.php:579
-#: single-templates/single-units.php:325 single-templates/single-units.php:466
+#: single-templates/single-projects.php:589 single-templates/single-units.php:362
+#: single-templates/single-units.php:505
 msgid "years"
 msgstr "سنوات"
 
-#: single-templates/single-projects.php:593
-#: single-templates/single-units.php:339 single-templates/single-units.php:482
-msgid "Last updated in:"
-msgstr "أخر تحديث في :"
-
-#: single-templates/single-units.php:247
+#: single-templates/single-units.php:250
 msgid "Unit details"
 msgstr "معلومات الوحدة"
 
-#: single-templates/single-units.php:252
+#: single-templates/single-units.php:255
 msgid "Unit Name"
 msgstr "اسم الوحدة"
 
-#: single-templates/single-units.php:270
+#: single-templates/single-units.php:275
 msgid "Developing Company"
 msgstr "الشركة المطورة"
 
-#: single-templates/single-units.php:286
+#: single-templates/single-units.php:291
 msgid "Unit Location"
 msgstr "لوكيشن الوحدة"
 
-#: single-templates/single-units.php:294
+#: single-templates/single-units.php:299
 msgid "Unit price"
 msgstr "سعر الوحدة"
 
-#: single-templates/single-units.php:295
+#: single-templates/single-units.php:300
 msgid "EGP"
 msgstr "جنيه"
 
-#: single-templates/single-units.php:313 single-templates/single-units.php:451
+#: single-templates/single-units.php:350 single-templates/single-units.php:490
 msgid "Payment System"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-units.php:387
+#: single-templates/single-units.php:376 single-templates/single-units.php:521
+msgid "Last updated in:"
+msgstr "أخر تحديث في :"
+
+#: single-templates/single-units.php:427
 msgid "Similar units"
 msgstr "وحدات مماثلة"
 
-#: single-templates/single-units.php:437
+#: single-templates/single-units.php:478
 msgid "No similar units"
 msgstr "لا توجد وحدات متشابهة"
 
@@ -1031,8 +1201,7 @@ msgstr "لم يتم العثور على أي شيء لـ"
 
 #: template-parts/content-none.php:22
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "جاهز لنشر أول مقالة لك؟ <a href=\"%1$s\">ابدأ هنا</a>."
 
 #: template-parts/content-none.php:33
@@ -1045,8 +1214,8 @@ msgstr ""
 
 #: template-parts/content-none.php:38
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching "
+"can help."
 msgstr "يبدو أننا لا نستطيع العثور على ما تبحث عنه. ربما يمكن أن يساعد البحث."
 
 #: template-parts/front-page/latest-developers.php:10
@@ -1100,11 +1269,11 @@ msgid ""
 "NewAqar is a sleek and modern WordPress theme tailored for real estate "
 "companies. Developed with Bootstrap and powered by PHP 8.2, it offers a "
 "responsive design for optimal user experience across devices. With advanced "
-"search options, interactive maps, and customizable property listings, "
-"NewAqar provides a user-friendly platform to showcase properties "
-"effectively. Its intuitive admin panel allows easy customization, making it "
-"an ideal choice for real estate agencies, developers, and individual "
-"realtors seeking a powerful and visually appealing online presence."
+"search options, interactive maps, and customizable property listings, NewAqar "
+"provides a user-friendly platform to showcase properties effectively. Its "
+"intuitive admin panel allows easy customization, making it an ideal choice for "
+"real estate agencies, developers, and individual realtors seeking a powerful "
+"and visually appealing online presence."
 msgstr ""
 "NewAqar هو قالب NewAqar أنيق وحديث مصمم خصيصًا لشركات العقارات. تم تطويره "
 "باستخدام NewAqar ويعتمد على PHP 8.2 ، ويقدم تصميمًا استجابيًا لتحقيق تجربة "
@@ -1121,3 +1290,35 @@ msgstr "وليد الصيفي"
 #. Author URI of the plugin/theme
 msgid "https://dido.pro"
 msgstr "https://dido.pro"
+
+#. Template Name of the plugin/theme
+msgid "Home Page"
+msgstr "الصفحة الرئيسية"
+
+#~ msgctxt "copyright date format"
+#~ msgid "Y"
+#~ msgstr "سنة"
+
+#~ msgid "Enter project Meter price"
+#~ msgstr "أدخل سعر المتر في المشروع"
+
+#~ msgid "Save"
+#~ msgstr "حفظ"
+
+#~ msgid "The"
+#~ msgstr "ال"
+
+#~ msgid "Enter unit Space"
+#~ msgstr "أدخل مساحة الوحدة"
+
+#~ msgid "Units Of Projects"
+#~ msgstr "وحدات المشروع"
+
+#~ msgid "Next"
+#~ msgstr "التالي"
+
+#~ msgid "Prev"
+#~ msgstr "السابق"
+
+#~ msgid "Latest update on: "
+#~ msgstr "أخر تحديث في : "

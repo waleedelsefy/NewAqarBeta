@@ -54,7 +54,7 @@
     --h1-hero-font-size:36px;
     --content-line-heigh: normal;
     --p-margin-heigh:0.5rem;
-    --unit-card-width:290px;
+    --unit-card-width:325px;
     --recent-height-property-none:280px;
     --full-width:99vw;
     --one-third:99vw;
@@ -111,6 +111,7 @@ button#toggleToc {
   border-radius: var(--all-border-radius);
   background: var(--sacnd-color);
   text-decoration: none;
+  padding: 5px 15px;
 }
 
 html body {
@@ -979,6 +980,17 @@ html .unit-card .project-location, html .unit-card .project-space {
     margin-bottom: 50px;
     font-size: var(--h1-hero-font-size);
   }
+  html .d-flex-dido {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+  }
+  html .d-flex-dido i {
+    font-size: 18px !important;
+  }
 }
 @media screen and (min-width: 770px) and (max-width: 3024px) {
   html {
@@ -986,6 +998,17 @@ html .unit-card .project-location, html .unit-card .project-space {
     /*progecj*/
     /*start header*/
     /*side bar*/
+  }
+  html .d-flex-dido {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    gap: 5px;
+    align-items: center;
+    font-size: 14px;
+  }
+  html .d-flex-dido i {
+    font-size: 18px !important;
   }
   html .breadcrumbs-wrapper {
     width: 100%;
@@ -2037,7 +2060,7 @@ h2.widget-title {
 
 #floating-icons a {
   display: block;
-  width: 40px;
+  width: 115px;
   background-color: var(--sacnd-color);
   border-radius: var(--all-border-radius);
   margin: 10px 0;

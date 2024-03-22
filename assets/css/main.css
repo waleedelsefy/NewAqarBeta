@@ -5325,14 +5325,3 @@ textarea#ff_7_3_description {
     justify-content: center !important;
     align-items: center !important;
 }
-.d-flex-dido {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    gap: 5px;
-    align-items: center;
-    font-size: 14px;
-}
-.d-flex-dido i {
-    font-size: 18px !important;
-}

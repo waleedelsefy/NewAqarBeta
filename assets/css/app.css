@@ -43103,7 +43103,7 @@ textarea.form-control-lg {
     --h1-hero-font-size:36px;
     --content-line-heigh: normal;
     --p-margin-heigh:0.5rem;
-    --unit-card-width:290px;
+    --unit-card-width:325px;
     --recent-height-property-none:280px;
     --full-width:99vw;
     --one-third:99vw;
@@ -43158,6 +43158,7 @@ button#toggleToc {
   border-radius: var(--all-border-radius);
   background: var(--sacnd-color);
   text-decoration:none;
+  padding: 5px 15px;
 }
 html body {
   background: var(--primary-background-color);
@@ -44028,10 +44029,35 @@ a.phone {
         font-size: var(--h1-hero-font-size);
       }
     }
+
+    .d-flex-dido {
+
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+    }
+    .d-flex-dido i {
+      font-size: 18px !important;
+    }
   }
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
 
+    .d-flex-dido {
+
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      gap: 5px;
+      align-items: center;
+      font-size: 14px;
+    }
+    .d-flex-dido i {
+      font-size: 18px !important;
+    }
     .breadcrumbs-wrapper {
       width: 100%;
     }
@@ -45000,7 +45026,7 @@ h2.widget-title {
 
 #form-btn{display: none}
 
-#floating-icons a{display: block; width:40px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
+#floating-icons a{display: block; width:115px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
 #floating-icons .float-phone{background-color: #192F43;color: #FFFFFF}
 
