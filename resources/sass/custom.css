@@ -991,6 +991,19 @@ html .unit-card .project-location, html .unit-card .project-space {
   html .d-flex-dido i {
     font-size: 18px !important;
   }
+  html #floating-icons a {
+    display: block;
+    width: 115px;
+    background-color: var(--sacnd-color);
+    border-radius: var(--all-border-radius);
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+    height: 40px;
+    line-height: 36px;
+    transition: 0.5s;
+    color: #FFFFFF;
+  }
 }
 @media screen and (min-width: 770px) and (max-width: 3024px) {
   html {
@@ -998,6 +1011,19 @@ html .unit-card .project-location, html .unit-card .project-space {
     /*progecj*/
     /*start header*/
     /*side bar*/
+  }
+  html #floating-icons a {
+    display: block;
+    width: 55px;
+    background-color: var(--sacnd-color);
+    border-radius: var(--all-border-radius);
+    margin: 10px 0;
+    font-size: 1rem;
+    text-align: center;
+    height: 40px;
+    line-height: 36px;
+    transition: 0.5s;
+    color: #FFFFFF;
   }
   html .d-flex-dido {
     display: flex;
@@ -2056,20 +2082,6 @@ h2.widget-title {
 
 #form-btn {
   display: none;
-}
-
-#floating-icons a {
-  display: block;
-  width: 115px;
-  background-color: var(--sacnd-color);
-  border-radius: var(--all-border-radius);
-  margin: 10px 0;
-  font-size: 1rem;
-  text-align: center;
-  height: 40px;
-  line-height: 36px;
-  transition: 0.5s;
-  color: #FFFFFF;
 }
 
 #floating-icons .float-phone {

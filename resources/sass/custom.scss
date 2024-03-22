@@ -991,9 +991,12 @@ a.phone {
     .d-flex-dido i {
       font-size: 18px !important;
     }
+    #floating-icons a{display: block; width:115px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
+
   }
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
+    #floating-icons a{display: block; width:55px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
     .d-flex-dido {
 
@@ -1975,7 +1978,6 @@ h2.widget-title {
 
 #form-btn{display: none}
 
-#floating-icons a{display: block; width:115px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
 #floating-icons .float-phone{background-color: #192F43;color: #FFFFFF}
 
