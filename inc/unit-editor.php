@@ -195,25 +195,7 @@ function newaqar_unit_permalink($permalink, $post_id) {
     return $permalink;
 }
 add_filter('post_type_link', 'newaqar_unit_permalink', 10, 2);
-function newaqar_manage_units_columns($columns) {
-    $columns['unit_space'] = 'مساحة الوحدة';
-    return $columns;
-}
-function newaqar_manage_units_column_content($column_name, $post_ID) {
-    if ($column_name == 'unit_space') {
-        $unit_details = get_post_meta($post_ID, 'unit_details', true);
-        $unit_space = isset($unit_details['unit_space']) ? esc_attr($unit_details['unit_space']) : '';
-        echo '<input type="number" name="unit_details[unit_space]" value="' . esc_attr($unit_space) . '" placeholder="' . esc_attr__('Enter unit Space', 'newaqar') . '" step="1">';
-        echo ' <button type="submit" class="button button-primary" name="save_unit_button">' . esc_html__('Save', 'newaqar') . '</button>';
-    }
-}
-function newaqar_manage_units_columns_sortable($columns) {
-    $columns['unit_space'] = 'unit_space';
-    return $columns;
-}
-add_filter('manage_units_posts_columns', 'newaqar_manage_units_columns');
-add_action('manage_units_posts_custom_column', 'newaqar_manage_units_column_content', 10, 2);
-add_filter('manage_edit-units_sortable_columns', 'newaqar_manage_units_columns_sortable');
+
 add_action('wp_ajax_save_unit_space', 'newaqar_save_unit_space');
 function newaqar_save_unit_space() {
     $post_id = isset($_POST['post_id']) ? intval($_POST['post_id']) : 0;

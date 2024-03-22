@@ -87,7 +87,7 @@ function generate_table_of_contents() {
     }
 
     // Initialize an empty string to store the table of contents
-    $toc = '<div class="table-of-contents"><div class="head-table-of-contents"><p>' . __('Table of Contents', 'newaqar') . '</p><button id="toggleToc">' . __('show', 'newaqar') . '</button></div><ul class="toc-list" style="display: none;">';
+    $toc = '<div class="table-of-contents"><div class="head-table-of-contents"><p class="headline right">' . __('Table of Contents', 'newaqar') . '</p><button id="toggleToc">' . __('show', 'newaqar') . '</button></div><ul class="toc-list" style="display: none;">';
 
     // Loop through headings to build the table of contents
     foreach ($headings as $heading) {
@@ -132,9 +132,7 @@ function generate_table_of_contents() {
 
     return $toc;
 }
-// functions.php
 
-// Add function to add heading IDs
 function add_heading_ids($content) {
     // Regular expression pattern to match headings
     $pattern = '/<h([2-6]).*?>(.*?)<\/h\1>/i';

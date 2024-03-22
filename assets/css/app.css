@@ -43068,7 +43068,6 @@ textarea.form-control-lg {
   --primary-link-color-not-collapsed: rgba(239, 94, 78, 0.75)!important;
   --bs-accordion-btn-focus-box-shadow:0 0 0 0.2rem rgb(243 134 122 / 17%) !important;
   --recent-property-background-color: #fff;
-  --recent-property-border-radius: 5px;
   --header-background-color: #fff;
   --primary-box-shadow:0px 0px 19px 2px #00000047;
   --h1-hero-font-size:36px;
@@ -43091,6 +43090,7 @@ textarea.form-control-lg {
   --one-third:32vw;
   --tow-third:63vw;
   --card-unts-gap:50px;
+  --all-border-radius:5px;
 }
 @media screen and (max-width: 900px) {
   :root {
@@ -43129,7 +43129,7 @@ body {
   justify-content: space-between;
   padding-inline-start: 17px;
   padding-inline-end: 17px;
-
+  margin-bottom: 20px;
   p {
     font-size: var(--h2-content-font-size) !important;
     font-weight: 600 !important;
@@ -43142,7 +43142,7 @@ hih.breadcrumb-item {
 }
 button#load-more-btn {
   font-size: var(--p-content-font-size);
-  border-radius: 25px;
+  border-radius:var(--all-border-radius);
   margin: 50px;
 }
 .full-width {
@@ -43156,7 +43156,7 @@ button#load-more-btn {
 button#toggleToc {
   color: #fff9f9;
   font-size: var(--p-content-font-size);
-  border-radius: 25px;
+  border-radius: var(--all-border-radius);
   background: var(--sacnd-color);
 }
 html body {
@@ -43431,7 +43431,7 @@ a.phone {
     height: 100%;
     width: 100%;
     padding: 0px;
-    border-radius: var(--recent-property-border-radius)
+    border-radius: var(--all-border-radius);
   }
   .img-recent-property {
     width: 100%;
@@ -43447,7 +43447,7 @@ a.phone {
   .swiper-button-next {
     padding: 13px;
     width: 35px !important;
-    border-radius: 20px;
+    border-radius:var(--all-border-radius);
     background: #a99c9c6b;
   }
   .swiper-button-next svg {
@@ -43586,7 +43586,7 @@ a.phone {
   }
   img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
     width: auto;
-    border-radius: 5px;
+    border-radius: var(--all-border-radius);
     box-shadow: 0px -1px 20px 4px #00000066;
     background: linear-gradient(307deg, var(--primary-link-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -43598,7 +43598,7 @@ a.phone {
     background-color: var(--primary-link-color);
     font-weight:var(--call-to-action-font-weight) ;
     padding: 0;
-    border-end-end-radius: var(--recent-property-border-radius);
+    border-end-end-radius: var(--all-border-radius);
   }
   a#whatsapp-liko ,#contact-us, #phone-num {
     padding: 0;
@@ -43629,7 +43629,7 @@ a.phone {
    .headline::after, .headline::before {
      content: "";
      position: absolute;
-     border-radius: 10px;
+     border-radius: var(--all-border-radius);
      height: 6px;
      background-color: var(--sacnd-color);
      bottom: -10px;
@@ -43723,7 +43723,7 @@ a.phone {
     width: 100%;
     background:var(--recent-property-background-color);
     height: 350px;
-    border-radius: var(--recent-property-border-radius);
+    border-radius: var(--all-border-radius);
     display: block;
   }
   .recent-property-none {
@@ -43731,7 +43731,7 @@ a.phone {
     width: 100%;
     background:var(--recent-property-background-color);
     height:var(--recent-height-property-none);
-    border-radius: var(--recent-property-border-radius);
+    border-radius: var(--all-border-radius);
     display: block;
   }
   .contact-container {
@@ -43740,15 +43740,15 @@ a.phone {
     position: relative;
     width: -webkit-fill-available;
     background:var(--recent-property-background-color);
-    border-radius:var(--recent-property-border-radius);
+    border-radius: var(--all-border-radius);
   }
   .img-recent-property{
-    border-start-start-radius: var(--recent-property-border-radius);
-    border-start-end-radius: var(--recent-property-border-radius);
+    border-start-start-radius: var(--all-border-radius);
+    border-start-end-radius: var(--all-border-radius);
   }
   /*** Unit Card**/
   .unit-card {
-    border-radius: var(--recent-property-border-radius);
+    border-radius: var(--all-border-radius);
     box-shadow: var(--primary-box-shadow);
     width: var(--unit-card-width);
     flex: 0 0 auto;
@@ -43961,7 +43961,7 @@ a.phone {
       width: 100%;
       background: var(--recent-property-background-color);
       height: 260px;
-      border-radius: var(--recent-property-border-radius);
+      border-radius: var(--all-border-radius);
       display: block;
     }
     /**End of post card**/
@@ -44025,6 +44025,9 @@ a.phone {
   }
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
+    .table-of-contents {
+      width: 40%;
+    }
     .search-main-content {
       display: flex;
       flex-wrap: wrap;
@@ -44178,7 +44181,7 @@ a.phone {
         text-decoration: none;
         position: relative;
         height: 40px;
-        border-radius: 9px;
+        border-radius: var(--all-border-radius);
         box-shadow: 0px 0px 10px 1.1px #0000004f;
         padding-inline-start: 10px;
         padding-inline-end: 10px;
@@ -44211,7 +44214,7 @@ a.phone {
     /*side bar*/
     .message-section {
       background: #fff;
-      border-radius: 5px;
+      border-radius: var(--all-border-radius);
       box-shadow: 0 1px 7px -2px #8f8f8f;
       font-family: var(--primary-font-family);
       padding: 10px;
@@ -44249,7 +44252,7 @@ a.phone {
       }
       .personal-img-logo {
         width: 90px;
-        border-radius: 15px;
+        border-radius: var(--all-border-radius);
         border: 1px solid #00000052;
         padding: 0;
         background: #ffff;
@@ -44401,7 +44404,7 @@ a.phone {
         align-items: center;
         width: 50px;
         height: 50px;
-        border-radius: 100%;
+        border-radius: var(--all-border-radius);
         text-decoration: none;
         background-color: #999;
         color: #fff;
@@ -44441,7 +44444,7 @@ a.phone {
 .shareLink {
   .permalink {
     position: relative;
-    border-radius: 30px;
+    border-radius: var(--all-border-radius);
     .textLink {
       text-align: center;
       padding: 12px 60px 12px 30px;
@@ -44450,7 +44453,7 @@ a.phone {
       font-size: 16px;
       letter-spacing: normal;
       color: #494949;
-      border-radius: 25px;
+      border-radius: var(--all-border-radius);
       border: 1px solid #f2f2f2;
       background-color: #f2f2f2;
       outline: 0;
@@ -44485,7 +44488,7 @@ a.phone {
         bottom: -40px;
         left: 50%;
         padding: 5px;
-        border-radius: 4px;
+        border-radius: var(--all-border-radius);
         font-size: 0.8rem;
         opacity: 0;
         pointer-events: none;
@@ -44536,11 +44539,9 @@ img {
   flex-wrap: wrap;
   box-sizing: border-box;
 }
+
 .authorbox {
-  margin-top: 25px;
-  padding: 8px 0 8px 0;
-  background: transparent;
-  box-shadow: none;
+  color: rgba(0, 0, 0, 0.87);
   width: 100%;
   border: 0;
   display: flex;
@@ -44548,36 +44549,12 @@ img {
   min-width: 0;
   word-wrap: break-word;
   font-size: .875rem;
+  margin-top: 30px;
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   margin-bottom: 30px;
-  border-radius: 6px;
+  border-radius:var(--all-border-radius);
   flex-direction: column;
-}
-.boxflex {
-  width: auto;
-  margin-left: -15px;
-  margin-inline-end: -15px;
-}
-.boxflex {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-}
-.borderbox {
-  width: 100%;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.box1-3 {
-                            flex-grow: 0;
-                            max-width: 16.66667%;
-                            flex-basis: 16.66667%;
-                          }
-.borderbox {
-  margin: 0;
-  box-sizing: border-box;
 }
 .authorbox {
   color: rgba(0, 0, 0, 0.87);
@@ -44592,54 +44569,7 @@ img {
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   margin-bottom: 30px;
-  border-radius: 6px;
-  flex-direction: column;
-}
-.borderbox {
-  margin: 0;
-  box-sizing: border-box;
-}
-.box1-3 {
-  flex-grow: 0;
-  max-width: 16.66667%;
-  flex-basis: 16.66667%;
-}
-.boximgauthor {
-  padding: 0;
-  overflow: hidden;
-  width: 100px;
-  min-width: 99px;
-  max-width: 125px;
-  height: 100px;
-  min-height: 99px;
-  max-height: 125px;
-  box-shadow: 0 14px 37px -12px rgba(0, 0, 0, 0.6), 0 4px 20px 0px rgba(0, 0, 0, 0.15), 0 6px 10px -6px rgba(0, 0, 0, 0.4);
-  border-radius: 50%;
-  margin-top: 20%;
-  margin-bottom: 10px;
-  margin-left: 10px;
-}
-.borderbox.box1-3 {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-.authorbox {
-  color: rgba(0, 0, 0, 0.87);
-  width: 100%;
-  border: 0;
-  display: flex;
-  position: relative;
-  min-width: 0;
-  word-wrap: break-word;
-  font-size: .875rem;
-  margin-top: 30px;
-  background: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-  margin-bottom: 30px;
-  border-radius: 6px;
+  border-radius: var(--all-border-radius);
   flex-direction: column;
 }
 .boximgauthor.boximgauthor img, .boximgauthor.jss728 img {
@@ -44675,7 +44605,7 @@ img {
 }
 .visitBtn {
   background-color: var(--primary-have-color-collapse);
-  border-radius:9px;
+  border-radius:var(--all-border-radius);
   display:inline-block;
   cursor:pointer;
   color:#ffffff !important;
@@ -44775,7 +44705,7 @@ div#fluentform_13_success {
     background: var(--primary-have-color-button);
     box-shadow: 0 0 4px 1px #0000008f;
     padding-top: 20px;
-    border-radius: 8px;
+    border-radius: var(--all-border-radius);
     margin-top: 16px;
     width: 77vw;
     a.name.text-start.d-flex {
@@ -44793,7 +44723,7 @@ div#fluentform_13_success {
     }
     .personal-img-logo {
       width: 90px;
-      border-radius: 15px;
+      border-radius: var(--all-border-radius);
       border: 1px solid #00000052;
       padding: 0;
       background: #ffff;
@@ -44847,7 +44777,7 @@ div#fluentform_13_success {
   font-size: var(--p-content-font-size);
 }
 .main-cta a {
-  border-radius: 5px;
+  border-radius: var(--all-border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44868,7 +44798,7 @@ div#fluentform_13_success {
   background: var(--primary-link-color-collapse) !important;
   border: 0;
   color: #fff !important;
-  border-radius: 5px;
+  border-radius: var(--all-border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44909,7 +44839,7 @@ div#fluentform_13_success {
   align-content: center;
   align-items: center;
   background: url(../img/gb.svg);
-  border-radius: 10px;
+  border-radius: var(--all-border-radius);
 img {
   display: none;
 }
@@ -44921,7 +44851,7 @@ img {
   align-content: center;
   align-items: center;
     background: url(../img/eg.svg);
-  border-radius: 10px;
+  border-radius: var(--all-border-radius);
 img {
   display: none;
 }
@@ -44980,7 +44910,7 @@ h2.widget-title {
   top: 50%;
   position: absolute;
   padding: 0.8rem 1rem;
-  border-radius: 3px;
+  border-radius: var(--all-border-radius);
   background-color: white;
   border: none;
   font-size: 1.4rem;
@@ -44998,7 +44928,7 @@ h2.widget-title {
   top: 50%;
   position: absolute;
   padding: 0.8rem 1rem;
-  border-radius: 3px;
+  border-radius: var(--all-border-radius);
   background-color: white;
   border: none;
   font-size: 1rem;
@@ -45012,7 +44942,7 @@ h2.widget-title {
   height:100%;
   width:100%;
   object-fit: cover;
-  border-radius:30px;
+  border-radius:var(--all-border-radius);
 }
 .is-hidden{
   display:none;
@@ -45026,7 +44956,7 @@ h2.widget-title {
 
   #floating-icons .float-phone{position: relative}
 
-  #floating-icons .floating-phone{display:inline-block;white-space: nowrap;padding:0 15px;background-color: #fff; border-radius: 5px;opacity: 0; visibility: hidden; transition: 0.5s; color: #233F5A;position: absolute;right:50%;bottom:0;border:1px solid #DDD;z-index: -1;line-height: 1.5rem}
+  #floating-icons .floating-phone{display:inline-block;white-space: nowrap;padding:0 15px;background-color: #fff; border-radius:var(--all-border-radius);opacity: 0; visibility: hidden; transition: 0.5s; color: #233F5A;position: absolute;right:50%;bottom:0;border:1px solid #DDD;z-index: -1;line-height: 1.5rem}
 
   #floating-icons .float-phone:hover .floating-phone{opacity:1;visibility: visible;right:100%}
 
@@ -45042,7 +44972,7 @@ h2.widget-title {
 
   /*#floating-icons a{flex-grow: 1;}*/
 
-  #floating-icons a{width:90%;height:30px;border-radius: 5px;margin:5px;line-height: 30px;padding: 0;border:none;font-size: 0.8rem}
+  #floating-icons a{width:90%;height:30px;border-radius: var(--all-border-radius);margin:5px;line-height: 30px;padding: 0;border:none;font-size: 0.8rem}
 
   #back-top{display: none}
 
@@ -45054,7 +44984,7 @@ h2.widget-title {
 
 #form-btn{display: none}
 
-#floating-icons a{display: block; width:40px;background-color: var(--sacnd-color);border-radius: 5px;margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
+#floating-icons a{display: block; width:40px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
 #floating-icons .float-phone{background-color: #192F43;color: #FFFFFF}
 

@@ -184,7 +184,7 @@ class dido
     align-content: center;
     align-items: center;
     background-position: center;
-    border-radius: 10px;" alt="' . $langDetails['name'] . '" class="header-language__item lg:px-1 current-lang"></li></a>';
+    border-radius: var(--all-border-radius);" alt="' . $langDetails['name'] . '" class="header-language__item lg:px-1 current-lang"></li></a>';
 
             }
         }

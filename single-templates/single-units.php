@@ -101,7 +101,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}
     @media only screen and (min-width:992px){
-        table.infotable th.ttitle {font-size: 0.9rem; width: 15%}
+        table.infotable th.ttitle {font-size: 0.9rem; width: 20% !important;}
         table.infotable td, table.infotable th {font-size: 1rem; padding: 7px 25px 7px 15px}
     }
     .facility-img img{height:25px;width:auto;display: block; margin-inline-end: 5px}
@@ -232,16 +232,16 @@ if ($post_type === 'units' || $post_type === 'projects') {
         .schedule-meeting .submit{margin-top:50px; margin-bottom: 0}
     }
 </style>
-<div class="container">
-    <div class="breadcrumbs-wrapper my-4">
-        <?php
-        the_breadcrumb();
-        ?>
-    </div>
-    <div class="row">
-        <div class="col-12 col-sm-9 col-lg-9 left-side-bar">
-            <div class="main-content">
-                <main id="content" class="column main-content">
+
+
+        <div class="content-body">
+
+        <div class="main-content two-third">
+            <div class="breadcrumbs-wrapper my-4">
+                <?php
+                the_breadcrumb();
+                ?>
+            </div>
                     <div class="post-thumbnail d-flex justify-content-center align-items-center">
                         <?php the_post_thumbnail() ?>
                     </div>
@@ -446,11 +446,9 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         wp_reset_postdata();
                         ?>
                     </div>
-                </main>
                 </section>
-            </div>
         </div>
-        <div class="col-12 col-sm-3 col-lg-3 right-side-bar">
+        <div class="one-third">
             <div class="side-bar">
                 <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
@@ -491,21 +489,96 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         </div>
                     </div>
                 <?php endif; ?>
-                <div class="message-section">
-                    <?php
-                    if (function_exists('pll_current_language')) {
-                        $current_language = pll_current_language();
+                <div class="">
+                    <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
+                    else { ?>
+                        <div class="message-section">
+                        <?php
 
-                        if ($current_language === 'ar') {
-                            echo do_shortcode('[fluentform id="7"]');
-                        } elseif ($current_language === 'en') {
-                            echo do_shortcode('[fluentform id="11"]');
-                        }
+    if (empty($developer_id)) {
+        global $post;
+        $post_type = get_post_type($post);
+
+        if ($post_type === 'units') {
+            $developer_terms = get_post_meta(get_the_ID(), '_unit_project_id', true);
+            if (is_array($developer_terms) && !empty($developer_terms)) {
+                $developer_id = reset($developer_terms)->term_id;
+            }
+        } elseif ($post_type === 'projects') {
+            $developer_terms = get_the_terms(get_the_ID(), 'developer');
+            if (is_array($developer_terms) && !empty($developer_terms)) {
+                $developer_id = reset($developer_terms)->term_id;
+            }
+        }
+
+    }
+    if (!empty($developer_id)) {
+        $developer_terms = get_term($developer_id, 'developer');
+        if (!is_wp_error($developer_terms) && $developer_terms) {
+            $developer_name = $developer_terms->name;
+            $developer_desc = get_term_meta($developer_id, 'developer_desc', true);
+            $developer_image = get_term_meta($developer_id, 'developer_image', true);
+            $developer_link = get_term_link($developer_id);
+        } else {
+            $developer_name = __('Unknown Developer', 'newaqar');
+            $developer_desc = __('No description available for the developer', 'newaqar');
+            $developer_image = 'https://www.newaqar.net/wp-content/uploads/2024/01/newaqaar.jpg';
+        }
+    } else {
+        $developer_name = __('Developer ID is required', 'newaqar');
+        $developer_desc = '';
+        $developer_image = '';
+    }
+
+
+
+    ob_start();
+    if (isset($developer_link)) {
+
+    ?>
+
+<div class="card-buo" >
+    <div class="developer-card">
+        <div class="developer-card-info">
+            <div class="personal-img">
+                <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name;?>">
+            </div>
+            <div class="personal-info">
+                <a href="<?php echo $developer_link?>"><?php echo $developer_name;?></a>
+                <p class="jobTitle">تواصل مع مندوب الشركة</p>
+            </div>
+
+        </div>
+
+        <div>
+            <?php
+            if (function_exists('pll_current_language')) {
+                $current_language = pll_current_language();
+                if ($current_language === 'ar') {
+                    echo do_shortcode('[fluentform id="15"]');
+                } elseif ($current_language === 'en') {
+                    echo do_shortcode('[fluentform id="16"]');
+                }
+            }
+            ?>        </div>
+
+    </div>
+</div>
+
+    <?php
+    }
+    return ob_get_clean();
+}
+add_shortcode('newaqar_developer', 'newaqar_developer_shortcode');
+
+                        </div>
+                        <?php
                     }
                     ?>
                 </div>
+
             </div>
         </div>
     </div>
-</div>
+
 <?php echo get_footer(); ?>

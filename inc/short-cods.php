@@ -162,22 +162,88 @@ function author_info_shortcode() {
     $author_email = get_the_author_meta('user_email', $author_id);
     $author_description = get_the_author_meta('description', $author_id);
     $author_url = get_the_author_meta('user_login', $author_id);
+    $author_img= esc_url(get_avatar_url($author_id));
     ?>
+        <style>
+            .authorbox {
+                color: rgba(0, 0, 0, 0.87);
+                width: 100%;
+                border: 0;
+                display: flex;
+                position: relative;
+                min-width: 0;
+                word-wrap: break-word;
+                font-size: .875rem;
+                margin-top: 30px;
+                background: #fff;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                margin-bottom: 30px;
+                border-radius: var(--all-border-radius);
+                flex-direction: column;
+                padding-inline-start: 30px;
+                padding-inline-end: 30px;
+            }
+
+
+            .authorbox-inline {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .authorbox-mobile {
+                display: flex;
+                gap: 14px;
+                align-items: center;
+            }
+            .boximgauthor {
+                padding: 0;
+                overflow: hidden;
+                width: 100px;
+                min-width: 99px;
+                max-width: 125px;
+                height: 100px;
+                min-height: 99px;
+                max-height: 125px;
+                box-shadow: 0 14px 37px -12px rgba(0, 0, 0, 0.6), 0 4px 20px 0px rgba(0, 0, 0, 0.15), 0 6px 10px -6px rgba(0, 0, 0, 0.4);
+                border-radius: var(--all-border-radius);
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+            }
+            .authorbox-inline-name {
+                width: 60%;
+               align-content: flex-start;
+            }
+        </style>
     <div class="">
         <hr>
-        <div class="authorbox">
-            <div class="boxflex ">
-                <div class="borderbox box1-3">
-                    <div class="boximgauthor">
-                        <img src="<?php echo esc_url(get_avatar_url($author_id)); ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>">
+        <div class="authorbox des-only">
+            <div class="authorbox-inline ">
+                <div class="boximgauthor">
+                    <img src="<?php echo $author_img; ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>">
+                </div>
+                <div class="authorbox-inline-name">
+                        <h4 class="hinfbox"><?php echo esc_html($author_name); ?></h4>
+
+                    </div>
+                <div class="authorbox-inline-sup">
+
+                <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>"  class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
+                </div>
+            </div>
+        </div>
+        <div class="authorbox mob-only">
+            <div class="authorbox-mobile">
+                <div class="boximgauthor">
+                    <img src=<?php echo $author_img; ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>">
+                    <div class="authorbox-inline-name">
                     </div>
                 </div>
-                <div class="borderbox  box1-6 box1-6">
-                    <h4 class="hinfbox"><?php echo esc_html(get_the_author()); ?></h4>
-                    <p><?php echo esc_html($author_description); ?></p>
-                </div>
-                <div class="borderbox box1-3 box1-3">
-                    <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>"  class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
+                <div class="authorbox-inline-sup">
+                    <h4 class="hinfbox" id="heading_1">
+                        <?php echo esc_html(get_the_author()); ?>
+                    </h4>
+                    <a href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>" class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
                 </div>
             </div>
         </div>
@@ -199,13 +265,17 @@ function newaqar_developer_shortcode($atts) {
         $post_type = get_post_type($post);
 
         if ($post_type === 'units') {
-            $developer_id = get_post_meta(get_the_ID(), '_unit_project_id', true);
+            $developer_terms = get_post_meta(get_the_ID(), '_unit_project_id', true);
+            if (is_array($developer_terms) && !empty($developer_terms)) {
+                $developer_id = reset($developer_terms)->term_id;
+            }
         } elseif ($post_type === 'projects') {
             $developer_terms = get_the_terms(get_the_ID(), 'developer');
-            if ($developer_terms && !is_wp_error($developer_terms)) {
+            if (is_array($developer_terms) && !empty($developer_terms)) {
                 $developer_id = reset($developer_terms)->term_id;
             }
         }
+
     }
     if (!empty($developer_id)) {
         $developer_terms = get_term($developer_id, 'developer');
@@ -225,13 +295,7 @@ function newaqar_developer_shortcode($atts) {
         $developer_image = '';
     }
 
-    $finle_developer_link = ''; // Initializing the variable
 
-    if (isset($developer_link)) {
-        $finle_developer_link = '<a href="' . esc_url($developer_link) . '" class="name text-start d-flex">' . $developer_name . '</a>';
-    } else {
-        $finle_developer_link = '<p>Developer link is not available</p>';
-    }
 
     ob_start();
     if (isset($developer_link)) {

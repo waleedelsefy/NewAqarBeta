@@ -92,14 +92,14 @@ if ($city_terms && !is_wp_error($city_terms)) {
             .project-gallery-img-big img{height:420px}
             .project-gallery .more-images{font-size: 1.1rem;line-height: 1.5rem}
         }
-        .content-box{background-color: #FFFFFF;padding:0px;margin-bottom: 25px;overflow: hidden;border-radius: 10px;color: #313A52;box-shadow: 0 0 3px rgba(0,0,0,0.1)}
+        .content-box{background-color: #FFFFFF;padding:0px;margin-bottom: 25px;overflow: hidden;border-radius: var(--all-border-radius);color: #313A52;box-shadow: 0 0 3px rgba(0,0,0,0.1)}
         .content-box ul{padding-right: 25px}
         .content-box li{padding:5px}
         .content-box h3{color:var(--primary-link-color)}
         .content-box img{max-width: 100%;height:auto}
         .content-box .headline-p {line-height: 30px;transition: 0.5s;text-align: start;font-size: 1.2rem;position: relative;font-weight: bold;margin: 15px 0;color: var(--primary-have-color-collapse);padding-right:10px;border-right: 4px solid var(--primary-have-color-collapse)}
         .project-sub-title{display:flex; font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
-        .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: 10px;height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
+        .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: var(--all-border-radius);height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
         .project-sub-title::after{margin-inline-start:10px; width:10%;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
         table.infotable {border-collapse: collapse;width:calc(100% + 30px);color: #646A70;margin:0px 0px 0px -7px;}
         table.infotable tr:nth-child(even){background-color: #F9F9F9}
@@ -126,13 +126,13 @@ if ($city_terms && !is_wp_error($city_terms)) {
         max-width: 90%;
         top: 50px;
         transform: translateX(-50%);
-        border-radius: 10px;
+        border-radius: var(--all-border-radius);
         overflow: hidden;
         background-color: #FFFFFF;
         }
         .quick-link-lightbox iframe {
             width: 100%;
-            border-radius: 10px;
+            border-radius: var(--all-border-radius);
             margin-top: 10px;
         }
         @media only screen and (min-width:992px){
@@ -141,14 +141,14 @@ if ($city_terms && !is_wp_error($city_terms)) {
         .lwptoc_items a:hover{color: var(--primary-link-color)}
         .faq .acc {margin: 0 auto;}
         .faq .acc__card {margin: 10px 0; position: relative;}
-        .faq .acc__title {background: #FFF; color: var(--primary-color-collapse); cursor: pointer; display: block; padding: 10px 15px; position: relative; text-align: start;border-radius: 5px;box-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
+        .faq .acc__title {background: #FFF; color: var(--primary-color-collapse); cursor: pointer; display: block; padding: 10px 15px; position: relative; text-align: start;border-radius: var(--all-border-radius);box-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
         .faq .acc__title::after  { width: 8px; height: 8px; border-left: 3px solid var(--primary-color-collapse); border-top: 3px solid var(--primary-color-collapse);  position: absolute; left: 20px; content: " "; top: 50%; transform: rotate(-45deg) translateY(-50%); transition: all 0.2s ease-in-out;}
         .faq .acc__title.active{background-color: var(--primary-have-color-collapse);color:#FFFFFF}
         .faq .acc__title.active::after { transform: rotate(-135deg) translateY(50%); transition: all 0.2s ease-in-out;border-color:#FFFFFF}
-        .faq .acc__panel {background-color: #FFFFFF;border:2px solid var(--primary-have-color-collapse); color: #575E65;  display: none; margin: 0; padding: 20px; text-align: start;border-radius: 0 0 5px 5px;margin-top:-5px}
+        .faq .acc__panel {background-color: #FFFFFF;border:2px solid var(--primary-have-color-collapse); color: #575E65;  display: none; margin: 0; padding: 20px; text-align: start;border-radius: 0 0 var(--all-border-radius) var(--all-border-radius);margin-top:-5px}
         /*author-box*/
         .author-box{width:100%;padding: 15px; display: flex; flex-wrap: wrap; justify-content: center;text-align: center}
-        .author-img{ border-radius: 100px; overflow: hidden;flex-shrink: 0}
+        .author-img{ border-radius: var(--all-border-radius); overflow: hidden;flex-shrink: 0}
         .author-img img{width:100px; height:100px;object-fit: cover; display: block}
         .author-name{font-size:1rem; font-weight: 700;margin-top: 10px}
         .author-name:hover{color: var(--primary-have-color-collapse)}
@@ -164,10 +164,10 @@ if ($city_terms && !is_wp_error($city_terms)) {
             ul.author-contacts{justify-content: flex-start}
         }
         .side-bar{position:sticky; top:100px}
-        .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: 10px;display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
+        .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: var(--all-border-radius);display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
         .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background:rgb(253 253 253); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
         .side-details{display: flex; margin:10px; margin-bottom: 15px}
-        .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
+        .side-details .side-details-box{background-color: #FFFFFF; border-radius:var(--all-border-radius);box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
         .side-details .big-detail{font-size: var(--p-content-font-size); font-weight: 600; color: var(--primary-color-collapse)}
         .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF !important; padding-top: 10px; border-radius: 0 0 9px 9px; text-align: center}
         .side-bar .payment-plan{display: block}
@@ -330,28 +330,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <?php echo do_shortcode('[newaqar_cta]') ?>
 
                         </div>
-                        <div class="mob-only">
-                            <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
-                            else { ?>
-                                <div class="message-section">
-                                    <?php
-                                    if (function_exists('pll_current_language')) {
-                                        $current_language = pll_current_language();
 
-                                        if ($current_language === 'ar') {
-                                            echo do_shortcode('[fluentform id="7"]');
-                                        } elseif ($current_language === 'en') {
-                                            echo do_shortcode('[fluentform id="11"]');
-                                        }
-                                    }
-
-                                    ?>
-
-                                </div>
-                                <?php
-                            }
-                            ?>
-                        </div>
                     <div>
                         <?php
                         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -462,10 +441,8 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <?php  echo do_shortcode('[social_share_box]');?>
                             <?php echo generate_table_of_contents(); ?>
                             <?php
-                            echo $the_content;
-
-                            ; ?>
-
+                            echo $the_content; ?>
+                            <?php echo do_shortcode('[author_info]'); ?>
                         </div>
                         <?php
                         $faqs = isset($project_details['faqs']) ? esc_attr($project_details['faqs']) : '';
