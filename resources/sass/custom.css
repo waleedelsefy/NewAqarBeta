@@ -38,7 +38,7 @@
   --full-width:100vw;
   --one-third:32vw;
   --tow-third:63vw;
-  --card-unts-gap:20px;
+  --card-unts-gap:25px;
   --all-border-radius:5px;
 }
 
@@ -758,6 +758,7 @@ html .unit-card .project-location, html .unit-card .project-space {
     max-width: 45%;
   }
   html .main-content {
+    margin-top: 50px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
@@ -1621,7 +1622,7 @@ div#fluentform_13_success {
 }
 
 .units-of-projects {
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   transition: transform 0.5s ease;
   gap: var(--card-unts-gap);
@@ -1785,10 +1786,11 @@ div#fluentform_13_success {
   transition: 0.3s;
   background-color: #FFFFFF;
   white-space: nowrap;
-  max-width: 25%;
+  max-width: 150px;
   font-size: var(--p-content-font-size);
   border-radius: var(--all-border-radius);
   margin: 15px;
+  text-decoration: none;
 }
 
 .main-cta a.cta-phone {
@@ -2049,6 +2051,10 @@ h2.widget-title {
 
 #floating-icons .floating-phone {
   display: none;
+}
+
+.latest-section table thead tr {
+  background: #0a976d;
 }
 
 /*# sourceMappingURL=custom.css.map */

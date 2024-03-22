@@ -160,7 +160,22 @@ function author_info_shortcode() {
     // Get author data
     $author_name = get_the_author_meta('display_name', $author_id);
     $author_email = get_the_author_meta('user_email', $author_id);
-    $author_description = get_the_author_meta('description', $author_id);
+
+// Check the current language
+    if (function_exists('pll_current_language')) {
+        $current_lang = pll_current_language();
+    } else {
+        // Fallback to default language if Polylang is not available
+        $current_lang = 'en'; // Change this to your default language code
+    }
+    if ($current_lang === 'ar') {
+        $author_description = get_the_author_meta('description', $author_id);
+    } elseif ($current_lang === 'en') {
+        $author_description = get_the_author_meta('description_en', $author_id);
+    } else {
+        $author_description = get_the_author_meta('description', $author_id);
+    }
+
     $author_url = get_the_author_meta('user_login', $author_id);
     $author_img= esc_url(get_avatar_url($author_id));
     ?>
@@ -216,7 +231,7 @@ function author_info_shortcode() {
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
-                    margin-inline-start: 35px;
+                    margin-inline-start: 20px;
                     align-content: flex-start
                 }
 

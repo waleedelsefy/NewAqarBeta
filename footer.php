@@ -12,6 +12,7 @@ $email = Template::setting('dido_email');
         span.d-flex.gap-2 {
             display: flex;
             justify-content: center;
+
         }
         #floating-icons {
             width: auto;
@@ -35,6 +36,7 @@ $email = Template::setting('dido_email');
         span.d-flex.gap-2 {
             display: flex;
             padding: 10px;
+            font-size:var(--call-to-action-font-size);
             justify-content: center;
             align-items: center;
             align-content: center;

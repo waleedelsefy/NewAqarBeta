@@ -425,7 +425,7 @@ $us_flag = Assets::getAseetsFileContent('images/usa-flag.svg');
 
     /*header button*/
 
-    .header-btn{display: inline-block; padding:0 5px;line-height: 30px; background-color: var(--sacnd-link-color); color:#FFFFFF; border-radius: 5px;margin:0 5px;font-weight: 600;white-space: nowrap;transition:0.2s;order:1}
+    .header-btn{display: inline-block; padding:5px;line-height: 30px; background-color: var(--sacnd-link-color); color:#FFFFFF; border-radius: 5px;margin:0 5px;font-weight: 600;white-space: nowrap;transition:0.2s;order:1}
 
     .header-btn:hover{background-color: #233F5A}
 

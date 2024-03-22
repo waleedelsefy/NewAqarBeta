@@ -363,7 +363,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </div>
                                 <?php if ($unit_query->max_num_pages > 1) : ?>
                                     <div class="d-flex justify-content-center">
-                                        <button id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'aqarround');  ?></button>
+                                        <button id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'newaqar');  ?></button>
                                     </div>
                                 <?php endif; ?>
 
@@ -383,10 +383,10 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                             project_id: <?php echo $post_id; ?>
                                         },
                                         beforeSend: function() {
-                                            $('#load-more-units').text('<?php echo __('Loading...', 'aqarround'); ?>');
+                                            $('#load-more-units').text('<?php echo __('Loading...', 'newaqar'); ?>');
                                         },
                                         success: function(response) {
-                                            $('#load-more-units').text('<?php echo __('Load More', 'aqarround'); ?>');
+                                            $('#load-more-units').text('<?php echo __('Load More', 'newaqar'); ?>');
                                             if (response) {
                                                 $('.units-of-projects').append(response);
                                                 $('#load-more-units').data('next-page', nextPage + 1);
@@ -529,7 +529,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         <div class="latest-section ">
                             <table>
                                 <thead>
-                                <tr>
+                                <tr class="latest-section">
                                     <th><?php echo __('Latest projects', 'newaqar'); ?></th>
                                 </tr>
                                 </thead>

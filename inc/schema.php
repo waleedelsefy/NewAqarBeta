@@ -17,15 +17,6 @@ function newaqar_product_schema() {
                 if (is_array($project_details) && !empty($project_details)) {
                     $price = isset($project_details['project_price']) ? esc_attr($project_details['project_price']) : '';
                     $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
-                    $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : 4.7;
-                    if ($number_of_votes < 3) {
-                        $number_of_votes = '4.7';
-                    }
-                    $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : intval($post_id/20);
-
-                    if ($number_of_voters < 5) {
-                        $number_of_voters = intval($post_id/20);
-                    }
 
 
                 } else {
@@ -33,6 +24,15 @@ function newaqar_product_schema() {
                     $payment_systems = '';
                 }
             }
+            $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) : 4.7;
+            if ($number_of_votes < 3) {
+                $number_of_votes = '4.7';
+            }
+            $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : intval($post_id/20);
+            if ($number_of_voters < 5) {
+                $number_of_voters = intval($post_id/20);
+            }
+
             if ($developer_terms && !is_wp_error($developer_terms)) {
                 $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
                 $first_term = reset($developer_terms);
@@ -88,10 +88,7 @@ function newaqar_product_schema() {
                 global $post;
                 $date_published = get_post_time('Y-m-d', true, $post);
 
-                // Calculate rating value with validation
                 $rating_value = (!empty($number_of_votes)) ? min(intval($number_of_votes) + 1, 4.6) : 4.7;
-
-                // Calculate best and worst ratings
                 $bestRating = (!empty($number_of_votes)) ? min($number_of_votes + 1.3, 4.9) : 5;
                 $worstRating = (!empty($number_of_votes)) ? max($number_of_votes - 1.3, 3.7) : 3;
                 $number_of_voters = isset($project_details['number_of_voters']) ? esc_attr($project_details['number_of_voters']) : ($post_id/20);

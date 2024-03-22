@@ -28,12 +28,19 @@
         $first_term = reset($developer_terms);
         $developer_name = esc_html($first_term->name);
         $developer_link = get_term_link($first_term);
+        $developer_link = get_term_link($first_term);
+        $developer_image = get_term_field('developer_image', $first_term);
+        $max_words = 4;
+        $trimmed_developer_name = wp_trim_words($developer_name, $max_words, '...');
+
     }
     if ($city_terms && !is_wp_error($city_terms)) {
         $first_term = reset($city_terms);
         $city_name = esc_html($first_term->name);
         $city_link = get_term_link($first_term);
     }
+
+
     ?>
 </head>
 <?php
@@ -53,7 +60,10 @@ if ($post_type === 'units' || $post_type === 'projects') {
 }
 ?>
 <style>
-
+    form.fluent_form_15 .ff-btn-submit:not(.ff_btn_no_style) {
+        background-color: #212529 !important;
+        color: #ffffff;
+    }
     .breadcrumbs a:hover{color: #8DBF6A}
     .project-main-title h1{font-size: 1.2rem;line-height: 2rem; font-weight: 700; margin:0 ;transition: 0.2s }
     .project-main-title h1:hover{color: #8DBF6A}
@@ -78,22 +88,22 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .project-gallery *{transition: 0.5}
     .project-gallery-img-big img, .project-gallery-img img{width:100%;height:300px; object-fit: cover;display: block}
     .project-gallery-img img{height:80px}
-    .project-gallery .more-images{position: absolute;top:0; bottom:0; left:0; margin-inline-start: 0;background-color: rgba(35,63,90,0.6);display: flex; align-items: center;justify-content: center;font-size: 0.9rem;line-height: 1.2rem; font-weight: bold; color: #FFFFFF;text-align: center;transition: 0.2s;text-shadow: 1px 1px 2px rgba(0,0,0,0.5)}
+    .project-gallery .more-images{position: absolute;top:0; bottom:0; left:0; right: 0;background-color: rgba(35,63,90,0.6);display: flex; align-items: center;justify-content: center;font-size: 0.9rem;line-height: 1.2rem; font-weight: bold; color: #FFFFFF;text-align: center;transition: 0.2s;text-shadow: 1px 1px 2px rgba(0,0,0,0.5)}
     .project-gallery .more-images:hover{background-color: rgba(35,63,90,0.8)}
     @media only screen and (min-width:992px){
         .project-gallery-img img{height:200px}
         .project-gallery-img-big img{height:420px}
         .project-gallery .more-images{font-size: 1.1rem;line-height: 1.5rem}
     }
-    .content-box{background-color: #FFFFFF;padding:0px;margin-bottom: 25px;overflow: hidden;border-radius: 10px;color: #313A52;box-shadow: 0 0 3px rgba(0,0,0,0.1)}
-    .content-box ul{padding-inlne-start: 25px}
+    .content-box{background-color: #FFFFFF;padding:0px;margin-bottom: 25px;overflow: hidden;border-radius: var(--all-border-radius);color: #313A52;box-shadow: 0 0 3px rgba(0,0,0,0.1)}
+    .content-box ul{padding-right: 25px}
     .content-box li{padding:5px}
     .content-box h3{color:var(--primary-link-color)}
     .content-box img{max-width: 100%;height:auto}
     .content-box .headline-p {line-height: 30px;transition: 0.5s;text-align: start;font-size: 1.2rem;position: relative;font-weight: bold;margin: 15px 0;color: var(--primary-have-color-collapse);padding-right:10px;border-right: 4px solid var(--primary-have-color-collapse)}
-    .project-sub-title{display: flex; font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
-    .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: 10px;height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
-    .project-sub-title::after{margin-inline-start:10px; width:80px;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
+    .project-sub-title{display:flex; font-weight: bold;font-size: 1.1rem;margin-bottom: 25px; margin-top: 25px;position: relative}
+    .project-sub-title::before, .project-sub-title::after{content: "";position:absolute;width:6px;border-radius: var(--all-border-radius);height:6px;background-color: var(--primary-have-color-collapse);bottom:-10px; }
+    .project-sub-title::after{margin-inline-start:10px; width:10%;height: 4px;background-color: #8CC2C8; ;bottom:-9px;}
     table.infotable {border-collapse: collapse;width:calc(100% + 30px);color: #646A70;margin:0px 0px 0px -7px;}
     table.infotable tr:nth-child(even){background-color: #F9F9F9}
     table.infotable th.ttitle {width: 35%;font-size: 0.8rem;padding-left:0;border-left:1px solid #e0dcd6;background-color: var(--primary-link-color-link); color:  #FFFFFF}
@@ -101,7 +111,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
     table.infotable td, table.infotable th {margin: 0; padding: 7px 10px; text-align: start;font-size: 0.9rem}
     table.infotable a:hover{color: var(--primary-have-color-collapse)}
     @media only screen and (min-width:992px){
-        table.infotable th.ttitle {font-size: 0.9rem; width: 20% !important;}
+        table.infotable th.ttitle {font-size: 0.9rem; width: 20%; padding-inline-start: 20px;}
         table.infotable td, table.infotable th {font-size: 1rem; padding: 7px 25px 7px 15px}
     }
     .facility-img img{height:25px;width:auto;display: block; margin-inline-end: 5px}
@@ -119,13 +129,13 @@ if ($post_type === 'units' || $post_type === 'projects') {
     max-width: 90%;
     top: 50px;
     transform: translateX(-50%);
-    border-radius: 10px;
+    border-radius: var(--all-border-radius);
     overflow: hidden;
     background-color: #FFFFFF;
     }
     .quick-link-lightbox iframe {
         width: 100%;
-        border-radius: 10px;
+        border-radius: var(--all-border-radius);
         margin-top: 10px;
     }
     @media only screen and (min-width:992px){
@@ -134,14 +144,14 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .lwptoc_items a:hover{color: var(--primary-link-color)}
     .faq .acc {margin: 0 auto;}
     .faq .acc__card {margin: 10px 0; position: relative;}
-    .faq .acc__title {background: #FFF; color: var(--primary-color-collapse); cursor: pointer; display: block; padding: 10px 15px; position: relative; text-align: start;border-radius: 5px;box-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
+    .faq .acc__title {background: #FFF; color: var(--primary-color-collapse); cursor: pointer; display: block; padding: 10px 15px; position: relative; text-align: start;border-radius: var(--all-border-radius);box-shadow: 1px 1px 2px rgba(0,0,0,0.3)}
     .faq .acc__title::after  { width: 8px; height: 8px; border-left: 3px solid var(--primary-color-collapse); border-top: 3px solid var(--primary-color-collapse);  position: absolute; left: 20px; content: " "; top: 50%; transform: rotate(-45deg) translateY(-50%); transition: all 0.2s ease-in-out;}
     .faq .acc__title.active{background-color: var(--primary-have-color-collapse);color:#FFFFFF}
     .faq .acc__title.active::after { transform: rotate(-135deg) translateY(50%); transition: all 0.2s ease-in-out;border-color:#FFFFFF}
-    .faq .acc__panel {background-color: #FFFFFF;border:2px solid var(--primary-have-color-collapse); color: #575E65;  display: none; margin: 0; padding: 20px; text-align: start;border-radius: 0 0 5px 5px;margin-top:-5px}
+    .faq .acc__panel {background-color: #FFFFFF;border:2px solid var(--primary-have-color-collapse); color: #575E65;  display: none; margin: 0; padding: 20px; text-align: start;border-radius: 0 0 var(--all-border-radius) var(--all-border-radius);margin-top:-5px}
     /*author-box*/
     .author-box{width:100%;padding: 15px; display: flex; flex-wrap: wrap; justify-content: center;text-align: center}
-    .author-img{ border-radius: 100px; overflow: hidden;flex-shrink: 0}
+    .author-img{ border-radius: var(--all-border-radius); overflow: hidden;flex-shrink: 0}
     .author-img img{width:100px; height:100px;object-fit: cover; display: block}
     .author-name{font-size:1rem; font-weight: 700;margin-top: 10px}
     .author-name:hover{color: var(--primary-have-color-collapse)}
@@ -156,26 +166,21 @@ if ($post_type === 'units' || $post_type === 'projects') {
         .author-name{font-size:1.1rem; margin: 0}
         ul.author-contacts{justify-content: flex-start}
     }
-    /*side-bar*/
-    .side-bar{position: sticky; top:100px}
-    /*payment-plan*/
-    .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: 10px;display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
-    /*side-title*/
+    .side-bar{position:sticky; top:100px}
+    .payment-plan {border: 2px solid var(--primary-have-color-collapse); border-radius: var(--all-border-radius);display: flex;flex-direction: column; margin-bottom: 0; margin-top:20px}
     .side-title{text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--primary-link-color); background:rgb(253 253 253); display: inline-block; margin-top: -20px; align-self: center; padding: 0 20px;line-height: 40px}
-    /*side-details*/
     .side-details{display: flex; margin:10px; margin-bottom: 15px}
-    .side-details .side-details-box{background-color: #FFFFFF; border-radius: 10px;box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
+    .side-details .side-details-box{background-color: #FFFFFF; border-radius:var(--all-border-radius);box-shadow: 0 0 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; font-size: calc(var(--p-content-font-size) - 20%); color: #8F959B; justify-content: center;padding:10px; text-align: center; margin:5px; width:100%; border:1px solid var(--primary-have-color-collapse)}
     .side-details .big-detail{font-size: var(--p-content-font-size); font-weight: 600; color: var(--primary-color-collapse)}
-    .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF; border-radius: 0 0 9px 9px; text-align: center}
+    .price-last-update{background-color: var(--primary-have-color-collapse);color: #FFF !important; padding-top: 10px; border-radius: 0 0 9px 9px; text-align: center}
     .side-bar .payment-plan{display: block}
     @media only screen and (min-width:992px){
         .payment-mobile{display:none}
-        .side-bar .payment-plan{display: flex; margin-top: 5px}
+        .side-bar .payment-plan{display: flex; margin-top: 25px}
     }
-    /*side-contact*/
     .side-contact form{display:block;padding:0 10px}
     .side-contact .form-title{font-weight: 700; font-size: 1.1rem}
-    .side-contact .form-bg,.side-contact .comment{width:100%;padding-right:15px;height:40px;line-height:38px;color:var(--primary-color-collapse);display:block;font-family:"Cairo";font-size:0.85rem;margin-top:15px;border:1px solid #C0C0C0;font-weight: bold;background-color: #FFFFFF;border-radius: 10px}
+    .side-contact .form-bg,.side-contact .comment{width:100%;padding-right:15px;height:40px;line-height:38px;color:var(--primary-color-collapse);display:block;font-family: var(--primary-font-family);font-size:0.85rem;margin-top:15px;border:1px solid #C0C0C0;font-weight: bold;background-color: #FFFFFF;border-radius: 10px}
     .side-contact .comment{height:100px;}
     .side-contact .search-select{appearance: none;
         -moz-appearance: none;
@@ -187,7 +192,6 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .side-contact .form-bg::placeholder,.side-contact .comment::placeholder{opacity:.5}
     .side-contact .submit{margin:15px 0;float:left;background-color:var(--primary-color-collapse);line-height:32px;padding:0 20px 3px;color:#FFF;font-size:1rem;border:0;transition:0.5s;border-radius: 10px;font-family: 'Cairo', sans-serif;}
     .side-contact .submit:hover{cursor:pointer;background-color: var(--primary-color-collapse)}
-    /*side-bar main-cta*/
     .side-bar .main-cta{}
     .side-bar .main-cta a{background-color: #8CC2C8;color:#FFF;border:none;}
     .side-bar .main-cta a:hover{transform: translateY(3px)}
@@ -197,12 +201,10 @@ if ($post_type === 'units' || $post_type === 'projects') {
     .side-bar .main-cta .cta-wts i, .side-bar .main-cta .cta-phone i{color:#FFFFFF }
     .contact-form.project-form{padding:10px 2%}
     .contact-form.project-form .form-title{padding-top:10px;padding-right:15px;font-size: 1.2rem;margin-bottom: 0}
-    /*related-projects*/
     .related-projects{padding:20px 0;margin-top:20px}
     @media only screen and (min-width:992px){
         .related-projects{padding:60px 0;}
     }
-    /*.schedule-meeting*/
     .schedule-meeting form{display: flex; flex-wrap: wrap;padding:15px; justify-content: space-between}
     .schedule-meeting .form-inside-title{font-weight: bold; font-size: 0.9rem;margin-bottom: 5px; padding-right: 5px}
     .schedule-meeting .input-box{width:98%;margin:0 1%}
@@ -310,6 +312,37 @@ if ($post_type === 'units' || $post_type === 'projects') {
                     </div>
                     <div>
                         <?php echo do_shortcode('[newaqar_cta]') ?>
+                        <div class="card-buo ">
+                            <div class="developer-card mob-only">
+                                <div class="developer-card-info">
+                                    <div class="personal-img">
+                                        <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name; ?>">
+                                    </div>
+                                    <div class="personal-info">
+                                        <a href="<?php echo $developer_link ?>"><?php echo $trimmed_developer_name ?></a>
+                                        <p class="jobTitle">تواصل مع مندوب الشركة</p>
+
+                                    </div>
+                                </div>
+
+
+
+
+                                <div>
+                                    <?php
+                                    if (function_exists('pll_current_language')) {
+                                        $current_language = pll_current_language();
+                                        if ($current_language === 'ar') {
+                                            echo do_shortcode('[fluentform id="15"]');
+                                        } elseif ($current_language === 'en') {
+                                            echo do_shortcode('[fluentform id="16"]');
+                                        }
+                                    }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="side-bar-mob">
                         <?php if ($down_payment != "") : ?>
@@ -448,7 +481,7 @@ if ($post_type === 'units' || $post_type === 'projects') {
                     </div>
                 </section>
         </div>
-        <div class="one-third">
+        <div class="one-third des-only">
             <div class="side-bar">
                 <?php if ($down_payment != "") : ?>
                     <div class="payment-plan">
@@ -489,7 +522,41 @@ if ($post_type === 'units' || $post_type === 'projects') {
                         </div>
                     </div>
                 <?php endif; ?>
-        </div>
+
+                <div class="card-buo">
+                    <div class="developer-card">
+                        <div class="developer-card-info">
+                            <div class="personal-img">
+                                <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name; ?>">
+                            </div>
+                            <div class="personal-info">
+                                <a href="<?php echo $developer_link ?>"><?php echo $trimmed_developer_name ?></a>
+                                <p class="jobTitle">تواصل مع مندوب الشركة</p>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div>
+                            <?php
+                            if (function_exists('pll_current_language')) {
+                                $current_language = pll_current_language();
+                                if ($current_language === 'ar') {
+                                    echo do_shortcode('[fluentform id="15"]');
+                                } elseif ($current_language === 'en') {
+                                    echo do_shortcode('[fluentform id="16"]');
+                                }
+                            }
+                            ?>
+                        </div>
+                </div>
+                    </div>
+            </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
