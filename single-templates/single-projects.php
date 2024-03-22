@@ -236,7 +236,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                 <div class="breadcrumbs-wrapper mt-4">
                     <?php
                     the_breadcrumb();
-                    $the_content= get_the_content();
+                    $the_content = apply_filters('the_content', get_post_field('post_content', $postx_id));
 
                     ?>
                 </div>
@@ -346,7 +346,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         $unit_query = new WP_Query($args);
                         if ($unit_query->have_posts()) :
                             ?>
-                            <div class="container">
+                            <div>
                                 <div class="units-of-projects">
                                     <?php
                                     while ($unit_query->have_posts()) :
@@ -435,7 +435,11 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </div>
                             <?php endif; ?>
                             <div>
-                                <?php if ($developer_name) { echo do_shortcode('[newaqar_developer]');} ?>
+                                <?php
+                                if (isset($developer_name) && $developer_name) {
+                                    echo do_shortcode('[newaqar_developer]');
+                                }
+                                ?>
                             </div>
 
                         </div>
