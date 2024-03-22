@@ -35,7 +35,6 @@ function newaqar_product_schema() {
             }
             if ($developer_terms && !is_wp_error($developer_terms)) {
                 $payment_systems = isset($project_details['payment_systems']) ? esc_attr($project_details['payment_systems']) : '';
-                $number_of_votes = isset($project_details['number_of_votes']) ? esc_attr($project_details['number_of_votes']) :'';
                 $first_term = reset($developer_terms);
                 $developer_name = esc_html($first_term->name);
                 $developer_link = get_term_link($first_term);
