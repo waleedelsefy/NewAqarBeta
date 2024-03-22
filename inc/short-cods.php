@@ -28,7 +28,7 @@ function newaqar_cta_shortcode()
     }
     ob_start(); ?>
     <div class="main-cta">
-        <a   class="cta-wts" href="https://wa.me/2<?php echo $whatsapp_number;?>?text=اريد برشور <?php the_title(); ?> قادم من <?php the_permalink(); ?>" aria-label="zoom-meeting" >
+        <a   class="cta-brc" href="https://wa.me/2<?php echo $whatsapp_number;?>?text=اريد برشور <?php the_title(); ?> قادم من <?php the_permalink(); ?>" aria-label="zoom-meeting" >
             <span class="d-flex gap-2">
                <span class="call-to-action-page"><?php echo esc_html(__('Brochure', 'newaqar')); ?></span>
   <svg xmlns="http://www.w3.org/2000/svg" height="20" fill="#ffffff" width="20" viewBox="0 0 576 512"><path d="M542.2 32.1c-54.8 3.1-163.7 14.4-231 55.6-4.6 2.8-7.3 7.9-7.3 13.2v363.9c0 11.6 12.6 18.9 23.3 13.5 69.2-34.8 169.2-44.3 218.7-46.9 16.9-.9 30-14.4 30-30.7V62.8c0-17.7-15.4-31.7-33.8-30.7zM264.7 87.6C197.5 46.5 88.6 35.2 33.8 32.1 15.4 31 0 45 0 62.8V400.6c0 16.2 13.1 29.8 30 30.7 49.5 2.6 149.6 12.1 218.8 47 10.6 5.4 23.2-1.9 23.2-13.5V100.6c0-5.3-2.6-10.1-7.3-13z"/></svg>            </span>
@@ -165,7 +165,24 @@ function author_info_shortcode() {
     $author_img= esc_url(get_avatar_url($author_id));
     ?>
         <style>
-            .authorbox {
+            @media only screen and (min-width:992px){
+                .authorbox-desc {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-content: center;
+                    align-items: center;
+                }
+                .authorbox-dido {
+                    width: 55%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-inline-start: 10px;
+                    align-content: flex-start
+                }
+                .authorbox{
                 color: rgba(0, 0, 0, 0.87);
                 width: 100%;
                 border: 0;
@@ -183,17 +200,83 @@ function author_info_shortcode() {
                 padding-inline-start: 30px;
                 padding-inline-end: 30px;
             }
+                .authorbox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
 
+                }
 
-            .authorbox-inline {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
             }
-            .authorbox-mobile {
+            @media only screen and (min-width:1025px){
+
+                .authorbox-dido {
+                    width: 65%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin-inline-start: 35px;
+                    align-content: flex-start
+                }
+
+
+            }
+            .author-description {
                 display: flex;
-                gap: 14px;
-                align-items: center;
+                margin: 6px;
+                background: #f7f7f7;
+                justify-content: center;
+                height: fit-content;
+                align-content: center;
+                border-radius: var(--all-border-radius);}
+            @media only screen and (max-width:992px){
+                .boximgauthor {
+                    padding: 0;
+                    overflow: hidden;
+                    width: 70px;
+                    height: 70px;
+                    box-shadow: 0 14px 37px -12px rgba(0, 0, 0, 0.6), 0 4px 20px 0px rgba(0, 0, 0, 0.15), 0 6px 10px -6px rgba(0, 0, 0, 0.4);
+                    border-radius: var(--all-border-radius);
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
+                }
+                .authorbox{
+                color: rgba(0, 0, 0, 0.87);
+                width: 100%;
+                border: 0;
+                display: flex;
+                position: relative;
+                min-width: 0;
+                word-wrap: break-word;
+                font-size: .875rem;
+                margin-top: 30px;
+                background: #fff;
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+                margin-bottom: 30px;
+                border-radius: var(--all-border-radius);
+                flex-direction: column;
+                padding-inline-start: 10px;
+                padding-inline-end: 10px;
+            }
+                .authorbox {
+                    display: flex;
+                    gap: 14px;
+                    align-items: center;
+
+                }
+
+
+            .authorbox-inline-name {
+                width: 60%;
+                display: flex;
+                align-content: flex-start;
+                flex-direction: column;
+                align-items: flex-start
+
+            }
+
             }
             .boximgauthor {
                 padding: 0;
@@ -219,33 +302,44 @@ function author_info_shortcode() {
         <hr>
         <div class="authorbox des-only">
             <div class="authorbox-inline ">
+                <div class="authorbox-desc">
                 <div class="boximgauthor">
                     <img src="<?php echo $author_img; ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>">
                 </div>
-                <div class="authorbox-inline-name">
-                        <h4 class="hinfbox"><?php echo esc_html($author_name); ?></h4>
-
+                    <div class="d-flex authorbox-dido">
+                        <div>
+                            <h4><?php echo esc_html($author_name); ?></h4>
+                        </div>
+                        <div>
+                        <p><?php echo esc_html($author_description); ?></p>
+                        </div>
                     </div>
-                <div class="authorbox-inline-sup">
+                    <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>"  class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
 
-                <a  href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>"  class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
                 </div>
+
+
             </div>
         </div>
         <div class="authorbox mob-only">
-            <div class="authorbox-mobile">
-                <div class="boximgauthor">
-                    <img src=<?php echo $author_img; ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>">
-                    <div class="authorbox-inline-name">
-                    </div>
-                </div>
+
                 <div class="authorbox-inline-sup">
-                    <h4 class="hinfbox" id="heading_1">
-                        <?php echo esc_html(get_the_author()); ?>
-                    </h4>
-                    <a href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>" class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
+                    <div class="d-flex ">
+                    <div class="boximgauthor">
+                        <img src=<?php echo $author_img; ?>" alt="<?php echo esc_attr(get_the_author_meta('display_name')); ?>" />
+
+                    </div>
+                    <div class="d-block">
+                        <h4 style="font-size: 18px !important;"><?php echo esc_html($author_name); ?></h4>
+                        <a href="<?php echo esc_url(home_url('/author/' . $author_url)); ?>" class="visitBtn"><?php echo __('More Posts', 'newaqar');?></a>
+
+                    </div>
+                    </div>
+                    <div class="author-description">
+                        <p><?php echo esc_html($author_description); ?></p>
+                    </div>
+
                 </div>
-            </div>
         </div>
     </div>
     <?php
@@ -265,17 +359,13 @@ function newaqar_developer_shortcode($atts) {
         $post_type = get_post_type($post);
 
         if ($post_type === 'units') {
-            $developer_terms = get_post_meta(get_the_ID(), '_unit_project_id', true);
-            if (is_array($developer_terms) && !empty($developer_terms)) {
-                $developer_id = reset($developer_terms)->term_id;
-            }
+            $developer_id = get_post_meta(get_the_ID(), '_unit_project_id', true);
         } elseif ($post_type === 'projects') {
             $developer_terms = get_the_terms(get_the_ID(), 'developer');
-            if (is_array($developer_terms) && !empty($developer_terms)) {
+            if ($developer_terms && !is_wp_error($developer_terms)) {
                 $developer_id = reset($developer_terms)->term_id;
             }
         }
-
     }
     if (!empty($developer_id)) {
         $developer_terms = get_term($developer_id, 'developer');
@@ -295,7 +385,15 @@ function newaqar_developer_shortcode($atts) {
         $developer_image = '';
     }
 
+    $finle_developer_link = ''; // Initializing the variable
 
+    if (isset($developer_link)) {
+        $finle_developer_link = '<a href="' . esc_url($developer_link) . '" class="name text-start d-flex">' . $developer_name . '</a>';
+    } else {
+        $finle_developer_link = '<p>Developer link is not available</p>';
+    }
+    $max_words = 4;
+    $trimmed_developer_name = wp_trim_words( $developer_name, $max_words, '...' );
 
     ob_start();
     if (isset($developer_link)) {
@@ -309,7 +407,7 @@ function newaqar_developer_shortcode($atts) {
                 <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name;?>">
             </div>
             <div class="personal-info">
-                <a href="<?php echo $developer_link?>"><?php echo $developer_name;?></a>
+                <a href="<?php echo $developer_link?>"><?php echo $trimmed_developer_name;?></a>
                 <p class="jobTitle">تواصل مع مندوب الشركة</p>
             </div>
 

@@ -43049,7 +43049,6 @@ textarea.form-control-lg {
   }
 }
 /*# sourceMappingURL=bootstrap-utilities.rtl.css.map */
-@import '../../node_modules/bootstrap/scss/bootstrap';
 :root {
   --menu-li-font-size: 11pt;
   --call-to-action-font-size: 14px;
@@ -43085,7 +43084,7 @@ textarea.form-control-lg {
   --p-margin-heigh:1rem;
   --all-h-content-color:var(--primary-link-color-collapse);
   --all-p-content-color: #2f2f2f;
-  --unit-card-width:380px;
+  --unit-card-width:320px;
   --full-width:100vw;
   --one-third:32vw;
   --tow-third:63vw;
@@ -43098,7 +43097,7 @@ textarea.form-control-lg {
     --p-content-font-size:14px;
     --h2-content-font-size:22px;
     --h3-content-font-size:20px;
-    --h4-content-font-size:22px;
+    --h4-content-font-size:18px;
     --h5-content-font-size:16px;
     --h6-content-font-size:14px;
     --h1-hero-font-size:36px;
@@ -43131,7 +43130,7 @@ body {
   padding-inline-end: 17px;
   margin-bottom: 20px;
   p {
-    font-size: var(--h2-content-font-size) !important;
+    font-size: var(--h4-content-font-size) !important;
     font-weight: 600 !important;
   }
 }
@@ -43158,6 +43157,7 @@ button#toggleToc {
   font-size: var(--p-content-font-size);
   border-radius: var(--all-border-radius);
   background: var(--sacnd-color);
+  text-decoration:none;
 }
 html body {
   background: var(--primary-background-color);
@@ -43278,14 +43278,6 @@ a.phone {
     box-sizing: border-box;
   }
   html h1, html .heading-size-1, body h1, body .heading-size-1 {
-  }
-  .mx-5 {
-    margin-inline-start: ($spacer * .25) !important;
-    margin-inline-end: ($spacer * .25) !important;
-    color:var(--all-h-content-color);
-  }
-  .col-2-4{
-    width: 20%;
   }
   input[type="submit"] {
     font-size: 1rem !important;
@@ -43514,10 +43506,19 @@ a.phone {
     margin-inline-start: 23px;
     font-size: 18px;
   }
-  .table-of-contents {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-  }
+     .table-of-contents {
+       margin-bottom: 1rem;
+       margin-top: 1rem;
+       background: #e9ecef73;
+       margin: 1rem -17px;
+       padding-inline-start: 20px;
+       padding-inline-end: 20px;
+       padding: 5px;
+       border-radius: var(--all-border-radius);
+     li {
+       font-size: var(--p-content-font-size);
+     }
+   }
   @media only screen and (min-width: 769px) {
     .swiper-wrapper {
       display: flex;
@@ -43795,6 +43796,7 @@ a.phone {
     }
     .main-content {
       padding-inline-start: 10px;
+      padding-inline-end: 10px;
     }
       .content-body {
       display: flex;
@@ -44026,7 +44028,8 @@ a.phone {
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
     .table-of-contents {
-      width: 40%;
+      width: 55%;
+      margin-inline-start: 15px;
     }
     .search-main-content {
       display: flex;
@@ -44068,8 +44071,8 @@ a.phone {
       width: var(--full-width);
       justify-content: center;
       flex-direction: row;
-      padding-inline-start: 30px;
-      padding-inline-end:  30px;
+      padding-inline-start: 8%;
+      padding-inline-end:  8%;
       gap: 30px;
       padding-top: 70px;
     }
@@ -44795,29 +44798,22 @@ div#fluentform_13_success {
   position: relative;
 }
 #load-more-units {
-  background: var(--primary-link-color-collapse) !important;
+  background: var(--sacnd-color) !important;
   border: 0;
-  color: #fff !important;
-  border-radius: var(--all-border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 30px;
+  height: 40px;
   line-height: 28px;
   text-align: center;
-  margin: 5px;
-  font-size: 0.8rem;
   transition: 0.3s;
   background-color: #FFFFFF;
-  border: 1px solid #9A9A9A;
   white-space: nowrap;
-  overflow: hidden;
-  font-weight: 600;
-  z-index: 1;
-  position: relative;
   max-width: 25%;
-
+  font-size: var(--p-content-font-size);
+  border-radius: var(--all-border-radius);
+  margin: 15px;
 }
 .main-cta a.cta-phone {
   background: var(--primary-link-color-collapse) !important;
@@ -44831,6 +44827,11 @@ div#fluentform_13_success {
 }
 .main-cta a {
   color: #a0b84f !important;
+}
+.main-cta a.cta-brc {
+  background: var(--sacnd-color) !important;
+  border: 0;
+  color: #FFF !important;
 }
 #menu-item-56636-en a, .nav-item-56636-en a, #menu-item-56639-en a , .lang-en {
   display: flex;

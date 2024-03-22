@@ -363,7 +363,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                                 </div>
                                 <?php if ($unit_query->max_num_pages > 1) : ?>
                                     <div class="d-flex justify-content-center">
-                                        <button class="cta-phone" id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'aqarround');  ?></button>
+                                        <button id="load-more-units" data-next-page="<?php echo esc_attr($paged + 1); ?>"><?php echo __('Load More', 'aqarround');  ?></button>
                                     </div>
                                 <?php endif; ?>
 
