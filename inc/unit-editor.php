@@ -59,36 +59,16 @@ function enqueue_select2_script() {
     ?>
     <script>
         jQuery(document).ready(function ($) {
+            var projectsData = <?php echo json_encode(get_project_options()); ?>;
             $('.project-association-select').select2({
-                ajax: {
-                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                    dataType: 'json',
-                    delay: 250,
-                    data: function (params) {
-                        return {
-                            action: 'get_project_options',
-                            q: params.term, // قيمة البحث
-                            page: params.page
-                        };
-                    },
-                    processResults: function (data, params) {
-                        params.page = params.page || 1;
-                        return {
-                            results: data.items.slice((params.page - 1) * 5, params.page * 5), // تحميل 5 نتائج في كل مرة
-                            pagination: {
-                                more: (params.page * 5) < data.total_count // تفعيل البحث إذا كان هناك المزيد من النتائج
-                            }
-                        };
-                    },
-                    cache: true
-                },
-                minimumInputLength: 1 // تعيين الحد الأدنى لعدد الحروف المدخلة للبحث
+                data: projectsData
             });
             $(document).on('change', '.project-association-select', function () {
                 var postId = $(this).data('post-id');
                 var projectAssociation = $(this).val();
+                console.log(ajaxurl);
                 $.ajax({
-                    url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                    url: ajaxurl,
                     type: 'POST',
                     data: {
                         action: 'update_project_association',
@@ -110,14 +90,8 @@ function enqueue_select2_script() {
     <?php
 }
 add_action('admin_footer', 'enqueue_select2_script');
-function get_project_options($search_term = '') {
-    $args = array(
-        'post_type'      => 'projects',
-        'posts_per_page' => 5,
-        's'              => $search_term, // تطبيق البحث إذا تم تقديم مصطلح بحث
-    );
-
-    $projects = get_posts($args);
+function get_project_options() {
+    $projects = get_posts(array('post_type' => 'projects', 'posts_per_page' => -1));
     $options = array();
     foreach ($projects as $project) {
         $options[] = array(

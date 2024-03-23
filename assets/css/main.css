@@ -5325,3 +5325,10 @@ textarea#ff_7_3_description {
     justify-content: center !important;
     align-items: center !important;
 }
+div#gtx-trans {
+    display: none;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto;
+}

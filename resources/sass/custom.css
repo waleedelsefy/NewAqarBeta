@@ -34,12 +34,13 @@
   --p-margin-heigh:1rem;
   --all-h-content-color:var(--primary-link-color-collapse);
   --all-p-content-color: #2f2f2f;
-  --unit-card-width:340px;
+  --unit-card-width:300px;
   --full-width:100vw;
   --one-third:32vw;
   --tow-third:63vw;
   --card-unts-gap:25px;
   --all-border-radius:5px;
+  --personal-img-logo:80px ;
 }
 
 @media screen and (max-width: 900px) {
@@ -60,6 +61,7 @@
     --one-third:99vw;
     --tow-third:99vw;
     --card-unts-gap:15px;
+    --personal-img-logo:100px ;
   }
 }
 body {
@@ -558,7 +560,7 @@ html img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
   background: linear-gradient(307deg, var(--primary-link-color), var(--secondary-color));
   -webkit-background-clip: text;
   color: transparent;
-  max-height: 41vh;
+  height: 58vh;
 }
 html #phone-num {
   background-color: var(--primary-link-color);
@@ -760,7 +762,7 @@ html .unit-card .project-location, html .unit-card .project-space {
     max-width: 45%;
   }
   html .main-content {
-    margin-top: 50px;
+    margin-top: 20px;
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
@@ -1012,6 +1014,13 @@ html .unit-card .project-location, html .unit-card .project-space {
     /*start header*/
     /*side bar*/
   }
+  html .languages ul {
+    padding-top: 15px;
+    display: block;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
   html #floating-icons a {
     display: block;
     width: 55px;
@@ -1089,8 +1098,8 @@ html .unit-card .project-location, html .unit-card .project-space {
     width: var(--full-width);
     justify-content: center;
     flex-direction: row;
-    padding-inline-start: 8%;
-    padding-inline-end: 8%;
+    padding-inline-start: 5%;
+    padding-inline-end: 5%;
     gap: 30px;
     padding-top: 70px;
   }
@@ -1134,6 +1143,13 @@ html .unit-card .project-location, html .unit-card .project-space {
     display: flex;
     flex-direction: row;
   }
+  html .hp-header .header-btn {
+    background-color: var(--sacnd-link-color);
+    padding: 10px;
+  }
+  html header.shrink-me .header-btn {
+    padding: 10px;
+  }
   html .hp-header {
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0, #ffffff 11%);
   }
@@ -1173,36 +1189,6 @@ html .unit-card .project-location, html .unit-card .project-space {
     content: "▼";
     font-size: 6pt;
     position: absolute;
-  }
-  html .breadcrumb-scroller .ul {
-    display: flex;
-    list-style: none;
-    margin-bottom: 0;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: flex-start;
-  }
-  html .breadcrumb-scroller .li {
-    display: flex;
-    flex-direction: row;
-    gap: 4px;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  html .breadcrumb-scroller .cil {
-    color: #000;
-    display: flex;
-    background: rgba(0, 0, 128, 0);
-    text-decoration: none;
-    position: relative;
-    height: 40px;
-    border-radius: var(--all-border-radius);
-    box-shadow: 0px 0px 10px 1.1px rgba(0, 0, 0, 0.3098039216);
-    padding-inline-start: 10px;
-    padding-inline-end: 10px;
-    text-align: center;
-    margin-inline-start: 11px;
   }
   html project-details th.project-title {
     font-size: var(--h2-content-font-size);
@@ -1268,13 +1254,6 @@ html .unit-card .project-location, html .unit-card .project-space {
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
-  html .developer-card .personal-img-logo {
-    width: 90px;
-    border-radius: var(--all-border-radius);
-    border: 1px solid rgba(0, 0, 0, 0.3215686275);
-    padding: 0;
-    background: white;
-  }
   html .developer-card p.jobTitle {
     display: flex;
     justify-content: center;
@@ -1290,6 +1269,7 @@ html .unit-card .project-location, html .unit-card .project-space {
 }
 html .grid-wrapper-blog {
   display: flex;
+  margin-top: 10%;
   flex-direction: row;
   gap: 2%;
   flex-wrap: wrap;
@@ -1757,13 +1737,6 @@ div#fluentform_13_success {
     padding-inline-start: 25px;
     padding-inline-end: 20px;
   }
-  .developer-card .personal-img-logo {
-    width: 90px;
-    border-radius: var(--all-border-radius);
-    border: 1px solid rgba(0, 0, 0, 0.3215686275);
-    padding: 0;
-    background: white;
-  }
   .developer-card p.jobTitle {
     display: flex;
     justify-content: center;
@@ -2100,6 +2073,14 @@ h2.widget-title {
 
 .latest-section table thead tr {
   background: #0a976d;
+}
+
+.personal-img-logo {
+  width: var(--personal-img-logo) !important;
+  border-radius: var(--all-border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.3215686275);
+  padding: 0;
+  background: white;
 }
 
 /*# sourceMappingURL=custom.css.map */

@@ -1,5 +1,8 @@
 {
     "/assets/js/app.js": "/assets/js/app.js",
     "/assets/css/app.css": "/assets/css/app.css",
+    "/assets/css/style.css": "/assets/css/style.css",
+    "/assets/css/rtl.css": "/assets/css/rtl.css",
+    "/assets/css/ltr.css": "/assets/css/ltr.css",
     "/assets/css/admin.css": "/assets/css/admin.css"
 }

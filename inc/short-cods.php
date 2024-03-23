@@ -66,7 +66,7 @@ function newaqar_post_shortcode($atts) {
         $query = new WP_Query($args);
         if ($query->have_posts()) {
             ob_start();
-            echo '<div class="container  posts-short my-2 py-3">';
+            echo '<div class="units-of-projects">';
             while ($query->have_posts()) {
                 $query->the_post();
                 get_template_part('template-parts/single-card');
@@ -186,7 +186,7 @@ function author_info_shortcode() {
                     align-items: center;
                 }
                 .authorbox-dido {
-                    width: 55%;
+                    width: 50%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
@@ -223,7 +223,7 @@ function author_info_shortcode() {
             @media only screen and (min-width:1025px){
 
                 .authorbox-dido {
-                    width: 65%;
+                    width: 55%;
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
@@ -419,7 +419,7 @@ function newaqar_developer_shortcode($atts) {
                 <img class="personal-img-logo" src="<?php echo esc_url($developer_image); ?>" alt="<?php echo $developer_name;?>">
             </div>
             <div class="personal-info">
-                <a href="<?php echo $developer_link?>"><?php echo $trimmed_developer_name;?></a>
+                <p><?php echo $trimmed_developer_name;?></p>
                 <p class="jobTitle"><?php _e('Contact the company representative', 'newaqar'); ?></p>
             </div>
 

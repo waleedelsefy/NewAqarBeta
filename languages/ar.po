@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: NewAqar\n"
-"POT-Creation-Date: 2024-03-22 12:35+0200\n"
-"PO-Revision-Date: 2024-03-22 12:45+0200\n"
+"POT-Creation-Date: 2024-03-23 03:07+0200\n"
+"PO-Revision-Date: 2024-03-23 03:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -368,6 +368,14 @@ msgstr "البريد الإلكتروني* (لن يتم نشره)"
 msgid "Website"
 msgstr "الموقع الإلكتروني"
 
+#: footer.php:162
+msgid "Important Developers"
+msgstr "اهم  المطوريين"
+
+#: footer.php:172
+msgid "Important Cities"
+msgstr "اهم المدن"
+
 #: inc/city-editor.php:6 inc/city-editor.php:18
 msgid "Cities"
 msgstr "المدن"
@@ -580,7 +588,7 @@ msgstr "اضف وصف للمطور ."
 msgid "Payment Systems"
 msgstr "أنظمة الدفع"
 
-#: inc/hooks.php:29 single-templates/single-projects.php:577
+#: inc/hooks.php:29 single-templates/single-projects.php:578
 msgid "payment system"
 msgstr "أنظمة الدفع"
 
@@ -750,7 +758,7 @@ msgstr "سعر المشروع:"
 msgid "Enter Project Price"
 msgstr "أدخل سعر المشروع"
 
-#: inc/project-editor.php:112 inc/unit-editor.php:267
+#: inc/project-editor.php:112 inc/unit-editor.php:241
 msgid "Payment Systems:"
 msgstr "أنظمة الدفع:"
 
@@ -766,7 +774,7 @@ msgstr "تقسيط"
 msgid "Both Cash and Installment"
 msgstr "كاش وقسط"
 
-#: inc/project-editor.php:120 inc/unit-editor.php:271
+#: inc/project-editor.php:120 inc/unit-editor.php:245
 msgid "Enter down payment"
 msgstr "ادخل سعر المقدم"
 
@@ -774,19 +782,19 @@ msgstr "ادخل سعر المقدم"
 msgid "Enter installment payment"
 msgstr "ادخل نظام الدفع"
 
-#: inc/project-editor.php:127 inc/unit-editor.php:256
+#: inc/project-editor.php:127 inc/unit-editor.php:230
 msgid "Votes:"
 msgstr "التصويتات:"
 
-#: inc/project-editor.php:131 inc/unit-editor.php:260
+#: inc/project-editor.php:131 inc/unit-editor.php:234
 msgid "Enable Votes"
 msgstr "تفعيل التصويتات (ضروري)"
 
-#: inc/project-editor.php:132 inc/unit-editor.php:261
+#: inc/project-editor.php:132 inc/unit-editor.php:235
 msgid "Votes"
 msgstr "التقييم"
 
-#: inc/project-editor.php:133 inc/unit-editor.php:262
+#: inc/project-editor.php:133 inc/unit-editor.php:236
 msgid "Voters"
 msgstr "عدد المصوتين"
 
@@ -862,8 +870,9 @@ msgstr "لا يوجد وصف للمطور"
 msgid "Developer ID is required"
 msgstr "ID المطور مطلوب"
 
-#: inc/short-cods.php:423 single-templates/single-units.php:323
-#: single-templates/single-units.php:536
+#: inc/short-cods.php:423 single-templates/single-units.php:333
+#: single-templates/single-units.php:550 taxonomy-developer.php:60
+#: taxonomy-developer.php:156
 msgid "Contact the company representative"
 msgstr "تواصل مع ممثل الشركة."
 
@@ -908,71 +917,71 @@ msgstr "اختر المشروع:"
 msgid "Select Project"
 msgstr "اختر المشروع"
 
-#: inc/unit-editor.php:163 inc/unit-editor.php:174
+#: inc/unit-editor.php:137 inc/unit-editor.php:148
 msgid "Units"
 msgstr "الوحدات"
 
-#: inc/unit-editor.php:164
+#: inc/unit-editor.php:138
 msgid "Unit"
 msgstr "وحدة"
 
-#: inc/unit-editor.php:165 inc/unit-editor.php:166
+#: inc/unit-editor.php:139 inc/unit-editor.php:140
 msgid "Add New Unit"
 msgstr "إضافة وحدة جديدة"
 
-#: inc/unit-editor.php:167
+#: inc/unit-editor.php:141
 msgid "Edit Unit"
 msgstr "تحرير الوحدة"
 
-#: inc/unit-editor.php:168
+#: inc/unit-editor.php:142
 msgid "New Unit"
 msgstr "وحدة جديدة"
 
-#: inc/unit-editor.php:169
+#: inc/unit-editor.php:143
 msgid "All Units"
 msgstr "جميع الوحدات"
 
-#: inc/unit-editor.php:170
+#: inc/unit-editor.php:144
 msgid "View Unit"
 msgstr "شاهد الوحدة"
 
-#: inc/unit-editor.php:171
+#: inc/unit-editor.php:145
 msgid "Search for Unit"
 msgstr "البحث عن وحدة"
 
-#: inc/unit-editor.php:172
+#: inc/unit-editor.php:146
 msgid "No unit found"
 msgstr "لم يتم العثور على وحدة"
 
-#: inc/unit-editor.php:173
+#: inc/unit-editor.php:147
 msgid "No unit found in trash"
 msgstr "لم يتم العثور على وحدة في سلة المهملات"
 
-#: inc/unit-editor.php:239
+#: inc/unit-editor.php:213
 msgid "Unit Space:"
 msgstr "مساحة الوحدة:"
 
-#: inc/unit-editor.php:242
+#: inc/unit-editor.php:216
 msgid "Enter the unit space"
 msgstr "أدخل مساحة الوحدة"
 
-#: inc/unit-editor.php:247
+#: inc/unit-editor.php:221
 msgid "Unit Price:"
 msgstr "سعر الوحدة:"
 
-#: inc/unit-editor.php:250
+#: inc/unit-editor.php:224
 msgid "Enter the unit price"
 msgstr "أدخل سعر الوحدة"
 
-#: inc/unit-editor.php:270
+#: inc/unit-editor.php:244
 msgid "Enter payment systems"
 msgstr "أدخل أنظمة الدفع"
 
-#: inc/unit-editor.php:272
+#: inc/unit-editor.php:246
 msgid "Enter unit installment"
 msgstr "أدخل أقساط الوحدة"
 
-#: inc/unit-editor.php:273
+#: inc/unit-editor.php:247
 msgid "Enter unit delivery"
 msgstr "موعد تسليم الوحدة"
 
@@ -1009,8 +1018,8 @@ msgstr "سايدبار الصفحات"
 msgid "Read more »"
 msgstr "المزيد »"
 
-#: page-templates/blog-page.php:26 single-templates/single-projects.php:373
-#: single-templates/single-projects.php:396
+#: page-templates/blog-page.php:26 single-templates/single-projects.php:374
+#: single-templates/single-projects.php:397
 msgid "Load More"
 msgstr "تحميل المزيد"
 
@@ -1057,141 +1066,141 @@ msgstr "فتح القائمة الجانبية"
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
-#: single-templates/single-projects.php:251
+#: single-templates/single-projects.php:252
 msgid "Project Details"
 msgstr "تفاصيل المشروع"
 
-#: single-templates/single-projects.php:256 single-templates/single-units.php:267
+#: single-templates/single-projects.php:257 single-templates/single-units.php:266
 msgid "Project Name"
 msgstr "اسم المشروع"
 
-#: single-templates/single-projects.php:265
+#: single-templates/single-projects.php:266
 msgid "Project Location"
 msgstr "لوكيشن المشروع"
 
-#: single-templates/single-projects.php:271
+#: single-templates/single-projects.php:272
 msgid "The Project Space"
 msgstr "مساحة المشروع"
 
-#: single-templates/single-projects.php:272
+#: single-templates/single-projects.php:273
 msgid "acre"
 msgstr "فدان"
 
-#: single-templates/single-projects.php:277
+#: single-templates/single-projects.php:278
 msgid "The Developer"
 msgstr "المطور"
 
-#: single-templates/single-projects.php:283
+#: single-templates/single-projects.php:284
 msgid "receiving date"
 msgstr "موعد الاستلام"
 
-#: single-templates/single-projects.php:289
-#: single-templates/single-projects.php:412
+#: single-templates/single-projects.php:290
+#: single-templates/single-projects.php:413
 msgid "Payment systems"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-projects.php:304 single-templates/single-units.php:306
+#: single-templates/single-projects.php:305 single-templates/single-units.php:305
 msgid "Sales Number"
 msgstr "رقم المبيعات"
 
-#: single-templates/single-projects.php:311 single-templates/single-units.php:283
+#: single-templates/single-projects.php:312 single-templates/single-units.php:282
 msgid "Unit Types"
 msgstr "نوع الوحدة"
 
-#: single-templates/single-projects.php:329
+#: single-templates/single-projects.php:330
 msgid "Meter price"
 msgstr "سعر المتر"
 
-#: single-templates/single-projects.php:330
+#: single-templates/single-projects.php:331
 msgid "L.E"
 msgstr "جنيه"
 
-#: single-templates/single-projects.php:393
+#: single-templates/single-projects.php:394
 msgid "Loading..."
 msgstr "تحميل..."
 
-#: single-templates/single-projects.php:416
-#: single-templates/single-projects.php:581 single-templates/single-units.php:354
-#: single-templates/single-units.php:494
+#: single-templates/single-projects.php:417
+#: single-templates/single-projects.php:582 single-templates/single-units.php:365
+#: single-templates/single-units.php:505
 msgid "Deposit"
 msgstr "مقدم"
 
-#: single-templates/single-projects.php:422
-#: single-templates/single-projects.php:587 single-templates/single-units.php:360
-#: single-templates/single-units.php:500
+#: single-templates/single-projects.php:423
+#: single-templates/single-projects.php:588 single-templates/single-units.php:371
+#: single-templates/single-units.php:511
 msgid "installment"
 msgstr "تقسيط"
 
-#: single-templates/single-projects.php:430
-#: single-templates/single-projects.php:595 single-templates/single-units.php:368
-#: single-templates/single-units.php:513
+#: single-templates/single-projects.php:431
+#: single-templates/single-projects.php:596 single-templates/single-units.php:379
+#: single-templates/single-units.php:524
 msgid "Receipt"
 msgstr "استلام"
 
-#: single-templates/single-projects.php:503
+#: single-templates/single-projects.php:504
 msgid "Similar Projects"
 msgstr "مشاريع مماثلة"
 
-#: single-templates/single-projects.php:531
+#: single-templates/single-projects.php:532
 msgid "No similar projects"
 msgstr "لا توجد مشاريع مماثلة"
 
-#: single-templates/single-projects.php:540
+#: single-templates/single-projects.php:541
 #: template-parts/front-page/latest-properties.php:7
 msgid "Latest projects"
 msgstr "اخر المشروعات"
 
-#: single-templates/single-projects.php:564
+#: single-templates/single-projects.php:565
 msgid "No Latest projects"
 msgstr "لا يوجد مشروعات جديدة"
 
-#: single-templates/single-projects.php:589 single-templates/single-units.php:362
-#: single-templates/single-units.php:503
+#: single-templates/single-projects.php:590 single-templates/single-units.php:373
+#: single-templates/single-units.php:514
 msgid "year"
 msgstr "سنة"
 
-#: single-templates/single-projects.php:589 single-templates/single-units.php:362
-#: single-templates/single-units.php:505
+#: single-templates/single-projects.php:590 single-templates/single-units.php:373
+#: single-templates/single-units.php:516
 msgid "years"
 msgstr "سنوات"
 
-#: single-templates/single-units.php:250
+#: single-templates/single-units.php:249
 msgid "Unit details"
 msgstr "معلومات الوحدة"
 
-#: single-templates/single-units.php:255
+#: single-templates/single-units.php:254
 msgid "Unit Name"
 msgstr "اسم الوحدة"
 
-#: single-templates/single-units.php:275
+#: single-templates/single-units.php:274
 msgid "Developing Company"
 msgstr "الشركة المطورة"
 
-#: single-templates/single-units.php:291
+#: single-templates/single-units.php:290
 msgid "Unit Location"
 msgstr "لوكيشن الوحدة"
 
-#: single-templates/single-units.php:299
+#: single-templates/single-units.php:298
 msgid "Unit price"
 msgstr "سعر الوحدة"
 
-#: single-templates/single-units.php:300
+#: single-templates/single-units.php:299
 msgid "EGP"
 msgstr "جنيه"
 
-#: single-templates/single-units.php:350 single-templates/single-units.php:490
+#: single-templates/single-units.php:361 single-templates/single-units.php:501
 msgid "Payment System"
 msgstr "أنظمة الدفع"
 
-#: single-templates/single-units.php:376 single-templates/single-units.php:521
+#: single-templates/single-units.php:387 single-templates/single-units.php:532
 msgid "Last updated in:"
 msgstr "أخر تحديث في :"
 
-#: single-templates/single-units.php:427
+#: single-templates/single-units.php:438
 msgid "Similar units"
 msgstr "وحدات مماثلة"
 
-#: single-templates/single-units.php:478
+#: single-templates/single-units.php:489
 msgid "No similar units"
 msgstr "لا توجد وحدات متشابهة"
 

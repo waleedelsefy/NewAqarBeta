@@ -11,32 +11,6 @@
 
 /***/ }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/sass/custom.scss":
-/*!************************************!*\
-  !*** ./resources/sass/custom.scss ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./resources/sass/input.scss":
 /*!***********************************!*\
   !*** ./resources/sass/input.scss ***!
@@ -67,6 +41,71 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************************!*\
   !*** ./resources/sass/input-form.scss ***!
   \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/custom.scss":
+/*!************************************!*\
+  !*** ./resources/sass/custom.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/ltr.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/ltr.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/rtl.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/rtl.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/style.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/style.scss ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -164,6 +203,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/app": 0,
 /******/ 			"assets/css/app": 0,
+/******/ 			"assets/css/style": 0,
+/******/ 			"assets/css/rtl": 0,
+/******/ 			"assets/css/ltr": 0,
 /******/ 			"assets/css/admin": 0
 /******/ 		};
 /******/ 		
@@ -214,12 +256,15 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/admin"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/admin"], () => (__webpack_require__("./resources/sass/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/admin"], () => (__webpack_require__("./resources/sass/custom.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/admin"], () => (__webpack_require__("./resources/sass/input.scss")))
-/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/admin"], () => (__webpack_require__("./resources/sass/admin_variables.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/app","assets/css/admin"], () => (__webpack_require__("./resources/sass/input-form.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/custom.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/ltr.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/rtl.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/input.scss")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/admin_variables.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/app","assets/css/style","assets/css/rtl","assets/css/ltr","assets/css/admin"], () => (__webpack_require__("./resources/sass/input-form.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

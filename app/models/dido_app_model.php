@@ -179,7 +179,7 @@ class dido
                 $content .= '<li style="background: url(' . get_template_directory_uri() . '/images/' . $langDetails['locale'] . '.svg)" alt="' . $langDetails['name'] . '" class="header-language__item lg:px-1 current-lang hidden"><a hreflang="' . $langkey . '" href="' . $langDetails['url'] . '" lang="' . $langDetails['locale'] . '">' . $langDetails['name'] . '</li></a>';
             } else {
                 $content .= '<a hreflang="' . $langkey . '" href="' . $langDetails['url'] . '" lang="' . $langDetails['locale'] . '"><li style="background: url(' . get_template_directory_uri() . '/images/' . $langDetails['locale'] . '.svg); background-size: cover;list-style: none; display: flex;
-    width: 40px;
+    width: 30px;
     height: 30px;
     align-content: center;
     align-items: center;

@@ -51,7 +51,7 @@ function load_more_posts() {
     $paged = $_POST['page'];
     $loop = new WP_Query(array(
         'post_type' => 'post',
-        'posts_per_page' => 6,
+        'posts_per_page' => 3,
         'paged' => $paged,
         'ignore_sticky_posts' => 1
     ));

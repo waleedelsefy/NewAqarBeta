@@ -7,7 +7,7 @@
         $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
         $loop = new WP_Query( array(
                 'post_type' => 'post',
-                'posts_per_page' => 8,
+                'posts_per_page' => 6,
                 'paged' => $paged,
                 'ignore_sticky_posts' => 1
             )

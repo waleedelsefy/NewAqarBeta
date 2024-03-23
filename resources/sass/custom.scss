@@ -33,12 +33,13 @@
   --p-margin-heigh:1rem;
   --all-h-content-color:var(--primary-link-color-collapse);
   --all-p-content-color: #2f2f2f;
-  --unit-card-width:340px;
+  --unit-card-width:300px;
   --full-width:100vw;
   --one-third:32vw;
   --tow-third:63vw;
   --card-unts-gap:25px;
   --all-border-radius:5px;
+  --personal-img-logo:80px
 }
 @media screen and (max-width: 900px) {
   :root {
@@ -58,6 +59,8 @@
     --one-third:99vw;
     --tow-third:99vw;
     --card-unts-gap:15px;
+    --personal-img-logo:100px
+
   }
 }
 body {
@@ -83,6 +86,7 @@ body {
     font-weight: 600 !important;
   }
 }
+
 
 hih.breadcrumb-item {
   font-size: 14px;
@@ -545,7 +549,7 @@ a.phone {
     background: linear-gradient(307deg, var(--primary-link-color), var(--secondary-color));
     -webkit-background-clip: text;
     color: transparent;
-    max-height: 41vh;
+    height: 58vh;
   }
   /* free size card buttons */
   #phone-num {
@@ -748,7 +752,7 @@ a.phone {
       max-width: 45%;
     }
     .main-content {
-      margin-top: 50px;
+      margin-top: 20px;
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
@@ -993,9 +997,17 @@ a.phone {
     }
     #floating-icons a{display: block; width:115px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
+
   }
   /**** Only Desktop ****/
   @media screen and (min-width: 770px) and (max-width: 3024px) {
+    .languages ul {
+      padding-top: 15px;
+      display: block;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
     #floating-icons a{display: block; width:55px;background-color: var(--sacnd-color);border-radius: var(--all-border-radius);margin:10px 0;font-size: 1rem;text-align: center;height:40px;line-height: 36px;transition: 0.5s;color:#FFFFFF;}
 
     .d-flex-dido {
@@ -1057,8 +1069,8 @@ a.phone {
       width: var(--full-width);
       justify-content: center;
       flex-direction: row;
-      padding-inline-start: 8%;
-      padding-inline-end:  8%;
+      padding-inline-start: 5%;
+      padding-inline-end:  5%;
       gap: 30px;
       padding-top: 70px;
     }
@@ -1104,6 +1116,14 @@ a.phone {
       flex-direction: row;
     }
     /*start header*/
+    .hp-header .header-btn {
+      background-color: var(--sacnd-link-color);
+      padding: 10px;
+    }
+    header.shrink-me .header-btn {
+      padding: 10px;
+
+    }
     .hp-header {
       background: linear-gradient(to top, rgb(255 255 255 / 0%) 0, #ffffff 11%);
     }
@@ -1145,39 +1165,6 @@ a.phone {
       content: "▼";
       font-size: 6pt;
       position: absolute;
-    }
-    .breadcrumb-scroller {
-      .ul{
-        display: flex;
-        list-style: none;
-        margin-bottom: 0;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        justify-content: flex-start;
-      }
-      .li {
-        display: flex;
-        flex-direction: row;
-        gap: 4px;
-        align-items: center;
-        flex-wrap: nowrap;
-      }
-      .cil {
-        color: #000;
-        display: flex;
-        background: #00008000;
-        text-decoration: none;
-        position: relative;
-        height: 40px;
-        border-radius: var(--all-border-radius);
-        box-shadow: 0px 0px 10px 1.1px #0000004f;
-        padding-inline-start: 10px;
-        padding-inline-end: 10px;
-        text-align: center;
-        margin-inline-start: 11px;
-
-      }
     }
     project-details {
       th.project-title {
@@ -1245,13 +1232,6 @@ a.phone {
         padding-inline-start: 10px;
         padding-inline-end: 10px;
       }
-      .personal-img-logo {
-        width: 90px;
-        border-radius: var(--all-border-radius);
-        border: 1px solid #00000052;
-        padding: 0;
-        background: #ffff;
-      }
       p.jobTitle {
         display: flex;
         justify-content: center;
@@ -1270,6 +1250,7 @@ a.phone {
   }
    .grid-wrapper-blog {
      display: flex;
+     margin-top: 10%;
      flex-direction: row;
      gap: 2%;
      flex-wrap: wrap;
@@ -1278,9 +1259,7 @@ a.phone {
      align-content: center;
    }
   /**** Start of fluent form ****/
-  .fluentform {
 
-  }
   button.ff-btn.ff-btn-submit.ff-btn-md.ff_btn_style {
     background: var(--primary-link-color);
   }
@@ -1716,13 +1695,6 @@ div#fluentform_13_success {
       padding-inline-start: 25px;
       padding-inline-end: 20px;
     }
-    .personal-img-logo {
-      width: 90px;
-      border-radius: var(--all-border-radius);
-      border: 1px solid #00000052;
-      padding: 0;
-      background: #ffff;
-    }
     p.jobTitle {
       display: flex;
       justify-content: center;
@@ -1991,4 +1963,13 @@ h2.widget-title {
   table thead tr {
     background: #0a976d;
   }
+}
+
+
+.personal-img-logo {
+  width: var(--personal-img-logo) !important;
+  border-radius: var(--all-border-radius);
+  border: 1px solid #00000052;
+  padding: 0;
+  background: #ffff;
 }

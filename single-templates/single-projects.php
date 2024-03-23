@@ -55,6 +55,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
     $city_name = esc_html($first_term->name);
     $city_link = get_term_link($first_term);
 }
+$newaqar_developer= do_shortcode('[newaqar_developer]');
 ?>
     <style>
         form.fluent_form_15 .ff-btn-submit:not(.ff_btn_no_style) {
@@ -231,7 +232,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
             .schedule-meeting .submit{margin-top:50px; margin-bottom: 0}
         }
         .post-thumbnail {
-            margin-top: 40px !important;
+            margin-top: 20px !important;
         }
     </style>
 <div class="content-body">
@@ -438,7 +439,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                             <div>
                                 <?php
                                 if (isset($developer_name) && $developer_name) {
-                                    echo do_shortcode('[newaqar_developer]');
+                                    echo $newaqar_developer;
                                 }
                                 ?>
                             </div>
@@ -600,7 +601,7 @@ if ($city_terms && !is_wp_error($city_terms)) {
                         </div>
                     <?php endif; ?>
                     <div class="des-only">
-                        <?php if ($developer_terms!= "") { echo do_shortcode('[newaqar_developer]');}
+                        <?php if ($developer_terms!= "") { echo $newaqar_developer;}
                         else { ?>
                             <div class="message-section">
                                 <?php

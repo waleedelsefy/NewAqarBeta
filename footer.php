@@ -159,22 +159,47 @@ $email = Template::setting('dido_email');
             </div>
             <div class="col-md-3">
                 <div class="headline right">
-                    <div class="main-title"><?php Dido::t('Important links') ?></div>
+                    <div class="main-title"><?php _e('Important Developers', 'newaqar'); ?></div>
                 </div>
                 <div class="contact">
-                    <?php if ( has_nav_menu( 'footer_menu_1' ) ): ?>
-                        <?php wp_nav_menu(['container'=>false,'theme_location'=>'footer_menu_1','menu_class'=>'']); ?>
-                    <?php endif; ?>
+                    <ul>
+                    <?php
+                    $recent_developers = get_terms(array(
+                        'taxonomy'   => 'developer',
+                        'hide_empty' => false,
+                        'orderby'    => 'date',
+                        'order'      => 'DESC',
+                        'number'     => 4,
+                    ));
+
+                    foreach ($recent_developers as $developer) :
+                        $translated_city = pll_get_term($developer->term_id, pll_current_language()); ?>
+                    <li class="developer-list"><i class="icon-building"></i> <a href="<?php echo get_term_link($developer); ?>"><?php echo $developer->name; ?></a></li>
+                    <?php endforeach; ?>
+                    </ul>
                 </div>
+
             </div>
             <div class="col-md-3">
                 <div class="headline right">
-                    <div class="main-title"><?php Dido::t('most searched') ?></div>
+                    <div class="main-title"><?php _e('Important Cities', 'newaqar'); ?></div>
                 </div>
                 <div class="contact">
-                    <?php if ( has_nav_menu( 'footer_menu_2' ) ): ?>
-                        <?php wp_nav_menu(['container'=>false,'theme_location'=>'footer_menu_2','menu_class'=>'']); ?>
-                    <?php endif; ?>
+                    <ul>
+                    <?php
+                    $recent_cities = get_terms(array(
+                        'taxonomy'   => 'city',
+                        'hide_empty' => false,
+                        'orderby'    => 'date',
+                        'order'      => 'DESC',
+                        'number'     => 4,
+                    ));
+
+                    foreach ($recent_cities as $city) :
+                        $translated_city = pll_get_term($city->term_id, pll_current_language()); ?>
+                        <li><i class="icon-location"></i> <a href="<?php echo get_term_link($city); ?>"><?php echo $city->name; ?></a></li>
+                    <?php endforeach; ?>
+                        </ul>
                 </div>
             </div>
         </div>

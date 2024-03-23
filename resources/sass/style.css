@@ -1,0 +1,11 @@
+/*developer page */
+.cards-devs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/*# sourceMappingURL=style.css.map */
